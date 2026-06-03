@@ -76,7 +76,7 @@ SUMÁRIO
 
 | | Fé — 20 habilidades PD (p.55) | |
 
-| | Tecnologia — 20 itens/dispositivos (p.58) | |
+| | Tecnologia — guia de criação + 20 itens/dispositivos (p.58) | |
 
 | | Aura — 20 técnicas AU (p.61) | |
 
@@ -2705,6 +2705,344 @@ Itens de Tecnologia Arcana
 
 Itens criados pelo sistema de Tecnologia mágica. Podem ser usados por qualquer pessoa, mas somente Artífices podem criar e infundir.
 
+Guia de Criação de Tecnologia Arcana
+
+Tecnologia Arcana é qualquer item que aprisiona energia, intenção mágica ou lógica ritual em matéria: cristais, runas, engrenagens, tecidos encantados, próteses, armas, armaduras, ferramentas, autômatos, veículos, armadilhas e estruturas. Ela existe para transformar magia em coisa usável.
+
+O objetivo deste guia é permitir variedade ampla sem quebrar o equilíbrio do jogo. Sempre crie o item a partir de três perguntas:
+
+• **O que ele faz?** Dano, cura, defesa, movimento, informação, controle, criação, transporte, automação, armazenamento ou transformação.
+
+• **Como ele cobra o preço?** Cargas, PA técnico, componente consumido, tempo de ativação, risco, manutenção, limitação de cena ou requisito de usuário.
+
+• **Onde ele falha?** Alcance curto, duração limitada, barulho, calor, instabilidade, peso, recarga lenta, custo alto, assinatura detectável ou efeito colateral.
+
+---
+
+### 1. Conceito e Forma
+
+Escolha primeiro a forma física do item. A forma define como ele é usado, carregado, quebrado e percebido.
+
+| Forma | Exemplos | Uso comum |
+
+|---|---|---|
+
+| Consumível | poção, bomba, ampola, cartucho, selo descartável | Efeito forte de uso único |
+
+| Ferramenta | lente, luva, chave, kit, detector, bússola | Exploração, perícia, análise, reparo |
+
+| Arma modificada | lâmina, arco, pistola arcana, lança, munição | Dano, condição, drenagem, alcance |
+
+| Armadura/vestimenta | couraça, capa, botas, máscara, bracelete | Defesa, mobilidade, resistência |
+
+| Acessório | anel, amuleto, broche, cristal, foco | Bônus pequeno, carga, proteção situacional |
+
+| Armadilha | runa, mina, fio, selo, torreta | Controle de área, alarme, dano preparado |
+
+| Construto | sentinela, drone, golem, servo mecânico | Ação autônoma, guarda, transporte, combate |
+
+| Prótese/implante | olho, braço, pulmão, coração mecânico | Melhoria corporal permanente com custo |
+
+| Veículo | prancha, trenó, barco, carroça, asa mecânica | Movimento, carga, viagem, perseguição |
+
+| Estrutura | porta, elevador, gerador, altar, muralha, núcleo | Defesa de base, dungeon, cidade, ritual |
+
+---
+
+### 2. Categoria de Efeito
+
+Todo item deve ter um efeito principal. Efeitos secundários aumentam custo e risco.
+
+| Categoria | Efeito seguro | Efeito forte | Limite recomendado |
+
+|---|---|---|---|
+
+| Dano | 1d6 a 2d6 | 3d6 a 6d6 ou área | Consumo, recarga ou risco |
+
+| Cura | 1d6 a 2d4+2 PV | 4d4+4 PV ou remover condição | Uso único ou recarga longa |
+
+| Defesa | +1 Aparar, resistência situacional | +2 Aparar, redução de dano | Duração curta ou requisito |
+
+| Movimento | +3m, ignorar terreno | voo curto, teleporte curto | Cargas e duração limitada |
+
+| Informação | detectar magia, idioma, direção | revelar invisível, histórico, fraqueza | Alcance e duração claros |
+
+| Controle | fumaça, empurrão, prender porta | cegar, paralisar, campo de força | Teste de resistência obrigatório |
+
+| Utilidade | luz, calor, reparo, tradução, cópia | criar abrigo, purificar área, automatizar tarefa | Tempo de ativação |
+
+| Automação | executar tarefa simples | agir em combate ou patrulhar | PV, Aparar e comandos limitados |
+
+| Armazenamento | guardar PA, item, mensagem | armazenar magia ou criatura pequena | Capacidade explícita |
+
+| Transformação | mudar material, forma ou função | prótese, mutação, modo alternativo | Manutenção e falha |
+
+---
+
+### 3. Grau Tecnológico
+
+Use o grau para definir custo, tempo, CD de criação e impacto narrativo.
+
+| Grau | Escala | CD | Custo base | Tempo base | Exemplo |
+
+|---|---|---:|---:|---:|---|
+
+| 0 — Truque | utilidade menor | 8 | 10 OO | 10 min | luz, alarme simples, faísca |
+
+| 1 — Comum | item de aventura | 10 | 30 OO | 1 h | bomba de fumaça, ferramenta +1 |
+
+| 2 — Especializado | item de combate/cena | 12 | 80 OO | 2 h | granada, lente arcana, veneno |
+
+| 3 — Avançado | muda abordagem tática | 14 | 200 OO | 8 h | arma +1, botas rápidas, drone |
+
+| 4 — Raro | item marcante de personagem | 16 | 500 OO | 3 dias | prótese, capa protetora, golem |
+
+| 5 — Obra-prima | define campanha ou facção | 18 | 1.500 OO | 2 semanas | veículo arcano, núcleo de base |
+
+| 6 — Lendário | artefato tecnológico | 20+ | 5.000 OO+ | 1 mês+ | máquina planar, corpo mecânico |
+
+O custo base assume materiais comuns em cidade grande. Em ruínas, guerra, isolamento ou mercado ilegal, aumente o custo em 25% a 100%.
+
+---
+
+### 4. Estrutura de Criação
+
+Para criar um item, siga estes passos:
+
+1. **Defina o conceito:** nome, forma, aparência, fonte de energia e função principal.
+
+2. **Escolha o grau:** use a tabela de Grau Tecnológico.
+
+3. **Escolha o efeito principal:** uma categoria de efeito.
+
+4. **Adicione módulos opcionais:** cada módulo aumenta custo, tempo ou CD.
+
+5. **Escolha uma limitação:** todo item de Grau 2+ deve ter ao menos uma.
+
+6. **Faça o teste:** Tecnologia ou ferramenta apropriada contra a CD do grau.
+
+7. **Registre manutenção:** cargas, recarga, peças, combustível, reparo e risco de falha.
+
+**Teste de criação:** role Tecnologia. Com proficiência, some Mod. INT. Sem proficiência, role apenas INT. Ferramentas adequadas são obrigatórias para itens Grau 2+. Laboratório/oficina concede +1 no teste se for apropriado.
+
+**Sucesso:** o item é criado.
+
+**Falha por 1-3:** escolha: gastar mais 25% do custo, dobrar o tempo, ou criar com 1 Instabilidade.
+
+**Falha por 4+:** materiais são perdidos pela metade e o item não funciona.
+
+**Aumento:** reduza custo em 25%, reduza tempo pela metade, adicione 1 carga, ou remova 1 Instabilidade.
+
+---
+
+### 5. Módulos de Efeito
+
+Use módulos como blocos de construção. Um item simples tem 1 módulo. Um item complexo tem 2 ou 3. Acima disso, trate como projeto raro ou lendário.
+
+| Módulo | Efeito | Ajuste |
+
+|---|---|---|
+
+| Dano leve | 1d6 dano | Sem ajuste |
+
+| Dano médio | 2d6 ou 1d10 dano | +1 grau ou uso limitado |
+
+| Dano pesado | 3d6 a 4d6 dano | +2 graus, consumo ou recarga longa |
+
+| Área pequena | raio 3m ou linha 9m | +50% custo |
+
+| Área média | raio 6m ou cone 6m | +1 grau |
+
+| Condição leve | Abalado, empurrado, queda, lentidão | teste de resistência |
+
+| Condição forte | Cego, Paralisado, Silenciado | +1 grau e duração curta |
+
+| Bônus de ataque | +1 em ataque com item | Grau 3+ |
+
+| Bônus de defesa | +1 Aparar | Grau 3+ |
+
+| Resistência | resistência a 1 tipo de dano | Grau 4+ ou duração curta |
+
+| Cura leve | 1d6 ou 2d4+2 PV | consumível |
+
+| Cura forte | 4d4+4 PV ou remove condição | Grau 3+ e uso único |
+
+| Sensor | detecta magia, calor, movimento, veneno | alcance 9m-18m |
+
+| Invisível/oculto | esconde assinatura, som ou imagem | duração 1-10 min |
+
+| Mobilidade | +3m, salto, escalada, nado | duração por cena |
+
+| Voo/teleporte curto | voo 9m ou teleporte 6m | Grau 4+ e cargas |
+
+| Armazenamento | guarda 1-6 pontos mágicos | custo por capacidade |
+
+| Automação | executa comando simples | PV e limites claros |
+
+| Inteligência limitada | interpreta ordens simples | +1 grau |
+
+| Comunicação | envia voz, imagem ou sinal | alcance definido |
+
+| Construção | cria ponte, parede, abrigo, suporte | requer tempo/material |
+
+| Alteração material | aquece, congela, magnetiza, dissolve | afeta área pequena |
+
+---
+
+### 6. Limitações e Preços
+
+Itens tecnológicos devem ter pelo menos uma limitação real. Quanto mais forte o efeito, mais visível deve ser o preço.
+
+| Limitação | Como funciona |
+
+|---|---|
+
+| Cargas | número fixo de usos antes de recarregar |
+
+| Uso único | item se consome completamente |
+
+| Recarga lenta | recarrega só em descanso longo, oficina ou cidade |
+
+| Componente raro | exige cristal, sangue, metal, essência ou planta específica |
+
+| Barulho/luz | denuncia posição ao ativar |
+
+| Calor | não pode ser usado em turnos consecutivos |
+
+| Peso | ocupa as mãos, reduz deslocamento ou exige FOR/VIG |
+
+| Vinculação | só funciona para o criador ou usuário sincronizado |
+
+| Assinatura | detectável por Arcanismo, Tecnologia ou criaturas sensíveis |
+
+| Risco | em falha crítica, ganha Instabilidade |
+
+| Manutenção | precisa de reparo a cada aventura ou após dano |
+
+| Legalidade | proibido, controlado por guilda, igreja ou exército |
+
+---
+
+### 7. Cargas, Energia e Recarga
+
+Itens de Tecnologia não usam o pool pessoal do usuário, a menos que a descrição diga o contrário. Eles carregam energia própria.
+
+| Tipo de energia | Regra |
+
+|---|---|
+
+| Carga interna | item tem 1-6 cargas; recuperar todas exige descanso longo ou oficina |
+
+| Cristal | cada cristal armazena PA técnico ou PA arcano, definido na criação |
+
+| Combustível | usa óleo, carvão, reagente, bateria, sangue, sal ou essência |
+
+| Canalização | usuário gasta PA/PE/PD/AU para ativar um efeito específico |
+
+| Ambiental | recarrega em tempestade, sol, água corrente, linha de força ou altar |
+
+| Cinética | recarrega ao mover, atacar, correr ou receber impacto |
+
+Regra simples de recarga: recuperar todas as cargas custa 10% do valor do item em materiais. Para itens de Grau 4+, o custo pode ser 20%.
+
+---
+
+### 8. Instabilidade
+
+Instabilidade representa falhas, aquecimento, runas desalinhadas e peças improvisadas. Um item pode receber Instabilidade por falha na criação, uso forçado, dano, manutenção ignorada ou modificação apressada.
+
+| Instabilidade | Efeito |
+
+|---|---|
+
+| 1 | falha crítica desativa o item até o fim da cena |
+
+| 2 | ao usar, role d6; em 1, perde 1 carga extra ou superaquece |
+
+| 3 | falha crítica causa efeito colateral leve no usuário |
+
+| 4 | ao usar, role d6; em 1, o item quebra |
+
+| 5 | falha crítica causa explosão, descarga ou maldição tecnológica |
+
+Remover 1 Instabilidade exige teste de Tecnologia CD igual à criação do item, metade do tempo base e 10% do custo base em peças.
+
+---
+
+### 9. Modelos Rápidos
+
+Use estes modelos para criar itens em poucos minutos.
+
+**Consumível de combate:** Grau 1-3. Escolha dano, condição ou área. Uso único. CD 10-14. Custo 30-100 OO.
+
+**Ferramenta de perícia:** Grau 1-3. Concede +1 em uma situação estreita, detecta algo ou permite tentar uma ação impossível sem ferramenta. Cargas opcionais.
+
+**Arma tecnológica:** Grau 3+. Escolha +1 ataque/dano, dano elemental, drenagem, retorno, munição especial ou modo alternativo. Deve ter manutenção ou carga.
+
+**Armadura tecnológica:** Grau 3+. Escolha +1 Aparar, resistência situacional, redução de dano, selamento ambiental ou propulsão curta. Peso e ruído são limitações comuns.
+
+**Prótese/implante:** Grau 4+. Concede função corporal nova ou substitui perda. Deve exigir manutenção e pode ter assinatura detectável.
+
+**Construto:** Grau 3+. Defina PV, Aparar, deslocamento, uma ação principal e uma limitação de comando. Construtos não improvisam sem inteligência limitada.
+
+**Veículo:** Grau 4+. Defina velocidade, capacidade, terreno, combustível, tripulação e falha de direção.
+
+**Estrutura de base:** Grau 4+. Defina área protegida, fonte de energia, manutenção semanal e como inimigos podem sabotar.
+
+---
+
+### 10. Balanceamento por Nível
+
+| Nível do personagem | Grau recomendado | Observação |
+
+|---|---|---|
+
+| 1-4 | Grau 0-2 | itens simples, consumíveis, ferramentas, bombas leves |
+
+| 5-9 | Grau 2-3 | armas +1, sensores, armaduras especiais, drones simples |
+
+| 10-14 | Grau 3-4 | construtos, próteses, mobilidade forte, resistências |
+
+| 15-19 | Grau 4-5 | veículos, autômatos avançados, núcleo de base |
+
+| 20+ | Grau 5-6 | obras-primas e artefatos de campanha |
+
+Em PVP, evite itens que neguem totalmente a ação do alvo sem teste. Em PVE, itens de controle podem ser fortes, mas devem ter gasto, risco ou limitação de alvo.
+
+---
+
+### 11. Exemplos de Possibilidades
+
+| Ideia | Grau | Efeito base |
+
+|---|---:|---|
+
+| Gancho de Retorno | 1 | puxa objeto leve até 9m |
+
+| Lanterna de Verdade | 2 | revela tinta invisível, rastros arcanos e ilusões fracas |
+
+| Luva Magnetizada | 2 | prende arma metálica, escala metal, desarma com teste |
+
+| Granada de Gelo | 2 | 3m raio; 2d6 frio e terreno difícil |
+
+| Máscara de Respiração | 2 | respira fumaça, água rasa ou gás por 10 min |
+
+| Botas de Impacto | 3 | ignora dano de queda curto e empurra ao aterrissar |
+
+| Bracelete de Retorno | 3 | arma marcada volta à mão como ação bônus |
+
+| Olho de Vidro Rúnico | 4 | visão no escuro e detecção de invisível 1×/dia |
+
+| Braço Hidráulico | 4 | +1 dado em testes de FOR com o braço; manutenção semanal |
+
+| Drone Cartógrafo | 4 | mapeia dungeon e marca criaturas grandes em 18m |
+
+| Coração de Cristal | 5 | +10 PV máximos, mas assinatura arcana sempre detectável |
+
+| Motor de Linha de Força | 5 | alimenta veículo, torre, laboratório ou barreira |
+
+| Porta de Fase | 6 | conecta dois pontos fixos por 1 minuto, 1×/semana |
+
 | Item | Custo | Efeito | Usos |
 
 |---|---|---|---|
@@ -3099,7 +3437,7 @@ Pool de PD concedido pela **classe Devoto** (começa em 10, cresce por nível). 
 
 Tecnologia — Magia Encantada em Objetos
 
-Sem pool pessoal — a energia é armazenada no item durante a criação. Qualquer pessoa pode usar itens de Tecnologia. Apenas Artífices podem criar e infundir novos itens.
+Sem pool pessoal — a energia é armazenada no item durante a criação. Qualquer pessoa pode usar itens de Tecnologia. Apenas Artífices podem criar e infundir novos itens. Para criar tecnologia nova, use o **Guia de Criação de Tecnologia Arcana** na Parte IX.
 
 **Quem acessa:** Todos (uso); apenas Artífices (criação/infusão).
 
