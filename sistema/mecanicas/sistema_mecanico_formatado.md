@@ -178,11 +178,11 @@ Com atributos definidos, calcule:
 
 **Aparar** = 4 + Mod. AGI + Bônus de Armadura + Bônus de Escudo
 
-**PV Máximos** = PV de Vigor + PV Inicial da Classe + Progressão da Classe por nível após o 1º
+**PV Máximos** = Valor do dado de VIG + Valor do dado de PV da classe
 
-• No nível 1: PV = PV de Vigor + PV Inicial da Classe
+• O valor do dado é o número máximo escrito nele: d4 = 4, d6 = 6, d8 = 8, d10 = 10, d12 = 12, d20 = 20.
 
-• A partir do nível 2: some a Progressão da Classe a cada nível. Não role PV por nível no modo padrão.
+• Subir de nível não aumenta PV automaticamente. PV aumenta por VIG maior, talentos, itens, características especiais ou efeitos permanentes.
 
 **Pool Mágico ou de Aura** = definido pela classe (ver tabela de cada classe)
 
@@ -399,9 +399,9 @@ Vigor (VIG)
 
 Resistência física e saúde. Determina pontos de vida, resistência a venenos, doenças e exaustão.
 
-• **PV de Vigor** = valor fixo pela tabela de PV (Exemplo: VIG d8 = 10 PV de Vigor)
+• **PV por Vigor** = valor do dado de VIG (Exemplo: VIG d8 = 8 PV)
 
-• **+PV por nível** = progressão fixa da classe após o 1º nível
+• **PV por classe** = valor do dado de PV da classe
 
 Intelecto (INT)
 
@@ -447,11 +447,13 @@ Ao chegar a 0 PV, o personagem cai inconsciente e passa a usar as regras de mort
 
 Como Calcular PV Máximos
 
-**PV Máximos = PV de Vigor + PV Inicial da Classe + (Progressão da Classe × níveis após o 1º) + bônus permanentes**
+**PV Máximos = Valor do dado de VIG + Valor do dado de PV da Classe + bônus permanentes**
 
-**Regra explícita:** no nível 1, o personagem soma **PV de Vigor** + **PV Inicial da Classe**. Depois do nível 1, ele não ganha o PV Inicial de novo; a cada novo nível, soma apenas a **Progressão da Classe** escolhida naquele nível.
+Esta regra usa o valor máximo escrito nos dados, sem rolagem. Se o personagem tem **VIG d8**, o dado de VIG vale **8**. Se a classe usa **d8** como dado de PV, o dado da classe vale **8**.
 
-O modo padrão usa valores fixos, sem rolagem de PV por nível. Isso deixa PVP e PVE mais previsíveis: personagens frágeis continuam vulneráveis, combatentes aguentam a linha de frente e o Mestre consegue calcular encontros sem depender de sorte na criação.
+> **Exemplo rápido:** Guerreiro com VIG d8 tem PV Máximos = 8 + 8 = **16 PV**.
+
+Subir de nível **não aumenta PV automaticamente**. O personagem fica mais forte por habilidades, talentos, magias, técnicas de Aura, tecnologia, equipamento, defesa, cura e aumento de atributos. PV só aumenta quando uma regra aumenta VIG, melhora o dado de PV da classe, concede bônus permanente ou dá PV temporários.
 
 Entenda cada parte da fórmula:
 
@@ -459,145 +461,113 @@ Entenda cada parte da fórmula:
 
 |---|---|
 
-| **PV de Vigor** | vida que vem da constituição física do personagem |
+| **Valor do dado de VIG** | vida que vem da constituição física do personagem |
 
-| **PV Inicial da Classe** | resistência que a classe concede no nível 1 |
-
-| **Progressão da Classe** | PV ganhos a cada nível depois do primeiro |
-
-| **Níveis após o 1º** | nível total do personagem menos 1 |
+| **Valor do dado de PV da Classe** | resistência base que vem do treinamento da classe |
 
 | **Bônus permanentes** | talentos, itens, características raciais, próteses, bênçãos ou efeitos duradouros |
 
-> **Atalho:** níveis após o 1º = Nível - 1. Um personagem nível 1 tem 0 níveis após o 1º; nível 5 tem 4; nível 10 tem 9.
+> **Importante:** "dado" aqui não significa rolar. Significa usar o valor máximo do dado.
 
-**Passo 1 — PV de Vigor**
+**Passo 1 — Valor do Dado de VIG**
 
-PV de Vigor é o valor fixo de vida concedido pelo dado atual de **VIG**. Ele representa corpo, fôlego, saúde, resistência a trauma e capacidade natural de suportar ferimentos. Quanto maior o dado de Vigor, maior esse bloco de PV.
+O valor do dado de VIG representa corpo, fôlego, saúde, resistência a trauma e capacidade natural de suportar ferimentos.
 
-| VIG | PV de Vigor |
+| VIG | Valor para PV |
 
 |---|---:|
 
-| d4 | 6 |
+| d4 | 4 PV |
 
-| d6 | 8 |
+| d6 | 6 PV |
 
-| d8 | 10 |
+| d8 | 8 PV |
 
-| d10 | 12 |
+| d10 | 10 PV |
 
-| d12 | 14 |
+| d12 | 12 PV |
 
-| d20 | 18 |
+| d20 | 20 PV |
 
-O PV de Vigor usa o **dado atual de VIG**. Se o personagem aumentar VIG depois, recalcule esta parte e ajuste os PV Máximos pela diferença.
+Se o personagem aumentar VIG depois, recalcule esta parte e ajuste os PV Máximos pela diferença.
 
-> Exemplo: um personagem sobe VIG de d6 para d8. PV de Vigor muda de 8 para 10. Ele ganha +2 PV Máximos.
+> Exemplo: um personagem sobe VIG de d6 para d8. O valor de VIG muda de 6 para 8. Ele ganha +2 PV Máximos.
 
-**Passo 2 — PV Inicial de Classe**
+**Passo 2 — Valor do Dado de PV da Classe**
 
-PV Inicial de Classe é o valor de vida que a classe concede **somente no nível 1**. Ele representa o treinamento inicial da classe: combatentes começam mais robustos, especialistas médios começam equilibrados e conjuradores frágeis começam com menos reserva física.
+O dado de PV da classe representa a robustez do treinamento principal do personagem. Classes frágeis usam d4, classes intermediárias usam d6 e classes resistentes usam d8.
 
-| Classe | PV Inicial de Classe | Por quê |
-
-|---|---:|---|
-
-| Arcanista | 4 | classe frágil, focada em magia e preparação |
-
-| Sensiente | 6 | suporte e controle, resistência intermediária |
-
-| Artífice | 6 | técnico de campo, usa ferramentas e armaduras médias |
-
-| Guerreiro | 8 | linha de frente, treino marcial pesado |
-
-| Devoto | 8 | combatente sagrado/profano com proteção e armadura |
-
-| Explorador | 8 | sobrevivente físico, móvel e resistente |
-
-**Passo 3 — Progressão de PV por Nível**
-
-A Progressão de PV é quanto a classe adiciona aos PV Máximos **cada vez que o personagem sobe de nível depois do 1º**. Ela não é rolada: é fixa.
-
-| Classe | Dado de PV | Progressão por nível depois do 1º |
+| Classe | Dado de PV da Classe | Valor para PV |
 
 |---|---:|---:|
 
-| Arcanista | d4 | +2 PV por nível |
+| Arcanista | d4 | 4 PV |
 
-| Sensiente | d6 | +3 PV por nível |
+| Sensiente | d6 | 6 PV |
 
-| Artífice | d6 | +3 PV por nível |
+| Artífice | d6 | 6 PV |
 
-| Guerreiro | d8 | +4 PV por nível |
+| Guerreiro | d8 | 8 PV |
 
-| Devoto | d8 | +4 PV por nível |
+| Devoto | d8 | 8 PV |
 
-| Explorador | d8 | +4 PV por nível |
+| Explorador | d8 | 8 PV |
 
-O **Dado de PV** ainda existe para curas de descanso curto, habilidades e referência de robustez da classe. O cálculo de PV Máximos, porém, usa **PV Inicial** e **Progressão fixa**, não rolagem aleatória.
+**Passo 3 — Some os Dois Dados**
 
-**Passo 4 — Total**
+Depois de encontrar os dois valores, some:
 
-Calcule nesta ordem:
-
-1. Pegue o PV de Vigor pela tabela.
-
-2. Some o PV Inicial da Classe.
-
-3. Calcule quantos níveis existem após o 1º: **Nível - 1**.
-
-4. Multiplique esse número pela Progressão da Classe.
-
-5. Some talentos, itens e bônus permanentes.
-
-> **Exemplo:** Guerreiro nível 5 com VIG d8:
-
-> PV de Vigor = 10 | PV Inicial da Classe = 8 | Progressão = 4 × 4 níveis após o 1º = 16
-
-> **PV Máximos = 10 + 8 + 16 = 34**
-
-> **Exemplo:** Arcanista nível 5 com VIG d6:
-
-> PV de Vigor = 8 | PV Inicial da Classe = 4 | Progressão = 2 × 4 níveis após o 1º = 8
-
-> **PV Máximos = 8 + 4 + 8 = 20**
-
-**Exemplo de nível 1:** Devoto nível 1 com VIG d6:
-
-> PV de Vigor = 8 | PV Inicial da Classe = 8 | Progressão = 4 × 0 = 0
-
-> **PV Máximos = 8 + 8 = 16**
-
-**Exemplo de personagem resistente:** Artífice nível 8 com VIG d10 e Amuleto de Saúde (+4 PV):
-
-> PV de Vigor = 12 | PV Inicial da Classe = 6 | Progressão = 3 × 7 = 21 | Bônus permanente = 4
-
-> **PV Máximos = 12 + 6 + 21 + 4 = 43**
-
-**Exemplo de subida de nível:** Explorador nível 4 com VIG d8 tem 10 + 8 + (4 × 3) = 30 PV. Ao subir para nível 5, ele ganha apenas a Progressão da Classe: +4 PV. Novo total: **34 PV**.
-
-**Tabela rápida de progressão**
-
-Use esta tabela quando o personagem subir de nível:
-
-| Se a classe do novo nível for... | Some aos PV Máximos |
+| Parte | Exemplo |
 
 |---|---:|
 
-| Arcanista | +2 PV |
+| VIG d8 | 8 PV |
 
-| Sensiente | +3 PV |
+| Classe Guerreiro d8 | 8 PV |
 
-| Artífice | +3 PV |
+| Total | 16 PV |
 
-| Guerreiro | +4 PV |
+O **Dado de PV** também é usado para curas de descanso curto, habilidades e referência de robustez da classe.
 
-| Devoto | +4 PV |
+**Passo 4 — Some Bônus Permanentes**
 
-| Explorador | +4 PV |
+Bônus permanentes vêm de talentos, itens, traços raciais, próteses, bênçãos duradouras ou tecnologia. Eles entram depois da soma dos dados.
 
-> **Importante:** subir de nível nunca soma novamente o PV Inicial de Classe. O PV Inicial é recebido uma única vez, no nível 1.
+> Exemplo: Artífice com VIG d10, dado de classe d6 e Amuleto de Saúde (+4 PV): 10 + 6 + 4 = **20 PV**.
+
+### Exemplos de Cálculo
+
+**Exemplo 1 — Arcanista frágil**
+
+> Arcanista com VIG d6:
+
+> VIG d6 = 6 | Classe d4 = 4
+
+> **PV Máximos = 6 + 4 = 10**
+
+**Exemplo 2 — Guerreiro resistente**
+
+> Guerreiro com VIG d8:
+
+> VIG d8 = 8 | Classe d8 = 8
+
+> **PV Máximos = 8 + 8 = 16**
+
+**Exemplo 3 — Devoto muito vigoroso**
+
+> Devoto com VIG d12:
+
+> VIG d12 = 12 | Classe d8 = 8
+
+> **PV Máximos = 12 + 8 = 20**
+
+**Exemplo 4 — Artífice com item**
+
+> Artífice com VIG d10 e Amuleto de Saúde (+4 PV):
+
+> VIG d10 = 10 | Classe d6 = 6 | Item = +4
+
+> **PV Máximos = 10 + 6 + 4 = 20**
 
 ---
 
@@ -609,9 +579,9 @@ Quando algo muda os PV Máximos, aplique apenas a diferença.
 
 |---|---|
 
-| Subiu de nível | some a Progressão da Classe do novo nível |
+| Subiu de nível | não aumenta PV automaticamente |
 
-| Aumentou VIG | recalcule o PV de Vigor e some a diferença |
+| Aumentou VIG | recalcule o valor do dado de VIG e some a diferença |
 
 | Perdeu VIG temporariamente | o Mestre decide se reduz PV Máximos enquanto durar o efeito |
 
@@ -623,23 +593,27 @@ Quando algo muda os PV Máximos, aplique apenas a diferença.
 
 **PV atual ao aumentar PV Máximos:** se o personagem estiver completamente curado, aumente também os PV atuais. Se estiver ferido, mantenha os PV atuais e aumente apenas o máximo, a menos que a regra diga que também cura.
 
-> Exemplo: Guerreiro 20/30 PV ganha +4 PV Máximos. Ele fica com 20/34 PV, não 24/34. Se estivesse em 30/30, ficaria em 34/34.
+> Exemplo: Guerreiro 10/16 PV ganha +4 PV Máximos. Ele fica com 10/20 PV, não 14/20. Se estivesse em 16/16, ficaria em 20/20.
 
 ---
 
 ### Multiclasse e PV
 
-Em multiclasse, o personagem recebe o **PV Inicial apenas da primeira classe**. Nos níveis seguintes, use a **Progressão da classe escolhida naquele nível**.
+Em multiclasse, use o dado de PV da **classe principal atual** do personagem. A classe principal é normalmente a primeira classe escolhida, mas pode mudar com aprovação do Mestre se a história e os níveis do personagem justificarem.
 
-> Exemplo: Guerreiro 3 / Arcanista 2 com VIG d8:
+> Exemplo: Guerreiro/Arcanista com Guerreiro como classe principal e VIG d8:
 
-> PV de Vigor = 10 | PV Inicial da primeira classe Guerreiro = 8
+> VIG d8 = 8 | classe principal Guerreiro d8 = 8
 
-> Progressão: nível 2 Guerreiro +4, nível 3 Guerreiro +4, nível 4 Arcanista +2, nível 5 Arcanista +2
+> **PV Máximos = 16**
 
-> **PV Máximos = 10 + 8 + 4 + 4 + 2 + 2 = 30**
+> Exemplo: Arcanista/Guerreiro com Arcanista como classe principal e VIG d8:
 
-Se o personagem começou como Arcanista e depois entrou em Guerreiro, ele mantém o PV Inicial de Arcanista e passa a ganhar +4 apenas nos níveis em que escolher Guerreiro.
+> VIG d8 = 8 | classe principal Arcanista d4 = 4
+
+> **PV Máximos = 12**
+
+Se o grupo preferir que a multiclasse mude a robustez do personagem, permita trocar a classe principal quando uma segunda classe se tornar dominante na ficha.
 
 ---
 
@@ -687,13 +661,31 @@ Ao chegar a 0 PV:
 
 Diretrizes de Balanceamento PVP/PVE
 
-• **PVP padrão:** use sempre PV fixo. PV temporário não acumula; se receber outra fonte, escolha o maior valor. Cura em combate não pode ultrapassar os PV máximos e efeitos de cura repetida devem custar ação, recurso ou limite de descanso.
+• **PVP padrão:** como os PV são baixos e não escalam por nível, evite dano explosivo sem teste. PV temporário não acumula; se receber outra fonte, escolha o maior valor. Cura em combate não pode ultrapassar os PV máximos e efeitos de cura repetida devem custar ação, recurso ou limite de descanso.
 
-• **PVE padrão:** use o PV calculado para personagens jogadores. Para criaturas comuns, prefira PV médio do bestiário. Para chefes, aumente PV em 25% a 50% ou adicione fases, em vez de dobrar dano.
+• **PVE padrão:** use criaturas com dano compatível com o PV baixo dos personagens. Para monstros comuns, prefira ataques de 1d6 a 2d6. Para chefes, use fases, objetivos e condições antes de simplesmente aumentar dano.
 
-• **Duração esperada:** um duelo equilibrado entre personagens do mesmo nível deve durar cerca de 3 a 5 rodadas. Um encontro PVE contra grupo equivalente deve durar 4 a 6 rodadas. Se combates passam disso com frequência, reduza PV de criaturas em 15% ou aumente objetivos de cenário além de “zerar PV”.
+• **Duração esperada:** um duelo equilibrado deve durar cerca de 2 a 4 rodadas. Um encontro PVE contra grupo equivalente deve durar 3 a 5 rodadas. Se personagens caem em 1 ataque comum, reduza dano. Se ninguém cai, aumente pressão, número de ameaças ou objetivos.
 
-• **Modo heroico opcional:** para campanhas mais épicas e menos letais, some +2 PV por nível do personagem. Não use este bônus em PVP competitivo.
+• **Modo heroico opcional:** para campanhas menos letais, some +2 PV aos personagens no nível 1. Não use este bônus em PVP competitivo.
+
+Teste rápido de balanceamento:
+
+| Referência | Resultado com PV 16 |
+
+|---|---|
+
+| Dano 1d6 | cerca de 5 acertos para derrubar |
+
+| Dano 1d8+2 | cerca de 3 acertos para derrubar |
+
+| Dano 2d6 | cerca de 3 acertos para derrubar |
+
+| Dano 3d6 | cerca de 2 acertos para derrubar |
+
+| Dano 5d6 | pode derrubar em 1 acerto médio |
+
+Conclusão: o novo sistema fica balanceado para combates rápidos e perigosos se ataques comuns ficarem entre **1d6 e 2d6**, ataques pesados ficarem perto de **3d6**, e danos de **5d6 ou mais** forem raros, caros, telegrafados ou permitirem teste de resistência.
 
 ---
 

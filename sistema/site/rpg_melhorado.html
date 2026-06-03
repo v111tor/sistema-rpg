@@ -808,14 +808,14 @@ const ATTRS = [
   ["DEV", "Devoção", "Religião, proteção divina e magia de fé"]
 ];
 const CLASS_HP = {
-  guerreiro: { label: "Guerreiro", die: "d8", initial: 8, perLevel: 4 },
-  arcanista: { label: "Arcanista", die: "d4", initial: 4, perLevel: 2 },
-  sensiente: { label: "Sensiente", die: "d6", initial: 6, perLevel: 3 },
-  devoto: { label: "Devoto", die: "d8", initial: 8, perLevel: 4 },
-  artifice: { label: "Artífice", die: "d6", initial: 6, perLevel: 3 },
-  explorador: { label: "Explorador", die: "d8", initial: 8, perLevel: 4 }
+  guerreiro: { label: "Guerreiro", die: "d8", value: 8 },
+  arcanista: { label: "Arcanista", die: "d4", value: 4 },
+  sensiente: { label: "Sensiente", die: "d6", value: 6 },
+  devoto: { label: "Devoto", die: "d8", value: 8 },
+  artifice: { label: "Artífice", die: "d6", value: 6 },
+  explorador: { label: "Explorador", die: "d8", value: 8 }
 };
-const VIGOR_HP = { d4: 6, d6: 8, d8: 10, d10: 12, d12: 14, d20: 18 };
+const VIGOR_HP = { d4: 4, d6: 6, d8: 8, d10: 10, d12: 12, d20: 20 };
 const SKILLS = [
   ["Acrobacia", "AGI"], ["Arcanismo", "INT"], ["Atletismo", "FOR"],
   ["Enganação", "ESP"], ["Furtividade", "AGI"], ["História", "INT"],
@@ -1070,7 +1070,7 @@ function blankCharacter() {
     id: uid(), name: "Novo personagem", player: "", ancestry: "", role: "", level: 1,
     background: "", alignment: "", xp: 0,
     attrs: { FOR: "d4", AGI: "d4", VIG: "d4", INT: "d4", ESP: "d4", DEV: "d4" },
-    hp: { current: 10, max: 10, temp: 0 }, ac: 4, speed: 9, prof: 2, initiative: 0,
+    hp: { current: 12, max: 12, temp: 0 }, ac: 4, speed: 9, prof: 2, initiative: 0,
     resources: { pa: { current: 4, max: 4 }, pe: { current: 4, max: 4 }, pd: { current: 0, max: 0 }, aura: { current: 2, max: 2 } },
     knownSpellIds: [],
     customSpells: [],
@@ -1159,7 +1159,7 @@ function normalize(data) {
   }
   merged.characters.forEach(c => {
     c.attrs = normalizeAttrs(c.attrs || {});
-    c.hp = { current: 10, max: 10, temp: 0, ...(c.hp || {}) };
+    c.hp = { current: 12, max: 12, temp: 0, ...(c.hp || {}) };
     const resources = c.resources || {};
     c.resources = {
       pa: { current: 0, max: 0, ...(resources.pa || {}) },
@@ -1482,19 +1482,16 @@ function classHpProfile(role) {
   return Object.entries(CLASS_HP).find(([key]) => text.includes(key))?.[1] || CLASS_HP.guerreiro;
 }
 function calcMaxHp(c) {
-  const level = Math.max(1, Number(c.level) || 1);
   const profile = classHpProfile(c.role);
   const vigor = attrDie(c.attrs?.VIG);
   const vigorHp = VIGOR_HP[vigor] || VIGOR_HP.d4;
-  return vigorHp + profile.initial + (profile.perLevel * (level - 1));
+  return vigorHp + profile.value;
 }
 function hpCalcDetails(c) {
-  const level = Math.max(1, Number(c.level) || 1);
   const profile = classHpProfile(c.role);
   const vigor = attrDie(c.attrs?.VIG);
   const vigorHp = VIGOR_HP[vigor] || VIGOR_HP.d4;
-  const progression = profile.perLevel * (level - 1);
-  return { level, profile, vigor, vigorHp, progression, total: vigorHp + profile.initial + progression };
+  return { profile, vigor, vigorHp, total: vigorHp + profile.value };
 }
 function skillAttr(c, attr) {
   if (String(attr).includes("/")) {
@@ -1716,7 +1713,7 @@ function renderSheetCategory(c, hpPct) {
         <div class="empty" style="margin-top:10px;text-align:left;padding:12px">
           <strong>PV sugerido pelo sistema: ${hpCalc.total}</strong>
           <p class="muted" style="margin:6px 0 0">
-            ${hpCalc.profile.label} (${hpCalc.profile.die}) · VIG ${hpCalc.vigor} = ${hpCalc.vigorHp} · inicial ${hpCalc.profile.initial} · progressão ${hpCalc.profile.perLevel} × ${Math.max(0, hpCalc.level - 1)} = ${hpCalc.progression}
+            VIG ${hpCalc.vigor} = ${hpCalc.vigorHp} · ${hpCalc.profile.label} ${hpCalc.profile.die} = ${hpCalc.profile.value}
           </p>
           <button class="btn small" style="margin-top:8px" onclick="applyCalculatedHp('${c.id}')">Aplicar PV calculado</button>
         </div>
