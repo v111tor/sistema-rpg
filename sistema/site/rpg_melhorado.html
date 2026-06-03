@@ -395,6 +395,10 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
 }
 .tool-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
 .tool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
   min-height: 42px;
   border: 1px solid var(--line);
   border-radius: 4px;
@@ -402,6 +406,14 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
   background: var(--surface-2);
 }
 .tool.active { border-color: var(--red); color: var(--red); }
+.map-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  pointer-events: none;
+}
+.tool .map-icon { width: 17px; height: 17px; }
 .map-legend {
   display: grid;
   gap: 7px;
@@ -428,6 +440,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
   font-size: .76rem;
   font-weight: 800;
 }
+.legend-symbol .map-icon { width: 18px; height: 18px; }
 .map-stage {
   overflow: auto;
   border: 1px solid var(--line);
@@ -449,6 +462,11 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
   font-size: .72rem;
   color: #fff;
   user-select: none;
+}
+.tile .map-icon {
+  width: 21px;
+  height: 21px;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.65));
 }
 .floor { background: #2a3138; }
 .wall { background: #111; }
@@ -868,20 +886,26 @@ const SOURCES = {
 SOURCES.aura = { title: "Aura", resource: "Aura", color: "violet", text: "Campo espiritual pessoal. Revela assinatura, presenca, intencao e vinculos sobrenaturais." };
 SOURCES.natural = { title: "Natural", resource: "Ambiente", color: "green", text: "Forca viva de ecossistemas, animais, clima, rios, raizes e territorio." };
 
+const MAP_ICON_BASE = "../../assets/map-icons/";
 const MAP_TOOLS = [
-  ["floor", "Chão", ""], ["wall", "Parede", ""], ["door", "Porta", "D"],
-  ["water", "Água", ""], ["hazard", "Perigo", "!"], ["token-pc", "PJ", "PJ"],
-  ["token-npc", "NPC", "N"], ["token-boss", "Chefe", "C"]
+  ["floor", "Chao", ".", ""],
+  ["wall", "Parede", "#", ""],
+  ["door", "Porta", "D", "door.svg"],
+  ["water", "Agua", "~", "water.svg"],
+  ["hazard", "Perigo", "!", "hazard.svg"],
+  ["chest", "Bau", "B", "chest.svg"],
+  ["pillar", "Pilar", "P", "pillar.svg"],
+  ["altar", "Altar", "A", "altar.svg"],
+  ["trap", "Armadilha", "T", "trap.svg"],
+  ["stairs", "Escada", "E", "stairs.svg"],
+  ["statue", "Estatua", "S", "statue.svg"],
+  ["rubble", "Entulho", "R", "rubble.svg"],
+  ["light", "Luz", "L", "light.svg"],
+  ["secret", "Secreto", "?", "secret.svg"],
+  ["token-pc", "PJ", "PJ", "pc.svg"],
+  ["token-npc", "NPC", "N", "npc.svg"],
+  ["token-boss", "Chefe", "C", "boss.svg"]
 ];
-
-MAP_TOOLS.splice(0, MAP_TOOLS.length,
-  ["floor", "Chao", "."], ["wall", "Parede", "#"], ["door", "Porta", "▣"],
-  ["water", "Agua", "~"], ["hazard", "Perigo", "!"], ["chest", "Bau", "▤"],
-  ["pillar", "Pilar", "◼"], ["altar", "Altar", "✦"], ["trap", "Armadilha", "△"],
-  ["stairs", "Escada", "⇅"], ["statue", "Estatua", "♜"], ["rubble", "Entulho", "≋"],
-  ["light", "Luz", "✹"], ["secret", "Secreto", "?"], ["token-pc", "PJ", "PJ"],
-  ["token-npc", "NPC", "N"], ["token-boss", "Chefe", "C"]
-);
 
 const BESTIARY_CATALOG = [
   ['Lobo de Cinza',1,'Besta','Primitiva','floresta',16,12],
@@ -2173,7 +2197,10 @@ function renderInitiative() {
 }
 
 function renderMapTools() {
-  byId("map-tools").innerHTML = MAP_TOOLS.map(([key, label]) => `<button class="tool ${selectedTool === key ? "active" : ""}" onclick="selectMapTool('${key}')">${label}</button>`).join("");
+  byId("map-tools").innerHTML = MAP_TOOLS.map(tool => {
+    const [key, label] = tool;
+    return `<button class="tool ${selectedTool === key ? "active" : ""}" title="${esc(label)}" onclick="selectMapTool('${key}')">${mapToolContent(tool)}<span>${esc(label)}</span></button>`;
+  }).join("");
   renderMapLegend();
   byId("map-name").value = state.map.name || "Mapa atual";
   byId("map-name").onchange = event => {
@@ -2188,16 +2215,29 @@ function renderMapTools() {
 function renderMapLegend() {
   const legend = byId("map-legend");
   if (!legend) return;
-  legend.innerHTML = MAP_TOOLS.map(([key, label, symbol]) => `
+  legend.innerHTML = MAP_TOOLS.map(tool => {
+    const [key, label] = tool;
+    return `
     <div class="legend-item">
-      <span class="legend-symbol ${esc(key)}">${esc(symbol || "·")}</span>
+      <span class="legend-symbol ${esc(key)}">${mapToolContent(tool)}</span>
       <span>${esc(label)}</span>
     </div>
-  `).join("");
+  `;
+  }).join("");
 }
 function selectMapTool(key) {
   selectedTool = key;
   renderMapTools();
+}
+function mapToolByKey(key) {
+  return MAP_TOOLS.find(([toolKey]) => toolKey === key);
+}
+function mapToolContent(tool) {
+  const [, label, symbol, icon] = tool || [];
+  if (icon) {
+    return `<img class="map-icon" src="${MAP_ICON_BASE + esc(icon)}" alt="${esc(label || "")}" loading="lazy">`;
+  }
+  return esc(symbol || ".");
 }
 function resizeMap() {
   const width = Math.max(8, Math.min(40, Number(byId("map-width").value) || 18));
@@ -2385,8 +2425,9 @@ function renderMap() {
   if (!grid) return;
   grid.style.gridTemplateColumns = `repeat(${state.map.width}, 32px)`;
   grid.innerHTML = state.map.tiles.map((tile, idx) => {
-    const tool = MAP_TOOLS.find(([key]) => key === tile);
-    return `<div class="tile ${esc(tile)}" onclick="paintTile(${idx})">${esc(tool ? tool[2] : "")}</div>`;
+    const tool = mapToolByKey(tile);
+    const label = tool ? tool[1] : tile;
+    return `<div class="tile ${esc(tile)}" title="${esc(label)}" onclick="paintTile(${idx})">${mapToolContent(tool)}</div>`;
   }).join("");
 }
 function paintTile(idx) {

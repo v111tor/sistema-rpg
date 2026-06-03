@@ -1,0 +1,26 @@
+Map icons
+=========
+
+Source: Game-icons.net / https://github.com/game-icons/icons
+License: Creative Commons Attribution 3.0 Unported (CC BY 3.0)
+License URL: https://creativecommons.org/licenses/by/3.0/
+
+The SVG files in this folder were downloaded from the Game-icons icon
+repository and lightly processed to remove the default black background path.
+
+Files used:
+- altar.svg: delapouite/sword-altar.svg
+- boss.svg: badges/skull.svg
+- chest.svg: skoll/open-treasure-chest.svg
+- door.svg: lorc/wooden-door.svg
+- hazard.svg: badges/exclamation.svg
+- light.svg: delapouite/torch.svg
+- npc.svg: darkzaitzev/hooded-figure.svg
+- pc.svg: delapouite/character.svg
+- pillar.svg: delapouite/ancient-columns.svg
+- rubble.svg: delapouite/brick-pile.svg
+- secret.svg: delapouite/boss-key.svg
+- stairs.svg: delapouite/3d-stairs.svg
+- statue.svg: skoll/chess-rook.svg
+- trap.svg: delapouite/caltrops.svg
+- water.svg: sbed/water-drop.svg

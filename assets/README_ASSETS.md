@@ -1,15 +1,19 @@
 # Assets do site
 
-O site já referencia `assets/crm-symbol.svg` como ícone local.
+O site referencia `assets/crm-symbol.svg` como icone local.
 
-Para baixar assets externos, use somente pacotes livres ou com licença compatível. Boas fontes:
+Os icones de mapa ficam em `assets/map-icons/` e foram baixados do
+Game-icons.net, com atribuicao registrada em `assets/map-icons/LICENSE.txt`.
+
+Para baixar novos assets externos, use somente pacotes livres ou com licenca
+compativel. Boas fontes:
 
 - Kenney Assets: https://kenney.nl/assets
 - OpenGameArt: https://opengameart.org/
 - Wikimedia Commons: https://commons.wikimedia.org/
 - Itch.io free game assets: https://itch.io/game-assets/free
 
-Sugestão de organização:
+Sugestao de organizacao:
 
 ```text
 assets/
@@ -19,7 +23,7 @@ assets/
   textures/
 ```
 
-Depois de baixar, prefira nomes simples e sem espaços:
+Depois de baixar, prefira nomes simples e sem espacos:
 
 ```text
 assets/tokens/guerreiro.png
