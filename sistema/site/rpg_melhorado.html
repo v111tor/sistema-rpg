@@ -110,7 +110,8 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
   flex-direction: column;
   gap: 5px;
 }
-.nav button {
+.nav button,
+.nav a {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -121,8 +122,11 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
   color: var(--muted);
   background: transparent;
   text-align: left;
+  text-decoration: none;
 }
-.nav button:hover, .nav button.active {
+.nav button:hover,
+.nav a:hover,
+.nav button.active {
   color: var(--text);
   background: var(--surface-2);
   border-color: var(--line-strong);
@@ -504,7 +508,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
   .app { grid-template-columns: 1fr; }
   .side { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
   .nav { flex-direction: row; overflow-x: auto; padding-bottom: 4px; }
-  .nav button { min-width: max-content; }
+  .nav button, .nav a { min-width: max-content; }
   .grid.sheet, .grid.two, .map-wrap { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
@@ -515,7 +519,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
   .save-status { width: 100%; margin-left: 0; }
   .grid.three, .grid.four, .field-row, .skills, .resource-grid, .stats, .filterbar, .filterbar.two, .sheet-summary { grid-template-columns: 1fr; }
   .sheet-tabs { display: grid; grid-template-columns: 1fr 1fr; }
-  .nav button { min-height: 44px; }
+  .nav button, .nav a { min-height: 44px; }
   input, textarea, select, .btn, .tool { min-height: 44px; }
   .tile { width: 38px; height: 38px; }
 }
@@ -536,6 +540,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
       <button data-tab="mapas"><span class="nav-mark">M</span> Mapas</button>
       <button data-tab="magia"><span class="nav-mark">H</span> Magias</button>
       <button data-tab="dados"><span class="nav-mark">D</span> Dados</button>
+      <a href="../ebook/Sistema_Mecanico_RPG.html" target="_blank" rel="noopener"><span class="nav-mark">S</span> Sistema Mecânico</a>
     </nav>
   </aside>
 
