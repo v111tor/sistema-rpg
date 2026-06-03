@@ -265,9 +265,17 @@ Escolha seu equipamento de duas formas (a critério do Mestre):
 
 |---|---|
 
-| Guerreiro | Armadura de couro reforçado, espada longa, escudo metálico, 3 poções de cura menor | | Arcanista | Bastão arcano, 3 pergaminhos em branco, kit de escrita, tinta arcana, 15 OO | | Sensiente | Cota de malha, adaga, instrumento musical, 20 OO |
+| Guerreiro | Couro reforçado, arma marcial, escudo ou arma pesada, 3 poções de cura menor |
 
-| Devoto | Armadura de escamas, maça, símbolo sagrado, kit de primeiros socorros, 15 OO | | Artífice | Armadura de brunea, besta leve, ferramentas artesanais (2 tipos), kit de alquimia, 10 OO | | Explorador | Couro reforçado, espada curta × 2, arco curto (20 flechas), ferramentas de ladrão, 15 OO |
+| Arcanista | Bastão arcano, adaga ou bordão, pergaminhos, kit de escrita, tinta arcana, 15 OO |
+
+| Sensiente | Couro, adaga ou bordão, foco emocional, instrumento musical, 20 OO |
+
+| Devoto | Escamas, maça, escudo de madeira, símbolo sagrado, kit de primeiros socorros, 15 OO |
+
+| Artífice | Brunea, besta leve, ferramentas artesanais (2 tipos), kit de alquimia, 10 OO |
+
+| Explorador | Couro reforçado, espadas curtas, arco curto (20 flechas), ferramentas de ladrão, 15 OO |
 
 **Opção B — Dinheiro Inicial:** Role 4d6 × 10 e compre equipamento na **Parte IX** (EQUIPAMENTOS). ---
 
@@ -931,6 +939,8 @@ Guerreiro
 
 **Pool de Aura:** 4 AU no nível 1, +1 a cada 2 níveis (máx. 14 no nível 20). Recupera em descanso curto.
 
+**Equipamento Inicial:** Couro reforçado; escolha **uma arma marcial corpo a corpo** (espada longa, machado de batalha ou martelo de guerra); escolha **escudo metálico** ou **arma marcial pesada** (espada grande ou alabarda); besta leve ou 3 dardos; kit de aventureiro; 3 poções de cura menor; 10 OO.
+
 **Características Fixas de Classe:**
 
 • **Nível 1:** Estilo de Combate (escolha um permanente: Arqueiro, Defesa, Duelo, Grande Arma, Proteção, Duas Armas)
@@ -1133,6 +1143,8 @@ Arcanista
 
 > *A magia arcana é intelectual, não postural — usar armadura não interfere nas habilidades. O Arcanista começa com treino em armadura leve e pode aprender média ou pesada investindo habilidades de classe ou talentos.*
 
+**Equipamento Inicial:** Bastão arcano; escolha **adaga** ou **bordão**; livro de fórmulas; 3 pergaminhos em branco; kit de escrita; tinta arcana; componente ou foco arcano simples; 15 OO.
+
 **Características Fixas de Classe:**
 
 • **Nível 1:** Grimório (aprende 6 habilidades Arcanas + 2 por nível) | Recuperação Arcana (2 PA/desc. curto)
@@ -1324,6 +1336,8 @@ Sensiente
 **Saves:** ESP, AGI | **Perícias:** Escolha 3 de (Persuasão, Enganação, Intimidação, Intuição, Acrobacia, História, Percepção)
 
 **Pool de PE:** 10 no nível 1, crescendo por nível (ver tabela). Recupera em descanso curto (4 PE) e longo (total). Estado Emocional
+
+**Equipamento Inicial:** Couro; escolha **adaga** ou **bordão**; escudo de madeira leve; foco emocional (amuleto, diário, máscara, lembrança ou instrumento); instrumento musical simples; 2 poções de cura menor; 20 OO.
 
 No início de cada combate (ou antes da primeira ação), o Sensiente **declara seu Estado Emocional**:
 
@@ -1543,6 +1557,8 @@ Devoto
 *Serve a uma divindade ou força demoníaca. Combina poder marcial com magia de Fé (PD).*
 
 **Dado de PV:** d8 | **Proficiências:** armas simples e marciais, armaduras leve e média, escudos **Saves:** DEV, ESP | **Perícias:** Escolha 2 de (Medicina, Religião, Intuição, Persuasão, História, Percepção) **Pool de PD:** 10 no nível 1, crescendo por nível (ver tabela). Recupera em descanso curto (4 PD) e longo (total).
+
+**Equipamento Inicial:** Escamas; maça ou martelo de guerra; escudo de madeira; símbolo sagrado, profano ou de pacto; livro de orações ou tomo de dogmas; incenso; kit de primeiros socorros; 15 OO.
 
 Escolha de Divindade
 
@@ -1767,6 +1783,8 @@ Artífice
 
 **Pool de PA (técnico):** 6 no nível 1, +1 a cada 2 níveis (máx. 16 no nível 20). Recupera em descanso curto (2 PA) e longo (total). Usado para ativar e criar encantamentos.
 
+**Equipamento Inicial:** Brunea; besta leve com 20 virotes; martelo de mão ou adaga; ferramentas artesanais de 2 tipos; kit de alquimia ou kit de reparo; 2 cristais de armazenamento vazios; caderno de esquemas; 10 OO.
+
 **Características Fixas de Classe:**
 
 • **Nível 1:** Infusão (encanta 1 item por nível/slots conforme tabela) | Especialista em Tecnologia (proficiência em todas ferramentas)
@@ -1963,6 +1981,8 @@ Explorador
 **Saves:** AGI, INT | **Perícias:** Escolha 3 de (Furtividade, Percepção, Sobrevivência, Atletismo, Enganação, Investigação, Natureza, Acrobacia)
 
 **Pool de AU:** 2 AU no nível 1, +1 a cada 3 níveis (máx. 8 no nível 20). Recupera em descanso curto.
+
+**Equipamento Inicial:** Couro reforçado; escolha **duas espadas curtas** ou **rapieira e adaga**; arco curto com 20 flechas ou besta de mão com 20 virotes; ferramentas de ladrão ou ferramentas de cartógrafo; corda 15m; capa de viagem; 15 OO.
 
 **Características Fixas de Classe:**
 
