@@ -208,6 +208,37 @@ O antecedente concede:
 
 ---
 
+### Idiomas do Sistema
+
+Todo personagem começa sabendo os idiomas concedidos pela raça. Quando uma raça, antecedente, talento ou feature conceder **1 idioma adicional**, escolha um idioma da tabela abaixo, desde que a escolha faça sentido para a história do personagem e para a campanha.
+
+Idiomas marcados como **Raro** normalmente exigem justificativa narrativa, contato com a cultura correspondente ou aprovação do Mestre.
+
+| Idioma | Categoria | Falantes comuns | Escrita | Pode ser idioma adicional? |
+|---|---|---|---|---|
+| Comum | Geral | Povos civilizados, viajantes, cidades e comércio | Comum | Sim |
+| Mercantil | Geral | Mercadores, guildas, caravanas e banqueiros | Comum | Sim |
+| Náutico | Geral | Marinheiros, piratas, portos e navegadores | Comum | Sim |
+| Antigo | Geral/Raro | Ruínas, estudiosos, impérios perdidos e inscrições arcanas | Antiga | Sim, com justificativa |
+| Élfico | Racial | Elfos, estudiosos de magia, cortes antigas | Élfica | Sim |
+| Anão | Racial | Anões, mineradores, ferreiros e arquitetos subterrâneos | Rúnica Anã | Sim |
+| Orcish | Racial | Orcs, clãs de guerra e tribos de fronteira | Marcas Orcs | Sim |
+| Goblin | Racial | Goblins, saqueadores, inventores improvisados e mercados ilegais | Goblin | Sim |
+| Sibilante | Racial | Lizardmans, criaturas reptilianas e cultos serpentinos | Glifos Reptilianos | Sim |
+| Tribal | Cultural | Homens-fera e povos tribais; varia por tribo | Marcas Tribais | Sim |
+| Uivante | Cultural | Tribos lupinas e homens-fera canídeos | Marcas Tribais | Sim |
+| Gorjeio | Cultural | Tribos aviárias e homens-fera alados | Marcas Tribais | Sim |
+| Rugido | Cultural | Tribos felinas, ursinas e grandes predadores | Marcas Tribais | Sim |
+| Subterrâneo | Raro | Povos das profundezas, cavernas, cidades soterradas e criaturas abissais de pedra | Rúnica Profunda | Sim, com aprovação |
+| Divino | Raro/Sagrado | Celestiais, devotos elevados, textos sagrados e servos de deuses | Celestial | Sim, com aprovação |
+| Abismal | Raro/Profano | Demônios, pactuados, cultos proibidos e entidades corrompidas | Abissal | Sim, com aprovação |
+
+**Idiomas adicionais:** quando uma regra disser "idioma adicional" ou "idioma à escolha", o personagem pode escolher qualquer idioma marcado como **Sim**. Idiomas raros devem aparecer na história do personagem: estudo religioso para Divino, pacto ou investigação proibida para Abismal, vivência em cavernas ou ruínas profundas para Subterrâneo.
+
+**Comunicação parcial:** personagens sem idioma em comum ainda podem tentar se comunicar com gestos, desenhos e palavras isoladas. O Mestre pode pedir um teste de **Influência**, **Intuição** ou **Conhecimento** dependendo da situação.
+
+---
+
 ### Passo 7 — Escolha as Perícias
 
 Sua classe oferece uma lista de perícias disponíveis; escolha o número indicado (geralmente 2 ou 3). Seu antecedente adiciona mais 2. Alguns traços raciais concedem perícias extras.
