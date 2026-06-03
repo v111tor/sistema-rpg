@@ -73,7 +73,20 @@ Finalize</a></li>
 <li><a href="#parte-i-mecânicas-base"
 id="toc-parte-i-mecânicas-base">PARTE I — MECÂNICAS BASE</a></li>
 <li><a href="#parte-ii-atributos" id="toc-parte-ii-atributos">PARTE II —
-ATRIBUTOS</a></li>
+ATRIBUTOS</a>
+<ul>
+<li><a href="#ajustes-depois-da-criação"
+id="toc-ajustes-depois-da-criação">Ajustes Depois da Criação</a></li>
+<li><a href="#multiclasse-e-pv" id="toc-multiclasse-e-pv">Multiclasse e
+PV</a></li>
+<li><a href="#pv-temporários" id="toc-pv-temporários">PV
+Temporários</a></li>
+<li><a href="#dados-de-vida-e-recuperação"
+id="toc-dados-de-vida-e-recuperação">Dados de Vida e
+Recuperação</a></li>
+<li><a href="#dano-cura-e-0-pv" id="toc-dano-cura-e-0-pv">Dano, Cura e 0
+PV</a></li>
+</ul></li>
 <li><a href="#parte-iii-perícias" id="toc-parte-iii-perícias">PARTE III
 — PERÍCIAS</a></li>
 <li><a href="#parte-iv-sistema-de-aura"
@@ -823,7 +836,21 @@ magia divina e possessão</p>
 <p>Pontos de Vida (PV)</p>
 <p>Os Pontos de Vida representam resistência física, fôlego, ferimentos
 leves, sorte de combate e a capacidade de continuar lutando sob pressão.
-Ao chegar a 0 PV, o personagem cai inconsciente.</p>
+PV não mede apenas “carne”; ele também mede aparos, sustos, cansaço,
+postura quebrada e pequenas aberturas que se acumulam até o personagem
+cair.</p>
+<p>Existem três valores importantes:</p>
+<div class="line-block">Valor | Função |</div>
+<p>|—|—|</p>
+<div class="line-block"><strong>PV Máximos</strong> | limite total de
+vida do personagem quando está completamente recuperado |</div>
+<div class="line-block"><strong>PV Atuais</strong> | quanto o personagem
+tem agora, depois de sofrer dano ou receber cura |</div>
+<div class="line-block"><strong>PV Temporários</strong> | proteção
+extra, barreira, moral ou energia provisória; é perdido antes dos PV
+atuais |</div>
+<p>Ao chegar a 0 PV, o personagem cai inconsciente e passa a usar as
+regras de morte.</p>
 <p>Como Calcular PV Máximos</p>
 <p><strong>PV Máximos = PV de Vigor + PV Inicial da Classe + (Progressão
 da Classe × níveis após o 1º) + bônus permanentes</strong></p>
@@ -831,6 +858,24 @@ da Classe × níveis após o 1º) + bônus permanentes</strong></p>
 deixa PVP e PVE mais previsíveis: personagens frágeis continuam
 vulneráveis, combatentes aguentam a linha de frente e o Mestre consegue
 calcular encontros sem depender de sorte na criação.</p>
+<p>Entenda cada parte da fórmula:</p>
+<div class="line-block">Parte da fórmula | O que significa |</div>
+<p>|—|—|</p>
+<div class="line-block"><strong>PV de Vigor</strong> | vida que vem da
+constituição física do personagem |</div>
+<div class="line-block"><strong>PV Inicial da Classe</strong> |
+resistência que a classe concede no nível 1 |</div>
+<div class="line-block"><strong>Progressão da Classe</strong> | PV
+ganhos a cada nível depois do primeiro |</div>
+<div class="line-block"><strong>Níveis após o 1º</strong> | nível total
+do personagem menos 1 |</div>
+<div class="line-block"><strong>Bônus permanentes</strong> | talentos,
+itens, características raciais, próteses, bênçãos ou efeitos duradouros
+|</div>
+<blockquote>
+<p><strong>Atalho:</strong> níveis após o 1º = Nível - 1. Um personagem
+nível 1 tem 0 níveis após o 1º; nível 5 tem 4; nível 10 tem 9.</p>
+</blockquote>
 <p><strong>Passo 1 — PV de Vigor:</strong></p>
 <div class="line-block">VIG | PV de Vigor |</div>
 <p>|—|—:|</p>
@@ -840,6 +885,13 @@ calcular encontros sem depender de sorte na criação.</p>
 <div class="line-block">d10 | 12 |</div>
 <div class="line-block">d12 | 14 |</div>
 <div class="line-block">d20 | 18 |</div>
+<p>O PV de Vigor usa o <strong>dado atual de VIG</strong>. Se o
+personagem aumentar VIG depois, recalcule esta parte e ajuste os PV
+Máximos pela diferença.</p>
+<blockquote>
+<p>Exemplo: um personagem sobe VIG de d6 para d8. PV de Vigor muda de 8
+para 10. Ele ganha +2 PV Máximos.</p>
+</blockquote>
 <p><strong>Passo 2 — PV da Classe:</strong></p>
 <div class="line-block">Classe | Dado de PV | PV Inicial | Progressão
 por nível após o 1º |</div>
@@ -848,7 +900,20 @@ por nível após o 1º |</div>
 <div class="line-block">Sensiente / Artífice | d6 | 6 | +3 |</div>
 <div class="line-block">Guerreiro / Devoto / Explorador | d8 | 8 | +4
 |</div>
+<p>O <strong>Dado de PV</strong> ainda existe para curas de descanso
+curto, habilidades e referência de robustez da classe. O cálculo de PV
+Máximos, porém, usa <strong>PV Inicial</strong> e <strong>Progressão
+fixa</strong>, não rolagem aleatória.</p>
 <p><strong>Passo 3 — Total:</strong></p>
+<p>Calcule nesta ordem:</p>
+<ol type="1">
+<li><p>Pegue o PV de Vigor pela tabela.</p></li>
+<li><p>Some o PV Inicial da Classe.</p></li>
+<li><p>Calcule quantos níveis existem após o 1º: <strong>Nível -
+1</strong>.</p></li>
+<li><p>Multiplique esse número pela Progressão da Classe.</p></li>
+<li><p>Some talentos, itens e bônus permanentes.</p></li>
+</ol>
 <blockquote>
 <p><strong>Exemplo:</strong> Guerreiro nível 5 com VIG d8:</p>
 </blockquote>
@@ -869,12 +934,113 @@ níveis após o 1º = 8</p>
 <blockquote>
 <p><strong>PV Máximos = 8 + 4 + 8 = 20</strong></p>
 </blockquote>
+<p><strong>Exemplo de nível 1:</strong> Devoto nível 1 com VIG d6:</p>
+<blockquote>
+<p>PV de Vigor = 8 | PV Inicial da Classe = 8 | Progressão = 4 × 0 =
+0</p>
+</blockquote>
+<blockquote>
+<p><strong>PV Máximos = 8 + 8 = 16</strong></p>
+</blockquote>
+<p><strong>Exemplo de personagem resistente:</strong> Artífice nível 8
+com VIG d10 e Amuleto de Saúde (+4 PV):</p>
+<blockquote>
+<p>PV de Vigor = 12 | PV Inicial da Classe = 6 | Progressão = 3 × 7 = 21
+| Bônus permanente = 4</p>
+</blockquote>
+<blockquote>
+<p><strong>PV Máximos = 12 + 6 + 21 + 4 = 43</strong></p>
+</blockquote>
+<p><strong>Exemplo de subida de nível:</strong> Explorador nível 4 com
+VIG d8 tem 10 + 8 + (4 × 3) = 30 PV. Ao subir para nível 5, ele ganha
+apenas a Progressão da Classe: +4 PV. Novo total: <strong>34
+PV</strong>.</p>
+<hr />
+<h3 id="ajustes-depois-da-criação">Ajustes Depois da Criação</h3>
+<p>Quando algo muda os PV Máximos, aplique apenas a diferença.</p>
+<div class="line-block">Mudança | Como ajustar |</div>
+<p>|—|—|</p>
+<div class="line-block">Subiu de nível | some a Progressão da Classe do
+novo nível |</div>
+<div class="line-block">Aumentou VIG | recalcule o PV de Vigor e some a
+diferença |</div>
+<div class="line-block">Perdeu VIG temporariamente | o Mestre decide se
+reduz PV Máximos enquanto durar o efeito |</div>
+<div class="line-block">Ganhou talento/item permanente | some o bônus
+listado |</div>
+<div class="line-block">Perdeu item permanente | remova o bônus listado
+|</div>
+<div class="line-block">Recebeu PV temporário | não altera PV Máximos;
+cria uma camada separada |</div>
+<p><strong>PV atual ao aumentar PV Máximos:</strong> se o personagem
+estiver completamente curado, aumente também os PV atuais. Se estiver
+ferido, mantenha os PV atuais e aumente apenas o máximo, a menos que a
+regra diga que também cura.</p>
+<blockquote>
+<p>Exemplo: Guerreiro 20/30 PV ganha +4 PV Máximos. Ele fica com 20/34
+PV, não 24/34. Se estivesse em 30/30, ficaria em 34/34.</p>
+</blockquote>
+<hr />
+<h3 id="multiclasse-e-pv">Multiclasse e PV</h3>
+<p>Em multiclasse, o personagem recebe o <strong>PV Inicial apenas da
+primeira classe</strong>. Nos níveis seguintes, use a <strong>Progressão
+da classe escolhida naquele nível</strong>.</p>
+<blockquote>
+<p>Exemplo: Guerreiro 3 / Arcanista 2 com VIG d8:</p>
+</blockquote>
+<blockquote>
+<p>PV de Vigor = 10 | PV Inicial da primeira classe Guerreiro = 8</p>
+</blockquote>
+<blockquote>
+<p>Progressão: nível 2 Guerreiro +4, nível 3 Guerreiro +4, nível 4
+Arcanista +2, nível 5 Arcanista +2</p>
+</blockquote>
+<blockquote>
+<p><strong>PV Máximos = 10 + 8 + 4 + 4 + 2 + 2 = 30</strong></p>
+</blockquote>
+<p>Se o personagem começou como Arcanista e depois entrou em Guerreiro,
+ele mantém o PV Inicial de Arcanista e passa a ganhar +4 apenas nos
+níveis em que escolher Guerreiro.</p>
+<hr />
+<h3 id="pv-temporários">PV Temporários</h3>
+<p>PV temporários representam escudos, moral, aura defensiva, placas
+improvisadas, bênçãos curtas ou amortecimento tecnológico.</p>
+<p>• Dano remove PV temporários antes dos PV atuais.</p>
+<p>• PV temporários não curam e não contam como PV atuais.</p>
+<p>• PV temporários não acumulam entre si; se receber uma nova fonte,
+escolha o maior valor.</p>
+<p>• PV temporários desaparecem ao fim da cena, descanso ou duração
+indicada.</p>
+<hr />
+<h3 id="dados-de-vida-e-recuperação">Dados de Vida e Recuperação</h3>
 <p><strong>Dados de Vida (Descanso Curto):</strong> No descanso curto
 você pode gastar um ou mais Dados de Vida para recuperar PV. Role o dado
 indicado pela classe e recupere o resultado + Mod. VIG, com mínimo de 1
 PV por dado gasto. Só pode usar dados de vida se tiver pelo menos 1 PV.
 Você possui uma quantidade de Dados de Vida igual ao seu nível e
 recupera metade deles ao final de um descanso longo.</p>
+<p>Em multiclasse, cada nível concede um Dado de Vida do tipo da classe
+daquele nível.</p>
+<blockquote>
+<p>Exemplo: Guerreiro 3 / Arcanista 2 possui 3 Dados de Vida d8 e 2
+Dados de Vida d4.</p>
+</blockquote>
+<p><strong>Descanso Longo:</strong> recupera todos os PV atuais até o
+máximo, remove PV temporários expirados e recupera metade dos Dados de
+Vida gastos.</p>
+<hr />
+<h3 id="dano-cura-e-0-pv">Dano, Cura e 0 PV</h3>
+<p>Quando sofre dano, reduza primeiro PV temporários, depois PV
+atuais.</p>
+<p>Quando recebe cura, aumente PV atuais até o limite dos PV Máximos.
+Cura excedente é perdida, a menos que o efeito diga que gera PV
+temporários.</p>
+<p>Ao chegar a 0 PV:</p>
+<p>• o personagem cai Inconsciente;</p>
+<p>• excesso de dano não deixa PV negativos no modo padrão;</p>
+<p>• começa a fazer Testes de Morte no início dos turnos seguintes;</p>
+<p>• cura recebida enquanto está a 0 PV faz o personagem acordar com o
+valor curado.</p>
 <p>Diretrizes de Balanceamento PVP/PVE</p>
 <p>• <strong>PVP padrão:</strong> use sempre PV fixo. PV temporário não
 acumula; se receber outra fonte, escolha o maior valor. Cura em combate
