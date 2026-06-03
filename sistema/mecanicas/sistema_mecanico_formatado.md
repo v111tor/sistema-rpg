@@ -449,6 +449,8 @@ Como Calcular PV Máximos
 
 **PV Máximos = PV de Vigor + PV Inicial da Classe + (Progressão da Classe × níveis após o 1º) + bônus permanentes**
 
+**Regra explícita:** no nível 1, o personagem soma **PV de Vigor** + **PV Inicial da Classe**. Depois do nível 1, ele não ganha o PV Inicial de novo; a cada novo nível, soma apenas a **Progressão da Classe** escolhida naquele nível.
+
 O modo padrão usa valores fixos, sem rolagem de PV por nível. Isso deixa PVP e PVE mais previsíveis: personagens frágeis continuam vulneráveis, combatentes aguentam a linha de frente e o Mestre consegue calcular encontros sem depender de sorte na criação.
 
 Entenda cada parte da fórmula:
@@ -469,7 +471,9 @@ Entenda cada parte da fórmula:
 
 > **Atalho:** níveis após o 1º = Nível - 1. Um personagem nível 1 tem 0 níveis após o 1º; nível 5 tem 4; nível 10 tem 9.
 
-**Passo 1 — PV de Vigor:**
+**Passo 1 — PV de Vigor**
+
+PV de Vigor é o valor fixo de vida concedido pelo dado atual de **VIG**. Ele representa corpo, fôlego, saúde, resistência a trauma e capacidade natural de suportar ferimentos. Quanto maior o dado de Vigor, maior esse bloco de PV.
 
 | VIG | PV de Vigor |
 
@@ -491,21 +495,49 @@ O PV de Vigor usa o **dado atual de VIG**. Se o personagem aumentar VIG depois, 
 
 > Exemplo: um personagem sobe VIG de d6 para d8. PV de Vigor muda de 8 para 10. Ele ganha +2 PV Máximos.
 
-**Passo 2 — PV da Classe:**
+**Passo 2 — PV Inicial de Classe**
 
-| Classe | Dado de PV | PV Inicial | Progressão por nível após o 1º |
+PV Inicial de Classe é o valor de vida que a classe concede **somente no nível 1**. Ele representa o treinamento inicial da classe: combatentes começam mais robustos, especialistas médios começam equilibrados e conjuradores frágeis começam com menos reserva física.
 
-|---|---:|---:|---:|
+| Classe | PV Inicial de Classe | Por quê |
 
-| Arcanista | d4 | 4 | +2 |
+|---|---:|---|
 
-| Sensiente / Artífice | d6 | 6 | +3 |
+| Arcanista | 4 | classe frágil, focada em magia e preparação |
 
-| Guerreiro / Devoto / Explorador | d8 | 8 | +4 |
+| Sensiente | 6 | suporte e controle, resistência intermediária |
+
+| Artífice | 6 | técnico de campo, usa ferramentas e armaduras médias |
+
+| Guerreiro | 8 | linha de frente, treino marcial pesado |
+
+| Devoto | 8 | combatente sagrado/profano com proteção e armadura |
+
+| Explorador | 8 | sobrevivente físico, móvel e resistente |
+
+**Passo 3 — Progressão de PV por Nível**
+
+A Progressão de PV é quanto a classe adiciona aos PV Máximos **cada vez que o personagem sobe de nível depois do 1º**. Ela não é rolada: é fixa.
+
+| Classe | Dado de PV | Progressão por nível depois do 1º |
+
+|---|---:|---:|
+
+| Arcanista | d4 | +2 PV por nível |
+
+| Sensiente | d6 | +3 PV por nível |
+
+| Artífice | d6 | +3 PV por nível |
+
+| Guerreiro | d8 | +4 PV por nível |
+
+| Devoto | d8 | +4 PV por nível |
+
+| Explorador | d8 | +4 PV por nível |
 
 O **Dado de PV** ainda existe para curas de descanso curto, habilidades e referência de robustez da classe. O cálculo de PV Máximos, porém, usa **PV Inicial** e **Progressão fixa**, não rolagem aleatória.
 
-**Passo 3 — Total:**
+**Passo 4 — Total**
 
 Calcule nesta ordem:
 
@@ -544,6 +576,28 @@ Calcule nesta ordem:
 > **PV Máximos = 12 + 6 + 21 + 4 = 43**
 
 **Exemplo de subida de nível:** Explorador nível 4 com VIG d8 tem 10 + 8 + (4 × 3) = 30 PV. Ao subir para nível 5, ele ganha apenas a Progressão da Classe: +4 PV. Novo total: **34 PV**.
+
+**Tabela rápida de progressão**
+
+Use esta tabela quando o personagem subir de nível:
+
+| Se a classe do novo nível for... | Some aos PV Máximos |
+
+|---|---:|
+
+| Arcanista | +2 PV |
+
+| Sensiente | +3 PV |
+
+| Artífice | +3 PV |
+
+| Guerreiro | +4 PV |
+
+| Devoto | +4 PV |
+
+| Explorador | +4 PV |
+
+> **Importante:** subir de nível nunca soma novamente o PV Inicial de Classe. O PV Inicial é recebido uma única vez, no nível 1.
 
 ---
 

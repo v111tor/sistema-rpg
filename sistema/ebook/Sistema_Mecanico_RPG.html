@@ -854,6 +854,11 @@ regras de morte.</p>
 <p>Como Calcular PV Máximos</p>
 <p><strong>PV Máximos = PV de Vigor + PV Inicial da Classe + (Progressão
 da Classe × níveis após o 1º) + bônus permanentes</strong></p>
+<p><strong>Regra explícita:</strong> no nível 1, o personagem soma
+<strong>PV de Vigor</strong> + <strong>PV Inicial da Classe</strong>.
+Depois do nível 1, ele não ganha o PV Inicial de novo; a cada novo
+nível, soma apenas a <strong>Progressão da Classe</strong> escolhida
+naquele nível.</p>
 <p>O modo padrão usa valores fixos, sem rolagem de PV por nível. Isso
 deixa PVP e PVE mais previsíveis: personagens frágeis continuam
 vulneráveis, combatentes aguentam a linha de frente e o Mestre consegue
@@ -876,7 +881,11 @@ itens, características raciais, próteses, bênçãos ou efeitos duradouros
 <p><strong>Atalho:</strong> níveis após o 1º = Nível - 1. Um personagem
 nível 1 tem 0 níveis após o 1º; nível 5 tem 4; nível 10 tem 9.</p>
 </blockquote>
-<p><strong>Passo 1 — PV de Vigor:</strong></p>
+<p><strong>Passo 1 — PV de Vigor</strong></p>
+<p>PV de Vigor é o valor fixo de vida concedido pelo dado atual de
+<strong>VIG</strong>. Ele representa corpo, fôlego, saúde, resistência a
+trauma e capacidade natural de suportar ferimentos. Quanto maior o dado
+de Vigor, maior esse bloco de PV.</p>
 <div class="line-block">VIG | PV de Vigor |</div>
 <p>|—|—:|</p>
 <div class="line-block">d4 | 6 |</div>
@@ -892,19 +901,44 @@ Máximos pela diferença.</p>
 <p>Exemplo: um personagem sobe VIG de d6 para d8. PV de Vigor muda de 8
 para 10. Ele ganha +2 PV Máximos.</p>
 </blockquote>
-<p><strong>Passo 2 — PV da Classe:</strong></p>
-<div class="line-block">Classe | Dado de PV | PV Inicial | Progressão
-por nível após o 1º |</div>
-<p>|—|—:|—:|—:|</p>
-<div class="line-block">Arcanista | d4 | 4 | +2 |</div>
-<div class="line-block">Sensiente / Artífice | d6 | 6 | +3 |</div>
-<div class="line-block">Guerreiro / Devoto / Explorador | d8 | 8 | +4
-|</div>
+<p><strong>Passo 2 — PV Inicial de Classe</strong></p>
+<p>PV Inicial de Classe é o valor de vida que a classe concede
+<strong>somente no nível 1</strong>. Ele representa o treinamento
+inicial da classe: combatentes começam mais robustos, especialistas
+médios começam equilibrados e conjuradores frágeis começam com menos
+reserva física.</p>
+<div class="line-block">Classe | PV Inicial de Classe | Por quê |</div>
+<p>|—|—:|—|</p>
+<div class="line-block">Arcanista | 4 | classe frágil, focada em magia e
+preparação |</div>
+<div class="line-block">Sensiente | 6 | suporte e controle, resistência
+intermediária |</div>
+<div class="line-block">Artífice | 6 | técnico de campo, usa ferramentas
+e armaduras médias |</div>
+<div class="line-block">Guerreiro | 8 | linha de frente, treino marcial
+pesado |</div>
+<div class="line-block">Devoto | 8 | combatente sagrado/profano com
+proteção e armadura |</div>
+<div class="line-block">Explorador | 8 | sobrevivente físico, móvel e
+resistente |</div>
+<p><strong>Passo 3 — Progressão de PV por Nível</strong></p>
+<p>A Progressão de PV é quanto a classe adiciona aos PV Máximos
+<strong>cada vez que o personagem sobe de nível depois do 1º</strong>.
+Ela não é rolada: é fixa.</p>
+<div class="line-block">Classe | Dado de PV | Progressão por nível
+depois do 1º |</div>
+<p>|—|—:|—:|</p>
+<div class="line-block">Arcanista | d4 | +2 PV por nível |</div>
+<div class="line-block">Sensiente | d6 | +3 PV por nível |</div>
+<div class="line-block">Artífice | d6 | +3 PV por nível |</div>
+<div class="line-block">Guerreiro | d8 | +4 PV por nível |</div>
+<div class="line-block">Devoto | d8 | +4 PV por nível |</div>
+<div class="line-block">Explorador | d8 | +4 PV por nível |</div>
 <p>O <strong>Dado de PV</strong> ainda existe para curas de descanso
 curto, habilidades e referência de robustez da classe. O cálculo de PV
 Máximos, porém, usa <strong>PV Inicial</strong> e <strong>Progressão
 fixa</strong>, não rolagem aleatória.</p>
-<p><strong>Passo 3 — Total:</strong></p>
+<p><strong>Passo 4 — Total</strong></p>
 <p>Calcule nesta ordem:</p>
 <ol type="1">
 <li><p>Pegue o PV de Vigor pela tabela.</p></li>
@@ -955,6 +989,22 @@ com VIG d10 e Amuleto de Saúde (+4 PV):</p>
 VIG d8 tem 10 + 8 + (4 × 3) = 30 PV. Ao subir para nível 5, ele ganha
 apenas a Progressão da Classe: +4 PV. Novo total: <strong>34
 PV</strong>.</p>
+<p><strong>Tabela rápida de progressão</strong></p>
+<p>Use esta tabela quando o personagem subir de nível:</p>
+<div class="line-block">Se a classe do novo nível for… | Some aos PV
+Máximos |</div>
+<p>|—|—:|</p>
+<div class="line-block">Arcanista | +2 PV |</div>
+<div class="line-block">Sensiente | +3 PV |</div>
+<div class="line-block">Artífice | +3 PV |</div>
+<div class="line-block">Guerreiro | +4 PV |</div>
+<div class="line-block">Devoto | +4 PV |</div>
+<div class="line-block">Explorador | +4 PV |</div>
+<blockquote>
+<p><strong>Importante:</strong> subir de nível nunca soma novamente o PV
+Inicial de Classe. O PV Inicial é recebido uma única vez, no nível
+1.</p>
+</blockquote>
 <hr />
 <h3 id="ajustes-depois-da-criação">Ajustes Depois da Criação</h3>
 <p>Quando algo muda os PV Máximos, aplique apenas a diferença.</p>
