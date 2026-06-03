@@ -5,6 +5,9 @@ O site referencia `assets/crm-symbol.svg` como icone local.
 Os icones de mapa ficam em `assets/map-icons/` e foram baixados do
 Game-icons.net, com atribuicao registrada em `assets/map-icons/LICENSE.txt`.
 
+Os tiles de terreno do mapa ficam em `assets/map-tiles/`, com licenca e
+fontes registradas em `assets/map-tiles/LICENSE.txt`.
+
 Para baixar novos assets externos, use somente pacotes livres ou com licenca
 compativel. Boas fontes:
 
