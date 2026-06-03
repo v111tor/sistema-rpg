@@ -778,7 +778,7 @@ Predador, Guardião, Parasita, Enxame, Diplomata, Fanático, Errante e Corrompid
 **FOR** 13 (+1) **DES** 12 (+1) **CON** 16 (+3) **INT** 6 (-2) **SAB** 13 (+1) **CAR** 12 (+1)  
 **Ataque** +4 | **Sentidos** visão no escuro 18m | **Cultura** Tribo isolada | **Ambiente** Montanha
 
-**Memória Congelada.** Alvo atingido perde bônus de proficiência por 1 rodada.  
+**Memória Congelada.** Alvo atingido trata uma perícia treinada à escolha do mestre como não proficiente por 1 rodada.  
 **Ações.** *Estilhaço Frio.* Ataque +4. Dano 2d6+2 frio.  
 **Gancho.** Pessoas presas no gelo ainda sonham.
 

@@ -640,9 +640,11 @@ situação.</p>
 <p>Sua classe oferece uma lista de perícias disponíveis; escolha o
 número indicado (geralmente 2 ou 3). Seu antecedente adiciona mais 2.
 Alguns traços raciais concedem perícias extras.</p>
-<p>Para cada perícia em que é <strong>proficiente</strong>: rola o dado
-do atributo correspondente + Mod. do atributo. Para perícias <strong>sem
-proficiência</strong>: rola d4 + Wild Die, sem modificador.</p>
+<p>Para cada perícia em que é <strong>proficiente</strong>: role o dado
+do atributo correspondente e some o Mod. do atributo. Para perícias
+<strong>sem proficiência</strong>: role somente o dado do atributo
+correspondente, sem Dado Selvagem, sem Mod. do atributo e sem bônus
+adicional.</p>
 <hr />
 <h3 id="passo-8-escolha-o-talento-inicial">Passo 8 — Escolha o Talento
 Inicial</h3>
@@ -687,14 +689,20 @@ Passo 6</p>
 por um dado — quanto maior o dado, mais competente o personagem naquele
 aspecto.</p>
 <p>A Rolagem Base</p>
-<p>Sempre que um personagem tenta algo com chance de falha, o jogador
-rola o <strong>dado do atributo ou perícia</strong> relevante.
+<p>Sempre que um personagem tenta algo com chance de falha fora das
+perícias, o jogador rola o <strong>dado do atributo</strong> relevante.
 Personagens jogadores também rolam um <strong>Dado Selvagem
 (d6)</strong> junto e ficam com o <strong>maior resultado</strong>.</p>
 <blockquote>
-<p><strong>Regra:</strong> Role [Dado do Atributo/Perícia] + [Dado
-Selvagem d6]. Tome o maior valor. Some o <strong>Modificador do
-Atributo</strong>. Compare com a CD.</p>
+<p><strong>Regra:</strong> Role [Dado do Atributo] + [Dado Selvagem d6].
+Tome o maior valor. Some o <strong>Modificador do Atributo</strong>.
+Compare com a CD.</p>
+</blockquote>
+<blockquote>
+<p><strong>Exceção — Perícias:</strong> perícias usam a regra própria da
+Parte III. Sem proficiência, role apenas o dado do atributo ligado à
+perícia. Com proficiência, role o dado do atributo e some o Modificador
+do Atributo.</p>
 </blockquote>
 <p>NPCs e monstros <strong>não</strong> rolam o Dado Selvagem — somente
 personagens jogadores.</p>
@@ -869,18 +877,30 @@ de Escudo</p>
 <p>• <em>Armaduras Pesadas:</em> Mod. AGI não se aplica</p>
 <hr />
 <h2 id="parte-iii-perícias">PARTE III — PERÍCIAS</h2>
-<p>Cada perícia está ligada a um atributo. Ao ser
-<strong>proficiente</strong> em uma perícia, o personagem rola o dado do
-atributo correspondente e <strong>adiciona o Modificador do Atributo ao
-resultado final</strong>. Sem proficiência, rola d4 (mais o Dado
-Selvagem, sem modificador).</p>
+<p>Cada perícia está ligada a um atributo. Perícias medem treinamento
+aplicado: um personagem ainda pode tentar uma ação sem treino, mas não
+recebe o refinamento que vem da proficiência.</p>
+<p><strong>Sem proficiência:</strong> role somente o dado do atributo
+correspondente. Não role Dado Selvagem, não some Modificador do Atributo
+e não aplique bônus adicional.</p>
+<p><strong>Com proficiência:</strong> role o dado do atributo
+correspondente e some o Modificador do Atributo.</p>
 <blockquote>
-<p><strong>Exemplo:</strong> Personagem com AGI d8 (Mod +2) tentando
-Furtividade. Rola d8 + d6 (Wild Die). Sai 5 e 3, usa o 5. Some +2 →
-total <strong>7</strong> vs CD 8. Falhou por 1.</p>
+<p><strong>Exemplo sem proficiência:</strong> Personagem com AGI d8
+tentando Furtividade sem treinamento. Rola apenas d8. Sai 5 → total
+<strong>5</strong> vs CD 8.</p>
 </blockquote>
-<p>A rolagem final portanto é: <strong>max(AtributoDie, WildDie) +
-Modificador do Atributo vs CD</strong>.</p>
+<blockquote>
+<p><strong>Exemplo com proficiência:</strong> O mesmo personagem é
+proficiente em Furtividade. Rola d8. Sai 5. Soma Mod. AGI +2 → total
+<strong>7</strong> vs CD 8.</p>
+</blockquote>
+<p>A rolagem final portanto é:</p>
+<div class="line-block">Situação | Rolagem |</div>
+<p>|—|—|</p>
+<div class="line-block">Sem proficiência | Dado do atributo |</div>
+<div class="line-block">Com proficiência | Dado do atributo +
+Modificador do atributo |</div>
 <div class="line-block">Perícia | Atributo | Usos comuns |</div>
 <p>|—|—|—|</p>
 <div class="line-block">Acrobacia | AGI | Equilíbrio, rolar, escapar de
@@ -2290,9 +2310,9 @@ finesse e tiver vantagem, estiver escondido, ou tiver um aliado
 adjacente ao alvo. O dano extra segue a coluna Ataque Furtivo da
 tabela.</p>
 <p><strong>Especialista.</strong> No nível 1, escolha 2 perícias em que
-você seja proficiente. Ao rolar essas perícias, dobre o bônus de
-proficiência. No nível 6, escolha mais 2 perícias para receber esse
-benefício.</p>
+você seja proficiente. Ao rolar essas perícias, some o Modificador do
+Atributo duas vezes. No nível 6, escolha mais 2 perícias para receber
+esse benefício.</p>
 <p><strong>Pool de Aura do Explorador.</strong> Seu AU representa
 reflexo, respiração e movimento treinado. Ele recupera em descanso curto
 e pode ser usado em técnicas de mobilidade, furtividade e
@@ -2355,9 +2375,9 @@ oportunidade (antes do ataque ser resolvido).</p>
 <p>Segue qualquer criatura em qualquer terreno sem teste. Identifica
 hora, velocidade e estado geral da criatura rastreada.</p>
 <p><strong>18. Maestria de Perícia</strong> <em>(Nível 5+)</em></p>
-<p>Dobra o bônus em 2 perícias adicionais (além das do Especialista).
-Uma perícia à escolha tem mínimo de 10 em qualquer teste (nunca falha
-criticamente).</p>
+<p>Dobra o Modificador do Atributo em 2 perícias adicionais (além das do
+Especialista). Uma perícia à escolha tem mínimo de 10 em qualquer teste
+(nunca falha criticamente).</p>
 <p><strong>Requer Nível 10+:</strong></p>
 <p><strong>19. Mente Elusiva</strong> <em>(Nível 10+)</em></p>
 <p>Imune a leitura de mente, bola de cristal e magias de controle
@@ -4746,8 +4766,8 @@ corrompido</em></p>
 <strong>Ataque</strong> +4 | <strong>Sentidos</strong> visão no escuro
 18m | <strong>Cultura</strong> Tribo isolada | <strong>Ambiente</strong>
 Montanha</p>
-<p><strong>Memória Congelada.</strong> Alvo atingido perde bônus de
-proficiência por 1 rodada.<br />
+<p><strong>Memória Congelada.</strong> Alvo atingido trata uma perícia
+treinada à escolha do mestre como não proficiente por 1 rodada.<br />
 <strong>Ações.</strong> <em>Estilhaço Frio.</em> Ataque +4. Dano 2d6+2
 frio.<br />
 <strong>Gancho.</strong> Pessoas presas no gelo ainda sonham.</p>

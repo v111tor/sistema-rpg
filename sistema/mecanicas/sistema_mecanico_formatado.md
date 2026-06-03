@@ -245,7 +245,7 @@ Idiomas marcados como **Raro** normalmente exigem justificativa narrativa, conta
 
 Sua classe oferece uma lista de perícias disponíveis; escolha o número indicado (geralmente 2 ou 3). Seu antecedente adiciona mais 2. Alguns traços raciais concedem perícias extras.
 
-Para cada perícia em que é **proficiente**: rola o dado do atributo correspondente + Mod. do atributo. Para perícias **sem proficiência**: rola d4 + Wild Die, sem modificador.
+Para cada perícia em que é **proficiente**: role o dado do atributo correspondente e some o Mod. do atributo. Para perícias **sem proficiência**: role somente o dado do atributo correspondente, sem Dado Selvagem, sem Mod. do atributo e sem bônus adicional.
 
 ---
 
@@ -303,9 +303,11 @@ Este sistema usa um conjunto de **dados poliédricos** (d4, d6, d8, d10, d12 e d
 
 A Rolagem Base
 
-Sempre que um personagem tenta algo com chance de falha, o jogador rola o **dado do atributo ou perícia** relevante. Personagens jogadores também rolam um **Dado Selvagem (d6)** junto e ficam com o **maior resultado**.
+Sempre que um personagem tenta algo com chance de falha fora das perícias, o jogador rola o **dado do atributo** relevante. Personagens jogadores também rolam um **Dado Selvagem (d6)** junto e ficam com o **maior resultado**.
 
-> **Regra:** Role [Dado do Atributo/Perícia] + [Dado Selvagem d6]. Tome o maior valor. Some o **Modificador do Atributo**. Compare com a CD.
+> **Regra:** Role [Dado do Atributo] + [Dado Selvagem d6]. Tome o maior valor. Some o **Modificador do Atributo**. Compare com a CD.
+
+> **Exceção — Perícias:** perícias usam a regra própria da Parte III. Sem proficiência, role apenas o dado do atributo ligado à perícia. Com proficiência, role o dado do atributo e some o Modificador do Atributo.
 
 NPCs e monstros **não** rolam o Dado Selvagem — somente personagens jogadores.
 
@@ -507,11 +509,25 @@ Representa a defesa passiva — a dificuldade de acertar o personagem.
 
 ## PARTE III — PERÍCIAS
 
-Cada perícia está ligada a um atributo. Ao ser **proficiente** em uma perícia, o personagem rola o dado do atributo correspondente e **adiciona o Modificador do Atributo ao resultado final**. Sem proficiência, rola d4 (mais o Dado Selvagem, sem modificador).
+Cada perícia está ligada a um atributo. Perícias medem treinamento aplicado: um personagem ainda pode tentar uma ação sem treino, mas não recebe o refinamento que vem da proficiência.
 
-> **Exemplo:** Personagem com AGI d8 (Mod +2) tentando Furtividade. Rola d8 + d6 (Wild Die). Sai 5 e 3, usa o 5. Some +2 → total **7** vs CD 8. Falhou por 1.
+**Sem proficiência:** role somente o dado do atributo correspondente. Não role Dado Selvagem, não some Modificador do Atributo e não aplique bônus adicional.
 
-A rolagem final portanto é: **max(AtributoDie, WildDie) + Modificador do Atributo vs CD**.
+**Com proficiência:** role o dado do atributo correspondente e some o Modificador do Atributo.
+
+> **Exemplo sem proficiência:** Personagem com AGI d8 tentando Furtividade sem treinamento. Rola apenas d8. Sai 5 → total **5** vs CD 8.
+
+> **Exemplo com proficiência:** O mesmo personagem é proficiente em Furtividade. Rola d8. Sai 5. Soma Mod. AGI +2 → total **7** vs CD 8.
+
+A rolagem final portanto é:
+
+| Situação | Rolagem |
+
+|---|---|
+
+| Sem proficiência | Dado do atributo |
+
+| Com proficiência | Dado do atributo + Modificador do atributo |
 
 | Perícia | Atributo | Usos comuns |
 
@@ -2056,7 +2072,7 @@ Explorador
 
 **Ataque Furtivo.** Uma vez por turno, cause dano extra quando acertar uma criatura com arma à distância, arma leve ou arma de finesse e tiver vantagem, estiver escondido, ou tiver um aliado adjacente ao alvo. O dano extra segue a coluna Ataque Furtivo da tabela.
 
-**Especialista.** No nível 1, escolha 2 perícias em que você seja proficiente. Ao rolar essas perícias, dobre o bônus de proficiência. No nível 6, escolha mais 2 perícias para receber esse benefício.
+**Especialista.** No nível 1, escolha 2 perícias em que você seja proficiente. Ao rolar essas perícias, some o Modificador do Atributo duas vezes. No nível 6, escolha mais 2 perícias para receber esse benefício.
 
 **Pool de Aura do Explorador.** Seu AU representa reflexo, respiração e movimento treinado. Ele recupera em descanso curto e pode ser usado em técnicas de mobilidade, furtividade e sobrevivência.
 
@@ -2140,7 +2156,7 @@ Segue qualquer criatura em qualquer terreno sem teste. Identifica hora, velocida
 
 **18. Maestria de Perícia** *(Nível 5+)*
 
-Dobra o bônus em 2 perícias adicionais (além das do Especialista). Uma perícia à escolha tem mínimo de 10 em qualquer teste (nunca falha criticamente).
+Dobra o Modificador do Atributo em 2 perícias adicionais (além das do Especialista). Uma perícia à escolha tem mínimo de 10 em qualquer teste (nunca falha criticamente).
 
 **Requer Nível 10+:**
 
