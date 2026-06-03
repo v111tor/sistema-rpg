@@ -178,9 +178,11 @@ Com atributos definidos, calcule:
 
 **Aparar** = 4 + Mod. AGI + Bônus de Armadura + Bônus de Escudo
 
-**PV Máximos** = PV Base (VIG dado × 2) + (Dado de PV da Classe × Nível)
+**PV Máximos** = PV de Vigor + PV Inicial da Classe + Progressão da Classe por nível após o 1º
 
-• No nível 1: PV = PV Base + valor máximo do dado de PV da classe
+• No nível 1: PV = PV de Vigor + PV Inicial da Classe
+
+• A partir do nível 2: some a Progressão da Classe a cada nível. Não role PV por nível no modo padrão.
 
 **Pool Mágico ou de Aura** = definido pela classe (ver tabela de cada classe)
 
@@ -395,9 +397,9 @@ Vigor (VIG)
 
 Resistência física e saúde. Determina pontos de vida, resistência a venenos, doenças e exaustão.
 
-• **PV base** = VIG dado × 2 (Exemplo: d8 VIG = 16 PV base)
+• **PV de Vigor** = valor fixo pela tabela de PV (Exemplo: VIG d8 = 10 PV de Vigor)
 
-• **+PV por nível** = dado de PV da classe
+• **+PV por nível** = progressão fixa da classe após o 1º nível
 
 Intelecto (INT)
 
@@ -425,51 +427,69 @@ Ligação com forças divinas ou demoníacas. O Modificador de DEV amplifica cur
 
 Pontos de Vida (PV)
 
-Os Pontos de Vida representam a resistência física e a vitalidade do personagem. Ao chegar a 0 PV, o personagem cai inconsciente.
+Os Pontos de Vida representam resistência física, fôlego, ferimentos leves, sorte de combate e a capacidade de continuar lutando sob pressão. Ao chegar a 0 PV, o personagem cai inconsciente.
 
 Como Calcular PV Máximos
 
-**PV Máximos = PV Base + (Dado de PV da Classe × Nível)**
+**PV Máximos = PV de Vigor + PV Inicial da Classe + (Progressão da Classe × níveis após o 1º) + bônus permanentes**
 
-**Passo 1 — PV Base (determinado pelo Vigor):**
+O modo padrão usa valores fixos, sem rolagem de PV por nível. Isso deixa PVP e PVE mais previsíveis: personagens frágeis continuam vulneráveis, combatentes aguentam a linha de frente e o Mestre consegue calcular encontros sem depender de sorte na criação.
 
-| VIG | PV Base |
+**Passo 1 — PV de Vigor:**
 
-|---|---|
+| VIG | PV de Vigor |
 
-| d4 | 8 |
+|---|---:|
 
-| d6 | 12 |
+| d4 | 6 |
 
-| d8 | 16 |
+| d6 | 8 |
 
-| d10 | 20 |
+| d8 | 10 |
 
-| d12 | 24 |
+| d10 | 12 |
 
-**Passo 2 — PV por Nível (dado da classe):**
+| d12 | 14 |
 
-| Classe | Dado de PV | Média por nível |
+| d20 | 18 |
 
-|---|---|---|
+**Passo 2 — PV da Classe:**
 
-| Arcanista | d4 | 2 |
+| Classe | Dado de PV | PV Inicial | Progressão por nível após o 1º |
 
-| Sensiente / Artífice | d6 | 3 |
+|---|---:|---:|---:|
 
-| Guerreiro / Devoto / Explorador | d8 | 4 |
+| Arcanista | d4 | 4 | +2 |
 
-A cada nível, role o dado de PV da sua classe e some ao total (ou use a média para consistência).
+| Sensiente / Artífice | d6 | 6 | +3 |
+
+| Guerreiro / Devoto / Explorador | d8 | 8 | +4 |
 
 **Passo 3 — Total:**
 
 > **Exemplo:** Guerreiro nível 5 com VIG d8:
 
-> PV Base = 16 | PV de nível = 4 × 5 = 20 (usando média)
+> PV de Vigor = 10 | PV Inicial da Classe = 8 | Progressão = 4 × 4 níveis após o 1º = 16
 
-> **PV Máximos = 16 + 20 = 36**
+> **PV Máximos = 10 + 8 + 16 = 34**
 
-**Dados de Vida (Descanso Curto):** No descanso curto você pode gastar um ou mais Dados de Vida para recuperar PV. Role o dado (mesmo tipo do dado de PV da sua classe) e recupere o resultado. Só pode usar dados de vida se tiver pelo menos 1 PV.
+> **Exemplo:** Arcanista nível 5 com VIG d6:
+
+> PV de Vigor = 8 | PV Inicial da Classe = 4 | Progressão = 2 × 4 níveis após o 1º = 8
+
+> **PV Máximos = 8 + 4 + 8 = 20**
+
+**Dados de Vida (Descanso Curto):** No descanso curto você pode gastar um ou mais Dados de Vida para recuperar PV. Role o dado indicado pela classe e recupere o resultado + Mod. VIG, com mínimo de 1 PV por dado gasto. Só pode usar dados de vida se tiver pelo menos 1 PV. Você possui uma quantidade de Dados de Vida igual ao seu nível e recupera metade deles ao final de um descanso longo.
+
+Diretrizes de Balanceamento PVP/PVE
+
+• **PVP padrão:** use sempre PV fixo. PV temporário não acumula; se receber outra fonte, escolha o maior valor. Cura em combate não pode ultrapassar os PV máximos e efeitos de cura repetida devem custar ação, recurso ou limite de descanso.
+
+• **PVE padrão:** use o PV calculado para personagens jogadores. Para criaturas comuns, prefira PV médio do bestiário. Para chefes, aumente PV em 25% a 50% ou adicione fases, em vez de dobrar dano.
+
+• **Duração esperada:** um duelo equilibrado entre personagens do mesmo nível deve durar cerca de 3 a 5 rodadas. Um encontro PVE contra grupo equivalente deve durar 4 a 6 rodadas. Se combates passam disso com frequência, reduza PV de criaturas em 15% ou aumente objetivos de cenário além de “zerar PV”.
+
+• **Modo heroico opcional:** para campanhas mais épicas e menos letais, some +2 PV por nível do personagem. Não use este bônus em PVP competitivo.
 
 ---
 

@@ -455,9 +455,11 @@ Derivados</h3>
 <p>Com atributos definidos, calcule:</p>
 <p><strong>Aparar</strong> = 4 + Mod. AGI + Bônus de Armadura + Bônus de
 Escudo</p>
-<p><strong>PV Máximos</strong> = PV Base (VIG dado × 2) + (Dado de PV da
-Classe × Nível)</p>
-<p>• No nível 1: PV = PV Base + valor máximo do dado de PV da classe</p>
+<p><strong>PV Máximos</strong> = PV de Vigor + PV Inicial da Classe +
+Progressão da Classe por nível após o 1º</p>
+<p>• No nível 1: PV = PV de Vigor + PV Inicial da Classe</p>
+<p>• A partir do nível 2: some a Progressão da Classe a cada nível. Não
+role PV por nível no modo padrão.</p>
 <p><strong>Pool Mágico ou de Aura</strong> = definido pela classe (ver
 tabela de cada classe)</p>
 <p><strong>Iniciativa</strong> = d20 + Mod. AGI</p>
@@ -758,9 +760,10 @@ armaduras médias e ignorado em pesadas)</em> •
 <p>Vigor (VIG)</p>
 <p>Resistência física e saúde. Determina pontos de vida, resistência a
 venenos, doenças e exaustão.</p>
-<p>• <strong>PV base</strong> = VIG dado × 2 (Exemplo: d8 VIG = 16 PV
-base)</p>
-<p>• <strong>+PV por nível</strong> = dado de PV da classe</p>
+<p>• <strong>PV de Vigor</strong> = valor fixo pela tabela de PV
+(Exemplo: VIG d8 = 10 PV de Vigor)</p>
+<p>• <strong>+PV por nível</strong> = progressão fixa da classe após o
+1º nível</p>
 <p>Intelecto (INT)</p>
 <p>Capacidade analítica, memória e conhecimento arcano. O Modificador de
 INT amplifica o efeito das magias Arcanas lançadas por Arcanistas.</p>
@@ -785,41 +788,77 @@ magia divina e possessão</p>
 <p>• <strong>PD</strong> não é derivado do DEV — o pool de Fé vem da
 <strong>classe Devoto</strong> (ver Parte VI). —</p>
 <p>Pontos de Vida (PV)</p>
-<p>Os Pontos de Vida representam a resistência física e a vitalidade do
-personagem. Ao chegar a 0 PV, o personagem cai inconsciente.</p>
+<p>Os Pontos de Vida representam resistência física, fôlego, ferimentos
+leves, sorte de combate e a capacidade de continuar lutando sob pressão.
+Ao chegar a 0 PV, o personagem cai inconsciente.</p>
 <p>Como Calcular PV Máximos</p>
-<p><strong>PV Máximos = PV Base + (Dado de PV da Classe ×
-Nível)</strong></p>
-<p><strong>Passo 1 — PV Base (determinado pelo Vigor):</strong></p>
-<div class="line-block">VIG | PV Base |</div>
-<p>|—|—|</p>
-<div class="line-block">d4 | 8 |</div>
-<div class="line-block">d6 | 12 |</div>
-<div class="line-block">d8 | 16 |</div>
-<div class="line-block">d10 | 20 |</div>
-<div class="line-block">d12 | 24 |</div>
-<p><strong>Passo 2 — PV por Nível (dado da classe):</strong></p>
-<div class="line-block">Classe | Dado de PV | Média por nível |</div>
-<p>|—|—|—|</p>
-<div class="line-block">Arcanista | d4 | 2 |</div>
-<div class="line-block">Sensiente / Artífice | d6 | 3 |</div>
-<div class="line-block">Guerreiro / Devoto / Explorador | d8 | 4 |</div>
-<p>A cada nível, role o dado de PV da sua classe e some ao total (ou use
-a média para consistência).</p>
+<p><strong>PV Máximos = PV de Vigor + PV Inicial da Classe + (Progressão
+da Classe × níveis após o 1º) + bônus permanentes</strong></p>
+<p>O modo padrão usa valores fixos, sem rolagem de PV por nível. Isso
+deixa PVP e PVE mais previsíveis: personagens frágeis continuam
+vulneráveis, combatentes aguentam a linha de frente e o Mestre consegue
+calcular encontros sem depender de sorte na criação.</p>
+<p><strong>Passo 1 — PV de Vigor:</strong></p>
+<div class="line-block">VIG | PV de Vigor |</div>
+<p>|—|—:|</p>
+<div class="line-block">d4 | 6 |</div>
+<div class="line-block">d6 | 8 |</div>
+<div class="line-block">d8 | 10 |</div>
+<div class="line-block">d10 | 12 |</div>
+<div class="line-block">d12 | 14 |</div>
+<div class="line-block">d20 | 18 |</div>
+<p><strong>Passo 2 — PV da Classe:</strong></p>
+<div class="line-block">Classe | Dado de PV | PV Inicial | Progressão
+por nível após o 1º |</div>
+<p>|—|—:|—:|—:|</p>
+<div class="line-block">Arcanista | d4 | 4 | +2 |</div>
+<div class="line-block">Sensiente / Artífice | d6 | 6 | +3 |</div>
+<div class="line-block">Guerreiro / Devoto / Explorador | d8 | 8 | +4
+|</div>
 <p><strong>Passo 3 — Total:</strong></p>
 <blockquote>
 <p><strong>Exemplo:</strong> Guerreiro nível 5 com VIG d8:</p>
 </blockquote>
 <blockquote>
-<p>PV Base = 16 | PV de nível = 4 × 5 = 20 (usando média)</p>
+<p>PV de Vigor = 10 | PV Inicial da Classe = 8 | Progressão = 4 × 4
+níveis após o 1º = 16</p>
 </blockquote>
 <blockquote>
-<p><strong>PV Máximos = 16 + 20 = 36</strong></p>
+<p><strong>PV Máximos = 10 + 8 + 16 = 34</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Exemplo:</strong> Arcanista nível 5 com VIG d6:</p>
+</blockquote>
+<blockquote>
+<p>PV de Vigor = 8 | PV Inicial da Classe = 4 | Progressão = 2 × 4
+níveis após o 1º = 8</p>
+</blockquote>
+<blockquote>
+<p><strong>PV Máximos = 8 + 4 + 8 = 20</strong></p>
 </blockquote>
 <p><strong>Dados de Vida (Descanso Curto):</strong> No descanso curto
 você pode gastar um ou mais Dados de Vida para recuperar PV. Role o dado
-(mesmo tipo do dado de PV da sua classe) e recupere o resultado. Só pode
-usar dados de vida se tiver pelo menos 1 PV.</p>
+indicado pela classe e recupere o resultado + Mod. VIG, com mínimo de 1
+PV por dado gasto. Só pode usar dados de vida se tiver pelo menos 1 PV.
+Você possui uma quantidade de Dados de Vida igual ao seu nível e
+recupera metade deles ao final de um descanso longo.</p>
+<p>Diretrizes de Balanceamento PVP/PVE</p>
+<p>• <strong>PVP padrão:</strong> use sempre PV fixo. PV temporário não
+acumula; se receber outra fonte, escolha o maior valor. Cura em combate
+não pode ultrapassar os PV máximos e efeitos de cura repetida devem
+custar ação, recurso ou limite de descanso.</p>
+<p>• <strong>PVE padrão:</strong> use o PV calculado para personagens
+jogadores. Para criaturas comuns, prefira PV médio do bestiário. Para
+chefes, aumente PV em 25% a 50% ou adicione fases, em vez de dobrar
+dano.</p>
+<p>• <strong>Duração esperada:</strong> um duelo equilibrado entre
+personagens do mesmo nível deve durar cerca de 3 a 5 rodadas. Um
+encontro PVE contra grupo equivalente deve durar 4 a 6 rodadas. Se
+combates passam disso com frequência, reduza PV de criaturas em 15% ou
+aumente objetivos de cenário além de “zerar PV”.</p>
+<p>• <strong>Modo heroico opcional:</strong> para campanhas mais épicas
+e menos letais, some +2 PV por nível do personagem. Não use este bônus
+em PVP competitivo.</p>
 <hr />
 <p>Aparar</p>
 <p>Representa a defesa passiva — a dificuldade de acertar o

@@ -807,6 +807,15 @@ const ATTRS = [
   ["ESP", "Espírito", "Percepção, emoções e magia primitiva"],
   ["DEV", "Devoção", "Religião, proteção divina e magia de fé"]
 ];
+const CLASS_HP = {
+  guerreiro: { label: "Guerreiro", die: "d8", initial: 8, perLevel: 4 },
+  arcanista: { label: "Arcanista", die: "d4", initial: 4, perLevel: 2 },
+  sensiente: { label: "Sensiente", die: "d6", initial: 6, perLevel: 3 },
+  devoto: { label: "Devoto", die: "d8", initial: 8, perLevel: 4 },
+  artifice: { label: "Artífice", die: "d6", initial: 6, perLevel: 3 },
+  explorador: { label: "Explorador", die: "d8", initial: 8, perLevel: 4 }
+};
+const VIGOR_HP = { d4: 6, d6: 8, d8: 10, d10: 12, d12: 14, d20: 18 };
 const SKILLS = [
   ["Acrobacia", "AGI"], ["Arcanismo", "INT"], ["Atletismo", "FOR"],
   ["Enganação", "ESP"], ["Furtividade", "AGI"], ["História", "INT"],
@@ -913,7 +922,7 @@ const LEVEL_ABILITIES = [
   { id:"exp-17-fantasma-da-trilha", class:"Explorador", level:17, name:"Fantasma da Trilha", effect:"Você e um grupo pequeno podem viajar sem deixar rastros mundanos ou mágicos fracos por 1 dia." },
 
   { id:"ger-2-treinamento", class:"Geral", level:2, name:"Treinamento Especial", effect:"Escolha uma perícia sem proficiência. Ela passa a receber proficiência." },
-  { id:"ger-4-resiliencia", class:"Geral", level:4, name:"Resiliência", effect:"Aumente HP máximo em +5 ou escolha um recurso mágico para ganhar +1 máximo." },
+  { id:"ger-4-resiliencia", class:"Geral", level:4, name:"Resiliência", effect:"Aumente PV máximo em +5 ou escolha um recurso mágico para ganhar +1 máximo." },
   { id:"ger-6-talento-extra", class:"Geral", level:6, name:"Talento Extra", effect:"Escolha um talento para o qual cumpra os pré-requisitos." },
   { id:"ger-8-aprimorar-atributo", class:"Geral", level:8, name:"Aprimorar Atributo", effect:"Aumente um atributo em um passo, respeitando o limite definido pelo mestre." },
   { id:"ger-10-versatilidade", class:"Geral", level:10, name:"Versatilidade", effect:"Escolha uma ferramenta, idioma ou perícia situacional. Você recebe proficiência nela." },
@@ -1105,7 +1114,7 @@ function seedMagic() {
     { id: uid(), source: "arcana", name: "Dardo Arcano", cost: "2 PA", range: "18m", effect: "Causa 1d4+MOD de força. Acerta se o alvo estiver visível." },
     { id: uid(), source: "arcana", name: "Escudo de Força", cost: "3 PA", range: "Pessoal", effect: "CA +2 por 1 hora. Vantagem em salvamentos de Força." },
     { id: uid(), source: "primitive", name: "Explosão de Raiva", cost: "2 PE", range: "6m", effect: "2d6 de fogo. Com intensidade alta, empurra 3m se falhar no teste de Força." },
-    { id: uid(), source: "primitive", name: "Abraço Curativo", cost: "2 PE", range: "Toque", effect: "Cura 1d8+2 HP. Ganha bônus se o alvo for alguém querido." },
+    { id: uid(), source: "primitive", name: "Abraço Curativo", cost: "2 PE", range: "Toque", effect: "Cura 1d8+2 PV. Ganha bônus se o alvo for alguém querido." },
     { id: uid(), source: "faith", name: "Bênção da Luz", cost: "2 PD", range: "9m", effect: "+1d4 em ataques e salvamentos por 1 hora." },
     { id: uid(), source: "faith", name: "Maldição das Sombras", cost: "3 PD", range: "18m", effect: "Alvo tem desvantagem em Percepção e Intuição até ser dissipado." },
     { id: uid(), source: "aura", name: "Leitura de Aura", cost: "1 ação", range: "9m", effect: "Revela fonte mágica dominante, emoção forte ou vínculo sobrenatural visível." },
@@ -1465,6 +1474,28 @@ function mod(value) {
   return table[attrDie(value)] ?? 0;
 }
 function signed(n) { return n >= 0 ? "+" + n : String(n); }
+function slugText(value) {
+  return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+function classHpProfile(role) {
+  const text = slugText(role);
+  return Object.entries(CLASS_HP).find(([key]) => text.includes(key))?.[1] || CLASS_HP.guerreiro;
+}
+function calcMaxHp(c) {
+  const level = Math.max(1, Number(c.level) || 1);
+  const profile = classHpProfile(c.role);
+  const vigor = attrDie(c.attrs?.VIG);
+  const vigorHp = VIGOR_HP[vigor] || VIGOR_HP.d4;
+  return vigorHp + profile.initial + (profile.perLevel * (level - 1));
+}
+function hpCalcDetails(c) {
+  const level = Math.max(1, Number(c.level) || 1);
+  const profile = classHpProfile(c.role);
+  const vigor = attrDie(c.attrs?.VIG);
+  const vigorHp = VIGOR_HP[vigor] || VIGOR_HP.d4;
+  const progression = profile.perLevel * (level - 1);
+  return { level, profile, vigor, vigorHp, progression, total: vigorHp + profile.initial + progression };
+}
 function skillAttr(c, attr) {
   if (String(attr).includes("/")) {
     return String(attr).split("/").sort((a, b) => mod(c.attrs[b]) - mod(c.attrs[a]))[0];
@@ -1547,7 +1578,7 @@ function renderCharacterList() {
           <h4>${esc(c.name)}</h4>
           <p>${esc(c.player || "Sem jogador")} | Nível ${esc(c.level)} | ${esc(c.role || "Sem classe")}</p>
         </div>
-        <span class="pill red">${esc(c.hp.current)}/${esc(c.hp.max)} HP</span>
+        <span class="pill red">${esc(c.hp.current)}/${esc(c.hp.max)} PV</span>
       </div>
     </div>
   `).join("") : `<div class="empty">Nenhum personagem encontrado.</div>`;
@@ -1593,7 +1624,7 @@ function renderSheet() {
         <div class="section-title">
           <h3>${esc(c.name)}</h3>
           <div class="row">
-            <span class="pill red">HP ${esc(c.hp.current)}/${esc(c.hp.max)}</span>
+            <span class="pill red">PV ${esc(c.hp.current)}/${esc(c.hp.max)}</span>
             <span class="pill gold">Aparar ${esc(c.ac)}</span>
             <span class="pill blue">Nível ${esc(c.level)}</span>
             <button class="btn small danger" onclick="deleteCharacter('${c.id}')">Excluir</button>
@@ -1619,6 +1650,7 @@ function selectAbilityCategory(id) {
 }
 
 function renderSheetCategory(c, hpPct) {
+  const hpCalc = hpCalcDetails(c);
   const blocks = {
     resumo: `
       <div class="panel">
@@ -1628,7 +1660,7 @@ function renderSheetCategory(c, hpPct) {
           <div class="sheet-metric"><b>${esc(c.role || "-")}</b><span>Classe / função</span></div>
           <div class="sheet-metric"><b>${esc(c.ancestry || "-")}</b><span>Povo / origem</span></div>
           <div class="sheet-metric"><b>${esc(c.background || "-")}</b><span>Antecedente</span></div>
-          <div class="sheet-metric"><b>${esc(c.hp.current)}/${esc(c.hp.max)}</b><span>HP</span></div>
+          <div class="sheet-metric"><b>${esc(c.hp.current)}/${esc(c.hp.max)}</b><span>PV</span></div>
           <div class="sheet-metric"><b>${esc(c.ac)}</b><span>Aparar</span></div>
           <div class="sheet-metric"><b>${esc(c.speed)}m</b><span>Deslocamento</span></div>
           <div class="sheet-metric"><b>${esc(c.prof)}</b><span>Proficiência</span></div>
@@ -1674,17 +1706,24 @@ function renderSheetCategory(c, hpPct) {
       <div class="panel">
         <div class="section-title"><h3>Combate</h3></div>
         <div class="grid three">
-          ${hpInput(c, "current", "HP atual")}
-          ${hpInput(c, "max", "HP máximo")}
-          ${hpInput(c, "temp", "HP temporário")}
+          ${hpInput(c, "current", "PV atual")}
+          ${hpInput(c, "max", "PV máximo")}
+          ${hpInput(c, "temp", "PV temporário")}
           ${inputFor(c, "ac", "Aparar", "number")}
           ${inputFor(c, "speed", "Deslocamento", "number")}
           ${inputFor(c, "prof", "Proficiência", "number")}
         </div>
+        <div class="empty" style="margin-top:10px;text-align:left;padding:12px">
+          <strong>PV sugerido pelo sistema: ${hpCalc.total}</strong>
+          <p class="muted" style="margin:6px 0 0">
+            ${hpCalc.profile.label} (${hpCalc.profile.die}) · VIG ${hpCalc.vigor} = ${hpCalc.vigorHp} · inicial ${hpCalc.profile.initial} · progressão ${hpCalc.profile.perLevel} × ${Math.max(0, hpCalc.level - 1)} = ${hpCalc.progression}
+          </p>
+          <button class="btn small" style="margin-top:8px" onclick="applyCalculatedHp('${c.id}')">Aplicar PV calculado</button>
+        </div>
         <div class="bar"><i style="width:${hpPct}%;background:var(--red)"></i></div>
         <div class="row" style="margin-top:10px">
-          <button class="btn small" onclick="adjustHp(-1)">-1 HP</button>
-          <button class="btn small" onclick="adjustHp(1)">+1 HP</button>
+          <button class="btn small" onclick="adjustHp(-1)">-1 PV</button>
+          <button class="btn small" onclick="adjustHp(1)">+1 PV</button>
           <button class="btn small" onclick="addCharacterToInitiative('${c.id}')">Iniciativa</button>
         </div>
       </div>
@@ -2039,6 +2078,23 @@ function updateHp(id, key, value) {
   renderCharacterList();
   renderSheet();
 }
+function applyCalculatedHp(id) {
+  const c = state.characters.find(x => x.id === id);
+  if (!c) return;
+  const previousMax = Number(c.hp.max) || 0;
+  const previousCurrent = Number(c.hp.current) || 0;
+  const nextMax = calcMaxHp(c);
+  c.hp.max = nextMax;
+  if (previousCurrent <= 0 || previousCurrent === previousMax) {
+    c.hp.current = nextMax;
+  } else {
+    c.hp.current = Math.min(previousCurrent, nextMax);
+  }
+  saveSoon();
+  renderCharacterList();
+  renderSheet();
+  toast("PV calculado aplicado.");
+}
 function updateResource(id, res, key, value) {
   const c = state.characters.find(x => x.id === id);
   c.resources[res][key] = Number(value) || 0;
@@ -2167,7 +2223,7 @@ function renderCreatures() {
       <div class="item-head">
         <div>
           <h4>${esc(m.name)}</h4>
-          <p>${esc(m.type)} | CA ${esc(m.ac)} | HP ${esc(m.hp)} | Grau ${esc(m.threat)}</p>
+          <p>${esc(m.type)} | CA ${esc(m.ac)} | PV ${esc(m.hp)} | Grau ${esc(m.threat)}</p>
         </div>
         <div class="row">
           <button class="btn small" onclick="addCreatureToInitiative('${m.id}')">Iniciativa</button>
@@ -2189,7 +2245,7 @@ function renderCreatures() {
             </div>
             <button class="btn small primary" onclick="addBestiaryCreature('${m.id}')">Adicionar</button>
           </div>
-          <p>CA ${esc(m.ac)} | HP ${esc(m.hp)} | ${esc(m.attacks)}</p>
+          <p>CA ${esc(m.ac)} | PV ${esc(m.hp)} | ${esc(m.attacks)}</p>
         </div>
       `).join("") : `<div class="empty">Nenhuma criatura do bestiário encontrada.</div>`}
     </div>
@@ -2223,7 +2279,7 @@ function openCreatureForm(id) {
         <div><label>Fonte</label><select id="cr-source">${Object.entries(SOURCES).map(([k,v]) => `<option value="${k}" ${m.source === k ? "selected" : ""}>${v.title}</option>`).join("")}</select></div>
       </div>
       <div class="grid four">
-        <div><label>HP</label><input id="cr-hp" type="number" value="${esc(m.hp)}"></div>
+        <div><label>PV</label><input id="cr-hp" type="number" value="${esc(m.hp)}"></div>
         <div><label>CA</label><input id="cr-ac" type="number" value="${esc(m.ac)}"></div>
         <div><label>Iniciativa</label><input id="cr-init" type="number" value="${esc(m.init)}"></div>
         <div><label>Grau</label><input id="cr-threat" value="${esc(m.threat)}"></div>
@@ -2283,7 +2339,7 @@ function renderInitiative() {
   byId("initiative-list").innerHTML = state.initiative.length ? state.initiative.map(e => `
     <div class="item ${e.active ? "active" : ""}">
       <div class="item-head">
-        <div><h4>${esc(e.name)}</h4><p>${esc(e.type)} | CA ${esc(e.ac)} | HP ${esc(e.hp)} | bônus ${signed(Number(e.bonus || 0))}</p></div>
+        <div><h4>${esc(e.name)}</h4><p>${esc(e.type)} | CA ${esc(e.ac)} | PV ${esc(e.hp)} | bônus ${signed(Number(e.bonus || 0))}</p></div>
         <span class="pill gold">${esc(e.roll || "-")}</span>
       </div>
     </div>
@@ -2382,7 +2438,7 @@ function mapCreatureCard(tile) {
     <div class="tile-card">
       <h4>${esc(creature.name)}</h4>
       <p>${esc(creature.type || "Criatura")} | ${esc(source)} | ${esc(creature.threat || "-")}</p>
-      <p>CA ${esc(creature.ac)} | HP ${esc(creature.hp)} | Inic. ${signed(Number(creature.init || 0))}</p>
+      <p>CA ${esc(creature.ac)} | PV ${esc(creature.hp)} | Inic. ${signed(Number(creature.init || 0))}</p>
       <p>${esc(creature.attacks || "Sem ações registradas.")}</p>
     </div>
   `;
@@ -2406,7 +2462,7 @@ function openMapCreatureSheet(tileIdx) {
           <span class="pill red">Mapa</span>
         </div>
         <div class="grid four" style="margin-top:10px">
-          <div class="sheet-metric"><b>${esc(creature.hp)}</b><span>HP</span></div>
+          <div class="sheet-metric"><b>${esc(creature.hp)}</b><span>PV</span></div>
           <div class="sheet-metric"><b>${esc(creature.ac)}</b><span>CA</span></div>
           <div class="sheet-metric"><b>${signed(Number(creature.init || 0))}</b><span>Iniciativa</span></div>
           <div class="sheet-metric"><b>${esc(creature.threat || "-")}</b><span>Grau</span></div>
