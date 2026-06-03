@@ -798,17 +798,22 @@ const DEFAULT_CLOUD_CONFIG = {
   anonKey: "sb_publishable_ADB15dEYrOIXKrpYaY_eNg_hZvGFy56",
   shareCode: "mesa-principal"
 };
+const ATTR_DICE = ["d4", "d6", "d8", "d10", "d12", "d20"];
 const ATTRS = [
-  ["STR", "Força"], ["DEX", "Destreza"], ["CON", "Constituição"],
-  ["INT", "Inteligência"], ["WIS", "Sabedoria"], ["CHA", "Carisma"]
+  ["FOR", "Força", "Ataques corpo a corpo, carga e atletismo"],
+  ["AGI", "Agilidade", "Ataques à distância, Aparar e iniciativa"],
+  ["VIG", "Vigor", "PV, resistência a venenos, doenças e exaustão"],
+  ["INT", "Intelecto", "Conhecimento, arcanismo e tecnologia"],
+  ["ESP", "Espírito", "Percepção, emoções e magia primitiva"],
+  ["DEV", "Devoção", "Religião, proteção divina e magia de fé"]
 ];
 const SKILLS = [
-  ["Acrobacia", "DEX"], ["Arcanismo", "INT"], ["Atletismo", "STR"],
-  ["Enganação", "CHA"], ["Furtividade", "DEX"], ["História", "INT"],
-  ["Intimidação", "CHA"], ["Intuição", "WIS"], ["Medicina", "WIS"],
-  ["Natureza", "INT"], ["Percepção", "WIS"], ["Persuasão", "CHA"],
-  ["Prestidigitação", "DEX"], ["Religião", "INT"], ["Sobrevivência", "WIS"],
-  ["Tecnologia dos Animais", "WIS"]
+  ["Acrobacia", "AGI"], ["Arcanismo", "INT"], ["Atletismo", "FOR"],
+  ["Enganação", "ESP"], ["Furtividade", "AGI"], ["História", "INT"],
+  ["Intimidação", "FOR/ESP"], ["Intuição", "ESP"], ["Medicina", "INT"],
+  ["Natureza", "INT"], ["Percepção", "ESP"], ["Persuasão", "ESP"],
+  ["Prestidigitação", "AGI"], ["Religião", "DEV"], ["Sobrevivência", "VIG"],
+  ["Tecnologia", "INT"]
 ];
 const LEVEL_ABILITIES = [
   { id:"gue-1-segundo-vento", class:"Guerreiro", level:1, name:"Segundo Vento", effect:"Gaste 1 AU como ação bônus para recuperar 1d8 + nível PV. Pode ser usado mesmo Abalado." },
@@ -1055,8 +1060,8 @@ function blankCharacter() {
   return {
     id: uid(), name: "Novo personagem", player: "", ancestry: "", role: "", level: 1,
     background: "", alignment: "", xp: 0,
-    attrs: { STR: 10, DEX: 10, CON: 10, INT: 10, WIS: 10, CHA: 10 },
-    hp: { current: 10, max: 10, temp: 0 }, ac: 10, speed: 9, prof: 2, initiative: 0,
+    attrs: { FOR: "d4", AGI: "d4", VIG: "d4", INT: "d4", ESP: "d4", DEV: "d4" },
+    hp: { current: 10, max: 10, temp: 0 }, ac: 4, speed: 9, prof: 2, initiative: 0,
     resources: { pa: { current: 4, max: 4 }, pe: { current: 4, max: 4 }, pd: { current: 0, max: 0 }, aura: { current: 2, max: 2 } },
     knownSpellIds: [],
     customSpells: [],
@@ -1071,8 +1076,8 @@ function defaultState() {
   c.name = "Kael, Aprendiz de Runa";
   c.player = "Jogador";
   c.role = "Arcanista";
-  c.attrs.INT = 15;
-  c.attrs.DEX = 13;
+  c.attrs.INT = "d8";
+  c.attrs.AGI = "d6";
   c.skills["Arcanismo"] = 1;
   c.skills["Percepção"] = 1;
   c.spells = "Dardo Arcano; Escudo de Força; Runa de Alarme.";
@@ -1144,7 +1149,7 @@ function normalize(data) {
     merged.selectedCharacter = c.id;
   }
   merged.characters.forEach(c => {
-    c.attrs = { STR: 10, DEX: 10, CON: 10, INT: 10, WIS: 10, CHA: 10, ...(c.attrs || {}) };
+    c.attrs = normalizeAttrs(c.attrs || {});
     c.hp = { current: 10, max: 10, temp: 0, ...(c.hp || {}) };
     const resources = c.resources || {};
     c.resources = {
@@ -1153,6 +1158,7 @@ function normalize(data) {
       pd: { current: 0, max: 0, ...(resources.pd || {}) },
       aura: { current: 0, max: 0, ...(resources.aura || {}) }
     };
+    if (c.skills?.["Tecnologia dos Animais"] && !c.skills.Tecnologia) c.skills.Tecnologia = c.skills["Tecnologia dos Animais"];
     c.skills = { ...Object.fromEntries(SKILLS.map(([n]) => [n, 0])), ...(c.skills || {}) };
     c.knownSpellIds ||= [];
     c.customSpells ||= [];
@@ -1427,14 +1433,48 @@ function setFilter(group, key, value) {
   if (group === "characterSpells") renderSheet();
   if (group === "abilities") renderSheet();
 }
+function attrDie(value) {
+  if (ATTR_DICE.includes(String(value))) return String(value);
+  return legacyAttrToDie(value);
+}
+function legacyAttrToDie(value) {
+  const n = Number(value);
+  if (!Number.isFinite(n)) return "d4";
+  if (n >= 20) return "d20";
+  if (n >= 18) return "d12";
+  if (n >= 16) return "d10";
+  if (n >= 14) return "d8";
+  if (n >= 12) return "d6";
+  return "d4";
+}
+function normalizeAttrs(attrs = {}) {
+  return {
+    FOR: attrDie(attrs.FOR ?? attrs.STR),
+    AGI: attrDie(attrs.AGI ?? attrs.DEX),
+    VIG: attrDie(attrs.VIG ?? attrs.CON),
+    INT: attrDie(attrs.INT),
+    ESP: attrDie(attrs.ESP ?? attrs.WIS ?? attrs.CHA),
+    DEV: attrDie(attrs.DEV ?? attrs.WIS)
+  };
+}
+function dieSides(value) {
+  return Number(String(attrDie(value)).replace("d", "")) || 4;
+}
 function mod(value) {
-  const m = Math.floor(((Number(value) || 10) - 10) / 2);
-  return m;
+  const table = { d4: 0, d6: 1, d8: 2, d10: 3, d12: 4, d20: 6 };
+  return table[attrDie(value)] ?? 0;
 }
 function signed(n) { return n >= 0 ? "+" + n : String(n); }
+function skillAttr(c, attr) {
+  if (String(attr).includes("/")) {
+    return String(attr).split("/").sort((a, b) => mod(c.attrs[b]) - mod(c.attrs[a]))[0];
+  }
+  return attr;
+}
 function profValue(c, skillName) {
-  const [_, attr] = SKILLS.find(([name]) => name === skillName) || ["", "INT"];
-  return mod(c.attrs[attr]) + (Number(c.skills[skillName]) ? Number(c.prof || 2) : 0);
+  const [, attr] = SKILLS.find(([name]) => name === skillName) || ["", "INT"];
+  const chosen = skillAttr(c, attr);
+  return mod(c.attrs[chosen]) + (Number(c.skills[skillName]) ? Number(c.prof || 2) : 0);
 }
 function currentCharacter() {
   return state.characters.find(c => c.id === state.selectedCharacter) || state.characters[0];
@@ -1554,7 +1594,7 @@ function renderSheet() {
           <h3>${esc(c.name)}</h3>
           <div class="row">
             <span class="pill red">HP ${esc(c.hp.current)}/${esc(c.hp.max)}</span>
-            <span class="pill gold">CA ${esc(c.ac)}</span>
+            <span class="pill gold">Aparar ${esc(c.ac)}</span>
             <span class="pill blue">Nível ${esc(c.level)}</span>
             <button class="btn small danger" onclick="deleteCharacter('${c.id}')">Excluir</button>
           </div>
@@ -1589,7 +1629,7 @@ function renderSheetCategory(c, hpPct) {
           <div class="sheet-metric"><b>${esc(c.ancestry || "-")}</b><span>Povo / origem</span></div>
           <div class="sheet-metric"><b>${esc(c.background || "-")}</b><span>Antecedente</span></div>
           <div class="sheet-metric"><b>${esc(c.hp.current)}/${esc(c.hp.max)}</b><span>HP</span></div>
-          <div class="sheet-metric"><b>${esc(c.ac)}</b><span>Classe de Armadura</span></div>
+          <div class="sheet-metric"><b>${esc(c.ac)}</b><span>Aparar</span></div>
           <div class="sheet-metric"><b>${esc(c.speed)}m</b><span>Deslocamento</span></div>
           <div class="sheet-metric"><b>${esc(c.prof)}</b><span>Proficiência</span></div>
           <div class="sheet-metric"><b>${esc(c.resources.pa.current)}/${esc(c.resources.pa.max)}</b><span>PA Arcana</span></div>
@@ -1618,10 +1658,12 @@ function renderSheetCategory(c, hpPct) {
         <div class="stats">
           ${ATTRS.map(([key, label]) => `
             <div class="stat">
-              <span>${label}</span>
-              <strong>${esc(c.attrs[key])}</strong>
+              <span>${esc(key)} · ${label}</span>
+              <strong>${esc(attrDie(c.attrs[key]))}</strong>
               <span>${signed(mod(c.attrs[key]))}</span>
-              <input type="number" value="${esc(c.attrs[key])}" onchange="updateAttr('${c.id}','${key}',this.value)">
+              <select title="${esc(label)}" onchange="updateAttr('${c.id}','${key}',this.value)">
+                ${ATTR_DICE.map(die => `<option value="${die}" ${attrDie(c.attrs[key]) === die ? "selected" : ""}>${die}</option>`).join("")}
+              </select>
               <button class="btn small" onclick="rollCheck('${key}')">Rolar</button>
             </div>
           `).join("")}
@@ -1635,7 +1677,7 @@ function renderSheetCategory(c, hpPct) {
           ${hpInput(c, "current", "HP atual")}
           ${hpInput(c, "max", "HP máximo")}
           ${hpInput(c, "temp", "HP temporário")}
-          ${inputFor(c, "ac", "CA", "number")}
+          ${inputFor(c, "ac", "Aparar", "number")}
           ${inputFor(c, "speed", "Deslocamento", "number")}
           ${inputFor(c, "prof", "Proficiência", "number")}
         </div>
@@ -1727,13 +1769,17 @@ function renderAbilityCategory(c) {
       <div class="grid">
         <div class="section-title" style="margin-top:14px"><h3>Perícias treinadas</h3></div>
         <div class="skills">
-          ${SKILLS.map(([name, attr]) => `
+          ${SKILLS.map(([name, attr]) => {
+            const chosenAttr = skillAttr(c, attr);
+            const profBonus = Number(c.skills[name]) ? signed(profValue(c, name)) : "d4";
+            return `
             <div class="skill">
-              <span>${esc(name)} <span class="muted">(${attr})</span></span>
+              <span>${esc(name)} <span class="muted">(${esc(attr)}${attr !== chosenAttr ? " → " + esc(chosenAttr) : ""})</span></span>
               <button class="btn small ${c.skills[name] ? "primary" : ""}" onclick="toggleSkill('${name}')">${c.skills[name] ? "Prof" : "Sem"}</button>
-              <button class="btn small" onclick="rollSkill('${name}')">${signed(profValue(c, name))}</button>
+              <button class="btn small" onclick="rollSkill('${name}')">${profBonus}</button>
             </div>
-          `).join("")}
+          `;
+          }).join("")}
         </div>
       </div>
     `;
@@ -1982,7 +2028,7 @@ function updateChar(id, key, value) {
 }
 function updateAttr(id, key, value) {
   const c = state.characters.find(x => x.id === id);
-  c.attrs[key] = Number(value) || 10;
+  c.attrs[key] = attrDie(value);
   saveSoon();
   renderSheet();
 }
@@ -2208,7 +2254,7 @@ function openCreatureForm(id) {
 
 function addCharacterToInitiative(id) {
   const c = state.characters.find(x => x.id === id);
-  state.initiative.push({ id: uid(), name: c.name, type: "PJ", hp: c.hp.current, ac: c.ac, bonus: mod(c.attrs.DEX) + Number(c.initiative || 0), roll: 0, active: false });
+  state.initiative.push({ id: uid(), name: c.name, type: "PJ", hp: c.hp.current, ac: c.ac, bonus: mod(c.attrs.AGI) + Number(c.initiative || 0), roll: 0, active: false });
   saveSoon(); renderInitiative(); showTab("mestre");
 }
 function addCreatureToInitiative(id) {
@@ -2659,6 +2705,18 @@ function parseRoll(expr) {
   const values = Array.from({ length: count }, () => d(sides));
   return { total: values.reduce((a, b) => a + b, 0) + bonus, values, bonus, expr: clean };
 }
+function attributeRoll(die, bonus = mod(die), label = "") {
+  const sides = dieSides(die);
+  const attrValue = d(sides);
+  const wildValue = d(6);
+  return {
+    total: Math.max(attrValue, wildValue) + bonus,
+    values: [attrValue, wildValue],
+    bonus,
+    expr: `max(${attrDie(die)},d6)${bonus ? signed(bonus) : ""}`,
+    detail: label
+  };
+}
 function addRoll(label, result) {
   state.rolls.unshift({ id: uid(), label, ...result, time: new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }) });
   state.rolls = state.rolls.slice(0, 50);
@@ -2675,16 +2733,21 @@ function customRoll() {
 }
 function rollCheck(attr) {
   const c = currentCharacter();
-  const bonus = mod(c.attrs[attr]);
-  const result = parseRoll("1d20" + signed(bonus));
-  addRoll(`${ATTRS.find(([k]) => k === attr)[1]} ${signed(bonus)}`, result);
+  const die = attrDie(c.attrs[attr]);
+  const bonus = mod(die);
+  const result = attributeRoll(die, bonus);
+  addRoll(`${ATTRS.find(([k]) => k === attr)[1]} ${die} ${signed(bonus)}`, result);
   showTab("dados");
 }
 function rollSkill(name) {
   const c = currentCharacter();
-  const bonus = profValue(c, name);
-  const result = parseRoll("1d20" + signed(bonus));
-  addRoll(`${name} ${signed(bonus)}`, result);
+  const [, attr] = SKILLS.find(([skillName]) => skillName === name) || ["", "INT"];
+  const chosen = skillAttr(c, attr);
+  const proficient = Number(c.skills[name]) ? true : false;
+  const die = proficient ? attrDie(c.attrs[chosen]) : "d4";
+  const bonus = proficient ? profValue(c, name) : 0;
+  const result = attributeRoll(die, bonus);
+  addRoll(`${name} (${chosen}) ${die}${proficient ? " prof " + signed(Number(c.prof || 2)) : " sem prof"}`, result);
   showTab("dados");
 }
 function clearRolls() {
