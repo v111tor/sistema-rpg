@@ -1070,6 +1070,7 @@ function blankCharacter() {
     id: uid(), name: "Novo personagem", player: "", ancestry: "", role: "", level: 1,
     background: "", alignment: "", xp: 0,
     attrs: { FOR: "d4", AGI: "d4", VIG: "d4", INT: "d4", ESP: "d4", DEV: "d4" },
+    saves: Object.fromEntries(ATTRS.map(([key]) => [key, 0])),
     hp: { current: 12, max: 12, temp: 0 }, ac: 4, speed: 9, prof: 2, initiative: 0,
     resources: { pa: { current: 4, max: 4 }, pe: { current: 4, max: 4 }, pd: { current: 0, max: 0 }, aura: { current: 2, max: 2 } },
     knownSpellIds: [],
@@ -1159,6 +1160,7 @@ function normalize(data) {
   }
   merged.characters.forEach(c => {
     c.attrs = normalizeAttrs(c.attrs || {});
+    c.saves = { ...Object.fromEntries(ATTRS.map(([key]) => [key, 0])), ...(c.saves || {}) };
     c.hp = { current: 12, max: 12, temp: 0, ...(c.hp || {}) };
     const resources = c.resources || {};
     c.resources = {
@@ -1504,6 +1506,9 @@ function profValue(c, skillName) {
   const chosen = skillAttr(c, attr);
   return Number(c.skills[skillName]) ? mod(c.attrs[chosen]) : 0;
 }
+function saveBonus(c, attr) {
+  return mod(c.attrs[attr]) + (Number(c.saves?.[attr]) ? Number(c.prof) || 0 : 0);
+}
 function currentCharacter() {
   return state.characters.find(c => c.id === state.selectedCharacter) || state.characters[0];
 }
@@ -1697,6 +1702,22 @@ function renderSheetCategory(c, hpPct) {
             </div>
           `).join("")}
         </div>
+        <div class="section-title" style="margin-top:16px"><h3>Testes de resistência</h3></div>
+        <div class="skills">
+          ${ATTRS.map(([key, label]) => {
+            const die = attrDie(c.attrs[key]);
+            const proficient = Number(c.saves?.[key]) ? true : false;
+            const bonus = saveBonus(c, key);
+            return `
+              <div class="skill">
+                <span>${esc(key)} · ${esc(label)} <span class="muted">${die} ${signed(mod(c.attrs[key]))}</span></span>
+                <button class="btn small ${proficient ? "primary" : ""}" onclick="toggleSave('${key}')">${proficient ? "Prof" : "Sem"}</button>
+                <button class="btn small" onclick="rollSave('${key}')">${die} ${signed(bonus)}</button>
+              </div>
+            `;
+          }).join("")}
+        </div>
+        <p class="muted" style="margin:10px 0 0">Marque Prof quando a classe conceder proficiência naquele save. O botão de rolagem usa dado do atributo + modificador; com proficiência, soma também o bônus de Proficiência.</p>
       </div>
     `,
     combate: `
@@ -2111,6 +2132,13 @@ function adjustHp(delta) {
 function toggleSkill(name) {
   const c = currentCharacter();
   c.skills[name] = c.skills[name] ? 0 : 1;
+  saveSoon();
+  renderSheet();
+}
+function toggleSave(attr) {
+  const c = currentCharacter();
+  c.saves ||= {};
+  c.saves[attr] = c.saves[attr] ? 0 : 1;
   saveSoon();
   renderSheet();
 }
@@ -2815,6 +2843,16 @@ function rollSkill(name) {
   const bonus = proficient ? profValue(c, name) : 0;
   const result = singleDieRoll(die, bonus);
   addRoll(`${name} (${chosen}) ${die}${proficient ? " prof " + signed(bonus) : " sem prof"}`, result);
+  showTab("dados");
+}
+function rollSave(attr) {
+  const c = currentCharacter();
+  const [, label = attr] = ATTRS.find(([key]) => key === attr) || [];
+  const die = attrDie(c.attrs[attr]);
+  const proficient = Number(c.saves?.[attr]) ? true : false;
+  const bonus = saveBonus(c, attr);
+  const result = attributeRoll(die, bonus);
+  addRoll(`Resistência de ${label} ${die}${proficient ? " prof " + signed(bonus) : " " + signed(bonus)}`, result);
   showTab("dados");
 }
 function clearRolls() {

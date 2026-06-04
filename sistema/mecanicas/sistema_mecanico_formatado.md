@@ -4,89 +4,28 @@
 
 ---
 
-SUMÁRIO
+## Sumário
 
-| # | Seção | Pág. |
-
+| Parte | Seção | Conteúdo principal |
 |---|---|---|
+| 0 | Guia de Criação de Personagem | Conceito, raça, classe, atributos, valores derivados, antecedentes, perícias, talento e equipamento |
+| I | Mecânicas Base | Rolagem base, CD, aumentos, vantagem/desvantagem, modificadores e descanso |
+| II | Atributos | Força, Agilidade, Vigor, Intelecto, Espírito, Devoção, PV e Aparar |
+| III | Perícias | Regra de proficiência e tabela de perícias |
+| IV | Sistema de Aura | Pool de AU, técnicas, uso por classe e multiclasse |
+| V | Raças | Humanos, elfos, orcs, anões, goblins, lizardmans e homens-fera |
+| VI | Classes | Características de classe, recursos, equipamentos iniciais e progressão |
+| VII | Multiclasse | Pré-requisitos, regras e recursos separados |
+| VIII | Antecedentes | Benefícios, perícias, equipamentos e caracter?sticas narrativas |
+| IX | Equipamentos | Moeda, armas, armaduras, escudos, itens mágicos, tecnologia e ferramentas |
+| X | Talentos | Talentos de combate, magia, social, exploração e raciais |
+| XI | Sistema de Magia | Fontes, aura, concentração, dissipação e recuperação |
+| XII | Combate | Iniciativa, turno, ataques, críticos, condições, morte, cobertura e ações |
+| XIII | Habilidades | Habilidades arcanas, primitivas, de fé, tecnologia e aura |
+| XIV | Guia de Criação de Habilidades | Tipo, alcance, duração, custo, CD, pré-requisitos e exemplos |
+| A | Apêndice de Playtest e Balanço | Cenários PvP/PvE, ajustes e princípios de balanceamento |
 
-| **0** | **Guia de Criação de Personagem** | **1** |
-
-| | Conceito · Raça · Classe · Atributos · Derivados · Antecedente · Perícias · Talento · Equipamento | | | **I** | **Mecânicas Base** | **4** |
-
-| | Rolagem Base · Classes de Dificuldade · Aumentos · Vantagem/Desvantagem · Descanso | | | **II** | **Atributos** | **5** |
-
-| | Força · Agilidade · Vigor · Intelecto · Espírito · Devoção · PV · Aparar | |
-
-| **III** | **Perícias** | **6** |
-
-| | Tabela de 16 perícias com atributos e usos | |
-
-| **IV** | **Sistema de Aura** | **7** |
-
-| | Pool de AU · Técnicas (20) · Guerreiro/Explorador · Multiclasse | |
-
-| **V** | **Raças** | **8** |
-
-| | Humanos (p.8) · Elfos (p.9) · Orcs (p.9) · Anões (p.10) · Goblins (p.10) · Lizardmans (p.11) · Homens-fera & Sistema de Quimera (p.11) | |
-
-| **VI** | **Classes** | **13** |
-
-| | Como Funcionam as Características de Classe (p.13) | |
-
-| | Guerreiro — 30 características (p.14) | |
-
-| | Arcanista — 30 características (p.17) | |
-
-| | Sensiente — 30 características (p.20) | |
-
-| | Devoto — 30 características + Divindades (p.23) | |
-
-| | Artífice — 30 características (p.26) | |
-
-| | Explorador — 30 características (p.30) | |
-
-| **VII** | **Multiclasse** | **33** |
-
-| | Pré-requisitos · Regras · Pools Separados | |
-
-| **VIII** | **Antecedentes** | **34** |
-
-| | Nobre · Criminoso · Soldado · Acadêmico · Eremita · Forasteiro · Marinheiro · Artesão de Guilda · Charlatão · Acólito · Sobrevivente · Mercador | |
-
-| **IX** | **Equipamentos** | **38** |
-
-| | Moeda · Propriedades de Armas · Armas Simples/Marciais · Armaduras Leve/Média/Pesada · Escudos · Itens Arcanos · Itens Mágicos · Ferramentas | |
-
-| **X** | **Talentos** | **42** |
-
-| | Combate (12) · Magia (10) · Social (6) · Exploração (6) · Raciais (7) | |
-
-| **XI** | **Sistema de Magia** | **46** |
-
-| | Cinco Fontes · Concentração · Dissipação · Recuperação | |
-
-| **XII** | **Combate** | **47** |
-
-| | Iniciativa · Estrutura do Turno · Ataques · Críticos/Aumentos · Condições · Morte · Cobertura · Ações | | | **XIII** | **Habilidades** | **49** |
-
-| | Arcana — 20 habilidades PA (p.49) | |
-
-| | Primitiva — 20 habilidades PE (p.52) | |
-
-| | Fé — 20 habilidades PD (p.55) | |
-
-| | Tecnologia — guia de criação + 20 itens/dispositivos (p.58) | |
-
-| | Aura — 20 técnicas AU (p.61) | |
-
-| **XIV** | **Guia de Criação de Habilidades** | **64** |
-
-| | Tipo · Alcance · Duração · Cálculo de Custo · CD · Associação ao Sistema · Pré-requisitos · Exemplos | | | **A** | **Apêndice: Notas de Playtest & Balanço** | **67** |
-
-| | Cenários PvP e PvE · Ajustes aplicados · Princípios de balanço | |
-
-> *Os números de página são estimativas baseadas em renderização padrão A4. O PDF gerado pode variar conforme configurações de margem e fonte.*
+> *Use o sumário como mapa de leitura. A numeração de páginas pode variar conforme o formato final do PDF ou EPUB.*
 
 ---
 
@@ -132,7 +71,7 @@ A raça concede:
 
 Leia as seis classes na **Parte VI** e escolha uma para o nível 1. (Parte VI = CLASSES) A classe concede:
 
-• Dado de PV (determina seu HP por nível)
+• Dado de PV da classe (usado no cálculo de PV e em Dados de Vida)
 
 • Testes de resistência
 
@@ -140,7 +79,7 @@ Leia as seis classes na **Parte VI** e escolha uma para o nível 1. (Parte VI = 
 
 • Proficiências (armas, armaduras)
 
-• Habilidades e recursos (PA, PE, PD ou AU dependendo da classe)
+• Características, habilidades conhecidas e recursos (PA, PE, PD ou AU dependendo da classe)
 
 > **Multiclasse:** Você começa com **uma classe** no nível 1. Multiclasse é uma opção de progressão, não de criação inicial.
 
@@ -153,40 +92,32 @@ Todos os seis atributos começam em **d4**. A raça escolhida pode elevar alguns
 **Método padrão:** Você tem **3 avanços de atributo** para distribuir livremente entre os seis atributos (cada avanço sobe um atributo um passo: d4→d6, d6→d8 etc.). Máximo d10 na criação com este método.
 
 | Atributo | Abrev | O que governa |
-
 |---|---|---|
-
 | Força | FOR | Ataques corpo a corpo, carga, atletismo |
-
 | Agilidade | AGI | Ataques à distância, Aparar, iniciativa |
-
 | Vigor | VIG | PV, resistência a doenças/venenos |
-
 | Intelecto | INT | Perícias de conhecimento, Arcanismo, bônus de magia arcana |
-
 | Espírito | ESP | Perícias sociais e percepção, bônus de magia emocional |
-
 | Devoção | DEV | Religião, proteção divina, bônus de magia de fé |
 
 > **Foco:** Pense na classe escolhida. Um Guerreiro se beneficia de FOR e VIG. Um Arcanista se beneficia de INT. Um Sensiente se beneficia de ESP. Invista primeiro no que sua classe usa.
 
 ---
 
-### Passo 5 — Calcule os Stats Derivados
+### Passo 5 — Calcule os Valores Derivados
 
-Com atributos definidos, calcule:
+Com os atributos definidos, calcule os valores abaixo e registre na ficha.
 
-**Aparar** = 4 + Mod. AGI + Bônus de Armadura + Bônus de Escudo
-
-**PV Máximos** = Valor do dado de VIG + Valor do dado de PV da classe
+| Stat derivado | Fórmula ou origem |
+|---|---|
+| **Aparar** | 4 + Mod. AGI + bônus de armadura + bônus de escudo |
+| **PV Máximos** | valor do dado de VIG + valor do dado de PV da classe |
+| **Pool mágico ou de Aura** | definido pela classe |
+| **Iniciativa** | d20 + Mod. AGI |
 
 • O valor do dado é o número máximo escrito nele: d4 = 4, d6 = 6, d8 = 8, d10 = 10, d12 = 12, d20 = 20.
 
 • Subir de nível não aumenta PV automaticamente. PV aumenta por VIG maior, talentos, itens, características especiais ou efeitos permanentes.
-
-**Pool Mágico ou de Aura** = definido pela classe (ver tabela de cada classe)
-
-**Iniciativa** = d20 + Mod. AGI
 
 ---
 
@@ -202,7 +133,7 @@ O antecedente concede:
 
 • Equipamento inicial
 
-• **Feature Narrativa** (habilidade fora do combate)
+• **Caracter?stica Narrativa** (habilidade fora do combate)
 
 • Tabelas de traços de personalidade, ideais, laços e falhas
 
@@ -212,7 +143,7 @@ O antecedente concede:
 
 ### Idiomas do Sistema
 
-Todo personagem começa sabendo os idiomas concedidos pela raça. Quando uma raça, antecedente, talento ou feature conceder **1 idioma adicional**, escolha um idioma da tabela abaixo, desde que a escolha faça sentido para a história do personagem e para a campanha.
+Todo personagem começa sabendo os idiomas concedidos pela raça. Quando uma raça, antecedente, talento ou caracter?stica conceder **1 idioma adicional**, escolha um idioma da tabela abaixo, desde que a escolha faça sentido para a história do personagem e para a campanha.
 
 Idiomas marcados como **Raro** normalmente exigem justificativa narrativa, contato com a cultura correspondente ou aprovação do Mestre.
 
@@ -264,22 +195,17 @@ Escolha seu equipamento de duas formas (a critério do Mestre):
 **Opção A — Pacote de Classe:**
 
 | Classe | Pacote |
-
 |---|---|
-
 | Guerreiro | Couro reforçado, arma marcial, escudo ou arma pesada, 3 poções de cura menor |
-
 | Arcanista | Bastão arcano, adaga ou bordão, pergaminhos, kit de escrita, tinta arcana, 15 OO |
-
 | Sensiente | Couro, adaga ou bordão, foco emocional, instrumento musical, 20 OO |
-
 | Devoto | Escamas, maça, escudo de madeira, símbolo sagrado, kit de primeiros socorros, 15 OO |
-
 | Artífice | Brunea, besta leve, ferramentas artesanais (2 tipos), kit de alquimia, 10 OO |
-
 | Explorador | Couro reforçado, espadas curtas, arco curto (20 flechas), ferramentas de ladrão, 15 OO |
 
-**Opção B — Dinheiro Inicial:** Role 4d6 × 10 e compre equipamento na **Parte IX** (EQUIPAMENTOS). ---
+**Opção B — Dinheiro Inicial:** Role 4d6 × 10 e compre equipamento na **Parte IX** (EQUIPAMENTOS).
+
+---
 
 ### Passo 10 — Finalize
 
@@ -291,17 +217,17 @@ Escolha seu equipamento de duas formas (a critério do Mestre):
 
 • Anote os traços de personalidade, ideal, laço e falha escolhidos no Passo 6
 
-• Registre todos os stats na ficha da ferramenta digital
+• Registre todos os valores na ficha da ferramenta digital
 
 ---
 
 ## PARTE I — MECÂNICAS BASE
 
-Como Jogar
+### Como Jogar
 
 Este sistema usa um conjunto de **dados poliédricos** (d4, d6, d8, d10, d12 e d20). Cada atributo do personagem é representado por um dado — quanto maior o dado, mais competente o personagem naquele aspecto.
 
-A Rolagem Base
+### Rolagem Base
 
 Sempre que um personagem tenta algo com chance de falha fora das perícias, o jogador rola o **dado do atributo** relevante. Personagens jogadores também rolam um **Dado Selvagem (d6)** junto e ficam com o **maior resultado**.
 
@@ -311,61 +237,49 @@ Sempre que um personagem tenta algo com chance de falha fora das perícias, o jo
 
 NPCs e monstros **não** rolam o Dado Selvagem — somente personagens jogadores.
 
-Classes de Dificuldade (CD)
+### Classes de Dificuldade (CD)
 
 | Dificuldade | CD |
-
 |---|---|
-
 | Trivial | 2 |
-
 | Fácil | 4 |
-
 | Médio | 8 |
-
 | Difícil | 12 |
-
 | Épico | 16 |
-
 | Lendário | 20 |
 
-Aumentos
+### Aumentos
 
 Quando a rolagem supera a CD por **4 ou mais pontos**, isso é um **Aumento**. Aumentos geralmente significam um efeito adicional: dano extra, mais informações, vantagem narrativa, efeito especial de magia.
 
 Cada 4 pontos acima da CD conta como um Aumento adicional. Um mestre pode definir efeitos graduais de acordo com o número de Aumentos.
 
-Vantagem e Desvantagem
+### Vantagem e Desvantagem
 
 • **Vantagem:** Role o dado do atributo duas vezes e use o **maior**.
 
 • **Desvantagem:** Role o dado do atributo duas vezes e use o **menor**.
 
-O Dado Selvagem não é duplicado ao usar vantagem/desvantagem — apenas o dado do atributo. ---
+O Dado Selvagem não é duplicado ao usar vantagem/desvantagem — apenas o dado do atributo.
 
-Modificadores de Atributo
+---
+
+### Modificadores de Atributo
 
 Além da rolagem, cada dado gera um **Modificador** usado em cálculos fixos (dano, defesa, pontos mágicos).
 
 | Dado | Modificador |
-
 |---|---|
-
 | d4 | +0 |
-
 | d6 | +1 |
-
 | d8 | +2 |
-
 | d10 | +3 |
-
 | d12 | +4 |
-
 | d20 | +6 |
 
 ---
 
-Descanso
+### Descanso
 
 • **Descanso Curto** (1 hora): Recupera metade dos pontos de magia (PA/PE/PD) e pode gastar Dados de Vida para recuperar PV.
 
@@ -377,9 +291,9 @@ Descanso
 
 Os seis atributos definem as capacidades físicas, mentais e mágicas do personagem. Todos começam em **d4** na criação e sobem ao longo dos níveis.
 
-Os Seis Atributos
+### Os Seis Atributos
 
-Força (FOR)
+#### Força (FOR)
 
 Poder físico bruto. Usado em ataques corpo a corpo, testes de atletismo, arrombamentos e intimidação física.
 
@@ -387,15 +301,17 @@ Poder físico bruto. Usado em ataques corpo a corpo, testes de atletismo, arromb
 
 • **Carga máxima:** FOR dado × 10 kg
 
-Agilidade (AGI)
+#### Agilidade (AGI)
 
 Velocidade, coordenação e reflexos. Usada em ataques à distância, acrobacia, furtividade e esquiva.
 
-• **Aparar base:** 4 + Mod. AGI *(limitado para armaduras médias e ignorado em pesadas)* • **Iniciativa:** d20 + Mod. AGI
+• **Aparar base:** 4 + Mod. AGI *(limitado para armaduras médias e ignorado em pesadas)*
+
+• **Iniciativa:** d20 + Mod. AGI
 
 • **Dano à distância:** dano da arma + Mod. AGI
 
-Vigor (VIG)
+#### Vigor (VIG)
 
 Resistência física e saúde. Determina pontos de vida, resistência a venenos, doenças e exaustão.
 
@@ -403,7 +319,7 @@ Resistência física e saúde. Determina pontos de vida, resistência a venenos,
 
 • **PV por classe** = valor do dado de PV da classe
 
-Intelecto (INT)
+#### Intelecto (INT)
 
 Capacidade analítica, memória e conhecimento arcano. O Modificador de INT amplifica o efeito das magias Arcanas lançadas por Arcanistas.
 
@@ -411,7 +327,7 @@ Capacidade analítica, memória e conhecimento arcano. O Modificador de INT ampl
 
 • **PA** não é derivado do INT — o pool de Arcana vem da **classe Arcanista** (ver Parte VI).
 
-Espírito (ESP)
+#### Espírito (ESP)
 
 Força emocional, percepção e conexão com o mundo. O Modificador de ESP amplifica curas e efeitos de controle da magia Primitiva usada por Sensientes.
 
@@ -419,33 +335,31 @@ Força emocional, percepção e conexão com o mundo. O Modificador de ESP ampli
 
 • **PE** não é derivado do ESP — o pool Emocional vem da **classe Sensiente** (ver Parte VI).
 
-Devoção (DEV)
+#### Devoção (DEV)
 
 Ligação com forças divinas ou demoníacas. O Modificador de DEV amplifica curas, bênçãos e maldições da magia de Fé usada por Devotos.
 
 • **Bônus em:** Religião; testes de resistência contra magia divina e possessão
 
-• **PD** não é derivado do DEV — o pool de Fé vem da **classe Devoto** (ver Parte VI). ---
+• **PD** não é derivado do DEV — o pool de Fé vem da **classe Devoto** (ver Parte VI).
 
-Pontos de Vida (PV)
+---
+
+### Pontos de Vida (PV)
 
 Os Pontos de Vida representam resistência física, fôlego, ferimentos leves, sorte de combate e a capacidade de continuar lutando sob pressão. PV não mede apenas "carne"; ele também mede aparos, sustos, cansaço, postura quebrada e pequenas aberturas que se acumulam até o personagem cair.
 
 Existem três valores importantes:
 
 | Valor | Função |
-
 |---|---|
-
 | **PV Máximos** | limite total de vida do personagem quando está completamente recuperado |
-
 | **PV Atuais** | quanto o personagem tem agora, depois de sofrer dano ou receber cura |
-
 | **PV Temporários** | proteção extra, barreira, moral ou energia provisória; é perdido antes dos PV atuais |
 
 Ao chegar a 0 PV, o personagem cai inconsciente e passa a usar as regras de morte.
 
-Como Calcular PV Máximos
+### Como Calcular PV Máximos
 
 **PV Máximos = Valor do dado de VIG + Valor do dado de PV da Classe + bônus permanentes**
 
@@ -458,13 +372,9 @@ Subir de nível **não aumenta PV automaticamente**. O personagem fica mais fort
 Entenda cada parte da fórmula:
 
 | Parte da fórmula | O que significa |
-
 |---|---|
-
 | **Valor do dado de VIG** | vida que vem da constituição física do personagem |
-
 | **Valor do dado de PV da Classe** | resistência base que vem do treinamento da classe |
-
 | **Bônus permanentes** | talentos, itens, características raciais, próteses, bênçãos ou efeitos duradouros |
 
 > **Importante:** "dado" aqui não significa rolar. Significa usar o valor máximo do dado.
@@ -474,19 +384,12 @@ Entenda cada parte da fórmula:
 O valor do dado de VIG representa corpo, fôlego, saúde, resistência a trauma e capacidade natural de suportar ferimentos.
 
 | VIG | Valor para PV |
-
 |---|---:|
-
 | d4 | 4 PV |
-
 | d6 | 6 PV |
-
 | d8 | 8 PV |
-
 | d10 | 10 PV |
-
 | d12 | 12 PV |
-
 | d20 | 20 PV |
 
 Se o personagem aumentar VIG depois, recalcule esta parte e ajuste os PV Máximos pela diferença.
@@ -498,19 +401,12 @@ Se o personagem aumentar VIG depois, recalcule esta parte e ajuste os PV Máximo
 O dado de PV da classe representa a robustez do treinamento principal do personagem. Classes frágeis usam d4, classes intermediárias usam d6 e classes resistentes usam d8.
 
 | Classe | Dado de PV da Classe | Valor para PV |
-
 |---|---:|---:|
-
 | Arcanista | d4 | 4 PV |
-
 | Sensiente | d6 | 6 PV |
-
 | Artífice | d6 | 6 PV |
-
 | Guerreiro | d8 | 8 PV |
-
 | Devoto | d8 | 8 PV |
-
 | Explorador | d8 | 8 PV |
 
 **Passo 3 — Some os Dois Dados**
@@ -518,13 +414,9 @@ O dado de PV da classe representa a robustez do treinamento principal do persona
 Depois de encontrar os dois valores, some:
 
 | Parte | Exemplo |
-
 |---|---:|
-
 | VIG d8 | 8 PV |
-
 | Classe Guerreiro d8 | 8 PV |
-
 | Total | 16 PV |
 
 O **Dado de PV** também é usado para curas de descanso curto, habilidades e referência de robustez da classe.
@@ -576,19 +468,12 @@ Bônus permanentes vêm de talentos, itens, traços raciais, próteses, bênçã
 Quando algo muda os PV Máximos, aplique apenas a diferença.
 
 | Mudança | Como ajustar |
-
 |---|---|
-
 | Subiu de nível | não aumenta PV automaticamente |
-
 | Aumentou VIG | recalcule o valor do dado de VIG e some a diferença |
-
 | Perdeu VIG temporariamente | o Mestre decide se reduz PV Máximos enquanto durar o efeito |
-
 | Ganhou talento/item permanente | some o bônus listado |
-
 | Perdeu item permanente | remova o bônus listado |
-
 | Recebeu PV temporário | não altera PV Máximos; cria uma camada separada |
 
 **PV atual ao aumentar PV Máximos:** se o personagem estiver completamente curado, aumente também os PV atuais. Se estiver ferido, mantenha os PV atuais e aumente apenas o máximo, a menos que a regra diga que também cura.
@@ -659,37 +544,31 @@ Ao chegar a 0 PV:
 
 • cura recebida enquanto está a 0 PV faz o personagem acordar com o valor curado.
 
-Diretrizes de Balanceamento PVP/PVE
+### Diretrizes de Balanceamento PvP/PvE
 
-• **PVP padrão:** como os PV são baixos e não escalam por nível, evite dano explosivo sem teste. PV temporário não acumula; se receber outra fonte, escolha o maior valor. Cura em combate não pode ultrapassar os PV máximos e efeitos de cura repetida devem custar ação, recurso ou limite de descanso.
+• **PvP padrão:** como os PV são baixos e não escalam por nível, evite dano explosivo sem teste. PV temporário não acumula; se receber outra fonte, escolha o maior valor. Cura em combate não pode ultrapassar os PV máximos e efeitos de cura repetida devem custar ação, recurso ou limite de descanso.
 
-• **PVE padrão:** use criaturas com dano compatível com o PV baixo dos personagens. Para monstros comuns, prefira ataques de 1d6 a 2d6. Para chefes, use fases, objetivos e condições antes de simplesmente aumentar dano.
+• **PvE padrão:** use criaturas com dano compatível com o PV baixo dos personagens. Para monstros comuns, prefira ataques de 1d6 a 2d6. Para chefes, use fases, objetivos e condições antes de simplesmente aumentar dano.
 
-• **Duração esperada:** um duelo equilibrado deve durar cerca de 2 a 4 rodadas. Um encontro PVE contra grupo equivalente deve durar 3 a 5 rodadas. Se personagens caem em 1 ataque comum, reduza dano. Se ninguém cai, aumente pressão, número de ameaças ou objetivos.
+• **Duração esperada:** um duelo equilibrado deve durar cerca de 2 a 4 rodadas. Um encontro PvE contra grupo equivalente deve durar 3 a 5 rodadas. Se personagens caem em 1 ataque comum, reduza dano. Se ninguém cai, aumente pressão, número de ameaças ou objetivos.
 
-• **Modo heroico opcional:** para campanhas menos letais, some +2 PV aos personagens no nível 1. Não use este bônus em PVP competitivo.
+• **Modo heroico opcional:** para campanhas menos letais, some +2 PV aos personagens no nível 1. Não use este bônus em PvP competitivo.
 
-Teste rápido de balanceamento:
+### Teste Rápido de Balanceamento
 
 | Referência | Resultado com PV 16 |
-
 |---|---|
-
 | Dano 1d6 | cerca de 5 acertos para derrubar |
-
 | Dano 1d8+2 | cerca de 3 acertos para derrubar |
-
 | Dano 2d6 | cerca de 3 acertos para derrubar |
-
 | Dano 3d6 | cerca de 2 acertos para derrubar |
-
 | Dano 5d6 | pode derrubar em 1 acerto médio |
 
 Conclusão: o novo sistema fica balanceado para combates rápidos e perigosos se ataques comuns ficarem entre **1d6 e 2d6**, ataques pesados ficarem perto de **3d6**, e danos de **5d6 ou mais** forem raros, caros, telegrafados ou permitirem teste de resistência.
 
 ---
 
-Aparar
+### Aparar
 
 Representa a defesa passiva — a dificuldade de acertar o personagem.
 
@@ -716,47 +595,26 @@ Cada perícia está ligada a um atributo. Perícias medem treinamento aplicado: 
 A rolagem final portanto é:
 
 | Situação | Rolagem |
-
 |---|---|
-
 | Sem proficiência | Dado do atributo |
-
 | Com proficiência | Dado do atributo + Modificador do atributo |
-
 | Perícia | Atributo | Usos comuns |
-
 |---|---|---|
-
 | Acrobacia | AGI | Equilíbrio, rolar, escapar de agarrões |
-
 | Arcanismo | INT | Identificar magia, lembrar de feitiços |
-
 | Atletismo | FOR | Escalar, nadar, saltar, correr |
-
 | Enganação | ESP | Mentir, blefar, criar distrações |
-
 | Furtividade | AGI | Mover-se em silêncio, se esconder |
-
 | História | INT | Lembrar fatos históricos, lendas |
-
 | Intimidação | FOR/ESP | Ameaçar, assustar, coagir |
-
 | Intuição | ESP | Detectar mentiras, ler emoções |
-
 | Medicina | INT | Estabilizar, curar feridas, identificar doenças |
-
 | Natureza | INT | Identificar plantas, animais, terrenos |
-
 | Percepção | ESP | Notar detalhes, escutar sons, avistar |
-
 | Persuasão | ESP | Convencer, negociar, inspirar |
-
 | Prestidigitação | AGI | Bater carteiras, truques de mão, esconder objetos |
-
 | Religião | DEV | Conhecimento divino/demoníaco, rituais |
-
 | Sobrevivência | VIG | Rastrear, acampar, encontrar recursos |
-
 | Tecnologia | INT | Usar, criar e reparar itens arcano-tecnológicos |
 
 ---
@@ -774,14 +632,13 @@ Pontos de Aura (AU)
 O pool de AU é determinado pela **classe**, não por atributos. Guerreiros começam com mais AU e crescem mais rápido; Exploradores têm um pool menor e mais especializado.
 
 | Classe | AU Nível 1 | Crescimento | AU Nível 20 |
-
 |---|---|---|---|
-
 | Guerreiro | 4 | +1 a cada 2 níveis | 14 |
-
 | Explorador | 2 | +1 a cada 3 níveis | 8 |
 
-**Recuperação:** Todo o AU é recuperado ao final de um **Descanso Curto** (1 hora) ou **Descanso Longo**. ---
+**Recuperação:** Todo o AU é recuperado ao final de um **Descanso Curto** (1 hora) ou **Descanso Longo**.
+
+---
 
 Técnicas de Aura
 
@@ -803,7 +660,9 @@ Ação bônus. Por 1 minuto (ou até cair inconsciente), +1 nas rolagens de ataq
 
 **Passo do Vento**
 
-Ação bônus. Move-se até 9m extras neste turno sem provocar ataques de oportunidade. ---
+Ação bônus. Move-se até 9m extras neste turno sem provocar ataques de oportunidade.
+
+---
 
 Custo 2 AU
 
@@ -1019,7 +878,9 @@ Répteis humanoides de sangue frio, os Lizardmans são sobreviventes natos forja
 
 **Deslocamento:** 9 metros.
 
-**Idiomas:** Comum, Sibilante (língua réptil de sibilos, cliques e vocalizações guturais; ininteligível para a maioria). ---
+**Idiomas:** Comum, Sibilante (língua réptil de sibilos, cliques e vocalizações guturais; ininteligível para a maioria).
+
+---
 
 Homens-fera
 
@@ -1041,24 +902,24 @@ Humanoides com aspectos animalescos — resultado de antigas fusões entre a nat
 
 **Deslocamento base:** 9 metros (pode ser alterado pelas partes compradas).
 
-**Idiomas:** Comum + idioma tribal (varia por tribo; ex.: Uivante para lobos, Gorjeio para aves, Rugido para felinos). ---
+**Idiomas:** Comum + idioma tribal (varia por tribo; ex.: Uivante para lobos, Gorjeio para aves, Rugido para felinos).
+
+---
 
 Sistema de Quimera
 
 Na criação, todo Homem-fera recebe **8 Pontos de Fera** para gastar nas categorias abaixo, montando sua composição bestial única. Todas as partes são **permanentes e sempre ativas** — elas fazem parte do corpo do personagem, não são poderes ativados.
 
-**Limite por categoria:** máx. 3 partes da mesma categoria (exceto Natureza Especial: máx. 1). ---
+**Limite por categoria:** máx. 3 partes da mesma categoria (exceto Natureza Especial: máx. 1).
+
+---
 
 #### I. Cabeça & Sentidos
 
 | Parte | Custo | Efeito |
-
 |---|---|---|
-
 | Presas / Mordida | 1 pt | Ataque de mordida d6 perfurante (ação bônus após ataque de arma) | | Chifres / Cornos | 1 pt | Ataque de chifrada d6 perfurante; ao carregar 6m+ em linha reta antes de atacar, +d4 extra | | Focinho & Olfato | 1 pt | Vantagem em Percepção (olfato); detecta sangue, veneno e criaturas em até 30m | | Bico | 1 pt | Ataque de bicada d4; ao acertar, alvo faz FOR CD 10 ou fica Agarrado |
-
 | Orelhas de Presa | 1 pt | Vantagem em Percepção (audição); nunca fica surpreso enquanto consciente | | Olhos Noturnos | 2 pts | Visão no Escuro completa 18m (vê em cores, não em cinza) |
-
 | Olhos de Predador | 2 pts | Sem penalidade em ataques à distância por distância; +2 em Percepção visual | | Língua Bifurcada | 1 pt | Detecta mentiras e emoções por feromônios (Intuição com vantagem em 3m) |
 
 ---
@@ -1066,13 +927,9 @@ Na criação, todo Homem-fera recebe **8 Pontos de Fera** para gastar nas catego
 #### II. Membros & Movimento
 
 | Parte | Custo | Efeito |
-
 |---|---|---|
-
 | Garras | 1 pt | Ataques desarmados causam d6 cortante; pode escalar superfícies verticais (metade do movimento) | | Cauda | 1 pt | +1 Aparar permanente; ataque de cauda d4 contundente como ação bônus | | Patas de Saltador | 1 pt | Dobra alcance de saltos; pular não custa movimento adicional | | Nadadeiras | 1 pt | Velocidade de natação = deslocamento normal |
-
 | Tentáculos | 2 pts | Alcance +1,5m em ataques; pode Agarrar como ação bônus |
-
 | Asas Vestigiais | 2 pts | Planador: cai 3m horizontais por 1m vertical; imune a dano de queda | | Asas Funcionais | 3 pts | Velocidade de voo 12m (requer pelo menos 1,5m de espaço para abrir) | | Patas de Escalador | 2 pts | Velocidade de escalada = deslocamento normal; pode se pendurar em tetos |
 
 ---
@@ -1080,9 +937,7 @@ Na criação, todo Homem-fera recebe **8 Pontos de Fera** para gastar nas catego
 #### III. Cobertura Corporal
 
 | Parte | Custo | Efeito |
-
 |---|---|---|
-
 | Pelagem Espessa | 1 pt | Resistência a dano de frio; +1 Aparar em ambientes de temperatura extrema fria | | Plumagem | 1 pt | Resistência a dano de calor; queda passiva (como Asas Vestigiais para dano de queda) | | Escamas | 2 pts | +1 Aparar permanente (armadura natural que não acumula com armadura média/pesada) | | Espinhos | 1 pt | Criaturas que agarrarem você sofrem 1d4 dano perfurante por rodada | | Couro Grosso | 2 pts | Reduz dano físico recebido em 1 por ataque (mínimo 1 dano) |
 
 ---
@@ -1090,13 +945,9 @@ Na criação, todo Homem-fera recebe **8 Pontos de Fera** para gastar nas catego
 #### IV. Natureza Especial *(máximo 1 parte desta categoria)*
 
 | Parte | Custo | Efeito |
-
 |---|---|---|
-
 | Veneno Natural | 2 pts | 1×/descanso curto: injeta veneno na mordida ou garra (VIG CD 12; 2d4 veneno por 2 rodadas) |
-
 | Regeneração Menor | 3 pts | Recupera 1 PV no início de cada turno enquanto tiver pelo menos 1 PV | | Camuflagem | 2 pts | Pode tentar se esconder mesmo sem cobertura total (Furtividade CD 14) |
-
 | Sopro Elemental | 3 pts | 1×/descanso longo: cone de 6m, 3d6 dano elemental (fogo, ácido ou frio), AGI CD 12 para metade |
 
 ---
@@ -1141,7 +992,7 @@ Exemplos de Homens-fera
 
 Existem seis classes. Ao criar um personagem, escolha uma. Cada classe define seu estilo de combate, acesso a magia e progressão. O avanço vai do nível 1 ao 20.
 
-Como Funcionam as Características de Classe
+### Como Funcionam as Características de Classe
 
 As **Características de Classe** são os recursos que definem como a classe joga: estilos de combate, truques de sobrevivência, técnicas, especializações, melhorias de magia, infusões, pactos e modos de usar recursos. Elas substituem o antigo termo "Habilidades de Classe".
 
@@ -1161,54 +1012,33 @@ A cada nível, o jogador escolhe **1 Característica de Classe** do pool de 30 d
 
 ---
 
-Habilidades Conhecidas por Nível
+### Habilidades Conhecidas por Nível
 
 As **Habilidades** são poderes aprendidos e ativáveis: magias Arcanas, Primitivas e de Fé, técnicas de Aura, tecnologias, dispositivos, infusões, criações personalizadas e efeitos semelhantes.
 
 Todo personagem possui uma quantidade de **Habilidades Conhecidas** baseada no nível. Essa quantidade representa quantas magias, técnicas, tecnologias ou efeitos personalizados o personagem domina o suficiente para usar sem improviso.
 
 | Nível | Habilidades Conhecidas Base |
-
 |---:|---:|
-
 | 1 | 2 |
-
 | 2 | 3 |
-
 | 3 | 4 |
-
 | 4 | 5 |
-
 | 5 | 6 |
-
 | 6 | 7 |
-
 | 7 | 8 |
-
 | 8 | 9 |
-
 | 9 | 10 |
-
 | 10 | 11 |
-
 | 11 | 12 |
-
 | 12 | 13 |
-
 | 13 | 14 |
-
 | 14 | 15 |
-
 | 15 | 16 |
-
 | 16 | 17 |
-
 | 17 | 18 |
-
 | 18 | 19 |
-
 | 19 | 20 |
-
 | 20 | 21 |
 
 **Regra simples:** Habilidades Conhecidas Base = nível do personagem + 1.
@@ -1216,17 +1046,11 @@ Todo personagem possui uma quantidade de **Habilidades Conhecidas** baseada no n
 **Acesso por fonte:** conhecer uma habilidade não basta; o personagem também precisa ter acesso à fonte ou ao item que permite usá-la.
 
 | Fonte | Como acessa |
-
 |---|---|
-
 | Arcana | PA, estudo arcano, grimório, infusão ou item apropriado |
-
 | Primitiva | PE, estado emocional, ligação espiritual ou treinamento sensiente |
-
 | Fé | PD, pacto, voto, divindade ou força patrona |
-
 | Aura | AU, treino físico/espiritual ou característica marcial |
-
 | Tecnologia | item criado, ferramenta, esquema, oficina ou característica de Artífice |
 
 **Características que concedem Habilidades:** algumas Características de Classe, talentos, itens ou eventos narrativos podem aumentar esse número. Quando isso acontecer, a ficha deve anotar: "Habilidades Conhecidas +X".
@@ -1255,7 +1079,7 @@ Todo personagem possui uma quantidade de **Habilidades Conhecidas** baseada no n
 
 ---
 
-Guerreiro
+### Guerreiro
 
 *Mestre das armas e da armadura. Adaptável, resistente e letal. Canaliza Aura através do treino físico.*
 
@@ -1273,47 +1097,26 @@ Guerreiro
 
 
 | Nível | AU | Marcos Fixos |
-
 |---|---|---|
-
 | 1 | 4 | Estilo de Combate |
-
 | 2 | 4 | — |
-
 | 3 | 5 | — |
-
 | 4 | 5 | Melhoria de Atributo |
-
 | 5 | 6 | Talento |
-
 | 6 | 6 | — |
-
 | 7 | 7 | — |
-
 | 8 | 7 | Melhoria de Atributo |
-
 | 9 | 8 | — |
-
 | 10 | 8 | — |
-
 | 11 | 9 | — |
-
 | 12 | 9 | Melhoria de Atributo |
-
 | 13 | 10 | Talento |
-
 | 14 | 10 | — |
-
 | 15 | 11 | — |
-
 | 16 | 11 | Melhoria de Atributo |
-
 | 17 | 12 | Talento |
-
 | 18 | 12 | — |
-
 | 19 | 13 | — |
-
 | 20 | 14 | Melhoria de Atributo |
 
 **Efeitos das Características Fixas:**
@@ -1459,9 +1262,11 @@ Possui os benefícios de todos os Estilos de Combate simultaneamente.
 
 **30. Campeão Supremo** *(Nível 15+)*
 
-Uma vez por turno, ao matar ou incapacitar um inimigo, realize um ataque de bônus gratuitamente. ---
+Uma vez por turno, ao matar ou incapacitar um inimigo, realize um ataque de bônus gratuitamente.
 
-Arcanista
+---
+
+### Arcanista
 
 *Estudioso da magia arcana. Usa PA para lançar habilidades arcanas, rituais e símbolos.*
 
@@ -1476,47 +1281,26 @@ Arcanista
 • **Nível 1:** Grimório (aprende 6 habilidades Arcanas + 2 por nível) | Recuperação Arcana (2 PA/desc. curto)
 
 | Nível | PA | Marcos Fixos |
-
 |---|---|---|
-
 | 1 | 10 | Grimório, Recuperação Arcana |
-
 | 2 | 12 | — |
-
 | 3 | 14 | — |
-
 | 4 | 14 | Melhoria de Atributo |
-
 | 5 | 16 | Talento |
-
 | 6 | 18 | — |
-
 | 7 | 18 | — |
-
 | 8 | 20 | Melhoria de Atributo |
-
 | 9 | 22 | — |
-
 | 10 | 24 | — |
-
 | 11 | 28 | — |
-
 | 12 | 28 | Melhoria de Atributo |
-
 | 13 | 32 | Talento |
-
 | 14 | 32 | — |
-
 | 15 | 36 | — |
-
 | 16 | 36 | Melhoria de Atributo |
-
 | 17 | 40 | Talento |
-
 | 18 | 44 | — |
-
 | 19 | 44 | — |
-
 | 20 | 44 | Melhoria de Atributo |
 
 **Efeitos das Características Fixas:**
@@ -1653,9 +1437,11 @@ Invoca entidade arcana de combate por 1 min. (PV = nível × 10, Aparar 14, dano
 
 **30. Toque do Astral** *(Nível 15+)*
 
-Força alvo a fazer INT CD 18; falha = transportado para plano astral por 1 hora. 15 PA. 1×/semana. ---
+Força alvo a fazer INT CD 18; falha = transportado para plano astral por 1 hora. 15 PA. 1×/semana.
 
-Sensiente
+---
+
+### Sensiente
 
 *Canaliza a Magia Primitiva através dos estados emocionais. Suporte, controle e dano emocional.*
 
@@ -1670,19 +1456,12 @@ Sensiente
 No início de cada combate (ou antes da primeira ação), o Sensiente **declara seu Estado Emocional**:
 
 | Estado | Emoção | Tipo de poder |
-
 |---|---|---|
-
 | Raiva | Fúria, ódio | Dano e destruição |
-
 | Amor | Afeto, compaixão | Cura e proteção |
-
 | Medo | Terror, ansiedade | Fuga, ilusão, controle |
-
 | Alegria | Euforia, esperança | Suporte, buffs, levitação |
-
 | Tristeza | Melancolia, luto | Debuff, clima, sonhos |
-
 | Determinação | Resolve, vontade | Resistência, barreira |
 
 • Habilidades **do seu estado declarado**: custo normal de PE.
@@ -1697,47 +1476,26 @@ No início de cada combate (ou antes da primeira ação), o Sensiente **declara 
 
 
 | Nível | PE | Marcos Fixos |
-
 |---|---|---|
-
 | 1 | 10 | Ressonância Emocional, Estado Emocional |
-
 | 2 | 12 | — |
-
 | 3 | 14 | — |
-
 | 4 | 14 | Melhoria de Atributo |
-
 | 5 | 16 | Talento |
-
 | 6 | 16 | — |
-
 | 7 | 16 | — |
-
 | 8 | 18 | Melhoria de Atributo |
-
 | 9 | 20 | — |
-
 | 10 | 22 | — |
-
 | 11 | 26 | — |
-
 | 12 | 26 | Melhoria de Atributo |
-
 | 13 | 30 | Talento |
-
 | 14 | 30 | — |
-
 | 15 | 32 | — |
-
 | 16 | 32 | Melhoria de Atributo |
-
 | 17 | 36 | Talento |
-
 | 18 | 36 | — |
-
 | 19 | 36 | — |
-
 | 20 | 36 | Melhoria de Atributo |
 
 **Efeitos das Características Fixas:**
@@ -1882,7 +1640,7 @@ Sente e influencia qualquer criatura inteligente via contato mental telepático;
 
 ---
 
-Devoto
+### Devoto
 
 *Serve a uma divindade ou força demoníaca. Combina poder marcial com magia de Fé (PD).*
 
@@ -1895,21 +1653,13 @@ Escolha de Divindade
 Na **criação do personagem**, o Devoto escolhe sua divindade:
 
 | Divindade | Símbolo | Natureza | Domínio de Poder |
-
 |---|---|---|---|
-
 | Luz | ■■ | Benígna | Cura, revelação, exorcismo, proteção |
-
 | Sombra | ■ | Neutra | Segredos, ilusões, passagem, morte suave |
-
 | Natureza | ■ | Neutra | Plantas, animais, clima, venenos naturais |
-
 | Morte | ■ | Neutra | Ancestrais, ciclos, ressurreição, passagem |
-
 | Caos | ■ | Maligna | Destruição, mutação, imprevisibilidade |
-
 | Ordem | ■■ | Benígna | Lei, destino, proteção, profecia |
-
 | Demônio | ■ | Maligna | Poder, medo, controle, pactos |
 
 Cada habilidade de PD tem uma ou mais divindades associadas. Usar habilidade de **divindade diferente da escolhida** custa o **dobro de PD**.
@@ -1920,47 +1670,26 @@ Cada habilidade de PD tem uma ou mais divindades associadas. Usar habilidade de 
 
 
 | Nível | PD | Marcos Fixos |
-
 |---|---|---|
-
 | 1 | 10 | Canalizar Divindade (2×/dc), Símbolo Sagrado, Escolha de Divindade |
-
 | 2 | 12 | — |
-
 | 3 | 14 | — |
-
 | 4 | 14 | Melhoria de Atributo |
-
 | 5 | 16 | Talento, Canalizar Divindade (3×/dc) |
-
 | 6 | 18 | — |
-
 | 7 | 18 | — |
-
 | 8 | 20 | Melhoria de Atributo |
-
 | 9 | 22 | — |
-
 | 10 | 24 | Intervenção Divina (1×/semana) |
-
 | 11 | 28 | Canalizar Divindade (4×/dc) |
-
 | 12 | 28 | Melhoria de Atributo |
-
 | 13 | 32 | Talento |
-
 | 14 | 32 | — |
-
 | 15 | 34 | — |
-
 | 16 | 34 | Melhoria de Atributo |
-
 | 17 | 38 | Talento, Canalizar Divindade (5×/dc) |
-
 | 18 | 42 | — |
-
 | 19 | 42 | — |
-
 | 20 | 42 | Melhoria de Atributo |
 
 **Efeitos das Características Fixas:**
@@ -2105,7 +1834,7 @@ Torna-se semi-divino por 1 hora: +3 em todos os atributos, imune a morte, aura s
 
 ---
 
-Artífice
+### Artífice
 
 *Mestre da Tecnologia mágica. Cria, encanta e usa itens arcano-tecnológicos.*
 
@@ -2123,47 +1852,26 @@ Artífice
 
 
 | Nível | PA | Infusões | Marcos Fixos |
-
 |---|---|---|---|
-
 | 1 | 6 | 1 | Infusão, Especialista em Tecnologia |
-
 | 2 | 6 | 2 | — |
-
 | 3 | 7 | 2 | — |
-
 | 4 | 7 | 2 | Melhoria de Atributo |
-
 | 5 | 8 | 3 | Talento |
-
 | 6 | 8 | 3 | — |
-
 | 7 | 9 | 3 | — |
-
 | 8 | 9 | 3 | Melhoria de Atributo |
-
 | 9 | 10 | 4 | — |
-
 | 10 | 10 | 4 | — |
-
 | 11 | 11 | 4 | — |
-
 | 12 | 11 | 4 | Melhoria de Atributo |
-
 | 13 | 12 | 5 | Talento |
-
 | 14 | 12 | 5 | — |
-
 | 15 | 13 | 5 | — |
-
 | 16 | 13 | 5 | Melhoria de Atributo |
-
 | 17 | 14 | 6 | Talento |
-
 | 18 | 14 | 6 | — |
-
 | 19 | 15 | 6 | — |
-
 | 20 | 16 | 6 | Melhoria de Atributo |
 
 **Efeitos das Características Fixas:**
@@ -2306,7 +2014,7 @@ Substitui um órgão ou membro por versão mecânica (ex.: olho = visão arcana,
 
 ---
 
-Explorador
+### Explorador
 
 *Mestre das sombras e da sobrevivência. Combina combate furtivo, mobilidade e perícias.*
 
@@ -2323,47 +2031,26 @@ Explorador
 • **Nível 1:** Ataque Furtivo (+1d6 por 2 níveis de Explorador) | Especialista (dobra bônus em 2 perícias)
 
 | Nível | Ataque Furtivo | AU | Marcos Fixos |
-
 |---|---|---|---|
-
 | 1 | 1d6 | 2 | Ataque Furtivo, Especialista |
-
 | 2 | 1d6 | 2 | — |
-
 | 3 | 2d6 | 2 | — |
-
 | 4 | 2d6 | 2 | Melhoria de Atributo |
-
 | 5 | 3d6 | 3 | Talento |
-
 | 6 | 3d6 | 3 | Especialista +2 |
-
 | 7 | 4d6 | 4 | — |
-
 | 8 | 4d6 | 4 | Melhoria de Atributo |
-
 | 9 | 5d6 | 4 | — |
-
 | 10 | 5d6 | 5 | — |
-
 | 11 | 6d6 | 5 | — |
-
 | 12 | 6d6 | 5 | Melhoria de Atributo |
-
 | 13 | 7d6 | 6 | Talento |
-
 | 14 | 7d6 | 6 | — |
-
 | 15 | 8d6 | 7 | — |
-
 | 16 | 8d6 | 7 | Melhoria de Atributo |
-
 | 17 | 9d6 | 7 | Talento |
-
 | 18 | 9d6 | 8 | — |
-
 | 19 | 10d6 | 8 | — |
-
 | 20 | 10d6 | 8 | Melhoria de Atributo |
 
 **Efeitos das Características Fixas:**
@@ -2513,19 +2200,12 @@ Ao matar um inimigo, recupera todos os AU gastos e o próximo Ataque Furtivo cau
 Personagens podem diversificar investindo níveis em outra classe ao invés de avançar na principal. Pré-requisitos de Multiclasse
 
 | Classe | Atributo Mínimo |
-
 |---|---|
-
 | Guerreiro | FOR d8 *ou* AGI d8 |
-
 | Arcanista | INT d8 |
-
 | Sensiente | ESP d8 |
-
 | Devoto | DEV d8 |
-
 | Artífice | INT d8 |
-
 | Explorador | AGI d8 |
 
 Regras de Multiclasse
@@ -2545,7 +2225,7 @@ Regras de Multiclasse
 
 ## PARTE VIII — ANTECEDENTES
 
-O antecedente descreve de onde o personagem vem antes de se tornar aventureiro. Concede 2 perícias, 1 proficiência extra (idioma ou ferramenta), um item especial e uma **Feature Narrativa** — habilidade social ou de contexto que funciona fora do combate.
+O antecedente descreve de onde o personagem vem antes de se tornar aventureiro. Concede 2 perícias, 1 proficiência extra (idioma ou ferramenta), um item especial e uma **Caracter?stica Narrativa** — habilidade social ou de contexto que funciona fora do combate.
 
 Cada antecedente também possui tabelas de **Traços de Personalidade**, **Ideais**, **Laços** e **Falhas** para inspirar o roleplay.
 
@@ -2559,41 +2239,27 @@ Nobre
 
 **Equipamento Inicial:** Roupa fina, anel de sinete, pergaminho de linhagem, 25 PO.
 
-**Feature — Posição Privilegiada:** As pessoas presumem que você tem direito à autoridade. Pode acessar salões nobres, palácios e círculos sociais de elite. Em situações mundanas, NPCs comuns e de classe média tendem a ser respeitosos ou deferentes.
+**Característica narrativa — Posição Privilegiada:** As pessoas presumem que você tem direito à autoridade. Pode acessar salões nobres, palácios e círculos sociais de elite. Em situações mundanas, NPCs comuns e de classe média tendem a ser respeitosos ou deferentes.
 
 | d8 | Traço de Personalidade |
-
 |---|---|
-
 | 1 | Minha eloquência é incomparável — sempre sei dizer a coisa certa. |
-
 | 2 | Tenho dificuldade em me relacionar com pessoas comuns. |
-
 | 3 | Acredito genuinamente que o poder obriga quem o possui. |
-
 | 4 | Escondo meu orgulho com humor autoderrisório. |
-
 | 5 | Tenho forte senso de moda e julgamento estético. |
-
 | 6 | Secretamente admiro quem trabalha com as próprias mãos. |
-
 | 7 | Coleciono informações sobre poderosos como arma. |
-
 | 8 | Sou generoso com quem demonstra lealdade genuína. |
-
 | d6 | Ideal | d6 | Laço | d6 | Falha |
-
 |---|---|---|---|---|---|
-
 | 1 | Nobreza Obliga | 1 | Minha família acima de tudo | 1 | Julgo todos pelos nascimento | | 2 | Poder é ferramenta | 2 | Um amor proibido | 2 | Nunca admito erros em público |
-
 | 3 | Tradição sagrada | 3 | Honra um mentor falecido | 3 | Gastos compulsivos |
-
 | 4 | Reforma social | 4 | Protege o povo de suas terras | 4 | Acha o povo simplório |
-
 | 5 | Independência total | 5 | Uma dívida de honra | 5 | Esnoba qualquer arte "vulgar" |
+| 6 | Igualdade verdadeira | 6 | Um segredo que envergonharia a família | 6 | Acredita ser sempre o mais inteligente |
 
-| 6 | Igualdade verdadeira | 6 | Um segredo que envergonharia a família | 6 | Acredita ser sempre o mais inteligente | ---
+---
 
 Criminoso
 
@@ -2603,34 +2269,21 @@ Criminoso
 
 **Equipamento Inicial:** Roupa escura, ferramentas de ladrão, 1 moeda falsa, 15 PO.
 
-**Feature — Contato Criminal:** Tem um contato no submundo que fornece informações, receptação de itens ou trabalho. O contato pode ser acionado entre aventuras para obter itens raros, pistas ou favores (a critério do Mestre).
+**Característica narrativa — Contato Criminal:** Tem um contato no submundo que fornece informações, receptação de itens ou trabalho. O contato pode ser acionado entre aventuras para obter itens raros, pistas ou favores (a critério do Mestre).
 
 | d8 | Traço de Personalidade |
-
 |---|---|
-
 | 1 | Sempre tenho um plano de saída de qualquer situação. |
-
 | 2 | Prefiro agir a planejar excessivamente. |
-
 | 3 | Não confio em ninguém facilmente — mas sou leal quando confio. |
-
 | 4 | Minhas maneiras são surpreendentemente refinadas. |
-
 | 5 | Tenho fascínio por quebra-cabeças e enigmas. |
-
 | 6 | O dinheiro é meio, nunca fim. |
-
 | 7 | Observo saídas e pontos fracos ao entrar em qualquer lugar. |
-
 | 8 | Faço piadas mesmo nas piores situações. |
-
 | d6 | Ideal | d6 | Laço | d6 | Falha |
-
 |---|---|---|---|---|---|
-
 | 1 | Liberdade absoluta | 1 | Proteger os da gangue | 1 | Não resiste a um golpe lucrativo | | 2 | Roubar dos ricos | 2 | Vinga morte de parceiro | 2 | Foge de compromissos |
-
 | 3 | Sobrevivência | 3 | Dívida com mentor do crime | 3 | Viciado em algum entorpecente | | 4 | Lealdade ao clã | 4 | Proteger uma criança da rua | 4 | Cleptomaníaco em situações de estresse | | 5 | Anarquia | 5 | Paga dívidas sempre | 5 | Não confia em autoridades de nenhuma forma | | 6 | Redenção pessoal | 6 | Segredo que pode arruiná-lo | 6 | Excessivamente paranoico |
 
 ---
@@ -2643,36 +2296,22 @@ Soldado
 
 **Equipamento Inicial:** Insígnia de patente, troféu de inimigo derrotado, ossos de dados, armadura comum (já usada), 10 PO.
 
-**Feature — Patente Militar:** Soldados e milicianos reconhecem sua patente e tratam você como superior hierárquico (em organizações militares equivalentes). Pode obter equipamento básico, alojamento e informações de quartéis.
+**Característica narrativa — Patente Militar:** Soldados e milicianos reconhecem sua patente e tratam você como superior hierárquico (em organizações militares equivalentes). Pode obter equipamento básico, alojamento e informações de quartéis.
 
 | d8 | Traço de Personalidade |
-
 |---|---|
-
 | 1 | Acordo com o pragmatismo — sempre a solução mais simples. |
-
 | 2 | Sou disciplinado ao ponto de irritar companheiros. |
-
 | 3 | Tenho histórias de guerra para toda situação. |
-
 | 4 | Camaradagem é mais importante que qualquer ideal. |
-
 | 5 | Sofro de pesadelos ocasionais de campanhas passadas. |
-
 | 6 | Respeito quem demonstra coragem independente da origem. |
-
 | 7 | Quando em perigo, assumo postura de comando natural. |
-
 | 8 | Tenho rituais supersticiosos antes de combates. |
-
 | d6 | Ideal | d6 | Laço | d6 | Falha |
-
 |---|---|---|---|---|---|
-
 | 1 | Maior bem da sociedade | 1 | Unidade de combate | 1 | Obedece ordens sem questionar | | 2 | Honra acima de tudo | 2 | Vinga camaradas caídos | 2 | Violência como primeira solução | | 3 | Nação e patria | 3 | Protetor de civis | 3 | Dificuldade com autoridade civil |
-
 | 4 | Sobrevivência do grupo | 4 | Mentor ou comandante | 4 | Não tolera covardia |
-
 | 5 | Paz duradoura | 5 | Família que deixou para trás | 5 | Pesadelos e flashbacks em batalha | | 6 | Poder pessoal | 6 | Inimigo que deve ser destruído | 6 | Desconfiança de magia |
 
 ---
@@ -2685,34 +2324,21 @@ Acadêmico
 
 **Equipamento Inicial:** Livro de anotações, tinta, pena, carta de uma biblioteca, 10 PO.
 
-**Feature — Pesquisador:** Sabe onde encontrar qualquer informação. Pode descobrir fatos obscuros com acesso a uma biblioteca, universidade ou arquivo. Se a informação não estiver disponível, sabe exatamente quem ou onde encontrá-la.
+**Característica narrativa — Pesquisador:** Sabe onde encontrar qualquer informação. Pode descobrir fatos obscuros com acesso a uma biblioteca, universidade ou arquivo. Se a informação não estiver disponível, sabe exatamente quem ou onde encontrá-la.
 
 | d8 | Traço de Personalidade |
-
 |---|---|
-
 | 1 | Cito fontes em conversas cotidianas. |
-
 | 2 | Anoto tudo — até conversas triviais. |
-
 | 3 | Confio na lógica mais que no instinto. |
-
 | 4 | Incapaz de resistir a um livro não lido. |
-
 | 5 | Tenho dificuldade em me expressar em termos simples. |
-
 | 6 | Corijo erros factuais independente da situação. |
-
 | 7 | Minha área de pesquisa é minha maior paixão. |
-
 | 8 | Sou genuinamente fascinado por culturas diferentes. |
-
 | d6 | Ideal | d6 | Laço | d6 | Falha |
-
 |---|---|---|---|---|---|
-
 | 1 | Conhecimento é poder | 1 | Uma academia ou instituição | 1 | Paralisa diante de situações imprevisíveis | | 2 | Verdade acima de tudo | 2 | Um mentor intelectual | 2 | Arrogância intelectual |
-
 | 3 | Conhecimento livre | 3 | Uma obra incompleta | 3 | Negligencia o físico pelo mental | | 4 | Preservação histórica | 4 | Um aluno promissor | 4 | Guarda segredos que não deveria | | 5 | Progresso científico | 5 | Uma biblioteca destruída | 5 | Viciado em adquirir conhecimento proibido | | 6 | Provar uma teoria revolucionária | 6 | Amigo de pesquisa perdido | 6 | Subestima o perigo ao investigar |
 
 ---
@@ -2725,7 +2351,7 @@ Eremita
 
 **Equipamento Inicial:** Estojo de ervas, diário de reflexões, roupas modestas, amuleto, 5 PO.
 
-**Feature — Descoberta:** Passou anos em isolamento meditando ou pesquisando algo. Possui um conhecimento secreto único sobre o mundo (revelar ao Mestre para definir; pode ser cosmológico, histórico ou mágico) que pode ser chave em uma aventura.
+**Característica narrativa — Descoberta:** Passou anos em isolamento meditando ou pesquisando algo. Possui um conhecimento secreto único sobre o mundo (revelar ao Mestre para definir; pode ser cosmológico, histórico ou mágico) que pode ser chave em uma aventura.
 
 ---
 
@@ -2737,7 +2363,7 @@ Forasteiro
 
 **Equipamento Inicial:** Cajado, faca de caça, mapa parcial da região de origem, trajes regionais, 10 PO.
 
-**Feature — Memória de Viajante:** Em qualquer ambiente natural, sempre consegue encontrar comida e água potável para si e até 5 companheiros. Também encontra refúgio seguro para descanso em qualquer região selvagem.
+**Característica narrativa — Memória de Viajante:** Em qualquer ambiente natural, sempre consegue encontrar comida e água potável para si e até 5 companheiros. Também encontra refúgio seguro para descanso em qualquer região selvagem.
 
 ---
 
@@ -2749,7 +2375,7 @@ Marinheiro
 
 **Equipamento Inicial:** Corda 15m, talismã de um ser querido, roupa resistente, faca marítima, 10 PO.
 
-**Feature — Passagem:** Tem conexões com embarcações e portos. Pode sempre obter transporte marítimo gratuito para si e até 5 companheiros, em troca de trabalho a bordo ou favores futuros.
+**Característica narrativa — Passagem:** Tem conexões com embarcações e portos. Pode sempre obter transporte marítimo gratuito para si e até 5 companheiros, em troca de trabalho a bordo ou favores futuros.
 
 ---
 
@@ -2761,7 +2387,7 @@ Artesão de Guilda
 
 **Equipamento Inicial:** Ferramentas artesanais, carta da guilda, roupas de artesão, 15 PO.
 
-**Feature — Associação de Guilda:** É membro ativo de uma guilda. Em qualquer cidade com a guilda presente, pode obter alojamento, comida e suporte básico dos membros. A guilda também pode fornecer contatos, informações ou recursos.
+**Característica narrativa — Associação de Guilda:** É membro ativo de uma guilda. Em qualquer cidade com a guilda presente, pode obter alojamento, comida e suporte básico dos membros. A guilda também pode fornecer contatos, informações ou recursos.
 
 ---
 
@@ -2773,7 +2399,7 @@ Charlatão
 
 **Equipamento Inicial:** Roupas finas, kit de disfarce, cartas de tarô falsas, 15 PO.
 
-**Feature — Identidade Falsa:** Possui uma identidade falsa completamente documentada (nome, histórico, referências). Pode criar novas identidades em 7 dias de trabalho, com documentos forjados convincentes.
+**Característica narrativa — Identidade Falsa:** Possui uma identidade falsa completamente documentada (nome, histórico, referências). Pode criar novas identidades em 7 dias de trabalho, com documentos forjados convincentes.
 
 ---
 
@@ -2785,7 +2411,7 @@ Acólito
 
 **Equipamento Inicial:** Símbolo sagrado, livro de orações, incenso, vestes religiosas, 15 PO.
 
-**Feature — Abrigo dos Fiéis:** Templos e santuários da sua fé (ou alinhados) fornecem alojamento, comida e cura básica gratuitamente para você e seus companheiros. Em troca, podem pedir serviços à altura.
+**Característica narrativa — Abrigo dos Fiéis:** Templos e santuários da sua fé (ou alinhados) fornecem alojamento, comida e cura básica gratuitamente para você e seus companheiros. Em troca, podem pedir serviços à altura.
 
 ---
 
@@ -2797,7 +2423,7 @@ Sobrevivente
 
 **Equipamento Inicial:** Faca de sobrevivência, kit de primeiros socorros, mochila robusta, 5 PO.
 
-**Feature — Instinto de Sobrevivência:** Vantagem nos testes de morte. Quando estabilizado, recupera 1 PV no início do próximo turno ao invés de ficar incapacitado.
+**Característica narrativa — Instinto de Sobrevivência:** Vantagem nos testes de morte. Quando estabilizado, recupera 1 PV no início do próximo turno ao invés de ficar incapacitado.
 
 ---
 
@@ -2809,7 +2435,7 @@ Mercador
 
 **Equipamento Inicial:** Balança de precisão, 5 gemas simples, roupas de negócios, 25 PO.
 
-**Feature — Mercados e Preços:** Sempre sabe o valor justo de itens comuns e raros. Pode comprar itens em lojas com 10% de desconto e vender itens usados por 10% a mais que o padrão. Tem contatos em mercados de qualquer cidade de tamanho médio.
+**Característica narrativa — Mercados e Preços:** Sempre sabe o valor justo de itens comuns e raros. Pode comprar itens em lojas com 10% de desconto e vender itens usados por 10% a mais que o padrão. Tem contatos em mercados de qualquer cidade de tamanho médio.
 
 ---
 
@@ -2818,15 +2444,10 @@ Mercador
 Moeda
 
 | Moeda | Abreviação | Equivalência |
-
 |---|---|---|
-
 | Cobre | CO | 10 CO = 1 PR |
-
 | Prata | PR | 10 PR = 1 OO |
-
 | Ouro | OO | 10 OO = 1 PL |
-
 | Platina | PL | 1 PL = 10 OO |
 
 ---
@@ -2834,23 +2455,14 @@ Moeda
 Propriedades de Armas
 
 | Propriedade | Descrição |
-
 |---|---|
-
 | **Finesse** | Pode usar FOR ou AGI nos ataques e dano. |
-
 | **Versátil** | Pode usar com 1 ou 2 mãos; dano maior com 2 mãos (indicado). |
-
 | **Pesado** | Criaturas Pequenas têm desvantagem nos ataques. |
-
 | **Leve** | Pode ser usada na mão secundária sem penalidade. |
-
 | **Arremessável** | Pode ser lançada (alcance normal/longo indicado em metros). |
-
 | **Alcance** | Ataca alvos em 3m ao invés de 1,5m. |
-
 | **Duas mãos** | Requer ambas as mãos. |
-
 | **Recarga** | Requer ação bônus para recarregar após cada disparo. | | **Munição** | Precisa de flechas/virotes/projéteis. Recupera metade após combate. | | **Especial** | Regras únicas descritas individualmente. |
 
 ---
@@ -2858,19 +2470,12 @@ Propriedades de Armas
 Armas Simples (Corpo a Corpo)
 
 | Arma | Custo | Dano | Peso | Propriedades |
-
 |---|---|---|---|---|
-
 | Clava | 1 PR | d4 contundente | 2 kg | Leve |
-
 | Adaga | 2 OO | d4 perfurante | 0,5 kg | Finesse, Leve, Arremessável (6/18m) | | Foice Leve | 2 OO | d4 cortante | 1 kg | Finesse, Leve |
-
 | Maçaneta | 5 PR | d6 contundente | 2 kg | — |
-
 | Bordão | 2 PR | d6 contundente | 2 kg | Versátil (d8) |
-
 | Lança | 1 OO | d6 perfurante | 1,5 kg | Arremessável (6/20m), Versátil (d8) | | Machado de Mão | 5 OO | d6 cortante | 1 kg | Leve, Arremessável (6/20m) | | Martelo de Mão | 5 OO | d6 contundente | 1 kg | Leve, Arremessável (6/20m) | | Foicinha | 1 OO | d4 cortante | 1 kg | Leve |
-
 | Porrete | 5 PR | d4 contundente | 1 kg | Leve |
 
 ---
@@ -2878,11 +2483,8 @@ Armas Simples (Corpo a Corpo)
 Armas Simples (À Distância)
 
 | Arma | Custo | Dano | Alcance | Propriedades |
-
 |---|---|---|---|---|
-
 | Besta Leve | 25 OO | d8 perfurante | 24/96m | Munição, Recarga, Duas mãos | | Dardo | 5 CO | d4 perfurante | 6/18m | Finesse, Arremessável |
-
 | Zarabatana | 10 OO | 1 perfurante | 8/32m | Munição, Recarga, Especial (veneno) | | Funda | 1 PR | d4 contundente | 9/36m | Munição |
 
 ---
@@ -2890,33 +2492,19 @@ Armas Simples (À Distância)
 Armas Marciais (Corpo a Corpo)
 
 | Arma | Custo | Dano | Peso | Propriedades |
-
 |---|---|---|---|---|
-
 | Machado de Batalha | 10 OO | d8 cortante | 2 kg | Versátil (d10) |
-
 | Alabarda | 20 OO | d10 cortante | 3 kg | Pesado, Alcance, Duas mãos |
-
 | Espada Grande | 50 OO | 2d6 cortante | 3 kg | Pesado, Duas mãos |
-
 | Espada Longa | 15 OO | d8 cortante | 1,5 kg | Versátil (d10) |
-
 | Maça | 5 OO | d8 contundente | 2 kg | — |
-
 | Rapieira | 25 OO | d8 perfurante | 1 kg | Finesse |
-
 | Espada Curta | 10 OO | d6 perfurante | 1 kg | Finesse, Leve |
-
 | Tridente | 5 OO | d6 perfurante | 2 kg | Arremessável (6/18m), Versátil (d8) |
-
 | Martelo de Guerra | 15 OO | d8 contundente | 2 kg | Versátil (d10) |
-
 | Chicote | 2 OO | d4 cortante | 1,5 kg | Finesse, Alcance |
-
 | Lança de Cavalaria | 10 OO | d12 perfurante | 3 kg | Alcance, Especial (acerto duplo após carga de 6m) | | Foice Grande | 20 OO | d10 cortante | 3 kg | Pesado, Alcance, Duas mãos |
-
 | Sabre | 15 OO | d8 cortante | 1 kg | Finesse |
-
 | Corrente com Bola | 10 OO | d8 contundente | 3 kg | Especial (ignora escudo) | | Garra Dupla | 20 OO | 2d4 cortante | 1 kg | Finesse, Especial (dois ataques por ação) |
 
 ---
@@ -2924,15 +2512,10 @@ Armas Marciais (Corpo a Corpo)
 Armas Marciais (À Distância)
 
 | Arma | Custo | Dano | Alcance | Propriedades |
-
 |---|---|---|---|---|
-
 | Besta Pesada | 50 OO | d10 perfurante | 30/120m | Pesado, Munição, Recarga, Duas mãos | | Arco Curto | 25 OO | d6 perfurante | 24/96m | Munição, Duas mãos |
-
 | Arco Longo | 50 OO | d8 perfurante | 45/180m | Pesado, Munição, Duas mãos |
-
 | Besta de Mão | 75 OO | d6 perfurante | 9/36m | Munição, Leve, Recarga |
-
 | Pistola Arcana | 250 OO | d10 perfurante | 18/54m | Munição (cristais), Recarga, Especial (ignora armadura leve) | | Arco Composto | 100 OO | d8 perfurante | 36/144m | Pesado, Munição, Duas mãos, Especial (+Mod. FOR ao dano) |
 
 ---
@@ -2944,13 +2527,9 @@ Leve
 *(Mod. AGI completo ao Aparar)*
 
 | Armadura | Custo | Bônus Aparar | Peso | Penalidade |
-
 |---|---|---|---|---|
-
 | Acolchoada | 5 OO | +1 | 4 kg | Desvantagem Furtividade |
-
 | Couro | 10 OO | +1 | 5 kg | — |
-
 | Couro Reforçado | 45 OO | +2 | 6,5 kg | — |
 
 Média
@@ -2958,15 +2537,10 @@ Média
 *(Mod. AGI máximo +2 ao Aparar)*
 
 | Armadura | Custo | Bônus Aparar | Peso | Req. VIG | Penalidade |
-
 |---|---|---|---|---|---|
-
 | Cota de Malha | 50 OO | +3 | 10 kg | — | — |
-
 | Escamas | 50 OO | +3 | 20 kg | d6 | Desvantagem Furtividade |
-
 | Brunea | 400 OO | +4 | 7,5 kg | d6 | — |
-
 | Meia Armadura | 750 OO | +4 | 12,5 kg | d6 | Desvantagem Furtividade |
 
 Pesada
@@ -2974,27 +2548,18 @@ Pesada
 *(Mod. AGI não se aplica)*
 
 | Armadura | Custo | Bônus Aparar | Peso | Req. VIG | Penalidade |
-
 |---|---|---|---|---|---|
-
 | Cota de Anéis | 30 OO | +4 | 18 kg | d8 | Desvantagem Furtividade |
-
 | Lamelar | 200 OO | +5 | 22,5 kg | d8 | Desvantagem Furtividade |
-
 | Loriga Segmentada | 600 OO | +6 | 30 kg | d10 | Desvantagem Furtividade |
-
 | Armadura de Placas | 1500 OO | +7 | 32 kg | d10 | Desvantagem Furtividade |
 
 Escudos
 
 | Escudo | Custo | Bônus Aparar | Peso |
-
 |---|---|---|---|
-
 | Escudo de Madeira | 5 OO | +1 | 3 kg |
-
 | Escudo Metálico | 10 OO | +2 | 5 kg |
-
 | Escudo Torre | 30 OO | +3 | 8 kg |
 
 > *Escudo Torre:* Desvantagem em ataques à distância enquanto equipado.
@@ -3024,27 +2589,16 @@ O objetivo deste guia é permitir variedade ampla sem quebrar o equilíbrio do j
 Escolha primeiro a forma física do item. A forma define como ele é usado, carregado, quebrado e percebido.
 
 | Forma | Exemplos | Uso comum |
-
 |---|---|---|
-
 | Consumível | poção, bomba, ampola, cartucho, selo descartável | Efeito forte de uso único |
-
 | Ferramenta | lente, luva, chave, kit, detector, bússola | Exploração, perícia, análise, reparo |
-
 | Arma modificada | lâmina, arco, pistola arcana, lança, munição | Dano, condição, drenagem, alcance |
-
 | Armadura/vestimenta | couraça, capa, botas, máscara, bracelete | Defesa, mobilidade, resistência |
-
 | Acessório | anel, amuleto, broche, cristal, foco | Bônus pequeno, carga, proteção situacional |
-
 | Armadilha | runa, mina, fio, selo, torreta | Controle de área, alarme, dano preparado |
-
 | Construto | sentinela, drone, golem, servo mecânico | Ação autônoma, guarda, transporte, combate |
-
 | Prótese/implante | olho, braço, pulmão, coração mecânico | Melhoria corporal permanente com custo |
-
 | Veículo | prancha, trenó, barco, carroça, asa mecânica | Movimento, carga, viagem, perseguição |
-
 | Estrutura | porta, elevador, gerador, altar, muralha, núcleo | Defesa de base, dungeon, cidade, ritual |
 
 ---
@@ -3054,27 +2608,16 @@ Escolha primeiro a forma física do item. A forma define como ele é usado, carr
 Todo item deve ter um efeito principal. Efeitos secundários aumentam custo e risco.
 
 | Categoria | Efeito seguro | Efeito forte | Limite recomendado |
-
 |---|---|---|---|
-
 | Dano | 1d6 a 2d6 | 3d6 a 6d6 ou área | Consumo, recarga ou risco |
-
 | Cura | 1d6 a 2d4+2 PV | 4d4+4 PV ou remover condição | Uso único ou recarga longa |
-
 | Defesa | +1 Aparar, resistência situacional | +2 Aparar, redução de dano | Duração curta ou requisito |
-
 | Movimento | +3m, ignorar terreno | voo curto, teleporte curto | Cargas e duração limitada |
-
 | Informação | detectar magia, idioma, direção | revelar invisível, histórico, fraqueza | Alcance e duração claros |
-
 | Controle | fumaça, empurrão, prender porta | cegar, paralisar, campo de força | Teste de resistência obrigatório |
-
 | Utilidade | luz, calor, reparo, tradução, cópia | criar abrigo, purificar área, automatizar tarefa | Tempo de ativação |
-
 | Automação | executar tarefa simples | agir em combate ou patrulhar | PV, Aparar e comandos limitados |
-
 | Armazenamento | guardar PA, item, mensagem | armazenar magia ou criatura pequena | Capacidade explícita |
-
 | Transformação | mudar material, forma ou função | prótese, mutação, modo alternativo | Manutenção e falha |
 
 ---
@@ -3084,21 +2627,13 @@ Todo item deve ter um efeito principal. Efeitos secundários aumentam custo e ri
 Use o grau para definir custo, tempo, CD de criação e impacto narrativo.
 
 | Grau | Escala | CD | Custo base | Tempo base | Exemplo |
-
 |---|---|---:|---:|---:|---|
-
 | 0 — Truque | utilidade menor | 8 | 10 OO | 10 min | luz, alarme simples, faísca |
-
 | 1 — Comum | item de aventura | 10 | 30 OO | 1 h | bomba de fumaça, ferramenta +1 |
-
 | 2 — Especializado | item de combate/cena | 12 | 80 OO | 2 h | granada, lente arcana, veneno |
-
 | 3 — Avançado | muda abordagem tática | 14 | 200 OO | 8 h | arma +1, botas rápidas, drone |
-
 | 4 — Raro | item marcante de personagem | 16 | 500 OO | 3 dias | prótese, capa protetora, golem |
-
 | 5 — Obra-prima | define campanha ou facção | 18 | 1.500 OO | 2 semanas | veículo arcano, núcleo de base |
-
 | 6 — Lendário | artefato tecnológico | 20+ | 5.000 OO+ | 1 mês+ | máquina planar, corpo mecânico |
 
 O custo base assume materiais comuns em cidade grande. Em ruínas, guerra, isolamento ou mercado ilegal, aumente o custo em 25% a 100%.
@@ -3140,51 +2675,28 @@ Para criar um item, siga estes passos:
 Use módulos como blocos de construção. Um item simples tem 1 módulo. Um item complexo tem 2 ou 3. Acima disso, trate como projeto raro ou lendário.
 
 | Módulo | Efeito | Ajuste |
-
 |---|---|---|
-
 | Dano leve | 1d6 dano | Sem ajuste |
-
 | Dano médio | 2d6 ou 1d10 dano | +1 grau ou uso limitado |
-
 | Dano pesado | 3d6 a 4d6 dano | +2 graus, consumo ou recarga longa |
-
 | Área pequena | raio 3m ou linha 9m | +50% custo |
-
 | Área média | raio 6m ou cone 6m | +1 grau |
-
 | Condição leve | Abalado, empurrado, queda, lentidão | teste de resistência |
-
 | Condição forte | Cego, Paralisado, Silenciado | +1 grau e duração curta |
-
 | Bônus de ataque | +1 em ataque com item | Grau 3+ |
-
 | Bônus de defesa | +1 Aparar | Grau 3+ |
-
 | Resistência | resistência a 1 tipo de dano | Grau 4+ ou duração curta |
-
 | Cura leve | 1d6 ou 2d4+2 PV | consumível |
-
 | Cura forte | 4d4+4 PV ou remove condição | Grau 3+ e uso único |
-
 | Sensor | detecta magia, calor, movimento, veneno | alcance 9m-18m |
-
 | Invisível/oculto | esconde assinatura, som ou imagem | duração 1-10 min |
-
 | Mobilidade | +3m, salto, escalada, nado | duração por cena |
-
 | Voo/teleporte curto | voo 9m ou teleporte 6m | Grau 4+ e cargas |
-
 | Armazenamento | guarda 1-6 pontos mágicos | custo por capacidade |
-
 | Automação | executa comando simples | PV e limites claros |
-
 | Inteligência limitada | interpreta ordens simples | +1 grau |
-
 | Comunicação | envia voz, imagem ou sinal | alcance definido |
-
 | Construção | cria ponte, parede, abrigo, suporte | requer tempo/material |
-
 | Alteração material | aquece, congela, magnetiza, dissolve | afeta área pequena |
 
 ---
@@ -3194,31 +2706,18 @@ Use módulos como blocos de construção. Um item simples tem 1 módulo. Um item
 Itens tecnológicos devem ter pelo menos uma limitação real. Quanto mais forte o efeito, mais visível deve ser o preço.
 
 | Limitação | Como funciona |
-
 |---|---|
-
 | Cargas | número fixo de usos antes de recarregar |
-
 | Uso único | item se consome completamente |
-
 | Recarga lenta | recarrega só em descanso longo, oficina ou cidade |
-
 | Componente raro | exige cristal, sangue, metal, essência ou planta específica |
-
 | Barulho/luz | denuncia posição ao ativar |
-
 | Calor | não pode ser usado em turnos consecutivos |
-
 | Peso | ocupa as mãos, reduz deslocamento ou exige FOR/VIG |
-
 | Vinculação | só funciona para o criador ou usuário sincronizado |
-
 | Assinatura | detectável por Arcanismo, Tecnologia ou criaturas sensíveis |
-
 | Risco | em falha crítica, ganha Instabilidade |
-
 | Manutenção | precisa de reparo a cada aventura ou após dano |
-
 | Legalidade | proibido, controlado por guilda, igreja ou exército |
 
 ---
@@ -3228,19 +2727,12 @@ Itens tecnológicos devem ter pelo menos uma limitação real. Quanto mais forte
 Itens de Tecnologia não usam o pool pessoal do usuário, a menos que a descrição diga o contrário. Eles carregam energia própria.
 
 | Tipo de energia | Regra |
-
 |---|---|
-
 | Carga interna | item tem 1-6 cargas; recuperar todas exige descanso longo ou oficina |
-
 | Cristal | cada cristal armazena PA técnico ou PA arcano, definido na criação |
-
 | Combustível | usa óleo, carvão, reagente, bateria, sangue, sal ou essência |
-
 | Canalização | usuário gasta PA/PE/PD/AU para ativar um efeito específico |
-
 | Ambiental | recarrega em tempestade, sol, água corrente, linha de força ou altar |
-
 | Cinética | recarrega ao mover, atacar, correr ou receber impacto |
 
 Regra simples de recarga: recuperar todas as cargas custa 10% do valor do item em materiais. Para itens de Grau 4+, o custo pode ser 20%.
@@ -3252,17 +2744,11 @@ Regra simples de recarga: recuperar todas as cargas custa 10% do valor do item e
 Instabilidade representa falhas, aquecimento, runas desalinhadas e peças improvisadas. Um item pode receber Instabilidade por falha na criação, uso forçado, dano, manutenção ignorada ou modificação apressada.
 
 | Instabilidade | Efeito |
-
 |---|---|
-
 | 1 | falha crítica desativa o item até o fim da cena |
-
 | 2 | ao usar, role d6; em 1, perde 1 carga extra ou superaquece |
-
 | 3 | falha crítica causa efeito colateral leve no usuário |
-
 | 4 | ao usar, role d6; em 1, o item quebra |
-
 | 5 | falha crítica causa explosão, descarga ou maldição tecnológica |
 
 Remover 1 Instabilidade exige teste de Tecnologia CD igual à criação do item, metade do tempo base e 10% do custo base em peças.
@@ -3294,75 +2780,44 @@ Use estes modelos para criar itens em poucos minutos.
 ### 10. Balanceamento por Nível
 
 | Nível do personagem | Grau recomendado | Observação |
-
 |---|---|---|
-
 | 1-4 | Grau 0-2 | itens simples, consumíveis, ferramentas, bombas leves |
-
 | 5-9 | Grau 2-3 | armas +1, sensores, armaduras especiais, drones simples |
-
 | 10-14 | Grau 3-4 | construtos, próteses, mobilidade forte, resistências |
-
 | 15-19 | Grau 4-5 | veículos, autômatos avançados, núcleo de base |
-
 | 20+ | Grau 5-6 | obras-primas e artefatos de campanha |
 
-Em PVP, evite itens que neguem totalmente a ação do alvo sem teste. Em PVE, itens de controle podem ser fortes, mas devem ter gasto, risco ou limitação de alvo.
+Em PvP, evite itens que neguem totalmente a ação do alvo sem teste. Em PvE, itens de controle podem ser fortes, mas devem ter gasto, risco ou limitação de alvo.
 
 ---
 
 ### 11. Exemplos de Possibilidades
 
 | Ideia | Grau | Efeito base |
-
 |---|---:|---|
-
 | Gancho de Retorno | 1 | puxa objeto leve até 9m |
-
 | Lanterna de Verdade | 2 | revela tinta invisível, rastros arcanos e ilusões fracas |
-
 | Luva Magnetizada | 2 | prende arma metálica, escala metal, desarma com teste |
-
 | Granada de Gelo | 2 | 3m raio; 2d6 frio e terreno difícil |
-
 | Máscara de Respiração | 2 | respira fumaça, água rasa ou gás por 10 min |
-
 | Botas de Impacto | 3 | ignora dano de queda curto e empurra ao aterrissar |
-
 | Bracelete de Retorno | 3 | arma marcada volta à mão como ação bônus |
-
 | Olho de Vidro Rúnico | 4 | visão no escuro e detecção de invisível 1×/dia |
-
 | Braço Hidráulico | 4 | +1 dado em testes de FOR com o braço; manutenção semanal |
-
 | Drone Cartógrafo | 4 | mapeia dungeon e marca criaturas grandes em 18m |
-
 | Coração de Cristal | 5 | +10 PV máximos, mas assinatura arcana sempre detectável |
-
 | Motor de Linha de Força | 5 | alimenta veículo, torre, laboratório ou barreira |
-
 | Porta de Fase | 6 | conecta dois pontos fixos por 1 minuto, 1×/semana |
-
 | Item | Custo | Efeito | Usos |
-
 |---|---|---|---|
-
 | Cristal de Arcana | 150 OO | Armazena 6 PA; qualquer um pode usar | 6 cargas; recarrega com 2h e 30 OO de material |
-
 | Poção de Cura Menor | 50 OO | Recupera 2d4+2 PV ao beber | 1 uso |
-
 | Poção de Cura Maior | 200 OO | Recupera 4d4+4 PV ao beber | 1 uso |
-
 | Bomba de Fumaça Arcana | 30 OO | 6m raio de fumaça opaca por 1 minuto; criaturas dentro ficam Cegas | 1 uso | | Bomba de Choque | 50 OO | 4m raio; 2d6 raio; AGI CD 12 para metade | 1 uso |
-
 | Veneno Paralisante | 80 OO | Aplicado em arma; VIG CD 14 ou Paralisado 1 rodada | 3 usos | | Adaga Sifão | 300 OO | +1 ataque; ao acertar, drena 1 PA/PE/PD do alvo | Permanente |
-
 | Sentinela de Pedra | 400 OO | Construto autônomo; patrulha 9m; 20 PV; Aparar 10; dano d8 | Permanente (quebra com 0 PV) |
-
 | Lente de Visão Arcana | 200 OO | Vê magias e auras em 18m enquanto equipada | Permanente | | Botas de Velocidade | 400 OO | +3m de deslocamento; pode Afastar como ação bônus 3×/dia | Permanente | | Capa de Proteção | 500 OO | +1 Aparar permanente enquanto vestida | Permanente |
-
 | Runa de Alarme | 50 OO | Grava numa superfície; alerta mentalmente quando criaturas passam em 3m | Até dissipada |
-
 | Glifo Explosivo | 120 OO | Grava em superfície; 4d6 dano de força em 3m raio (Percepção CD 16 para notar) | 1 ativação |
 
 ---
@@ -3374,43 +2829,26 @@ Itens encantados por magia poderosa. Divididos em três raridades.
 Incomuns
 
 | Item | Efeito |
-
 |---|---|
-
 | Adaga +1 | +1 em rolagens de ataque e dano. |
-
 | Espada Longa +1 | +1 em rolagens de ataque e dano. |
-
 | Armadura de Couro +1 | +1 Aparar extra além do normal. |
-
 | Anel de Proteção +1 | +1 Aparar e +1 em testes de resistência. |
-
 | Amuleto de Saúde | PV máximos +4. |
-
 | Bolsa de Manutenção | Mantém alimentos frescos por 30 dias. |
-
 | Espelho de Detecção | Mostra criaturas invisíveis em 6m por 1 minuto, 1×/dia. |
-
 | Pergaminho de Feitiço | Contém 1 habilidade Arcana de custo ≤4 PA; qualquer um pode usar. | Raros
-
 | Item | Efeito |
-
 |---|---|
-
 | Espada Flamejante +2 | +2 ataque/dano; +1d6 dano de fogo em cada ataque. |
-
 | Cajado do Necromante +2 | +2 PA e +2 dano em habilidades de morte/escuridão. |
-
 | Armadura de Placas +1 | +1 Aparar além do normal; resistência a dano perfurante. | | Botas dos Ventos | Voar (deslocamento 12m) por até 1 hora/dia (em incrementos de 1 min). | | Espelho da Alma | Uma vez por dia, revela a verdadeira forma de qualquer criatura em frente. | | Anel da Mente | +1 dado em testes de ESP e INT. |
-
 | Manto de Invisibilidade | Invisibilidade por 1 hora, 1×/dia (quebra ao atacar ou lançar magia). | | Cristal de PA Superior | Armazena 16 PA; recarrega completamente em descanso longo. |
 
 Lendários
 
 | Item | Efeito |
-
 |---|---|
-
 | Lâmina do Destino | +3 ataque/dano; crítico em 18-20; ao matar, recupera 10 PV. | | Cetro da Tempestade | Lança Raio (6d8, 30m alcance, AGI CD 16 para metade) 3×/dia; +3 PA. | | Coroa das Sete Emoções | +3 PE; cada habilidade emocional ganha efeito adicional único. | | Égide dos Deuses | Armadura +3; ao ser atingido, chance de 20% de refletir o ataque. | | Tomo da Criação | Aprende 5 habilidades novas de qualquer fonte; +4 INT. | | Alma Gêmea | Arma que cresce junto ao personagem; ganha propriedades ao subir de nível. |
 
 ---
@@ -3418,31 +2856,18 @@ Lendários
 Ferramentas e Suprimentos
 
 | Item | Custo | Descrição |
-
 |---|---|---|
-
 | Ferramentas de Ladrão | 25 OO | Abrir fechaduras (AGI CD variável), desarmar armadilhas. | | Kit de Herborismo | 5 OO | Criar poções básicas, identificar plantas. |
-
 | Kit de Primeiros Socorros | 10 OO | Estabilizar personagem a 0 PV (Medicina CD 10). | | Instrumentos de Navegação | 25 OO | Orientação marítima e terrestre. |
-
 | Kit de Escalada | 25 OO | +2 em testes de Atletismo para escalar; impede queda livre. | | Kit de Forgery | 15 OO | Falsificar documentos (Prestidigitação CD 12-18). | | Kit de Disfarce | 25 OO | Mudar aparência (Enganação CD 12). |
-
 | Corda (15m) | 1 OO | Resistente; 250 kg. |
-
 | Tochas (10) | 1 PR | Iluminação 6m por 1 hora cada. |
-
 | Lanterna | 5 OO | Iluminação 12m por 4 horas (com óleo). |
-
 | Óleo (frasco) | 1 PR | Combustível; pode ser lançado (1d4 dano de fogo). |
-
 | Mochila | 2 OO | Capacidade 15 kg. |
-
 | Pergaminho em branco | 1 PR | Para escrita de rituais e símbolos. |
-
 | Suprimentos (7 dias) | 3 OO | Ração de viagem para 1 pessoa. |
-
 | Tenda (2 pessoas) | 2 OO | Abrigo portátil. |
-
 | Correntes | 5 OO | FOR d12 para quebrar; Aparar 10. |
 
 ---
@@ -3531,7 +2956,9 @@ Ataques críticos contra você se tornam acertos normais.
 
 *Pré-requisito: FOR d8*
 
-Uma vez por descanso curto, por 1 minuto: +1 dado em ataques e +2 de dano corpo a corpo. ---
+Uma vez por descanso curto, por 1 minuto: +1 dado em ataques e +2 de dano corpo a corpo.
+
+---
 
 Talentos de Magia
 
@@ -3707,7 +3134,9 @@ O traço Sangue Frio agora concede também vantagem no próximo ataque dentro do
 
 **Forma Selvagem Aprimorada** *(Homens-fera)*
 
-A Forma Selvagem dura 10 minutos ao invés de 1 minuto, e concede +1 Aparar além do bônus de dano. ---
+A Forma Selvagem dura 10 minutos ao invés de 1 minuto, e concede +1 Aparar além do bônus de dano.
+
+---
 
 ## PARTE XI — SISTEMA DE MAGIA
 
@@ -3753,7 +3182,9 @@ Habilidades marcadas como **Concentração** exigem atenção contínua. Regras:
 
 • Só uma habilidade de Concentração pode estar ativa por vez.
 
-• Ao sofrer dano, faz teste de VIG CD (dano sofrido ÷ 2, mínimo 8) ou perde a concentração. ---
+• Ao sofrer dano, faz teste de VIG CD (dano sofrido ÷ 2, mínimo 8) ou perde a concentração.
+
+---
 
 Dissipação
 
@@ -3764,11 +3195,8 @@ Para anular efeito mágico em andamento, role **Arcanismo** contra CD igual a 8 
 Recuperação de Pontos Mágicos
 
 | Descanso | Recuperação |
-
 |---|---|
-
 | Curto (1 hora) | Metade do pool máximo de PA/PE/PD (arredondado para baixo) |
-
 | Longo (8 horas) | Pool completo |
 
 ---
@@ -3830,15 +3258,10 @@ Quando uma criatura sai do alcance de corpo a corpo sem usar a ação Recuar, pr
 Condições
 
 | Condição | Efeito |
-
 |---|---|
-
 | **Abalado** | Desvantagem em rolagens de ataque e testes de atributo. |
-
 | **Envenenado** | Desvantagem em rolagens de ataque e verificações de atributo. Perde 1d4 PV por turno. | | **Paralisado** | Não pode agir. Ataques contra a criatura têm vantagem. |
-
 | **Assustado** | Não pode se aproximar da fonte do medo. Desvantagem em ataques enquanto puder ver a fonte. | | **Encantado** | Não pode atacar a fonte do encantamento. Fonte tem vantagem em interações sociais. | | **Cego** | Desvantagem em ataques; ataques contra a criatura têm vantagem. |
-
 | **Incapacitado** | Não pode realizar ações ou reações. |
 
 ---
@@ -3859,20 +3282,17 @@ No início de cada turno enquanto inconsciente, faz um **Teste de Morte** (rola 
 
 • Crítico contra personagem a 0 PV = 2 falhas.
 
-**Estabilização externa:** Medicina CD 10 estabiliza o personagem sem teste de morte. ---
+**Estabilização externa:** Medicina CD 10 estabiliza o personagem sem teste de morte.
+
+---
 
 Alcance de Movimento
 
 | Condição | Custo |
-
 |---|---|
-
 | Terreno normal | 1m por 1m de deslocamento |
-
 | Terreno difícil | 2m por 1m de deslocamento |
-
 | Escalar/nadar (sem treinamento) | 2m por 1m de deslocamento |
-
 | Rastejar | 2m por 1m de deslocamento |
 
 ---
@@ -3880,19 +3300,12 @@ Alcance de Movimento
 Ações em Combate
 
 | Ação | Efeito |
-
 |---|---|
-
 | **Atacar** | Realiza ataque(s) conforme classe e nível. |
-
 | **Lançar Magia** | Usa habilidade PA/PE/PD com custo indicado. |
-
 | **Usar Item** | Ativa poção, bomba ou equipamento. |
-
 | **Ajudar** | Dá vantagem a aliado em 1 ataque ou teste de perícia no próximo turno. | | **Recuar** | Move-se sem provocar ataques de oportunidade. |
-
 | **Esquivar** | Ataques contra você têm desvantagem até o próximo turno (e vantagem em AGI saves). | | **Correr** | Move o dobro do deslocamento. Não pode atacar ou lançar magia neste turno. | | **Preparar** | Declara ação e gatilho; a ação ocorre como reação quando o gatilho acontece. | | **Estabilizar** | Medicina CD 10 para estabilizar aliado inconsciente. |
-
 | **Esconder** | Furtividade CD (geralmente 12-16) para se tornar oculto. |
 
 ---
@@ -3900,13 +3313,9 @@ Ações em Combate
 Cobertura
 
 | Tipo | Bônus Aparar | Bônus Saves AGI |
-
 |---|---|---|
-
 | Cobertura Parcial (metade do corpo) | +2 | +2 |
-
 | Cobertura Três Quartos | +4 | +4 |
-
 | Cobertura Total | Não pode ser alvo | — |
 
 ---
@@ -4015,7 +3424,9 @@ Cria construto gigante de força (PV = nível×8, Aparar 14, dano 3d8+Mod.INT). 
 
 **20. Desejo Arcano** | *Especial* | 20 PA | — | —
 
-Recria efeito de qualquer habilidade Arcana já usada neste combate, mesmo as mais caras. Sem roll. 1×/semana. ---
+Recria efeito de qualquer habilidade Arcana já usada neste combate, mesmo as mais caras. Sem roll. 1×/semana.
+
+---
 
 Primitiva (PE) — 20 Habilidades
 
@@ -4091,7 +3502,9 @@ Barreira física e mental. Nenhum efeito de emoção, charme ou medo a atravessa
 
 **20. Amor Incondicional** | *(Amor) Controle Mental* | 15 PE | 12m | 1 hora
 
-Alvo passa a considerar o caster um aliado próximo (ESP CD 18). Incapaz de prejudicá-lo. 1×/dia. ---
+Alvo passa a considerar o caster um aliado próximo (ESP CD 18). Incapaz de prejudicá-lo. 1×/dia.
+
+---
 
 Fé (PD) — 20 Habilidades
 
@@ -4182,23 +3595,14 @@ Tecnologia — Sistema de Criação e 20 Modelos
 Para criar uma tecnologia personalizada, monte a ficha do item usando os campos abaixo:
 
 | Campo | Pergunta |
-
 |---|---|
-
 | Nome | Como a tecnologia é chamada? |
-
 | Forma | É arma, armadura, ferramenta, consumível, construto, prótese, veículo, armadilha ou estrutura? |
-
 | Grau | Qual a potência do projeto? |
-
 | Efeito base | O que ela faz em jogo? |
-
 | Custo de ativação | Usa cargas, materiais, ação, PA técnico, risco ou tempo? |
-
 | Limitação | Como ela falha ou o que impede abuso? |
-
 | Manutenção | Como recarrega, repara ou estabiliza? |
-
 | Assinatura | Que som, brilho, cheiro, runa, calor ou marca ela deixa? |
 
 ---
@@ -4206,21 +3610,13 @@ Para criar uma tecnologia personalizada, monte a ficha do item usando os campos 
 ### Grau da Tecnologia
 
 | Grau | Potência | CD de criação | Custo base | Tempo base |
-
 |---|---|---:|---:|---:|
-
 | 0 | truque utilitário | 8 | 10 OO | 10 min |
-
 | 1 | item comum de aventura | 10 | 30 OO | 1 h |
-
 | 2 | ferramenta especializada | 12 | 80 OO | 2 h |
-
 | 3 | tecnologia de combate | 14 | 200 OO | 8 h |
-
 | 4 | projeto raro ou prótese | 16 | 500 OO | 3 dias |
-
 | 5 | obra-prima de campanha | 18 | 1.500 OO | 2 semanas |
-
 | 6 | artefato tecnológico | 20+ | 5.000 OO+ | 1 mês+ |
 
 **Teste:** role Tecnologia ou ferramenta apropriada contra a CD. Com proficiência, some Mod. INT. Sem proficiência, role apenas INT. Oficina adequada concede +1.
@@ -4232,49 +3628,27 @@ Para criar uma tecnologia personalizada, monte a ficha do item usando os campos 
 Escolha 1 efeito base. Adicione efeitos extras aumentando grau, custo ou limitação.
 
 | Efeito | Grau mínimo | Regra base |
-
 |---|---:|---|
-
 | Dano leve | 1 | causa 1d6 dano |
-
 | Dano médio | 2 | causa 2d6 dano ou 1d10 dano |
-
 | Dano pesado | 3 | causa 3d6 dano; exige carga, material ou recarga |
-
 | Explosão/área pequena | 2 | raio 3m ou cone/linha curta; teste para metade |
-
 | Explosão/área média | 3 | raio 6m ou linha 15m; teste para metade |
-
 | Cura leve | 1 | cura 1d6 ou 2d4+2 PV; normalmente consumível |
-
 | Cura forte | 3 | cura 4d4+4 PV ou remove 1 condição leve |
-
 | Defesa leve | 2 | +1 Aparar ou redução de 1 dano |
-
 | Defesa forte | 4 | resistência situacional ou barreira temporária |
-
 | Movimento | 2 | +3m, salto, escalada, nado ou ignorar terreno |
-
 | Voo/teleporte curto | 4 | voo 9m ou teleporte 6m com cargas |
-
 | Sensor | 1 | detecta magia, calor, movimento, veneno ou metal |
-
 | Revelação | 3 | revela invisível, aura, ilusão, fraqueza ou rastro |
-
 | Controle leve | 2 | empurra, derruba, prende porta, reduz movimento |
-
 | Controle forte | 4 | Cego, Paralisado, Silenciado ou campo de força; sempre permite teste |
-
 | Armazenamento | 2 | guarda 1-6 pontos mágicos, mensagem, item pequeno ou energia |
-
 | Automação | 3 | executa uma tarefa simples sem usuário |
-
 | Construto | 4 | cria servo com PV, Aparar, ação e comando limitado |
-
 | Prótese | 4 | substitui função corporal ou concede função nova |
-
 | Veículo | 4 | desloca grupo/carga; exige combustível e manutenção |
-
 | Estrutura | 4 | protege área, abre passagem, move plataforma ou alimenta base |
 
 ---
@@ -4284,31 +3658,18 @@ Escolha 1 efeito base. Adicione efeitos extras aumentando grau, custo ou limita�
 Toda tecnologia de Grau 2+ precisa ter pelo menos 1 limitação. Grau 4+ precisa ter 2 limitações.
 
 | Limitação | Efeito |
-
 |---|---|
-
 | Cargas | possui usos limitados antes de recarregar |
-
 | Uso único | se consome ao ativar |
-
 | Recarga lenta | só recarrega em descanso longo, oficina ou local específico |
-
 | Material raro | exige cristal, óleo, metal, reagente, essência ou peça especial |
-
 | Barulho ou luz | denuncia posição |
-
 | Aquecimento | não pode usar em turnos consecutivos |
-
 | Peso | ocupa mãos, reduz deslocamento ou exige FOR/VIG |
-
 | Instabilidade | falha crítica causa defeito |
-
 | Assinatura arcana | detectável por Arcanismo ou Tecnologia |
-
 | Vinculação | só funciona com usuário sincronizado |
-
 | Manutenção | precisa de reparo depois de cada missão |
-
 | Legalidade | item proibido, controlado ou rastreável |
 
 ---
@@ -4316,17 +3677,11 @@ Toda tecnologia de Grau 2+ precisa ter pelo menos 1 limitação. Grau 4+ precisa
 ### Resultado do Teste de Criação
 
 | Resultado | Efeito |
-
 |---|---|
-
 | Sucesso | a tecnologia funciona |
-
 | Aumento | reduza custo em 25%, reduza tempo pela metade, adicione 1 carga ou remova 1 limitação leve |
-
 | Falha por 1-3 | escolha: gastar +25% do custo, dobrar tempo ou criar com 1 Instabilidade |
-
 | Falha por 4+ | perde metade dos materiais e precisa refazer o projeto |
-
 | Falha crítica | item quebra, explode, consome material raro ou cria efeito colateral |
 
 ---
