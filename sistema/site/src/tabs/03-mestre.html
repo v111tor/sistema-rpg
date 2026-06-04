@@ -1,0 +1,31 @@
+<section id="tab-mestre" class="tabs">
+      <div class="grid two">
+        <div class="panel">
+          <div class="section-title">
+            <h3>Criaturas</h3>
+            <button class="btn small primary" onclick="openCreatureForm()">Nova criatura</button>
+          </div>
+          <div class="filterbar">
+            <input id="creature-search" aria-label="Pesquisar criaturas" placeholder="Pesquisar criatura, ação ou nota" oninput="setFilter('creatures','search',this.value)">
+            <select id="creature-source-filter" aria-label="Filtrar criaturas por fonte" onchange="setFilter('creatures','source',this.value)">
+              <option value="">Todas as fontes</option>
+            </select>
+            <select id="creature-type-filter" aria-label="Filtrar criaturas por tipo" onchange="setFilter('creatures','type',this.value)">
+              <option value="">Todos os tipos</option>
+            </select>
+          </div>
+          <div id="creature-list" class="list"></div>
+        </div>
+        <div class="panel">
+          <div class="section-title">
+            <h3>Controle de encontro</h3>
+            <div class="row">
+              <button class="btn small" onclick="rollInitiative()">Rolar</button>
+              <button class="btn small" onclick="nextTurn()">Próximo</button>
+              <button class="btn small danger" onclick="clearInitiative()">Limpar</button>
+            </div>
+          </div>
+          <div id="initiative-list" class="list"></div>
+        </div>
+      </div>
+    </section>

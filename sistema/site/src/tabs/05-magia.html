@@ -1,0 +1,21 @@
+<section id="tab-magia" class="tabs">
+      <div class="grid two">
+        <div class="panel">
+          <div class="section-title"><h3>Fontes de habilidades</h3></div>
+          <div id="magic-sources" class="list"></div>
+        </div>
+        <div class="panel">
+          <div class="section-title">
+            <h3>Registros de habilidades</h3>
+            <button class="btn small primary" onclick="openMagicForm()">Novo registro</button>
+          </div>
+          <div class="filterbar two">
+            <input id="magic-search" aria-label="Pesquisar habilidades" placeholder="Pesquisar habilidade, custo ou efeito" oninput="setFilter('magic','search',this.value)">
+            <select id="magic-source-filter" aria-label="Filtrar habilidades por fonte" onchange="setFilter('magic','source',this.value)">
+              <option value="">Todas as fontes</option>
+            </select>
+          </div>
+          <div id="magic-list" class="list"></div>
+        </div>
+      </div>
+    </section>

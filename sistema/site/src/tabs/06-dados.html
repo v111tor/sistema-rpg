@@ -1,0 +1,24 @@
+<section id="tab-dados" class="tabs">
+      <div class="grid two">
+        <div class="panel">
+          <div class="section-title"><h3>Rolagem livre</h3></div>
+          <div class="grid four">
+            <button class="btn" onclick="rollDice('1d4')">d4</button>
+            <button class="btn" onclick="rollDice('1d6')">d6</button>
+            <button class="btn" onclick="rollDice('1d8')">d8</button>
+            <button class="btn" onclick="rollDice('1d10')">d10</button>
+            <button class="btn" onclick="rollDice('1d12')">d12</button>
+            <button class="btn primary" onclick="rollDice('1d20')">d20</button>
+            <button class="btn" onclick="rollDice('1d100')">d100</button>
+            <button class="btn" onclick="customRoll()">Custom</button>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="section-title">
+            <h3>Histórico</h3>
+            <button class="btn small danger" onclick="clearRolls()">Limpar</button>
+          </div>
+          <div id="roll-log" class="dice-log"></div>
+        </div>
+      </div>
+    </section>

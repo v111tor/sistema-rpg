@@ -1,0 +1,6 @@
+src/tabs/01-ficha.html
+src/tabs/02-campanha.html
+src/tabs/03-mestre.html
+src/tabs/04-mapas.html
+src/tabs/05-magia.html
+src/tabs/06-dados.html

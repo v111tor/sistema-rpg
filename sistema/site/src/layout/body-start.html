@@ -1,0 +1,31 @@
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="app">
+  <aside class="side">
+    <div class="brand">
+      <h1>C.R.M.</h1>
+      <p>Central de Registro Mecânico para personagens, campanhas, criaturas e habilidades.</p>
+    </div>
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <button class="active" data-tab="ficha"><span class="nav-mark">P</span> Personagem</button>
+      <button data-tab="campanha"><span class="nav-mark">C</span> Campanhas</button>
+      <button data-tab="mestre"><span class="nav-mark">!</span> Criaturas</button>
+      <button data-tab="mapas"><span class="nav-mark">M</span> Mapas</button>
+      <button data-tab="magia"><span class="nav-mark">H</span> Habilidades</button>
+      <button data-tab="dados"><span class="nav-mark">D</span> Dados</button>
+      <a href="../ebook/Sistema_Mecanico_RPG.html" target="_blank" rel="noopener"><span class="nav-mark">S</span> Sistema Mecânico</a>
+      <a href="../ebook/Sistema_Mecanico_RPG.pdf" download><span class="nav-mark">PDF</span> Baixar PDF</a>
+    </nav>
+  </aside>
+
+  <main class="main" id="conteudo" tabindex="-1">
+    <div class="topbar">
+      <h2 id="page-title">Personagem</h2>
+      <button class="btn small" onclick="saveNow()">Salvar</button>
+      <button class="btn small" onclick="exportData()">Backup</button>
+      <button class="btn small" onclick="document.getElementById('import-file').click()">Importar</button>
+      <button class="btn small primary" onclick="openCloudSettings()">Online</button>
+      <button class="btn small" onclick="syncCloudNow()">Sincronizar</button>
+      <input id="import-file" type="file" accept="application/json" hidden>
+      <span id="cloud-status" class="cloud-status offline">Offline</span>
+      <span id="save-status" class="save-status">Pronto</span>
+    </div>

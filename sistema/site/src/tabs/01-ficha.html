@@ -1,0 +1,15 @@
+<section id="tab-ficha" class="tabs active">
+      <div class="grid sheet">
+        <div class="panel">
+          <div class="section-title">
+            <h3>Personagens registrados</h3>
+            <button class="btn small primary" onclick="newCharacter()">Novo</button>
+          </div>
+          <div class="filterbar one">
+            <input id="character-search" aria-label="Pesquisar personagens" placeholder="Pesquisar personagem, jogador ou classe" oninput="setFilter('characters','search',this.value)">
+          </div>
+          <div id="character-list" class="list"></div>
+        </div>
+        <div id="sheet-area"></div>
+      </div>
+    </section>

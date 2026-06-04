@@ -1,0 +1,11 @@
+js/01-dados-sistema.js
+js/02-estado-local.js
+js/03-nuvem-supabase.js
+js/04-utilidades-navegacao.js
+js/05-personagens.js
+js/06-campanha.js
+js/07-criaturas-iniciativa.js
+js/08-mapas.js
+js/09-habilidades.js
+js/10-dados-rolagens.js
+js/11-interface-backup-init.js
