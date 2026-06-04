@@ -52,9 +52,17 @@ function getCloudClientId() {
 function loadUiState() {
   try {
     const stored = JSON.parse(localStorage.getItem(LOCAL_UI_KEY) || "{}");
-    return { selectedCharacter: state?.selectedCharacter || "", ...stored };
+    return { selectedCharacter: readLegacySelectedCharacter(), ...stored };
   } catch {
-    return { selectedCharacter: state?.selectedCharacter || "" };
+    return { selectedCharacter: readLegacySelectedCharacter() };
+  }
+}
+function readLegacySelectedCharacter() {
+  try {
+    const legacy = JSON.parse(localStorage.getItem(SAVE_KEY) || "{}");
+    return legacy.selectedCharacter || "";
+  } catch {
+    return "";
   }
 }
 function saveUiState() {
@@ -65,12 +73,6 @@ function saveUiState() {
 function selectedCharacterId() {
   const localId = uiState.selectedCharacter;
   if (localId && state.characters.some(c => c.id === localId)) return localId;
-  const legacyId = state.selectedCharacter;
-  if (legacyId && state.characters.some(c => c.id === legacyId)) {
-    uiState.selectedCharacter = legacyId;
-    saveUiState();
-    return legacyId;
-  }
   const fallback = state.characters[0]?.id || "";
   if (fallback) {
     uiState.selectedCharacter = fallback;
@@ -127,7 +129,6 @@ function defaultState() {
   c.skills["Percepção"] = 1;
   c.spells = "Dardo Arcano; Escudo de Força; Runa de Alarme.";
   return {
-    selectedCharacter: c.id,
     characters: [c],
     campaign: {
       name: "Campanha sem nome", premise: "Um mundo onde magia nasce de mente, emoção, fé, tecnologia e absorção.",
@@ -377,7 +378,6 @@ function normalize(data) {
   if (!merged.characters.length) {
     const c = blankCharacter();
     merged.characters.push(c);
-    merged.selectedCharacter = c.id;
   }
   merged.characters.forEach(c => {
     c.attrs = normalizeAttrs(c.attrs || {});
@@ -410,6 +410,7 @@ function normalize(data) {
     const tiles = Array.isArray(map.tiles) && map.tiles.length === expected ? map.tiles.map(sanitizeMapTile) : Array(expected).fill("floor");
     return { ...map, width, height, tiles };
   });
+  delete merged.selectedCharacter;
   return merged;
 }
 function mergeSystemMagic(list) {
