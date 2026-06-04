@@ -583,14 +583,14 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
   <aside class="side">
     <div class="brand">
       <h1>C.R.M.</h1>
-      <p>Central de Registro Mecânico para personagens, campanhas, criaturas e magias.</p>
+      <p>Central de Registro Mecânico para personagens, campanhas, criaturas e habilidades.</p>
     </div>
     <nav class="nav" id="nav" aria-label="Navegação principal">
       <button class="active" data-tab="ficha"><span class="nav-mark">P</span> Personagem</button>
       <button data-tab="campanha"><span class="nav-mark">C</span> Campanhas</button>
       <button data-tab="mestre"><span class="nav-mark">!</span> Criaturas</button>
       <button data-tab="mapas"><span class="nav-mark">M</span> Mapas</button>
-      <button data-tab="magia"><span class="nav-mark">H</span> Magias</button>
+      <button data-tab="magia"><span class="nav-mark">H</span> Habilidades</button>
       <button data-tab="dados"><span class="nav-mark">D</span> Dados</button>
       <a href="../ebook/Sistema_Mecanico_RPG.html" target="_blank" rel="noopener"><span class="nav-mark">S</span> Sistema Mecânico</a>
       <a href="../ebook/Sistema_Mecanico_RPG.pdf" download><span class="nav-mark">PDF</span> Baixar PDF</a>
@@ -734,17 +734,17 @@ input:focus, textarea:focus, select:focus { border-color: var(--red); box-shadow
     <section id="tab-magia" class="tabs">
       <div class="grid two">
         <div class="panel">
-          <div class="section-title"><h3>Fontes de magia</h3></div>
+          <div class="section-title"><h3>Fontes de habilidades</h3></div>
           <div id="magic-sources" class="list"></div>
         </div>
         <div class="panel">
           <div class="section-title">
-            <h3>Registros de magia</h3>
+            <h3>Registros de habilidades</h3>
             <button class="btn small primary" onclick="openMagicForm()">Novo registro</button>
           </div>
           <div class="filterbar two">
-            <input id="magic-search" aria-label="Pesquisar magias" placeholder="Pesquisar magia, custo ou efeito" oninput="setFilter('magic','search',this.value)">
-            <select id="magic-source-filter" aria-label="Filtrar magias por fonte" onchange="setFilter('magic','source',this.value)">
+            <input id="magic-search" aria-label="Pesquisar habilidades" placeholder="Pesquisar habilidade, custo ou efeito" oninput="setFilter('magic','search',this.value)">
+            <select id="magic-source-filter" aria-label="Filtrar habilidades por fonte" onchange="setFilter('magic','source',this.value)">
               <option value="">Todas as fontes</option>
             </select>
           </div>
@@ -1531,7 +1531,7 @@ byId("import-file").addEventListener("change", event => {
 function showTab(tab) {
   document.querySelectorAll(".tabs").forEach(el => el.classList.toggle("active", el.id === "tab-" + tab));
   document.querySelectorAll(".nav button").forEach(el => el.classList.toggle("active", el.dataset.tab === tab));
-  const titles = { ficha: "Personagem", campanha: "Campanhas", mestre: "Criaturas", mapas: "Mapas", magia: "Magias", dados: "Dados" };
+  const titles = { ficha: "Personagem", campanha: "Campanhas", mestre: "Criaturas", mapas: "Mapas", magia: "Habilidades", dados: "Dados" };
   byId("page-title").textContent = titles[tab] || "Mesa RPG";
   if (tab === "mapas") { renderMapTools(); renderMap(); }
 }
@@ -1611,8 +1611,8 @@ function renderSheet() {
     ["dados", "Dados"],
     ["atributos", "Atributos"],
     ["combate", "Combate"],
-    ["habilidades", "Habilidades"],
-    ["magias", "Magias"],
+    ["habilidades", "Características"],
+    ["magias", "Habilidades"],
     ["inventario", "Inventário"]
   ];
   byId("sheet-area").innerHTML = `
@@ -1729,13 +1729,13 @@ function renderSheetCategory(c, hpPct) {
       <div class="grid">
         <div class="panel">
           <div class="section-title">
-            <h3>Habilidades</h3>
+            <h3>Características</h3>
             <span class="pill blue">${esc(c.role || "Classe não definida")}</span>
           </div>
-          <div class="sheet-tabs" role="tablist" aria-label="Categorias de habilidades">
+          <div class="sheet-tabs" role="tablist" aria-label="Categorias de características">
             ${[
               ["pericias", "Perícias"],
-              ["habilidades", "Habilidades"]
+              ["habilidades", "Características"]
             ].map(([id, label]) => `<button class="${abilityCategory === id ? "active" : ""}" role="tab" aria-selected="${abilityCategory === id}" onclick="selectAbilityCategory('${id}')">${label}</button>`).join("")}
           </div>
           ${renderAbilityCategory(c)}
@@ -1745,7 +1745,7 @@ function renderSheetCategory(c, hpPct) {
     magias: `
       <div class="grid">
         <div class="panel">
-          <div class="section-title"><h3>Recursos mágicos</h3></div>
+          <div class="section-title"><h3>Recursos de habilidade</h3></div>
           <div class="resource-grid">
             ${resourceBox(c, "pa", "PA Arcana", "arcana")}
             ${resourceBox(c, "pe", "PE Emoção", "primitive")}
@@ -1759,8 +1759,9 @@ function renderSheetCategory(c, hpPct) {
         </div>
         <div class="panel">
           <div class="section-title">
-            <h3>Magias do personagem</h3>
-            <button class="btn small primary" onclick="openCharacterSpellForm('${c.id}')">Criar magia personalizada</button>
+            <h3>Habilidades do personagem</h3>
+            <span class="pill gold">Base ${Math.max(1, Number(c.level) || 1) + 1}</span>
+            <button class="btn small primary" onclick="openCharacterSpellForm('${c.id}')">Criar habilidade personalizada</button>
           </div>
           <div class="grid two">
             ${renderCharacterSpells(c)}
@@ -1769,7 +1770,7 @@ function renderSheetCategory(c, hpPct) {
         <div class="panel">
           <div class="section-title"><h3>Catálogo do sistema</h3></div>
           <div class="filterbar two">
-            <input id="char-spell-search" placeholder="Buscar magia do sistema" value="${esc(filters.characterSpells.search)}" oninput="setFilter('characterSpells','search',this.value)">
+            <input id="char-spell-search" placeholder="Buscar habilidade do sistema" value="${esc(filters.characterSpells.search)}" oninput="setFilter('characterSpells','search',this.value)">
             <select id="char-spell-source" onchange="setFilter('characterSpells','source',this.value)">
               <option value="">Todas as fontes</option>
               ${Object.entries(SOURCES).map(([key, src]) => `<option value="${key}" ${filters.characterSpells.source === key ? "selected" : ""}>${src.title}</option>`).join("")}
@@ -1780,8 +1781,8 @@ function renderSheetCategory(c, hpPct) {
           </div>
         </div>
         <div class="panel">
-          <div class="section-title"><h3>Magias conhecidas</h3></div>
-          ${textareaFor(c, "spells", "Magias, símbolos e rituais conhecidos")}
+          <div class="section-title"><h3>Habilidades conhecidas</h3></div>
+          ${textareaFor(c, "spells", "Habilidades, magias, técnicas, tecnologias e rituais conhecidos")}
         </div>
       </div>
     `,
@@ -1789,7 +1790,7 @@ function renderSheetCategory(c, hpPct) {
       <div class="panel">
         <div class="section-title"><h3>Inventário e notas</h3></div>
         <div class="grid">
-          ${textareaFor(c, "features", "Traços e habilidades")}
+          ${textareaFor(c, "features", "Traços e características")}
           ${textareaFor(c, "inventory", "Equipamento")}
           ${textareaFor(c, "notes", "Notas")}
         </div>
@@ -1825,16 +1826,16 @@ function renderAbilityCategory(c) {
   return `
     <div class="grid" style="margin-top:14px">
       <div class="section-title">
-        <h3>Habilidades adquiridas</h3>
-        <button class="btn small primary" onclick="openCustomAbilityForm('${c.id}')">Criar habilidade personalizada</button>
+        <h3>Características adquiridas</h3>
+        <button class="btn small primary" onclick="openCustomAbilityForm('${c.id}')">Criar característica personalizada</button>
       </div>
       <div class="grid two">${renderKnownAbilities(c)}</div>
       <div class="section-title" style="margin-top:14px">
-        <h3>Catálogo por classe e nível</h3>
+        <h3>Catálogo de características por classe e nível</h3>
         <span class="pill gold">Nível ${esc(c.level)}</span>
       </div>
       <div class="filterbar three">
-        <input placeholder="Buscar habilidade" value="${esc(filters.abilities.search)}" oninput="setFilter('abilities','search',this.value)">
+        <input placeholder="Buscar característica" value="${esc(filters.abilities.search)}" oninput="setFilter('abilities','search',this.value)">
         <select onchange="setFilter('abilities','class',this.value)">
           <option value="__current" ${filters.abilities.class === "__current" ? "selected" : ""}>Classe do personagem</option>
           <option value="" ${filters.abilities.class === "" ? "selected" : ""}>Todas as classes</option>
@@ -1880,7 +1881,7 @@ function getCharacterSpellList(c) {
 }
 function renderCharacterSpells(c) {
   const list = getCharacterSpellList(c);
-  if (!list.length) return `<div class="empty">Nenhuma magia adicionada ao personagem. Use o catálogo ou crie uma magia personalizada.</div>`;
+  if (!list.length) return `<div class="empty">Nenhuma habilidade adicionada ao personagem. Use o catálogo ou crie uma habilidade personalizada.</div>`;
   return list.map(spell => spellCard(spell, `
     <button class="btn small danger" onclick="${spell.custom ? `removeCustomSpell('${c.id}','${spell.id}')` : `removeKnownSpell('${c.id}','${spell.id}')`}">Remover</button>
   `)).join("");
@@ -1891,7 +1892,7 @@ function renderSpellCatalogForCharacter(c) {
     const searchOk = textMatches(`${spell.name} ${spell.cost} ${spell.range} ${spell.effect}`, filters.characterSpells.search);
     return sourceOk && searchOk;
   });
-  if (!list.length) return `<div class="empty">Nenhuma magia encontrada no catálogo.</div>`;
+  if (!list.length) return `<div class="empty">Nenhuma habilidade encontrada no catálogo.</div>`;
   return list.map(spell => spellCard(spell, c.knownSpellIds.includes(spell.id)
     ? `<span class="pill green">Adicionada</span>`
     : `<button class="btn small primary" onclick="addKnownSpell('${c.id}','${spell.id}')">Adicionar</button>`
@@ -1965,7 +1966,7 @@ function removeKnownAbility(charId, abilityId) {
   renderSheet();
 }
 function openCustomAbilityForm(charId) {
-  openModal("Criar habilidade personalizada", `
+  openModal("Criar característica personalizada", `
     <div class="grid">
       <div class="grid three">
         <div><label>Nome</label><input id="ab-name"></div>
@@ -1979,7 +1980,7 @@ function openCustomAbilityForm(charId) {
       const c = state.characters.find(x => x.id === charId);
       c.customAbilities.push({
         id: uid(),
-        name: byId("ab-name").value || "Habilidade personalizada",
+        name: byId("ab-name").value || "Característica personalizada",
         class: byId("ab-class").value || "Geral",
         level: Number(byId("ab-level").value) || 1,
         effect: byId("ab-effect").value
@@ -2029,7 +2030,7 @@ function removeCustomSpell(charId, spellId) {
   renderSheet();
 }
 function openCharacterSpellForm(charId) {
-  openModal("Criar magia personalizada", `
+  openModal("Criar habilidade personalizada", `
     <div class="grid">
       <div class="grid three">
         <div><label>Nome</label><input id="cs-name"></div>
@@ -2044,7 +2045,7 @@ function openCharacterSpellForm(charId) {
       const c = state.characters.find(x => x.id === charId);
       c.customSpells.push({
         id: uid(),
-        name: byId("cs-name").value || "Magia personalizada",
+        name: byId("cs-name").value || "Habilidade personalizada",
         source: byId("cs-source").value,
         cost: byId("cs-cost").value,
         range: byId("cs-range").value,
@@ -2717,12 +2718,12 @@ function renderMagic() {
         <p>${esc(m.effect)}</p>
       </div>
     `;
-  }).join("") || `<div class="empty">Nenhuma magia encontrada.</div>`;
+  }).join("") || `<div class="empty">Nenhuma habilidade encontrada.</div>`;
 }
 function openMagicForm(id) {
   const existing = state.magic.find(m => m.id === id);
   const m = existing || { id: uid(), source: "arcana", name: "", cost: "", range: "", effect: "" };
-  openModal(existing ? "Editar magia" : "Nova magia", `
+  openModal(existing ? "Editar habilidade" : "Nova habilidade", `
     <div class="grid">
       <div class="grid three">
         <div><label>Nome</label><input id="mg-name" value="${esc(m.name)}"></div>
@@ -2734,7 +2735,7 @@ function openMagicForm(id) {
     </div>
   `, [
     ["Salvar", "primary", () => {
-      Object.assign(m, { name: byId("mg-name").value || "Registro de magia", source: byId("mg-source").value, cost: byId("mg-cost").value, range: byId("mg-range").value, effect: byId("mg-effect").value });
+      Object.assign(m, { name: byId("mg-name").value || "Registro de habilidade", source: byId("mg-source").value, cost: byId("mg-cost").value, range: byId("mg-range").value, effect: byId("mg-effect").value });
       if (!existing) state.magic.unshift(m);
       closeModal(); saveSoon(); renderMagic();
     }],

@@ -32,19 +32,19 @@ SUMÁRIO
 
 | **VI** | **Classes** | **13** |
 
-| | Como Funcionam as Habilidades de Classe (p.13) | |
+| | Como Funcionam as Características de Classe (p.13) | |
 
-| | Guerreiro — 30 habilidades (p.14) | |
+| | Guerreiro — 30 características (p.14) | |
 
-| | Arcanista — 30 habilidades (p.17) | |
+| | Arcanista — 30 características (p.17) | |
 
-| | Sensiente — 30 habilidades (p.20) | |
+| | Sensiente — 30 características (p.20) | |
 
-| | Devoto — 30 habilidades + Divindades (p.23) | |
+| | Devoto — 30 características + Divindades (p.23) | |
 
-| | Artífice — 30 habilidades (p.26) | |
+| | Artífice — 30 características (p.26) | |
 
-| | Explorador — 30 habilidades (p.30) | |
+| | Explorador — 30 características (p.30) | |
 
 | **VII** | **Multiclasse** | **33** |
 
@@ -68,7 +68,7 @@ SUMÁRIO
 
 | **XII** | **Combate** | **47** |
 
-| | Iniciativa · Estrutura do Turno · Ataques · Críticos/Aumentos · Condições · Morte · Cobertura · Ações | | | **XIII** | **Habilidades Universais** | **49** |
+| | Iniciativa · Estrutura do Turno · Ataques · Críticos/Aumentos · Condições · Morte · Cobertura · Ações | | | **XIII** | **Habilidades** | **49** |
 
 | | Arcana — 20 habilidades PA (p.49) | |
 
@@ -1141,21 +1141,117 @@ Exemplos de Homens-fera
 
 Existem seis classes. Ao criar um personagem, escolha uma. Cada classe define seu estilo de combate, acesso a magia e progressão. O avanço vai do nível 1 ao 20.
 
-Como Funcionam as Habilidades de Classe
+Como Funcionam as Características de Classe
 
-A cada nível, o jogador escolhe **1 Habilidade de Classe** do pool de 30 disponíveis para sua classe. Ao longo de 20 níveis, o personagem terá escolhido 20 das 30 habilidades — os 10 não escolhidos são caminhos que ficaram por explorar.
+As **Características de Classe** são os recursos que definem como a classe joga: estilos de combate, truques de sobrevivência, técnicas, especializações, melhorias de magia, infusões, pactos e modos de usar recursos. Elas substituem o antigo termo "Habilidades de Classe".
+
+A cada nível, o jogador escolhe **1 Característica de Classe** do pool de 30 disponíveis para sua classe. Ao longo de 20 níveis, o personagem terá escolhido 20 das 30 características — as 10 não escolhidas são caminhos que ficaram por explorar.
 
 **Regras de pré-requisito:**
 
-• *Nível X+:* a habilidade só pode ser escolhida a partir daquele nível.
+• *Nível X+:* a característica só pode ser escolhida a partir daquele nível.
 
-• *Necessita: [Habilidade]:* precisa ter essa outra habilidade antes de escolher esta.
+• *Necessita: [Característica]:* precisa ter essa outra característica antes de escolher esta.
 
 **Marcos Fixos (não são escolhas — ocorrem automaticamente):**
 
 • Níveis 4, 8, 12, 16, 20: Melhoria de Atributo (sobe 1 passo em 1 atributo)
 
 • Níveis 1, 5, 9, 13, 17: Escolha de Talento (ver Parte X)
+
+---
+
+Habilidades Conhecidas por Nível
+
+As **Habilidades** são poderes aprendidos e ativáveis: magias Arcanas, Primitivas e de Fé, técnicas de Aura, tecnologias, dispositivos, infusões, criações personalizadas e efeitos semelhantes.
+
+Todo personagem possui uma quantidade de **Habilidades Conhecidas** baseada no nível. Essa quantidade representa quantas magias, técnicas, tecnologias ou efeitos personalizados o personagem domina o suficiente para usar sem improviso.
+
+| Nível | Habilidades Conhecidas Base |
+
+|---:|---:|
+
+| 1 | 2 |
+
+| 2 | 3 |
+
+| 3 | 4 |
+
+| 4 | 5 |
+
+| 5 | 6 |
+
+| 6 | 7 |
+
+| 7 | 8 |
+
+| 8 | 9 |
+
+| 9 | 10 |
+
+| 10 | 11 |
+
+| 11 | 12 |
+
+| 12 | 13 |
+
+| 13 | 14 |
+
+| 14 | 15 |
+
+| 15 | 16 |
+
+| 16 | 17 |
+
+| 17 | 18 |
+
+| 18 | 19 |
+
+| 19 | 20 |
+
+| 20 | 21 |
+
+**Regra simples:** Habilidades Conhecidas Base = nível do personagem + 1.
+
+**Acesso por fonte:** conhecer uma habilidade não basta; o personagem também precisa ter acesso à fonte ou ao item que permite usá-la.
+
+| Fonte | Como acessa |
+
+|---|---|
+
+| Arcana | PA, estudo arcano, grimório, infusão ou item apropriado |
+
+| Primitiva | PE, estado emocional, ligação espiritual ou treinamento sensiente |
+
+| Fé | PD, pacto, voto, divindade ou força patrona |
+
+| Aura | AU, treino físico/espiritual ou característica marcial |
+
+| Tecnologia | item criado, ferramenta, esquema, oficina ou característica de Artífice |
+
+**Características que concedem Habilidades:** algumas Características de Classe, talentos, itens ou eventos narrativos podem aumentar esse número. Quando isso acontecer, a ficha deve anotar: "Habilidades Conhecidas +X".
+
+**Amplificação de Conhecimento:** quando uma característica disser que concede Amplificação de Conhecimento, escolha uma das opções abaixo:
+
+• Aprender **2 Habilidades** de uma fonte à qual você tem acesso.
+
+• Aprender **1 Habilidade** de uma fonte à qual você ainda não teria acesso, se houver justificativa narrativa e aprovação do Mestre.
+
+• Transformar **1 tecnologia, magia ou técnica conhecida** em versão aprimorada, adicionando 1 módulo de efeito, aumentando alcance/duração em uma etapa ou reduzindo custo em 1 ponto (mínimo 1), conforme aprovação do Mestre.
+
+• Registrar **1 esquema tecnológico**: você passa a poder recriar aquela tecnologia em oficina sem precisar redescobrir o projeto.
+
+**Limite de troca:** ao subir de nível, o personagem pode substituir 1 Habilidade conhecida por outra da mesma fonte. Isso representa estudo, treino, reconfiguração de tecnologia ou abandono de uma técnica antiga.
+
+**Resumo do nível:** quando subir de nível, o personagem normalmente recebe:
+
+1. +1 Característica de Classe escolhida do pool da classe.
+
+2. +1 Habilidade Conhecida Base.
+
+3. Marcos fixos se o nível tiver Melhoria de Atributo ou Talento.
+
+4. Habilidades extras se alguma característica, talento ou item conceder Amplificação de Conhecimento.
 
 ---
 
@@ -1235,9 +1331,9 @@ Guerreiro
 
 **Talento.** Nos níveis indicados, escolha 1 talento para o qual cumpra os pré-requisitos.
 
-Pool de 30 Habilidades — Guerreiro
+Pool de 30 Características — Guerreiro
 
-*(Escolha 1 por nível. Pré-requisitos de nível ou habilidade devem ser cumpridos.)*
+*(Escolha 1 característica por nível. Pré-requisitos de nível ou característica devem ser cumpridos.)*
 
 **Sem pré-requisito de nível:**
 
@@ -1433,7 +1529,9 @@ Arcanista
 
 **Talento.** Nos níveis indicados, escolha 1 talento para o qual cumpra os pré-requisitos.
 
-Pool de 30 Habilidades — Arcanista
+Pool de 30 Características — Arcanista
+
+*(Escolha 1 característica por nível. Pré-requisitos de nível ou característica devem ser cumpridos.)*
 
 **Sem pré-requisito de nível:**
 
@@ -1652,7 +1750,9 @@ No início de cada combate (ou antes da primeira ação), o Sensiente **declara 
 
 **Talento.** Nos níveis indicados, escolha 1 talento para o qual cumpra os pré-requisitos.
 
-Pool de 30 Habilidades — Sensiente
+Pool de 30 Características — Sensiente
+
+*(Escolha 1 característica por nível. Pré-requisitos de nível ou característica devem ser cumpridos.)*
 
 **Sem pré-requisito de nível:**
 
@@ -1877,7 +1977,9 @@ Cada habilidade de PD tem uma ou mais divindades associadas. Usar habilidade de 
 
 **Talento.** Nos níveis indicados, escolha 1 talento para o qual cumpra os pré-requisitos.
 
-Pool de 30 Habilidades — Devoto
+Pool de 30 Características — Devoto
+
+*(Escolha 1 característica por nível. Pré-requisitos de nível ou característica devem ser cumpridos.)*
 
 **Sem pré-requisito de nível:**
 
@@ -2076,7 +2178,9 @@ Artífice
 
 **Talento.** Nos níveis indicados, escolha 1 talento para o qual cumpra os pré-requisitos.
 
-Pool de 30 Habilidades — Artífice
+Pool de 30 Características — Artífice
+
+*(Escolha 1 característica por nível. Pré-requisitos de nível ou característica devem ser cumpridos.)*
 
 **Sem pré-requisito de nível:**
 
@@ -2274,7 +2378,9 @@ Explorador
 
 **Talento.** Nos níveis indicados, escolha 1 talento para o qual cumpra os pré-requisitos.
 
-Pool de 30 Habilidades — Explorador
+Pool de 30 Características — Explorador
+
+*(Escolha 1 característica por nível. Pré-requisitos de nível ou característica devem ser cumpridos.)*
 
 **Sem pré-requisito de nível:**
 
@@ -3807,9 +3913,17 @@ Cobertura
 
 ---
 
-## PARTE XIII — HABILIDADES UNIVERSAIS
+## PARTE XIII — HABILIDADES
 
-As Habilidades Universais são os poderes, feitiços e técnicas que os personagens podem lançar gastando seu pool (PA, PE, PD ou AU). Qualquer personagem com acesso ao pool correspondente pode usar estas habilidades — a classe define como você as potencializa, não se você pode usá-las.
+As **Habilidades** são os poderes, feitiços, técnicas, tecnologias, infusões e criações que os personagens podem aprender e usar. Elas incluem magias Arcanas, Primitivas e de Fé, técnicas de Aura, tecnologia arcana e habilidades personalizadas.
+
+Uma Habilidade precisa de duas coisas:
+
+• estar entre as **Habilidades Conhecidas** do personagem;
+
+• ter acesso à fonte necessária para usar ou criar o efeito (PA, PE, PD, AU, tecnologia, item, ferramenta, pacto, emoção, divindade ou esquema).
+
+A classe define como você potencializa as Habilidades, não necessariamente se você pode conhecê-las.
 
 **Formato:**
 
@@ -4057,9 +4171,205 @@ Revive aliado morto há até 1 hora com metade dos PV máximos. Remove venenos e
 
 ---
 
-Tecnologia — 20 Habilidades
+Tecnologia — Sistema de Criação e 20 Modelos
 
-*Itens criados pelo sistema de Tecnologia mágica. Qualquer um pode USAR; somente Artífices podem CRIAR. Custo indicado é o custo de fabricação (OO + tempo de trabalho). Itens têm cargas ou são permanentes.*
+*Tecnologias são Habilidades materializadas em itens, dispositivos, armas, armaduras, ferramentas, próteses, construtos ou estruturas. Qualquer personagem pode USAR uma tecnologia pronta; somente personagens com acesso a Tecnologia, esquema, oficina ou característica adequada podem CRIAR tecnologia nova.*
+
+---
+
+### Criando uma Tecnologia Personalizada
+
+Para criar uma tecnologia personalizada, monte a ficha do item usando os campos abaixo:
+
+| Campo | Pergunta |
+
+|---|---|
+
+| Nome | Como a tecnologia é chamada? |
+
+| Forma | É arma, armadura, ferramenta, consumível, construto, prótese, veículo, armadilha ou estrutura? |
+
+| Grau | Qual a potência do projeto? |
+
+| Efeito base | O que ela faz em jogo? |
+
+| Custo de ativação | Usa cargas, materiais, ação, PA técnico, risco ou tempo? |
+
+| Limitação | Como ela falha ou o que impede abuso? |
+
+| Manutenção | Como recarrega, repara ou estabiliza? |
+
+| Assinatura | Que som, brilho, cheiro, runa, calor ou marca ela deixa? |
+
+---
+
+### Grau da Tecnologia
+
+| Grau | Potência | CD de criação | Custo base | Tempo base |
+
+|---|---|---:|---:|---:|
+
+| 0 | truque utilitário | 8 | 10 OO | 10 min |
+
+| 1 | item comum de aventura | 10 | 30 OO | 1 h |
+
+| 2 | ferramenta especializada | 12 | 80 OO | 2 h |
+
+| 3 | tecnologia de combate | 14 | 200 OO | 8 h |
+
+| 4 | projeto raro ou prótese | 16 | 500 OO | 3 dias |
+
+| 5 | obra-prima de campanha | 18 | 1.500 OO | 2 semanas |
+
+| 6 | artefato tecnológico | 20+ | 5.000 OO+ | 1 mês+ |
+
+**Teste:** role Tecnologia ou ferramenta apropriada contra a CD. Com proficiência, some Mod. INT. Sem proficiência, role apenas INT. Oficina adequada concede +1.
+
+---
+
+### Efeitos de Tecnologia
+
+Escolha 1 efeito base. Adicione efeitos extras aumentando grau, custo ou limitação.
+
+| Efeito | Grau mínimo | Regra base |
+
+|---|---:|---|
+
+| Dano leve | 1 | causa 1d6 dano |
+
+| Dano médio | 2 | causa 2d6 dano ou 1d10 dano |
+
+| Dano pesado | 3 | causa 3d6 dano; exige carga, material ou recarga |
+
+| Explosão/área pequena | 2 | raio 3m ou cone/linha curta; teste para metade |
+
+| Explosão/área média | 3 | raio 6m ou linha 15m; teste para metade |
+
+| Cura leve | 1 | cura 1d6 ou 2d4+2 PV; normalmente consumível |
+
+| Cura forte | 3 | cura 4d4+4 PV ou remove 1 condição leve |
+
+| Defesa leve | 2 | +1 Aparar ou redução de 1 dano |
+
+| Defesa forte | 4 | resistência situacional ou barreira temporária |
+
+| Movimento | 2 | +3m, salto, escalada, nado ou ignorar terreno |
+
+| Voo/teleporte curto | 4 | voo 9m ou teleporte 6m com cargas |
+
+| Sensor | 1 | detecta magia, calor, movimento, veneno ou metal |
+
+| Revelação | 3 | revela invisível, aura, ilusão, fraqueza ou rastro |
+
+| Controle leve | 2 | empurra, derruba, prende porta, reduz movimento |
+
+| Controle forte | 4 | Cego, Paralisado, Silenciado ou campo de força; sempre permite teste |
+
+| Armazenamento | 2 | guarda 1-6 pontos mágicos, mensagem, item pequeno ou energia |
+
+| Automação | 3 | executa uma tarefa simples sem usuário |
+
+| Construto | 4 | cria servo com PV, Aparar, ação e comando limitado |
+
+| Prótese | 4 | substitui função corporal ou concede função nova |
+
+| Veículo | 4 | desloca grupo/carga; exige combustível e manutenção |
+
+| Estrutura | 4 | protege área, abre passagem, move plataforma ou alimenta base |
+
+---
+
+### Limitações Obrigatórias
+
+Toda tecnologia de Grau 2+ precisa ter pelo menos 1 limitação. Grau 4+ precisa ter 2 limitações.
+
+| Limitação | Efeito |
+
+|---|---|
+
+| Cargas | possui usos limitados antes de recarregar |
+
+| Uso único | se consome ao ativar |
+
+| Recarga lenta | só recarrega em descanso longo, oficina ou local específico |
+
+| Material raro | exige cristal, óleo, metal, reagente, essência ou peça especial |
+
+| Barulho ou luz | denuncia posição |
+
+| Aquecimento | não pode usar em turnos consecutivos |
+
+| Peso | ocupa mãos, reduz deslocamento ou exige FOR/VIG |
+
+| Instabilidade | falha crítica causa defeito |
+
+| Assinatura arcana | detectável por Arcanismo ou Tecnologia |
+
+| Vinculação | só funciona com usuário sincronizado |
+
+| Manutenção | precisa de reparo depois de cada missão |
+
+| Legalidade | item proibido, controlado ou rastreável |
+
+---
+
+### Resultado do Teste de Criação
+
+| Resultado | Efeito |
+
+|---|---|
+
+| Sucesso | a tecnologia funciona |
+
+| Aumento | reduza custo em 25%, reduza tempo pela metade, adicione 1 carga ou remova 1 limitação leve |
+
+| Falha por 1-3 | escolha: gastar +25% do custo, dobrar tempo ou criar com 1 Instabilidade |
+
+| Falha por 4+ | perde metade dos materiais e precisa refazer o projeto |
+
+| Falha crítica | item quebra, explode, consome material raro ou cria efeito colateral |
+
+---
+
+### Modelo Pronto
+
+Use este molde na ficha:
+
+> **Nome da Tecnologia** | Forma | Grau | Custo/Recarga
+
+> **Efeito:** descreva o que faz.
+
+> **Ativação:** ação, ação bônus, reação, descanso, gatilho ou passivo.
+
+> **Teste/CD:** se afetar inimigo, defina atributo e CD.
+
+> **Limitação:** cargas, risco, material, calor, peso, assinatura ou manutenção.
+
+> **Instabilidade:** o que acontece se falhar criticamente.
+
+---
+
+### Exemplos Criados pelo Sistema
+
+**Luva de Repulsão** | Ferramenta/Combate | Grau 2 | 3 cargas
+
+**Efeito:** empurra criatura ou objeto médio 3m. Alvo resistente faz FOR CD 12 para negar. **Limitação:** cada uso consome 1 carga; recarrega em oficina.
+
+**Máscara de Filtro Abissal** | Vestimenta | Grau 2 | manutenção diária
+
+**Efeito:** permite respirar fumaça, pó venenoso ou gás fraco por 10 minutos. **Limitação:** falha contra venenos mágicos fortes sem teste de Tecnologia CD 14.
+
+**Drone Cartógrafo** | Construto | Grau 4 | recarga longa
+
+**Efeito:** mapeia corredores em 18m e marca portas, armadilhas mecânicas e criaturas grandes. PV 8, Aparar 12. **Limitação:** não luta e faz ruído baixo constante.
+
+**Braço Hidráulico** | Prótese | Grau 4 | manutenção semanal
+
+**Efeito:** em testes de FOR feitos com o braço, trate FOR como 1 dado maior. **Limitação:** em falha crítica, trava até reparo CD 14.
+
+---
+
+### 20 Modelos de Tecnologia
 
 ---
 
