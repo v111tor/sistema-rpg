@@ -1,9 +1,10 @@
 function renderCharacterList() {
   const el = byId("character-list");
   const query = filters.characters.search;
+  const activeCharacter = selectedCharacterId();
   const list = state.characters.filter(c => textMatches(`${c.name} ${c.player} ${c.role} ${c.ancestry}`, query));
   el.innerHTML = list.length ? list.map(c => `
-    <div class="item selectable ${state.selectedCharacter === c.id ? "active" : ""}" onclick="selectCharacter('${c.id}')">
+    <div class="item selectable ${activeCharacter === c.id ? "active" : ""}" onclick="selectCharacter('${c.id}')">
       <div class="item-head">
         <div>
           <h4>${esc(c.name)}</h4>
@@ -15,15 +16,15 @@ function renderCharacterList() {
   `).join("") : `<div class="empty">Nenhum personagem encontrado.</div>`;
 }
 function selectCharacter(id) {
-  state.selectedCharacter = id;
-  saveSoon();
+  setLocalSelectedCharacter(id);
+  byId("save-status").textContent = "Ficha selecionada neste dispositivo";
   renderCharacterList();
   renderSheet();
 }
 function newCharacter() {
   const c = blankCharacter();
   state.characters.push(c);
-  state.selectedCharacter = c.id;
+  setLocalSelectedCharacter(c.id);
   saveSoon();
   renderCharacterList();
   renderSheet();
@@ -32,7 +33,7 @@ function deleteCharacter(id) {
   if (state.characters.length <= 1) return toast("Mantenha pelo menos uma ficha.");
   state.characters = state.characters.filter(c => c.id !== id);
   state.campaign.partyIds = state.campaign.partyIds.filter(pid => pid !== id);
-  state.selectedCharacter = state.characters[0].id;
+  if (uiState.selectedCharacter === id) setLocalSelectedCharacter(state.characters[0].id);
   saveSoon();
   renderAll();
 }

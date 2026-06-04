@@ -376,8 +376,9 @@ function subscribeCloud() {
     });
 }
 function cloudPayload(source, revision) {
+  const { selectedCharacter, ...sharedState } = source;
   return {
-    ...source,
+    ...sharedState,
     _sync: {
       clientId: cloud.clientId,
       revision,
@@ -387,7 +388,7 @@ function cloudPayload(source, revision) {
 }
 function cleanCloudPayload(data) {
   if (!data || typeof data !== "object") return data;
-  const { _sync, ...clean } = data;
+  const { _sync, selectedCharacter, ...clean } = data;
   return clean;
 }
 function handleCloudPayload(data, rowRevision = "") {

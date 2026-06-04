@@ -1,4 +1,5 @@
 let state = loadState();
+let uiState = loadUiState();
 let selectedTool = "floor";
 let selectedMapCreature = "";
 let sheetCategory = "resumo";
@@ -47,6 +48,40 @@ function getCloudClientId() {
   } catch {
     return "client-" + uid();
   }
+}
+function loadUiState() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(LOCAL_UI_KEY) || "{}");
+    return { selectedCharacter: state?.selectedCharacter || "", ...stored };
+  } catch {
+    return { selectedCharacter: state?.selectedCharacter || "" };
+  }
+}
+function saveUiState() {
+  try {
+    localStorage.setItem(LOCAL_UI_KEY, JSON.stringify(uiState));
+  } catch {}
+}
+function selectedCharacterId() {
+  const localId = uiState.selectedCharacter;
+  if (localId && state.characters.some(c => c.id === localId)) return localId;
+  const legacyId = state.selectedCharacter;
+  if (legacyId && state.characters.some(c => c.id === legacyId)) {
+    uiState.selectedCharacter = legacyId;
+    saveUiState();
+    return legacyId;
+  }
+  const fallback = state.characters[0]?.id || "";
+  if (fallback) {
+    uiState.selectedCharacter = fallback;
+    saveUiState();
+  }
+  return fallback;
+}
+function setLocalSelectedCharacter(id) {
+  if (!state.characters.some(c => c.id === id)) return;
+  uiState.selectedCharacter = id;
+  saveUiState();
 }
 function blankAttack() {
   return {

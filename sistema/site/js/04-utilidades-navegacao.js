@@ -95,7 +95,7 @@ function saveBonus(c, attr) {
   return mod(c.attrs[attr]) + (Number(c.saves?.[attr]) ? Number(c.prof) || 0 : 0);
 }
 function currentCharacter() {
-  return state.characters.find(c => c.id === state.selectedCharacter) || state.characters[0];
+  return state.characters.find(c => c.id === selectedCharacterId()) || state.characters[0];
 }
 
 document.querySelectorAll(".nav button").forEach(btn => {

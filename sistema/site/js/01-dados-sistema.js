@@ -1,4 +1,5 @@
 const SAVE_KEY = "mesa_rpg_sistema_mecanico_v1";
+const LOCAL_UI_KEY = "mesa_rpg_ui_local_v1";
 const CLOUD_CONFIG_KEY = "mesa_rpg_supabase_config_v1";
 const CLOUD_TABLE = "campaign_states";
 const DEFAULT_CLOUD_CONFIG = {
