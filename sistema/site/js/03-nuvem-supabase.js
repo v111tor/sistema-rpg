@@ -59,6 +59,24 @@ function resetCloudConnection() {
   cloud.configKey = "";
   cloud.authListenerReady = false;
 }
+function enqueueCloudTask(label, task) {
+  cloud.queuedTasks += 1;
+  const run = async () => {
+    cloud.queuedTasks = Math.max(0, cloud.queuedTasks - 1);
+    cloud.activeTask = label;
+    try {
+      return await task();
+    } catch (error) {
+      console.error("Erro na fila online:", label, error);
+      throw error;
+    } finally {
+      if (!cloud.queuedTasks) cloud.activeTask = "";
+    }
+  };
+  const next = cloud.taskQueue.catch(() => {}).then(run);
+  cloud.taskQueue = next.catch(() => {});
+  return next;
+}
 async function ensureCloudClient() {
   const config = cloudConfig();
   if (!canUseCloud(config)) {
@@ -188,12 +206,18 @@ async function signInCloud(email, password) {
   return true;
 }
 async function joinCloudCampaign() {
+  return enqueueCloudTask("Entrar na mesa", doJoinCloudCampaign);
+}
+async function doJoinCloudCampaign() {
   const client = await requireCloudLogin();
   const config = cloudConfig();
   if (!client || !config.shareCode) return;
   await client.rpc("join_campaign", { p_share_code: config.shareCode });
 }
 async function loadCloudState(options = {}) {
+  return enqueueCloudTask("Carregar nuvem", () => doLoadCloudState(options));
+}
+async function doLoadCloudState(options = {}) {
   const client = await requireCloudLogin();
   const config = cloudConfig();
   if (!client) return;
@@ -202,7 +226,7 @@ async function loadCloudState(options = {}) {
   const { data, error } = await client.from(CLOUD_TABLE).select("data, updated_at").eq("share_code", config.shareCode).maybeSingle();
   if (error) return toast("Erro ao carregar nuvem: " + error.message);
   if (!data) {
-    await saveCloudNow();
+    await doSaveCloudNow(true);
     if (!silent) toast("Mesa criada na nuvem.");
     return;
   }
@@ -220,10 +244,13 @@ function queueCloudSave() {
   clearTimeout(cloud.saveTimer);
   cloud.saveTimer = setTimeout(() => {
     cloud.saveTimer = null;
-    saveCloudNow(true);
+    saveCloudNow(true).catch(() => {});
   }, 1800);
 }
 async function saveCloudNow(silent = false) {
+  return enqueueCloudTask("Salvar nuvem", () => doSaveCloudNow(silent));
+}
+async function doSaveCloudNow(silent = false) {
   if (cloud.saving) {
     cloud.pendingSave = true;
     return;
@@ -312,9 +339,9 @@ async function initCloudFromConfig() {
 function installCloudResumeListeners() {
   if (cloud.resumeListenersReady) return;
   cloud.resumeListenersReady = true;
-  window.addEventListener("online", () => resumeCloudConnection());
+  window.addEventListener("online", () => resumeCloudConnection().catch(() => {}));
   document.addEventListener("visibilitychange", () => {
-    if (!document.hidden) resumeCloudConnection();
+    if (!document.hidden) resumeCloudConnection().catch(() => {});
   });
 }
 function scheduleCloudReconnect(delay = 2500) {
@@ -322,14 +349,17 @@ function scheduleCloudReconnect(delay = 2500) {
   cloud.reconnectTimer = setTimeout(async () => {
     cloud.reconnectTimer = null;
     detachCloudChannel({ keepReconnectTimer: true });
-    await resumeCloudConnection();
+    await resumeCloudConnection().catch(() => {});
   }, delay);
 }
 async function resumeCloudConnection() {
+  return enqueueCloudTask("Reconectar nuvem", doResumeCloudConnection);
+}
+async function doResumeCloudConnection() {
   const client = await ensureCloudClient();
   if (!client || !cloud.user) return;
-  await joinCloudCampaign();
-  await loadCloudState({ silent: true });
+  await doJoinCloudCampaign();
+  await doLoadCloudState({ silent: true });
   subscribeCloud();
   startCloudPolling();
 }
@@ -414,9 +444,10 @@ function flushPendingRemote() {
     cloud.remoteTimer = setTimeout(flushPendingRemote, 900);
     return;
   }
-  applyRemoteCloudState(cloud.pendingRemoteData);
+  const data = cloud.pendingRemoteData;
   cloud.pendingRemoteData = null;
   cloud.pendingRemoteRevision = "";
+  enqueueCloudTask("Aplicar nuvem", async () => applyRemoteCloudState(data));
 }
 function applyRemoteCloudState(data, options = {}) {
   const incoming = normalize(cleanCloudPayload(data) || defaultState());
