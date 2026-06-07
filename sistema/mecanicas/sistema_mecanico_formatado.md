@@ -3360,25 +3360,43 @@ Cobertura
 
 As **Habilidades** são os poderes, feitiços, técnicas, tecnologias, infusões e criações que os personagens podem aprender e usar. Elas incluem magias Arcanas, Primitivas e de Fé, técnicas de Aura, tecnologia arcana e habilidades personalizadas.
 
-Uma Habilidade precisa de duas coisas:
+### Como Usar Este Capítulo
 
-• estar entre as **Habilidades Conhecidas** do personagem;
+Use esta parte como um catálogo de consulta durante a criação de personagem, subida de nível ou preparação de sessão.
 
-• ter acesso à fonte necessária para usar ou criar o efeito (PA, PE, PD, AU, tecnologia, item, ferramenta, pacto, emoção, divindade ou esquema).
+1. Escolha a **fonte** da Habilidade.
+2. Confira se o personagem tem acesso à fonte, recurso, item ou treinamento necessário.
+3. Leia o **custo**, o **alcance**, a **duração/recarga** e o **efeito**.
+4. Quando a Habilidade pedir resistência, use a CD indicada ou a CD padrão da fonte.
+5. Se a Habilidade for personalizada, compare com a tabela de balanceamento antes de aprovar.
 
-A classe define como você potencializa as Habilidades, não necessariamente se você pode conhecê-las.
+Uma Habilidade precisa cumprir duas condições:
+
+| Condição | O que significa |
+|---|---|
+| **Ser conhecida** | A Habilidade deve estar entre as **Habilidades Conhecidas** do personagem, salvo uso improvisado permitido pelo Mestre. |
+| **Ter acesso à fonte** | O personagem precisa da fonte necessária para usar ou criar o efeito: PA, PE, PD, AU, tecnologia, item, ferramenta, pacto, emoção, divindade ou esquema. |
+
+> **Regra central:** a classe define como o personagem potencializa as Habilidades. Ela não impede, sozinha, que o personagem conheça uma Habilidade de outra fonte se a campanha, um item, um professor, uma característica ou uma regra especial conceder acesso.
 
 **Formato:**
 
-> **Nome** | *Tipo* | Custo | Alcance | Duração
-
-> Efeito da habilidade.
+| Campo | Como ler |
+|---|---|
+| **Nome** | Nome usado na ficha e no catálogo. |
+| **Tipo** | Função da Habilidade: ataque, cura, controle, proteção, suporte, movimento, utilitário, tecnologia, aura ou especial. |
+| **Custo** | Recurso gasto: PA, PE, PD, AU, grau tecnológico, carga, recarga ou custo narrativo. |
+| **Alcance** | Distância máxima ou condição de uso. |
+| **Duração/Recarga** | Tempo do efeito ou quando ele pode ser usado novamente. |
+| **Efeito** | Resultado mecânico e limites de segurança. |
 
 ---
 
-### Revisao de Balanceamento das Habilidades
+### Revisão de Balanceamento das Habilidades
 
-As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis de usar durante a sessao. Cada fonte agora possui **40 opcoes**.
+As listas abaixo foram revisadas para ficarem claras, consistentes e mais fáceis de usar durante a sessão. Cada fonte possui **40 opções**.
+
+#### Faixas de Poder
 
 | Faixa | Custo tipico | Dano/efeito seguro | Limite recomendado |
 |---|---:|---|---|
@@ -3387,17 +3405,46 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | Avancada | 7-10 pontos | 6d6 a 8d6, area media, invocacao ou controle decisivo | concentracao, recarga ou risco |
 | Epica | 11+ pontos | teleporte, ressurreicao, avatar, milagre ou cena inteira | descanso longo, semana ou custo raro |
 
+#### CD, Testes e Limites
+
 **CD padrao:** quando a habilidade nao trouxer CD fixa, use **8 + modificador da fonte**: INT para Arcana/Tecnologia, ESP para Primitiva, DEV para Fe e FOR ou VIG para Aura.
 
 **Regra de seguranca:** dano alto, controle forte, ressurreicao, teleporte e efeitos que negam acao sempre exigem teste, concentracao, custo alto, limite de uso ou preco narrativo.
 
-***
+#### Faixas Dentro de Cada Catálogo
+
+| Entradas | Uso esperado |
+|---:|---|
+| 1-10 | Habilidades básicas, boas para nível baixo ou uso frequente. |
+| 11-20 | Habilidades intermediárias, mais caras ou mais táticas. |
+| 21-30 | Habilidades avançadas, com impacto forte em combate ou exploração. |
+| 31-40 | Habilidades épicas, raras, caras ou dependentes de aprovação narrativa. |
+
+---
+
+### Catálogo de Habilidades por Fonte
+
+Cada fonte tem uma identidade própria. Use os blocos abaixo para escolher rapidamente qual lista combina com o personagem.
+
+| Fonte | Recurso | Atributo de CD | Identidade |
+|---|---|---|---|
+| **Arcana** | PA | INT | lógica, runas, força, geometria e manipulação mágica. |
+| **Primitiva** | PE | ESP | emoção, instinto, vínculos e estados internos. |
+| **Fé** | PD | DEV | votos, domínio divino, pactos, milagres e maldições. |
+| **Tecnologia** | grau, carga ou item | INT | criação material, dispositivos, próteses, armas e construtos. |
+| **Aura** | AU | FOR ou VIG | corpo, presença, disciplina marcial e energia espiritual. |
+
+---
+
 ### Arcana (PA) - 40 Habilidades
 
 *Magia intelectual de simbolos, runas e geometria. Use INT para CD e amplificacao.*
 
+**Leitura rápida:** Arcana é a melhor fonte para dano direto, proteção geométrica, detecção, selos, barreiras e manipulação de espaço.
+
 | # | Nome | Tipo | Custo | Alcance | Duracao/Recarga | Efeito |
 |---:|---|---|---|---|---|---|
+| **1-10** | **Básicas** |  |  |  |  | Baixo custo, uso frequente e efeitos diretos. |
 | 1 | **Dardo Arcano** | Ataque | 2 PA | 18m | Instantaneo | Projeta forca pura. Causa 1d6+Mod.INT; alvo com cobertura recebe AGI CD 12 para reduzir metade. |
 | 2 | **Escudo de Forca** | Protecao | 2 PA | Pessoal ou 9m | 1 minuto | Concede +1 a +2 Aparar, resistencia situacional ou barreira. Se proteger varios aliados, exige concentracao. |
 | 3 | **Detectar Magia** | Utilitario/Ritual | 2 PA | 18m | 1 minuto | Revela, manipula ou registra magia sem substituir pericias. Efeitos ocultos exigem Arcanismo contra CD do criador. |
@@ -3408,6 +3455,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 8 | **Relampago Linear** | Ataque/Area | 2 PA | Linha 15m | Instantaneo | Causa 1d6+Mod.INT do tipo apropriado. AGI ou VIG CD 12 reduz a metade e evita empurrao, queda ou perda de recurso. |
 | 9 | **Invisibilidade** | Movimento/Furtividade | 2 PA | Pessoal ou toque | 1 minuto | Reposiciona, oculta ou atravessa obstaculos limitados. Nao atravessa barreiras dimensionais ou protecao total sem teste. |
 | 10 | **Dissipar Magia** | Especial | 3 PA | Variavel | Variavel | Efeito arcano raro. O Mestre define custo colateral se alterar a cena inteira ou repetir poder de alto nivel. |
+| **11-20** | **Intermediárias** |  |  |  |  | Maior alcance, defesa estável e controle com teste. |
 | 11 | **Bola de Fogo** | Ataque/Area | 4 PA | 24m | Instantaneo | Causa 3d6+Mod.INT do tipo apropriado. AGI ou VIG CD 13 reduz a metade e evita empurrao, queda ou perda de recurso. |
 | 12 | **Telecinese** | Controle | 4 PA | 9m a 18m | 1 minuto | Altera acao, movimento ou posicao do alvo. INT, FOR ou ESP CD 13 nega ou permite novo teste no fim do turno. |
 | 13 | **Muralha de Forca** | Protecao | 4 PA | Pessoal ou 9m | 10 minutos | Concede +1 a +2 Aparar, resistencia situacional ou barreira. Se proteger varios aliados, exige concentracao. |
@@ -3418,6 +3466,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 18 | **Selo de Silencio** | Controle | 4 PA | 9m a 18m | 1 minuto | Altera acao, movimento ou posicao do alvo. INT, FOR ou ESP CD 13 nega ou permite novo teste no fim do turno. |
 | 19 | **Tranca Mistica** | Utilitario/Ritual | 4 PA | 9m | 10 minutos | Revela, manipula ou registra magia sem substituir pericias. Efeitos ocultos exigem Arcanismo contra CD do criador. |
 | 20 | **Campo Antimagia Menor** | Protecao | 5 PA | Pessoal ou 9m | 10 minutos | Concede +1 a +2 Aparar, resistencia situacional ou barreira. Se proteger varios aliados, exige concentracao. |
+| **21-30** | **Avançadas** |  |  |  |  | Impacto alto, concentração ou cena tática importante. |
 | 21 | **Temporal Arcano** | Controle | 7 PA | 9m a 18m | 10 minutos | Altera acao, movimento ou posicao do alvo. INT, FOR ou ESP CD 15 nega ou permite novo teste no fim do turno. |
 | 22 | **Gaiola Arcana** | Controle | 7 PA | 9m a 18m | 10 minutos | Altera acao, movimento ou posicao do alvo. INT, FOR ou ESP CD 15 nega ou permite novo teste no fim do turno. |
 | 23 | **Duplicata Ilusoria** | Ilusao | 7 PA | Pessoal | 1 minuto | Cria copia que confunde ataques. O primeiro ataque contra voce por rodada tem chance de atingir a duplicata. |
@@ -3428,6 +3477,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 28 | **Forma Eterea Breve** | Movimento/Furtividade | 7 PA | Pessoal ou toque | Instantaneo | Reposiciona, oculta ou atravessa obstaculos limitados. Nao atravessa barreiras dimensionais ou protecao total sem teste. |
 | 29 | **Ruptura de Mana** | Ataque/Area | 7 PA | 18m | Instantaneo | Causa 5d6+Mod.INT do tipo apropriado. AGI ou VIG CD 15 reduz a metade e evita empurrao, queda ou perda de recurso. |
 | 30 | **Porta Arcana** | Movimento/Furtividade | 7 PA | Pessoal ou toque | Instantaneo | Reposiciona, oculta ou atravessa obstaculos limitados. Nao atravessa barreiras dimensionais ou protecao total sem teste. |
+| **31-40** | **Épicas** |  |  |  |  | Efeitos raros, custo alto e aprovação narrativa quando mudarem a cena inteira. |
 | 31 | **Teletransporte** | Movimento/Furtividade | 15 PA | Pessoal ou toque | Instantaneo | Reposiciona, oculta ou atravessa obstaculos limitados. Nao atravessa barreiras dimensionais ou protecao total sem teste. |
 | 32 | **Prisao Dimensional** | Controle | 15 PA | 9m a 18m | 1 hora/concentracao | Altera acao, movimento ou posicao do alvo. INT, FOR ou ESP CD 16 nega ou permite novo teste no fim do turno. |
 | 33 | **Colosso de Forca** | Criacao | 15 PA | 6m | 1 minuto/concentracao | Cria construto de forca com PV, Aparar e dano proporcionais ao nivel. Comandar exige acao bonus. |
@@ -3438,12 +3488,18 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 38 | **Clone de Contingencia** | Protecao | 14 PA | Pessoal ou 9m | 1 hora | Concede +1 a +2 Aparar, resistencia situacional ou barreira. Se proteger varios aliados, exige concentracao. |
 | 39 | **Dobrar Realidade** | Controle | 14 PA | 9m a 18m | 1 hora/concentracao | Altera acao, movimento ou posicao do alvo. INT, FOR ou ESP CD 16 nega ou permite novo teste no fim do turno. |
 | 40 | **Desejo Arcano** | Especial | 15 PA | Variavel | Variavel | Efeito arcano raro. O Mestre define custo colateral se alterar a cena inteira ou repetir poder de alto nivel. |
+
+---
+
 ### Primitiva (PE) - 40 Habilidades
 
 *Magia emocional. Cada opcao pertence a Raiva, Amor, Medo, Alegria, Tristeza ou Determinacao; fora do estado declarado, o custo dobra.*
 
+**Leitura rápida:** Primitiva depende do estado emocional ativo. Ela brilha em cura emocional, controle de medo, suporte de grupo e explosões instintivas.
+
 | # | Nome | Tipo | Custo | Alcance | Duracao/Recarga | Efeito |
 |---:|---|---|---|---|---|---|
+| **1-10** | **Básicas** |  |  |  |  | Estados emocionais simples e efeitos de resposta rápida. |
 | 1 | **Brasa da Raiva** | Raiva/Ataque | 2 PE | 15m | Instantaneo | Converte raiva em dano. Causa 1d6+Mod.ESP e pode empurrar, derrubar ou marcar; VIG/AGI CD 12 reduz efeito. |
 | 2 | **Toque Gentil** | Amor/Cura | 3 PE | Toque | Instantaneo | Cura 1d6 PV, protege ou cria vinculo emocional. Efeitos fortes tem limite por descanso. |
 | 3 | **Sussurro do Terror** | Medo/Controle | 1 PE | 9m | Instantaneo | Impoe medo ou hesitacao. Alvo faz ESP CD 12; controle forte permite novo teste no fim do turno. |
@@ -3454,6 +3510,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 8 | **Cura Emocional** | Amor/Cura | 3 PE | Toque | Instantaneo | Cura 1d6 PV, protege ou cria vinculo emocional. Efeitos fortes tem limite por descanso. |
 | 9 | **Campo de Pavor** | Medo/Controle | 1 PE | 9m | Instantaneo | Impoe medo ou hesitacao. Alvo faz ESP CD 12; controle forte permite novo teste no fim do turno. |
 | 10 | **Extase Coletivo** | Alegria/Suporte | 2 PE | 9m | Instantaneo | Inspira movimento, coragem e ritmo. Aliados recebem vantagem, +1d4 ou deslocamento extra; nao acumula consigo mesma. |
+| **11-20** | **Intermediárias** |  |  |  |  | Mais duração, proteção emocional e controle com save. |
 | 11 | **Tempestade de Cinzas** | Tristeza/Debuff | 6 PE | 12m | 1 minuto | Pesa o ambiente. Inimigos fazem ESP CD 13 ou sofrem penalidade curta, terreno dificil ou bloqueio de cura. |
 | 12 | **Barreira de Determinacao** | Determinacao/Protecao | 3 PE | Pessoal | 1 minuto | Fortalece vontade e corpo. Concede resistencia, PV temporario ou repeticao de save; versoes epicas tem limite por descanso longo. |
 | 13 | **Grito da Fera** | Raiva/Ataque | 4 PE | 15m | 1 minuto | Converte raiva em dano. Causa 2d6+Mod.ESP e pode empurrar, derrubar ou marcar; VIG/AGI CD 13 reduz efeito. |
@@ -3464,6 +3521,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 18 | **Juramento Interno** | Determinacao/Protecao | 5 PE | Pessoal | 1 minuto | Fortalece vontade e corpo. Concede resistencia, PV temporario ou repeticao de save; versoes epicas tem limite por descanso longo. |
 | 19 | **Inferno da Raiva** | Raiva/Ataque | 6 PE | 15m | 1 minuto | Converte raiva em dano. Causa 2d6+Mod.ESP e pode empurrar, derrubar ou marcar; VIG/AGI CD 13 reduz efeito. |
 | 20 | **Ressurreicao por Amor** | Amor/Cura | 3 PE | Toque | 1 minuto | Cura 2d6 PV, protege ou cria vinculo emocional. Efeitos fortes tem limite por descanso. |
+| **21-30** | **Avançadas** |  |  |  |  | Impacto forte, foco de cena e limites por descanso quando necessário. |
 | 21 | **Pesadelo Vivo** | Medo/Controle | 7 PE | 9m | 1 rodada | Impoe medo ou hesitacao. Alvo faz ESP CD 15; controle forte permite novo teste no fim do turno. |
 | 22 | **Euforia de Batalha** | Alegria/Suporte | 8 PE | 9m | 1 rodada | Inspira movimento, coragem e ritmo. Aliados recebem vantagem, +1d4 ou deslocamento extra; nao acumula consigo mesma. |
 | 23 | **Melancolia da Morte** | Tristeza/Debuff | 9 PE | 12m | 1 rodada | Pesa o ambiente. Inimigos fazem ESP CD 15 ou sofrem penalidade curta, terreno dificil ou bloqueio de cura. |
@@ -3474,6 +3532,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 28 | **Cancao de Vitoria** | Alegria/Suporte | 9 PE | 9m | 1 rodada | Inspira movimento, coragem e ritmo. Aliados recebem vantagem, +1d4 ou deslocamento extra; nao acumula consigo mesma. |
 | 29 | **Silencio do Funeral** | Tristeza/Debuff | 10 PE | 12m | 1 rodada | Pesa o ambiente. Inimigos fazem ESP CD 15 ou sofrem penalidade curta, terreno dificil ou bloqueio de cura. |
 | 30 | **Corpo Inquebravel** | Determinacao/Protecao | 6 PE | Pessoal | 1 rodada | Fortalece vontade e corpo. Concede resistencia, PV temporario ou repeticao de save; versoes epicas tem limite por descanso longo. |
+| **31-40** | **Épicas** |  |  |  |  | Emoções extremas, milagres emocionais e efeitos de clímax. |
 | 31 | **Furia de Milenios** | Raiva/Ataque | 11 PE | 15m | 10 minutos | Converte raiva em dano. Causa 8d6+Mod.ESP e pode empurrar, derrubar ou marcar; VIG/AGI CD 16 reduz efeito. |
 | 32 | **Amor Incondicional** | Amor/Cura | 12 PE | Toque | 10 minutos | Cura 8d6 PV, protege ou cria vinculo emocional. Efeitos fortes tem limite por descanso. |
 | 33 | **Terror Primordial** | Medo/Controle | 13 PE | 9m | 10 minutos | Impoe medo ou hesitacao. Alvo faz ESP CD 16; controle forte permite novo teste no fim do turno. |
@@ -3485,12 +3544,17 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 39 | **Memoria Feliz** | Medo/Controle | 13 PE | 9m | 10 minutos | Impoe medo ou hesitacao. Alvo faz ESP CD 16; controle forte permite novo teste no fim do turno. |
 | 40 | **Eu Continuo** | Alegria/Suporte | 14 PE | 9m | 10 minutos | Inspira movimento, coragem e ritmo. Aliados recebem vantagem, +1d4 ou deslocamento extra; nao acumula consigo mesma. |
 
+---
+
 ### Fe (PD) - 40 Habilidades
 
 *Poder de votos, deuses, demonios e forcas patronas. Fora do dominio escolhido, o custo dobra e pode exigir justificativa.*
 
+**Leitura rápida:** Fé organiza poderes por domínio. Ela é forte em cura, proteção, juramentos, punição espiritual e pactos com preço narrativo.
+
 | # | Nome | Tipo | Custo | Alcance | Duracao/Recarga | Efeito |
 |---:|---|---|---|---|---|---|
+| **1-10** | **Básicas** |  |  |  |  | Milagres simples, bênçãos curtas e maldições leves. |
 | 1 | **Bencao Divina** | Luz/Suporte | 3 PD | 9m | Instantaneo | Cura, purifica ou fere corrupcao. Cura 1d6 PV ou causa dano radiante; mortos-vivos e demonios sofrem pressao adicional. |
 | 2 | **Cura Divina** | Natureza/Cura | 4 PD | Toque | Instantaneo | Cura, invoca vida ou prende com raizes. Cura 1d6 PV ou controla terreno com save apropriado. |
 | 3 | **Palavra Sagrada** | Ordem/Controle | 2 PD | 9m raio | Instantaneo | Impoe regra sagrada. Alvo faz DEV ou ESP CD 12; falha causa obediencia curta, contencao ou protecao por juramento. |
@@ -3501,6 +3565,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 8 | **Maldicao** | Luz/Suporte | 4 PD | 9m | Instantaneo | Cura, purifica ou fere corrupcao. Cura 1d6 PV ou causa dano radiante; mortos-vivos e demonios sofrem pressao adicional. |
 | 9 | **Raio Sagrado** | Natureza/Cura | 2 PD | Toque | Instantaneo | Cura, invoca vida ou prende com raizes. Cura 1d6 PV ou controla terreno com save apropriado. |
 | 10 | **Barreira Sagrada** | Ordem/Controle | 3 PD | 9m raio | Instantaneo | Impoe regra sagrada. Alvo faz DEV ou ESP CD 12; falha causa obediencia curta, contencao ou protecao por juramento. |
+| **11-20** | **Intermediárias** |  |  |  |  | Domínios mais presentes, invocações menores e efeitos com duração. |
 | 11 | **Invocar Aliado Menor** | Sombra/Utilitario | 7 PD | 18m | 1 minuto | Oculta ou amaldicoa. Concede furtividade, escuridao ou penalidade com DEV CD 13. |
 | 12 | **Tempestade Divina** | Morte/Ataque | 4 PD | Pessoal | 1 minuto | Lida com almas e necrose. Causa 2d6 necrotico, conversa com mortos ou impede cura ate VIG/DEV CD 13. |
 | 13 | **Decretar** | Caos/Protecao | 5 PD | 12m | 1 minuto | Gera milagre instavel. Dano fica em 2d6; efeitos de controle sempre permitem save. |
@@ -3511,6 +3576,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 18 | **Riso do Caos** | Sombra/Utilitario | 6 PD | 18m | 1 minuto | Oculta ou amaldicoa. Concede furtividade, escuridao ou penalidade com DEV CD 13. |
 | 19 | **Marca Infernal** | Morte/Ataque | 7 PD | Pessoal | 1 minuto | Lida com almas e necrose. Causa 2d6 necrotico, conversa com mortos ou impede cura ate VIG/DEV CD 13. |
 | 20 | **Silencio Funerario** | Caos/Protecao | 4 PD | 12m | 1 minuto | Gera milagre instavel. Dano fica em 2d6; efeitos de controle sempre permitem save. |
+| **21-30** | **Avançadas** |  |  |  |  | Milagres de grande impacto, ressurreição, pactos e exorcismos. |
 | 21 | **Forma Divina Menor** | Demonio/Especial | 8 PD | 24m | 10 minutos | Firma pacto perigoso. Concede poder forte com preco, marca ou obrigacao; alvo involuntario faz DEV CD 15. |
 | 22 | **Praga** | Luz/Suporte | 9 PD | 9m | 10 minutos | Cura, purifica ou fere corrupcao. Cura 4d6 PV ou causa dano radiante; mortos-vivos e demonios sofrem pressao adicional. |
 | 23 | **Destruicao Sagrada** | Natureza/Cura | 10 PD | Toque | 10 minutos | Cura, invoca vida ou prende com raizes. Cura 4d6 PV ou controla terreno com save apropriado. |
@@ -3521,6 +3587,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 28 | **Circulo de Exorcismo** | Demonio/Especial | 10 PD | 24m | 10 minutos | Firma pacto perigoso. Concede poder forte com preco, marca ou obrigacao; alvo involuntario faz DEV CD 15. |
 | 29 | **Chamado da Matilha** | Luz/Suporte | 11 PD | 9m | 10 minutos | Cura, purifica ou fere corrupcao. Cura 4d6 PV ou causa dano radiante; mortos-vivos e demonios sofrem pressao adicional. |
 | 30 | **Pacto Sangrento** | Natureza/Cura | 7 PD | Toque | 10 minutos | Cura, invoca vida ou prende com raizes. Cura 4d6 PV ou controla terreno com save apropriado. |
+| **31-40** | **Épicas** |  |  |  |  | Intervenções de domínio, pactos maiores e efeitos de clímax. |
 | 31 | **Ressurreicao Total** | Ordem/Controle | 16 PD | 9m raio | 1 hora | Impoe regra sagrada. Alvo faz DEV ou ESP CD 16; falha causa obediencia curta, contencao ou protecao por juramento. |
 | 32 | **Avatar Divino Completo** | Sombra/Utilitario | 17 PD | 18m | 1 hora | Oculta ou amaldicoa. Concede furtividade, escuridao ou penalidade com DEV CD 16. |
 | 33 | **Juizo Final Menor** | Morte/Ataque | 18 PD | Pessoal | 1 hora | Lida com almas e necrose. Causa 8d6 necrotico, conversa com mortos ou impede cura ate VIG/DEV CD 16. |
@@ -3532,12 +3599,17 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 39 | **Voto Inquebravel** | Sombra/Utilitario | 15 PD | 18m | 1 hora | Oculta ou amaldicoa. Concede furtividade, escuridao ou penalidade com DEV CD 16. |
 | 40 | **Graca Impossivel** | Morte/Ataque | 16 PD | Pessoal | 1 hora | Lida com almas e necrose. Causa 8d6 necrotico, conversa com mortos ou impede cura ate VIG/DEV CD 16. |
 
+---
+
 ### Tecnologia - 40 Modelos
 
 *Poder materializado em item, dispositivo, arma, armadura, ferramenta, protese, construto ou estrutura.*
 
+**Leitura rápida:** Tecnologia transforma poder em objeto. Ela usa grau, carga, oficina, manutenção e risco para equilibrar efeitos que qualquer personagem pode carregar.
+
 | # | Nome | Tipo | Custo | Alcance | Duracao/Recarga | Efeito |
 |---:|---|---|---|---|---|---|
+| **1-10** | **Básicas** |  |  |  |  | Ferramentas simples, consumíveis e dispositivos de baixo grau. |
 | 1 | **Cristal de Arcana** | Armazenamento | Grau 1 | Variavel | 1 uso | Armazenamento de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 10 para criar ou reparar. |
 | 2 | **Bomba de Fumaca Arcana** | Consumivel | Grau 2 | Variavel | 1 uso | Consumivel de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 10 para criar ou reparar. |
 | 3 | **Eletrochoque Portatil** | Arma | Grau 1 | Variavel | 1 uso | Arma de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 10 para criar ou reparar. |
@@ -3548,6 +3620,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 8 | **Botas de Velocidade** | Vestimenta | Grau 2 | Variavel | 1 uso | Vestimenta de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 10 para criar ou reparar. |
 | 9 | **Capa de Protecao** | Vestimenta | Grau 1 | Variavel | 1 uso | Vestimenta de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 10 para criar ou reparar. |
 | 10 | **Sentinela de Pedra** | Construto | Grau 1 | Variavel | 1 uso | Construto de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 10 para criar ou reparar. |
+| **11-20** | **Intermediárias** |  |  |  |  | Itens com cargas, defesa, mobilidade e utilidade consistente. |
 | 11 | **Drone Cartografo** | Construto | Grau 3 | Variavel | 3 cargas | Construto de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 12 para criar ou reparar. |
 | 12 | **Luva de Repulsao** | Ferramenta | Grau 2 | Variavel | 3 cargas | Ferramenta de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 12 para criar ou reparar. |
 | 13 | **Mascara de Filtro Abissal** | Vestimenta | Grau 2 | Variavel | 3 cargas | Vestimenta de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 12 para criar ou reparar. |
@@ -3558,6 +3631,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 18 | **Placa Reativa** | Armadura | Grau 2 | Variavel | 3 cargas | Armadura de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 12 para criar ou reparar. |
 | 19 | **Projetor de Luz Solar** | Ferramenta | Grau 2 | Variavel | 3 cargas | Ferramenta de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 12 para criar ou reparar. |
 | 20 | **Chave Universal Runica** | Ferramenta | Grau 3 | Variavel | 3 cargas | Ferramenta de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 12 para criar ou reparar. |
+| **21-30** | **Avançadas** |  |  |  |  | Equipamentos permanentes, estruturas e armas de alto impacto. |
 | 21 | **Mochila Gravitacional** | Equipamento | Grau 3 | Variavel | Permanente | Equipamento de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 14 para criar ou reparar. |
 | 22 | **Gerador de Barreira** | Dispositivo | Grau 3 | Variavel | Permanente | Dispositivo de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 14 para criar ou reparar. |
 | 23 | **Automato Cirurgiao** | Construto | Grau 4 | Variavel | Permanente | Construto de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 14 para criar ou reparar. |
@@ -3568,6 +3642,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 28 | **Gaiola de Contencao** | Estrutura | Grau 3 | Variavel | Permanente | Estrutura de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 14 para criar ou reparar. |
 | 29 | **Pistola de Cristal** | Arma | Grau 4 | Variavel | Permanente | Arma de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 14 para criar ou reparar. |
 | 30 | **Rede Eletrorrunica** | Arma | Grau 3 | Variavel | Permanente | Arma de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 14 para criar ou reparar. |
+| **31-40** | **Épicas** |  |  |  |  | Protótipos raros, recarga longa, oficina e manutenção pesada. |
 | 31 | **Coracao Mecanico Auxiliar** | Protese | Grau 4 | Variavel | Recarga longa | Protese de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 16 para criar ou reparar. |
 | 32 | **Bateria Prismatica** | Armazenamento | Grau 5 | Variavel | Recarga longa | Armazenamento de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 16 para criar ou reparar. |
 | 33 | **Canhao Portatil** | Arma | Grau 4 | Variavel | Recarga longa | Arma de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 16 para criar ou reparar. |
@@ -3579,12 +3654,17 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 39 | **Portal de Oficina** | Estrutura | Grau 4 | Variavel | Recarga longa | Estrutura de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 16 para criar ou reparar. |
 | 40 | **Nucleo de Golem** | Construto | Grau 4 | Variavel | Recarga longa | Construto de grau controlado. Produz dano, defesa, mobilidade, sensor ou automacao equivalente ao grau; usa cargas/manutencao e Tecnologia CD 16 para criar ou reparar. |
 
+---
+
 ### Aura (AU) - 40 Tecnicas
 
 *Energia marcial e espiritual treinada pelo corpo. Usa alcance curto, acao fisica e AU limitado.*
 
+**Leitura rápida:** Aura é física e espiritual. Ela funciona melhor em alcance curto, reação, reposicionamento, presença marcial e golpes que dependem do corpo.
+
 | # | Nome | Tipo | Custo | Alcance | Duracao/Recarga | Efeito |
 |---:|---|---|---|---|---|---|
+| **1-10** | **Básicas** |  |  |  |  | Técnicas curtas, leitura corporal e pressão marcial imediata. |
 | 1 | **Golpe de Aura** | Ataque | 2 AU | Pessoal | Instantaneo | Tecnica ofensiva ou pressao. Adiciona 1d6 dano de aura, derruba, empurra ou corta reacao; FOR/VIG/AGI CD 12 reduz efeito secundario. |
 | 2 | **Passo de Cacador** | Movimento | 1 AU | 9m | Instantaneo | Movimento marcial explosivo. Move, salta ou reposiciona sem provocar reacao; exige terreno possivel e gasto de AU. |
 | 3 | **Leitura de Aura** | Percepcao | 2 AU | 6m | Instantaneo | Leitura ou presenca de aura. Revela intencao, rastro ou assinatura espiritual; alvo oculto pode resistir com ESP CD 12. |
@@ -3595,6 +3675,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 8 | **Foco Marcial** | Especial | 1 AU | 9m | Instantaneo | Tecnica ofensiva ou pressao. Adiciona 1d6 dano de aura, derruba, empurra ou corta reacao; FOR/VIG/AGI CD 12 reduz efeito secundario. |
 | 9 | **Rugido de Guerra** | Ataque | 2 AU | 6m | Instantaneo | Tecnica ofensiva ou pressao. Adiciona 1d6 dano de aura, derruba, empurra ou corta reacao; FOR/VIG/AGI CD 12 reduz efeito secundario. |
 | 10 | **Veu de Presenca** | Movimento | 1 AU | 3m raio | Instantaneo | Leitura ou presenca de aura. Revela intencao, rastro ou assinatura espiritual; alvo oculto pode resistir com ESP CD 12. |
+| **11-20** | **Intermediárias** |  |  |  |  | Defesa, contra-ataque, postura e leitura de combate. |
 | 11 | **Contra-Ataque** | Percepcao | 4 AU | 12m | 1 rodada | Tecnica ofensiva ou pressao. Adiciona 2d6 dano de aura, derruba, empurra ou corta reacao; FOR/VIG/AGI CD 13 reduz efeito secundario. |
 | 12 | **Marca Animica** | Defesa | 2 AU | Corpo a corpo | 1 rodada | Leitura ou presenca de aura. Revela intencao, rastro ou assinatura espiritual; alvo oculto pode resistir com ESP CD 13. |
 | 13 | **Investida de Aura** | Controle | 3 AU | Pessoal | 1 rodada | Movimento marcial explosivo. Move, salta ou reposiciona sem provocar reacao; exige terreno possivel e gasto de AU. |
@@ -3605,6 +3686,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 18 | **Surto de Aura** | Movimento | 2 AU | Corpo a corpo | 1 rodada | Tecnica ofensiva ou pressao. Adiciona 2d6 dano de aura, derruba, empurra ou corta reacao; FOR/VIG/AGI CD 13 reduz efeito secundario. |
 | 19 | **Quebra de Guarda** | Percepcao | 3 AU | Pessoal | 1 rodada | Tecnica ofensiva ou pressao. Adiciona 2d6 dano de aura, derruba, empurra ou corta reacao; FOR/VIG/AGI CD 13 reduz efeito secundario. |
 | 20 | **Escudo de Espirito** | Defesa | 4 AU | 9m | 1 rodada | Defesa corporal. Reduz dano, concede +1 a +2 Aparar, PV temporario ou repeticao de save por duracao curta. |
+| **21-30** | **Avançadas** |  |  |  |  | Controle corporal, suporte de grupo e impacto em área curta. |
 | 21 | **Explosao de Chi** | Controle | 4 AU | 6m | 1 minuto | Tecnica ofensiva ou pressao. Adiciona 4d6 dano de aura, derruba, empurra ou corta reacao; FOR/VIG/AGI CD 15 reduz efeito secundario. |
 | 22 | **Passo Entre Golpes** | Suporte | 5 AU | 3m raio | 1 minuto | Movimento marcial explosivo. Move, salta ou reposiciona sem provocar reacao; exige terreno possivel e gasto de AU. |
 | 23 | **Grito Despertador** | Reacao | 6 AU | 12m | 1 minuto | Defesa corporal. Reduz dano, concede +1 a +2 Aparar, PV temporario ou repeticao de save por duracao curta. |
@@ -3615,6 +3697,7 @@ As listas abaixo foram revisadas para ficarem claras, consistentes e mais faceis
 | 28 | **Punho Sismico** | Defesa | 3 AU | 3m raio | 1 minuto | Tecnica ofensiva ou pressao. Adiciona 4d6 dano de aura, derruba, empurra ou corta reacao; FOR/VIG/AGI CD 15 reduz efeito secundario. |
 | 29 | **Corte de Vento** | Controle | 4 AU | 12m | 1 minuto | Movimento marcial explosivo. Move, salta ou reposiciona sem provocar reacao; exige terreno possivel e gasto de AU. |
 | 30 | **Determinacao Feroz** | Suporte | 5 AU | Corpo a corpo | 1 minuto | Defesa corporal. Reduz dano, concede +1 a +2 Aparar, PV temporario ou repeticao de save por duracao curta. |
+| **31-40** | **Épicas** |  |  |  |  | Técnicas lendárias, custo alto e presença marcial extraordinária. |
 | 31 | **Lenda Marcial** | Reacao | 8 AU | Pessoal | 10 minutos | Tecnica ofensiva ou pressao. Adiciona 8d6 dano de aura, derruba, empurra ou corta reacao; FOR/VIG/AGI CD 16 reduz efeito secundario. |
 | 32 | **Campo de Duelo** | Especial | 5 AU | 9m | 10 minutos | Tecnica ofensiva ou pressao. Adiciona 8d6 dano de aura, derruba, empurra ou corta reacao; FOR/VIG/AGI CD 16 reduz efeito secundario. |
 | 33 | **Muralha Humana** | Ataque | 6 AU | 6m | 10 minutos | Defesa corporal. Reduz dano, concede +1 a +2 Aparar, PV temporario ou repeticao de save por duracao curta. |
