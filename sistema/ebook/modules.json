@@ -1,0 +1,98 @@
+[
+  {
+    "file": "src/chapters/01-sistema-mecanico-rpg-de-mesa.html",
+    "title": "SISTEMA MECÂNICO — RPG DE MESA"
+  },
+  {
+    "file": "src/chapters/02-sumario.html",
+    "title": "Sumário"
+  },
+  {
+    "file": "src/chapters/03-parte-0-guia-de-criacao-de-personagem.html",
+    "title": "PARTE 0 — GUIA DE CRIAÇÃO DE PERSONAGEM"
+  },
+  {
+    "file": "src/chapters/04-parte-i-mecanicas-base.html",
+    "title": "PARTE I — MECÂNICAS BASE"
+  },
+  {
+    "file": "src/chapters/05-parte-ii-atributos.html",
+    "title": "PARTE II — ATRIBUTOS"
+  },
+  {
+    "file": "src/chapters/06-parte-iii-pericias.html",
+    "title": "PARTE III — PERÍCIAS"
+  },
+  {
+    "file": "src/chapters/07-parte-iv-sistema-de-aura.html",
+    "title": "PARTE IV — SISTEMA DE AURA"
+  },
+  {
+    "file": "src/chapters/08-parte-v-racas.html",
+    "title": "PARTE V — RAÇAS"
+  },
+  {
+    "file": "src/chapters/09-parte-vi-classes.html",
+    "title": "PARTE VI — CLASSES"
+  },
+  {
+    "file": "src/chapters/10-parte-vii-multiclasse.html",
+    "title": "PARTE VII — MULTICLASSE"
+  },
+  {
+    "file": "src/chapters/11-parte-viii-antecedentes.html",
+    "title": "PARTE VIII — ANTECEDENTES"
+  },
+  {
+    "file": "src/chapters/12-parte-ix-equipamentos.html",
+    "title": "PARTE IX — EQUIPAMENTOS"
+  },
+  {
+    "file": "src/chapters/13-parte-x-talentos.html",
+    "title": "PARTE X — TALENTOS"
+  },
+  {
+    "file": "src/chapters/14-parte-xi-sistema-de-magia.html",
+    "title": "PARTE XI — SISTEMA DE MAGIA"
+  },
+  {
+    "file": "src/chapters/15-parte-xii-combate.html",
+    "title": "PARTE XII — COMBATE"
+  },
+  {
+    "file": "src/chapters/16-parte-xiii-habilidades.html",
+    "title": "PARTE XIII — HABILIDADES"
+  },
+  {
+    "file": "src/chapters/17-parte-xiv-guia-de-criacao-de-habilidades.html",
+    "title": "PARTE XIV - GUIA DE CRIACAO DE HABILIDADES"
+  },
+  {
+    "file": "src/chapters/18-apendice-a-notas-de-playtest-e-balanco.html",
+    "title": "APENDICE A - NOTAS DE PLAYTEST E BALANCO"
+  },
+  {
+    "file": "src/chapters/19-bestiario-do-sistema-mecanico.html",
+    "title": "Bestiário do Sistema Mecânico"
+  },
+  {
+    "file": "src/chapters/20-como-ler-um-bloco.html",
+    "title": "Como Ler um Bloco"
+  },
+  {
+    "file": "src/chapters/21-escala-de-balanceamento.html",
+    "title": "Escala de Balanceamento"
+  },
+  {
+    "file": "src/chapters/22-guia-de-criacao-de-criatura.html",
+    "title": "Guia de Criação de Criatura"
+  },
+  {
+    "file": "src/chapters/23-criaturas.html",
+    "title": "Criaturas"
+  },
+  {
+    "file": "src/chapters/24-notas-de-teste.html",
+    "title": "Notas de Teste"
+  }
+]

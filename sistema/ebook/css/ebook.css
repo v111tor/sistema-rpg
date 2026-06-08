@@ -1,0 +1,44 @@
+/* Estilos do ebook.
+   Edite este arquivo para mudar a apar?ncia do HTML montado. */
+
+body {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  line-height: 1.6;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1f2933;
+  background: #ffffff;
+}
+
+a {
+  color: #2457a6;
+}
+
+nav#TOC {
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d8dee9;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #d8dee9;
+  padding: 0.35rem 0.5rem;
+  vertical-align: top;
+}
+
+@media print {
+  body {
+    max-width: none;
+    padding: 0;
+  }
+}

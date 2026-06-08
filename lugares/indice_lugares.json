@@ -1,0 +1,47 @@
+[
+  {
+    "nome": "Vila de Ferro Clara",
+    "tipo": "vila",
+    "continente": "continente indefinido",
+    "regiao": "pantano",
+    "imperio": "imperio indefinido",
+    "cidade": "cidade indefinida",
+    "bioma": "pantano",
+    "povo": "lizardman",
+    "divindade": "Natureza",
+    "markdown": "lugares\\continente-indefinido\\pantano\\imperio-indefinido\\cidade-indefinida\\vila-de-ferro-clara\\vila-de-ferro-clara.md",
+    "html": "lugares\\continente-indefinido\\pantano\\imperio-indefinido\\cidade-indefinida\\vila-de-ferro-clara\\vila-de-ferro-clara.html",
+    "epub": "lugares\\continente-indefinido\\pantano\\imperio-indefinido\\cidade-indefinida\\vila-de-ferro-clara\\vila-de-ferro-clara.epub",
+    "json": "lugares\\continente-indefinido\\pantano\\imperio-indefinido\\cidade-indefinida\\vila-de-ferro-clara\\vila-de-ferro-clara.json"
+  },
+  {
+    "nome": "Templo do Juramento",
+    "tipo": "templo",
+    "continente": "continente indefinido",
+    "regiao": "ruina",
+    "imperio": "imperio indefinido",
+    "cidade": "cidade indefinida",
+    "bioma": "ruina",
+    "povo": "anao",
+    "divindade": "Morte",
+    "markdown": "lugares\\continente-indefinido\\ruina\\imperio-indefinido\\cidade-indefinida\\templo-do-juramento\\templo-do-juramento.md",
+    "html": "lugares\\continente-indefinido\\ruina\\imperio-indefinido\\cidade-indefinida\\templo-do-juramento\\templo-do-juramento.html",
+    "epub": "lugares\\continente-indefinido\\ruina\\imperio-indefinido\\cidade-indefinida\\templo-do-juramento\\templo-do-juramento.epub",
+    "json": "lugares\\continente-indefinido\\ruina\\imperio-indefinido\\cidade-indefinida\\templo-do-juramento\\templo-do-juramento.json"
+  },
+  {
+    "nome": "Vila das Sete Portas",
+    "tipo": "vila",
+    "continente": "Eldoria",
+    "regiao": "Marisma Oriental",
+    "imperio": "Imperio de Sal",
+    "cidade": "Porto Junco",
+    "bioma": "pantano",
+    "povo": "lizardman",
+    "divindade": "Natureza",
+    "markdown": "lugares\\eldoria\\marisma-oriental\\imperio-de-sal\\porto-junco\\vila-das-sete-portas\\vila-das-sete-portas.md",
+    "html": "lugares\\eldoria\\marisma-oriental\\imperio-de-sal\\porto-junco\\vila-das-sete-portas\\vila-das-sete-portas.html",
+    "epub": "lugares\\eldoria\\marisma-oriental\\imperio-de-sal\\porto-junco\\vila-das-sete-portas\\vila-das-sete-portas.epub",
+    "json": "lugares\\eldoria\\marisma-oriental\\imperio-de-sal\\porto-junco\\vila-das-sete-portas\\vila-das-sete-portas.json"
+  }
+]

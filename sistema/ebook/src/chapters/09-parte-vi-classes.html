@@ -1,0 +1,1874 @@
+<h2 id="parte-vi-classes">PARTE VI - CLASSES</h2>
+<p>Existem seis classes. Ao criar um personagem, escolha uma. Cada
+classe define seu estilo de combate, acesso a magia e progressao. O
+avanco vai do nivel 1 ao 20.</p>
+<h3 id="como-funcionam-as-caracteristicas-de-classe">Como Funcionam as
+Caracteristicas de Classe</h3>
+<p>As <strong>Caracteristicas de Classe</strong> sao os recursos que
+definem como a classe joga: estilos de combate, truques de
+sobrevivencia, tecnicas, especializacoes, melhorias de magia, infusoes,
+pactos e modos de usar recursos. Elas substituem o antigo termo
+Habilidades de Classe.</p>
+<p>A cada nivel, o jogador escolhe <strong>1 Caracteristica de
+Classe</strong> do pool de 30 disponiveis para sua classe. Ao longo de
+20 niveis, o personagem tera escolhido 20 das 30 caracteristicas  as 10
+nao escolhidas sao caminhos que ficaram por explorar.</p>
+<p><strong>Regras de pre-requisito:</strong></p>
+<p> <em>Nivel X+:</em> a caracteristica so pode ser escolhida a partir
+daquele nivel.</p>
+<p> <em>Necessita: [Caracteristica]:</em> precisa ter essa outra
+caracteristica antes de escolher esta.</p>
+<p><strong>Marcos Fixos (nao sao escolhas  ocorrem
+automaticamente):</strong></p>
+<p> Niveis 4, 8, 12, 16, 20: Melhoria de Atributo (sobe 1 passo em 1
+atributo)</p>
+<p> Niveis 1, 5, 9, 13, 17: Escolha de Talento (ver Parte X)</p>
+<hr />
+<h3 id="habilidades-conhecidas-por-nivel">Habilidades Conhecidas por
+Nivel</h3>
+<p>As <strong>Habilidades</strong> sao poderes aprendidos e ativaveis:
+magias Arcanas, Primitivas e de Fe, tecnicas de Aura, tecnologias,
+dispositivos, infusoes, criacoes personalizadas e efeitos
+semelhantes.</p>
+<p>Todo personagem possui uma quantidade de <strong>Habilidades
+Conhecidas</strong> baseada no nivel. Essa quantidade representa quantas
+magias, tecnicas, tecnologias ou efeitos personalizados o personagem
+domina o suficiente para usar sem improviso.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Nivel</th>
+<th style="text-align: right;">Habilidades Conhecidas Base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">21</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Regra simples:</strong> Habilidades Conhecidas Base = nivel
+do personagem + 1.</p>
+<p><strong>Acesso por fonte:</strong> conhecer uma habilidade nao basta;
+o personagem tambem precisa ter acesso a fonte ou ao item que permite
+usa-la.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Fonte</th>
+<th>Como acessa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arcana</td>
+<td>PA, estudo arcano, grimorio, infusao ou item apropriado</td>
+</tr>
+<tr>
+<td>Primitiva</td>
+<td>PE, estado emocional, ligacao espiritual ou treinamento
+sensiente</td>
+</tr>
+<tr>
+<td>Fe</td>
+<td>PD, pacto, voto, divindade ou forca patrona</td>
+</tr>
+<tr>
+<td>Aura</td>
+<td>AU, treino fisico/espiritual ou caracteristica marcial</td>
+</tr>
+<tr>
+<td>Tecnologia</td>
+<td>item criado, ferramenta, esquema, oficina ou caracteristica de
+Artifice</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Caracteristicas que concedem Habilidades:</strong> algumas
+Caracteristicas de Classe, talentos, itens ou eventos narrativos podem
+aumentar esse numero. Quando isso acontecer, a ficha deve anotar:
+Habilidades Conhecidas +X.</p>
+<p><strong>Amplificacao de Conhecimento:</strong> quando uma
+caracteristica disser que concede Amplificacao de Conhecimento, escolha
+uma das opcoes abaixo:</p>
+<p> Aprender <strong>2 Habilidades</strong> de uma fonte a qual voce
+tem acesso.</p>
+<p> Aprender <strong>1 Habilidade</strong> de uma fonte a qual voce
+ainda nao teria acesso, se houver justificativa narrativa e aprovacao do
+Mestre.</p>
+<p> Transformar <strong>1 tecnologia, magia ou tecnica
+conhecida</strong> em versao aprimorada, adicionando 1 modulo de efeito,
+aumentando alcance/duracao em uma etapa ou reduzindo custo em 1 ponto
+(minimo 1), conforme aprovacao do Mestre.</p>
+<p> Registrar <strong>1 esquema tecnologico</strong>: voce passa a
+poder recriar aquela tecnologia em oficina sem precisar redescobrir o
+projeto.</p>
+<p><strong>Limite de troca:</strong> ao subir de nivel, o personagem
+pode substituir 1 Habilidade conhecida por outra da mesma fonte. Isso
+representa estudo, treino, reconfiguracao de tecnologia ou abandono de
+uma tecnica antiga.</p>
+<p><strong>Resumo do nivel:</strong> quando subir de nivel, o personagem
+normalmente recebe:</p>
+<ol type="1">
+<li><p>+1 Caracteristica de Classe escolhida do pool da classe.</p></li>
+<li><p>+1 Habilidade Conhecida Base.</p></li>
+<li><p>Marcos fixos se o nivel tiver Melhoria de Atributo ou
+Talento.</p></li>
+<li><p>Habilidades extras se alguma caracteristica, talento ou item
+conceder Amplificacao de Conhecimento.</p></li>
+</ol>
+<hr />
+<h3 id="guerreiro">Guerreiro</h3>
+<p><em>Mestre das armas e da armadura. Adaptavel, resistente e letal.
+Canaliza Aura atraves do treino fisico.</em></p>
+<p><strong>Dado de PV:</strong> d8 | <strong>Proficiencias:</strong>
+todas as armas e armaduras, escudos</p>
+<p><strong>Saves:</strong> FOR, VIG | <strong>Pericias:</strong> Escolha
+2 de (Atletismo, Intimidacao, Percepcao, Sobrevivencia, Persuasao,
+Historia)</p>
+<p><strong>Pool de Aura:</strong> 4 AU no nivel 1, +1 a cada 2 niveis
+(max. 14 no nivel 20). Recupera em descanso curto.</p>
+<p><strong>Equipamento Inicial:</strong> Couro reforcado; escolha
+<strong>uma arma marcial corpo a corpo</strong> (espada longa, machado
+de batalha ou martelo de guerra); escolha <strong>escudo
+metalico</strong> ou <strong>arma marcial pesada</strong> (espada grande
+ou alabarda); besta leve ou 3 dardos; kit de aventureiro; 3 pocoes de
+cura menor; 10 OO.</p>
+<p><strong>Caracteristicas Fixas de Classe:</strong></p>
+<p> <strong>Nivel 1:</strong> Estilo de Combate (escolha um permanente:
+Arqueiro, Defesa, Duelo, Grande Arma, Protecao, Duas Armas)</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>AU</th>
+<th>Marcos Fixos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>4</td>
+<td>Estilo de Combate</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>6</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>7</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>9</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>9</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>13</td>
+<td>10</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>14</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>11</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>11</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>17</td>
+<td>12</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>18</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>13</td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>14</td>
+<td>Melhoria de Atributo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Efeitos das Caracteristicas Fixas:</strong></p>
+<p><strong>Estilo de Combate.</strong> No nivel 1, escolha um estilo
+permanente. Ele nao custa acao nem AU e fica ativo enquanto voce cumprir
+suas condicoes.</p>
+<ul>
+<li><strong>Arqueiro:</strong> +1 em ataques com armas a distancia. Se
+mirar antes de atacar, ignore cobertura leve.</li>
+<li><strong>Defesa:</strong> +1 Aparar enquanto usa armadura.</li>
+<li><strong>Duelo:</strong> +2 dano quando usa uma arma corpo a corpo em
+uma mao e nao usa outra arma.</li>
+<li><strong>Grande Arma:</strong> ao rolar 1 ou 2 no dado de dano de
+arma pesada, role novamente uma vez.</li>
+<li><strong>Protecao:</strong> quando aliado adjacente for atacado, use
+reacao para impor -2 no ataque inimigo se estiver usando escudo.</li>
+<li><strong>Duas Armas:</strong> ao lutar com duas armas leves, some
+metade do Mod. AGI ou FOR no dano da arma secundaria.</li>
+</ul>
+<p><strong>Melhoria de Atributo.</strong> Nos niveis indicados, aumente
+um atributo em 1 passo, respeitando o limite da campanha.</p>
+<p><strong>Talento.</strong> Nos niveis indicados, escolha 1 talento
+para o qual cumpra os pre-requisitos.</p>
+<p>Pool de 30 Caracteristicas - Guerreiro</p>
+<p><em>(Escolha 1 caracteristica por nivel. Pre-requisitos de nivel ou
+caracteristica devem ser cumpridos.)</em></p>
+<p><strong>Sem pre-requisito de nivel:</strong></p>
+<p><strong>1. Segundo Vento</strong></p>
+<p>Acao bonus; recupera 1d8 + nivel PV. Pode usar mesmo Abalado. 1
+AU.</p>
+<p><strong>2. Guarda Marcial</strong></p>
+<p>Reacao; ao ser atacado, ganhe +2 Aparar contra aquele ataque. 0
+AU.</p>
+<p><strong>3. Arma de Escolha</strong></p>
+<p>Escolha um tipo de arma; +1 nas rolagens de ataque e +1 de dano com
+esse tipo permanentemente.</p>
+<p><strong>4. Postura de Batalha</strong></p>
+<p>Acao bonus; por 1 minuto ganhe +1 nas rolagens de ataque e +1 Aparar.
+1 AU.</p>
+<p><strong>5. Brutalidade</strong></p>
+<p>Ao rolar 1 ou 2 em qualquer dado de dano, relance o dado (uma vez por
+dado).</p>
+<p><strong>6. Impeto</strong></p>
+<p>Ao se mover em linha reta por 6m+ antes de atacar, cause +1d6 dano
+naquele ataque. 1 AU.</p>
+<p><strong>7. Resistencia Fisica</strong></p>
+<p>+4 PV maximos. <em>Pode ser escolhida multiplas vezes.</em></p>
+<p><strong>8. Treinamento de Escudo</strong></p>
+<p>Com escudo equipado, pode atacar com ele (dano d4 contundente) como
+acao bonus sem perder o bonus de Aparar.</p>
+<p><strong>9. Golpe Preciso</strong></p>
+<p>Declare antes de rolar; aceita -2 na rolagem de ataque para ganhar +4
+de dano no acerto.</p>
+<p><strong>10. Instinto de Combate</strong></p>
+<p>Nunca fica surpreso em combate. Ganha vantagem na rolagem de
+Iniciativa.</p>
+<p><strong>Requer Nivel 5+:</strong></p>
+<p><strong>11. Surto de Acao</strong> <em>(Nivel 5+)</em></p>
+<p>Ganha uma acao adicional no turno. 1/descanso curto. Nao pode ser
+usada para lancar magia.</p>
+<p><strong>12. Ataque Giratorio</strong> <em>(Nivel 5+)</em></p>
+<p>Acao; ataca todos os inimigos em alcance corpo a corpo em um unico
+movimento circular. 2 AU.</p>
+<p><strong>13. Golpe Atordoante</strong> <em>(Nivel 5+)</em></p>
+<p>Apos acertar um ataque, gaste acao bonus para forcar VIG CD 12 no
+alvo; falha = Abalado ate fim do proximo turno. 1 AU.</p>
+<p><strong>14. Pressao Marcial</strong> <em>(Nivel 5+)</em></p>
+<p>Ao se mover em direcao a inimigo, ele tem desvantagem no proximo
+ataque contra voce naquele turno.</p>
+<p><strong>15. Postura do Guardiao</strong> <em>(Nivel 5+)</em></p>
+<p>Reacao; imponha desvantagem em um ataque de inimigo contra aliado
+adjacente que voce possa ver.</p>
+<p><strong>16. Impeto Poderoso</strong> <em>(Nivel 5+ | Necessita:
+Impeto)</em></p>
+<p>Impeto agora causa +2d6 dano. Nao precisa ser em linha reta  basta
+6m de movimento continuo.</p>
+<p><strong>17. Corpo de Ferro</strong> <em>(Nivel 5+ | Necessita:
+Resistencia Fisica)</em></p>
+<p>+8 PV maximos adicionais. VIG nao pode ser forcada abaixo de d4 por
+efeitos magicos.</p>
+<p><strong>18. Resistencia Marcial</strong> <em>(Nivel 5+)</em></p>
+<p>Escolha 1 tipo de dano (fogo, frio, raio, cortante, etc.); ganha
+resistencia permanente a ele. <strong>Requer Nivel 10+:</strong></p>
+<p><strong>19. Maestria de Arma</strong> <em>(Nivel 10+ | Necessita:
+Arma de Escolha)</em></p>
+<p>A arma escolhida causa +1 dado extra em criticos (ex.: longsword
+passa de 2d8 para 3d8 no critico). Critico automatico em 19-20.</p>
+<p><strong>20. Ruptura de Defesas</strong> <em>(Nivel 10+)</em></p>
+<p>Ao acertar, impoe -2 Aparar no alvo ate o inicio do proximo turno
+desse alvo.</p>
+<p><strong>21. Aura de Coragem</strong> <em>(Nivel 10+)</em></p>
+<p>Aliados em 6m sao imunes a Assustado e Abalado enquanto voce estiver
+consciente.</p>
+<p><strong>22. Contra-Ataque</strong> <em>(Nivel 10+ | Necessita: Guarda
+Marcial)</em></p>
+<p>Ao usar Guarda Marcial com sucesso (ataque miss), pode contra-atacar
+como reacao imediatamente.</p>
+<p><strong>23. Furia Marcial</strong> <em>(Nivel 10+)</em></p>
+<p>1/desc. curto; por 1 minuto: ataques causam +1d6 extra; vantagem em
+FOR e VIG; imune a Assustado. 3 AU.</p>
+<p><strong>24. Surto de Acao Aprimorado</strong> <em>(Nivel 10+ |
+Necessita: Surto de Acao)</em></p>
+<p>Surto de Acao pode ser usado 2/descanso curto.</p>
+<p><strong>Requer Nivel 15+:</strong></p>
+<p><strong>25. Lenda Viva</strong> <em>(Nivel 15+)</em></p>
+<p>Inimigos que te viram lutar antes tem desvantagem em ataques contra
+voce na primeira rodada de cada combate.</p>
+<p><strong>26. Golpe de Lenda</strong> <em>(Nivel 15+)</em></p>
+<p>1/desc. longo; um ataque causa dano maximo automaticamente. O alvo
+faz VIG CD 15 ou fica Incapacitado 1 rodada. 4 AU.</p>
+<p><strong>27. Resistencia Total</strong> <em>(Nivel 15+ | Necessita:
+Resistencia Marcial)</em></p>
+<p>Escolha um segundo tipo de dano; ganha resistencia a ele tambem.</p>
+<p><strong>28. Corpo Imortal</strong> <em>(Nivel 15+ | Necessita: Corpo
+de Ferro)</em></p>
+<p>Ao chegar a 0 PV, faca VIG CD 10; sucesso = fica em 1 PV. 1/descanso
+longo.</p>
+<p><strong>29. Maestria Marcial</strong> <em>(Nivel 15+)</em></p>
+<p>Possui os beneficios de todos os Estilos de Combate
+simultaneamente.</p>
+<p><strong>30. Campeao Supremo</strong> <em>(Nivel 15+)</em></p>
+<p>Uma vez por turno, ao matar ou incapacitar um inimigo, realize um
+ataque de bonus gratuitamente.</p>
+<hr />
+<h3 id="arcanista">Arcanista</h3>
+<p><em>Estudioso da magia arcana. Usa PA para lancar habilidades
+arcanas, rituais e simbolos.</em></p>
+<p><strong>Dado de PV:</strong> d4 | <strong>Proficiencias:</strong>
+todas as armas simples; armadura <strong>leve</strong> por padrao
+<strong>Saves:</strong> INT, AGI | <strong>Pericias:</strong> Escolha 2
+de (Arcanismo, Historia, Medicina, Natureza, Percepcao, Religiao)
+<strong>Pool de PA:</strong> 10 no nivel 1, crescendo por nivel (ver
+tabela). Recupera em descanso curto (2 PA) e longo (total).</p>
+<blockquote>
+<p><em>A magia arcana e intelectual, nao postural  usar armadura nao
+interfere nas habilidades. O Arcanista comeca com treino em armadura
+leve e pode aprender media ou pesada investindo habilidades de classe ou
+talentos.</em></p>
+</blockquote>
+<p><strong>Equipamento Inicial:</strong> Bastao arcano; escolha
+<strong>adaga</strong> ou <strong>bordao</strong>; livro de formulas; 3
+pergaminhos em branco; kit de escrita; tinta arcana; componente ou foco
+arcano simples; 15 OO.</p>
+<p><strong>Caracteristicas Fixas de Classe:</strong></p>
+<p> <strong>Nivel 1:</strong> Grimorio (aprende 6 habilidades Arcanas +
+2 por nivel) | Recuperacao Arcana (2 PA/desc. curto)</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>PA</th>
+<th>Marcos Fixos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10</td>
+<td>Grimorio, Recuperacao Arcana</td>
+</tr>
+<tr>
+<td>2</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>14</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>14</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>5</td>
+<td>16</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>6</td>
+<td>18</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>18</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>20</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>9</td>
+<td>22</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>24</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>28</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>28</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>13</td>
+<td>32</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>14</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>36</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>36</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>17</td>
+<td>40</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>18</td>
+<td>44</td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>44</td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>44</td>
+<td>Melhoria de Atributo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Efeitos das Caracteristicas Fixas:</strong></p>
+<p><strong>Grimorio.</strong> No nivel 1, voce recebe um grimorio arcano
+e registra 6 habilidades Arcanas conhecidas. A cada nivel de Arcanista,
+registre mais 2 habilidades Arcanas. Sem o grimorio, magias de custo 2
+PA ou maior sofrem -2 no teste ate voce preparar uma copia durante
+descanso longo.</p>
+<p><strong>Recuperacao Arcana.</strong> Uma vez por descanso curto, apos
+10 minutos de estudo, recupere 2 PA. A partir do nivel 9, recupere 4 PA.
+Essa recuperacao nao pode ultrapassar seu PA maximo.</p>
+<p><strong>Melhoria de Atributo.</strong> Nos niveis indicados, aumente
+um atributo em 1 passo, respeitando o limite da campanha.</p>
+<p><strong>Talento.</strong> Nos niveis indicados, escolha 1 talento
+para o qual cumpra os pre-requisitos.</p>
+<p>Pool de 30 Caracteristicas - Arcanista</p>
+<p><em>(Escolha 1 caracteristica por nivel. Pre-requisitos de nivel ou
+caracteristica devem ser cumpridos.)</em></p>
+<p><strong>Sem pre-requisito de nivel:</strong></p>
+<p><strong>1. Analise Magica</strong></p>
+<p>Acao bonus; identifica propriedades magicas de item, criatura ou
+efeito em 9m. Sem custo.</p>
+<p><strong>2. Escudo Arcano</strong></p>
+<p>Reacao; +3 Aparar contra um ataque. 1 PA.</p>
+<p><strong>3. Vinculo de Grimorio</strong></p>
+<p>Grimorio teleporta para sua mao como acao bonus; nunca pode ser
+roubado permanentemente.</p>
+<p><strong>4. Truque Menor</strong></p>
+<p>Cria efeitos sensoriais pequenos a vontade (som, cheiro, imagem
+estatica, luz fraca). Sem custo.</p>
+<p><strong>5. Especializacao em Escola</strong></p>
+<p>Escolha uma escola arcana (Evocacao, Ilusao, Transmutacao, Abjuracao,
+Conjuracao). Habilidades dessa escola custam 1 PA a menos.</p>
+<p><strong>6. Contra-Feitico</strong></p>
+<p>Reacao; ao ver magia sendo lancada em 12m, tente anula-la (Arcanismo
+CD = 8 + custo da habilidade em PA).</p>
+<p><strong>7. Ritual Veloz</strong></p>
+<p>Executa rituais em metade do tempo normal.</p>
+<p><strong>8. Memoria Arcana</strong></p>
+<p>Vantagem em todos os testes de Arcanismo e Historia. Memoriza
+qualquer texto apos le-lo uma vez. <strong>9. Escudo de
+Espinhos</strong> <em>(Necessita: Escudo Arcano)</em></p>
+<p>Enquanto Escudo Arcano estiver ativo, atacantes corpo a corpo sofrem
+1d6 dano de forca.</p>
+<p><strong>10. Armadura Arcana</strong></p>
+<p>Como acao bonus, envolve-se em energia arcana: +1 Aparar por 1 hora
+(acumula com armadura fisica). 2 PA. <em>Ao escolher esta habilidade,
+aprende proficiencia em armadura media. Proficiencia em armadura pesada
+pode ser obtida pelo talento de Combate Maestria em Arma aplicado a
+armaduras, ou via multiclasse.</em></p>
+<p><strong>Requer Nivel 5+:</strong></p>
+<p><strong>11. Amplificacao</strong> <em>(Nivel 5+)</em></p>
+<p>Pague 2 o custo de PA de qualquer habilidade Arcana para dobrar o
+dano, a area ou a duracao. 1/turno.</p>
+<p><strong>12. Dissipar Magia</strong> <em>(Nivel 5+)</em></p>
+<p>Remove efeito magico ativo em alvo ou area (Arcanismo CD = 8 + custo
+original da magia). 3 PA.</p>
+<p><strong>13. Telecinese Menor</strong> <em>(Nivel 5+)</em></p>
+<p>Move objeto de ate 5kg em 12m como acao bonus. Pode ser usado para
+atacar (1d6 forca). 2 PA.</p>
+<p><strong>14. Aura Arcana</strong> <em>(Nivel 5+)</em></p>
+<p>Aura passiva; uma vez por turno, a primeira habilidade Arcana que
+voce lanca custa 1 PA a menos.</p>
+<p><strong>15. Feitico Duplo</strong> <em>(Nivel 5+)</em></p>
+<p>Ao lancar habilidade Arcana de custo  4 PA, lanca segunda habilidade
+de custo  2 PA como acao bonus. 1/desc. longo.</p>
+<p><strong>16. Aprendizado Rapido</strong> <em>(Nivel 5+)</em></p>
+<p>Copia habilidade Arcana de pergaminho sem custo material; apenas o
+tempo de copia.</p>
+<p><strong>17. Especializacao Superior</strong> <em>(Nivel 5+ |
+Necessita: Especializacao em Escola)</em></p>
+<p>A escola escolhida custa 2 PA a menos (acumula com o -1 anterior).
+Uma habilidade dessa escola por descanso longo custa 0 PA.</p>
+<p><strong>18. Olho da Mente</strong> <em>(Nivel 5+)</em></p>
+<p>Concentracao; visao em 360 em 9m, inclusive atraves de paredes de
+ate 15cm. 3 PA/minuto. <strong>Requer Nivel 10+:</strong></p>
+<p><strong>19. Amplificacao Superior</strong> <em>(Nivel 10+ |
+Necessita: Amplificacao)</em></p>
+<p>Amplificacao agora permite escolher: dobrar dano E aumentar area
+(paga 3 o custo original).</p>
+<p><strong>20. Dissipar Area</strong> <em>(Nivel 10+ | Necessita:
+Dissipar Magia)</em></p>
+<p>Dissipa todas magias ativas em 9m raio. CD 14. 6 PA.</p>
+<p><strong>21. Replicacao Arcana</strong> <em>(Nivel 10+)</em></p>
+<p>Ao receber habilidade Arcana, pode replica-la imediatamente
+(Arcanismo CD = 8 + custo). 1/desc. longo.</p>
+<p><strong>22. Transmutacao Menor</strong> <em>(Nivel 10+)</em></p>
+<p>Transforma objeto nao magico de ate 1m3 em outro material similar por
+1 hora. 4 PA.</p>
+<p><strong>23. Ritual Mestre</strong> <em>(Nivel 10+ | Necessita: Ritual
+Veloz)</em></p>
+<p>Pode conduzir 2 rituais simultaneamente com efeitos
+independentes.</p>
+<p><strong>24. Ancora Arcana</strong> <em>(Nivel 10+)</em></p>
+<p>Concentracao nao e quebrada por receber dano (ainda deve passar no
+teste, mas com vantagem). <strong>Requer Nivel 15+:</strong></p>
+<p><strong>25. Maestria de Escola</strong> <em>(Nivel 15+ | Necessita:
+Especializacao Superior)</em></p>
+<p>1/desc. longo: lanca qualquer habilidade da escola escolhida de
+forma gratuita (0 PA).</p>
+<p><strong>26. Viagem Arcana</strong> <em>(Nivel 15+)</em></p>
+<p>Teleporta voce e ate 5 aliados para local familiar em ate 50km. 12
+PA.</p>
+<p><strong>27. Prisao Arcana</strong> <em>(Nivel 15+)</em></p>
+<p>Cria prisao de forca ao redor de alvo em 12m (FOR CD 16 para
+escapar). Concentracao. 8 PA.</p>
+<p><strong>28. Transcendencia Arcana</strong> <em>(Nivel 15+ |
+Necessita: Amplificacao Superior)</em></p>
+<p>Amplificacao pode ser aplicada a qualquer habilidade Arcana,
+incluindo efeitos de duracao ou utilitarios.</p>
+<p><strong>29. Invocacao Arcana</strong> <em>(Nivel 15+)</em></p>
+<p>Invoca entidade arcana de combate por 1 min. (PV = nivel  10, Aparar
+14, dano 2d8+Mod.INT). 8 PA.</p>
+<p><strong>30. Toque do Astral</strong> <em>(Nivel 15+)</em></p>
+<p>Forca alvo a fazer INT CD 18; falha = transportado para plano astral
+por 1 hora. 15 PA. 1/semana.</p>
+<hr />
+<h3 id="sensiente">Sensiente</h3>
+<p><em>Canaliza a Magia Primitiva atraves dos estados emocionais.
+Suporte, controle e dano emocional.</em></p>
+<p><strong>Dado de PV:</strong> d6 | <strong>Proficiencias:</strong>
+armas simples, armaduras leve, escudos leves</p>
+<p><strong>Saves:</strong> ESP, AGI | <strong>Pericias:</strong> Escolha
+3 de (Persuasao, Enganacao, Intimidacao, Intuicao, Acrobacia, Historia,
+Percepcao)</p>
+<p><strong>Pool de PE:</strong> 10 no nivel 1, crescendo por nivel (ver
+tabela). Recupera em descanso curto (4 PE) e longo (total). Estado
+Emocional</p>
+<p><strong>Equipamento Inicial:</strong> Couro; escolha
+<strong>adaga</strong> ou <strong>bordao</strong>; escudo de madeira
+leve; foco emocional (amuleto, diario, mascara, lembranca ou
+instrumento); instrumento musical simples; 2 pocoes de cura menor; 20
+OO.</p>
+<p>No inicio de cada combate (ou antes da primeira acao), o Sensiente
+<strong>declara seu Estado Emocional</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Emocao</th>
+<th>Tipo de poder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raiva</td>
+<td>Furia, odio</td>
+<td>Dano e destruicao</td>
+</tr>
+<tr>
+<td>Amor</td>
+<td>Afeto, compaixao</td>
+<td>Cura e protecao</td>
+</tr>
+<tr>
+<td>Medo</td>
+<td>Terror, ansiedade</td>
+<td>Fuga, ilusao, controle</td>
+</tr>
+<tr>
+<td>Alegria</td>
+<td>Euforia, esperanca</td>
+<td>Suporte, buffs, levitacao</td>
+</tr>
+<tr>
+<td>Tristeza</td>
+<td>Melancolia, luto</td>
+<td>Debuff, clima, sonhos</td>
+</tr>
+<tr>
+<td>Determinacao</td>
+<td>Resolve, vontade</td>
+<td>Resistencia, barreira</td>
+</tr>
+</tbody>
+</table>
+<p> Habilidades <strong>do seu estado declarado</strong>: custo normal
+de PE.</p>
+<p> Habilidades de <strong>outros estados</strong>: custam o
+<strong>dobro de PE</strong>.</p>
+<p> Pode mudar o estado declarado gastando uma <strong>acao</strong> e
+2 PE.</p>
+<p><strong>Caracteristicas Fixas de Classe:</strong></p>
+<p> <strong>Nivel 1:</strong> Ressonancia Emocional (detecta emocoes em
+9m; ESP CD 8)</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>PE</th>
+<th>Marcos Fixos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10</td>
+<td>Ressonancia Emocional, Estado Emocional</td>
+</tr>
+<tr>
+<td>2</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>14</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>14</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>5</td>
+<td>16</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>6</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>18</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>9</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>22</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>26</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>26</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>13</td>
+<td>30</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>14</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>32</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>17</td>
+<td>36</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>18</td>
+<td>36</td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>36</td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>36</td>
+<td>Melhoria de Atributo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Efeitos das Caracteristicas Fixas:</strong></p>
+<p><strong>Estado Emocional.</strong> Antes da primeira acao em uma cena
+tensa, declare Raiva, Amor, Medo, Alegria, Tristeza ou Determinacao.
+Habilidades do estado declarado custam o valor normal. Habilidades de
+outro estado custam o dobro. Voce pode trocar de estado com uma acao e 2
+PE.</p>
+<p><strong>Ressonancia Emocional.</strong> Como acao, escolha uma
+criatura em ate 9m. Se ela falhar em ESP CD 8 + Mod. ESP, voce descobre
+sua emocao dominante, se esta hostil e se ha influencia emocional magica
+ativa. Em sucesso, voce sente apenas uma impressao vaga.</p>
+<p><strong>Melhoria de Atributo.</strong> Nos niveis indicados, aumente
+um atributo em 1 passo, respeitando o limite da campanha.</p>
+<p><strong>Talento.</strong> Nos niveis indicados, escolha 1 talento
+para o qual cumpra os pre-requisitos.</p>
+<p>Pool de 30 Caracteristicas - Sensiente</p>
+<p><em>(Escolha 1 caracteristica por nivel. Pre-requisitos de nivel ou
+caracteristica devem ser cumpridos.)</em></p>
+<p><strong>Sem pre-requisito de nivel:</strong></p>
+<p><strong>1. Pulso Emocional</strong></p>
+<p>Envia onda do estado atual em 6m raio; criaturas sentem fisicamente a
+emocao (narrativo + ESP CD para resistir a influencia). 1 PE.</p>
+<p><strong>2. Fortalecer Aliado</strong></p>
+<p>(Amor/Alegria) Acao bonus; aliado em 9m ganha vantagem no proximo
+teste ou ataque. 1 PE.</p>
+<p><strong>3. Amplificar Emocao</strong></p>
+<p>Duplica intensidade de emocao em alvo em 9m; efeito narrativo forte +
+impoe ou concede dado de bonus situacional. 2 PE.</p>
+<p><strong>4. Escuta Empatica</strong></p>
+<p>Passivo; vantagem em todos os testes de Intuicao para detectar
+mentiras ou ler motivacoes.</p>
+<p><strong>5. Aura de Presenca</strong></p>
+<p>Passivo; criaturas que tentam Intimidar voce tem desvantagem. Aliados
+em 3m ganham +1 em saves contra Medo.</p>
+<p><strong>6. Cura de Emergencia</strong></p>
+<p>Acao bonus; estabiliza aliado a 0 PV sem teste. 1 PE.</p>
+<p><strong>7. Eco de Emocao</strong></p>
+<p>Ao usar habilidade de PE, aliados em 9m que compartilham o mesmo
+estado emocional recuperam 1 PE.</p>
+<p><strong>8. Vinculo Empatico</strong></p>
+<p>Conecta-se a aliado; como acao bonus pode transferir PV entre si (ate
+Mod.ESP  2 por turno). 2 PE.</p>
+<p><strong>9. Sentido Agucado de Emocoes</strong></p>
+<p>Detecta estados emocionais passivamente em 18m; nunca erra ao ler se
+alguem esta em perigo, assustado ou em panico.</p>
+<p><strong>10. Resistencia Emocional</strong></p>
+<p>Passivo; imune a efeitos de Charme e Medo. Vantagem em todos saves
+mentais.</p>
+<p><strong>Requer Nivel 5+:</strong></p>
+<p><strong>11. Contagio Emocional</strong> <em>(Nivel 5+)</em></p>
+<p>Espalha seu estado emocional em 9m raio; criaturas fazem ESP CD
+(8+Mod.ESP) ou adotam a emocao por 1 turno. 3 PE.</p>
+<p><strong>12. Elo Empatico Profundo</strong> <em>(Nivel 5+ | Necessita:
+Vinculo Empatico)</em></p>
+<p>Vinculo Empatico pode ser mantido a distancia (12m). Voce sente dor e
+dano do aliado antes que ele receba (reacao gratuita de aviso).</p>
+<p><strong>13. Empatia Profunda</strong> <em>(Nivel 5+)</em></p>
+<p>Acao; le motivacoes ocultas de criatura em 6m (nao pode ser
+falseado). ESP CD 12. Sem custo.</p>
+<p><strong>14. Presenca Inspiradora</strong> <em>(Nivel 5+)</em></p>
+<p>Uma vez por encontro, concede a aliado visivel um dado bonus de d8 em
+qualquer teste ou ataque.</p>
+<p><strong>15. Catarse Menor</strong> <em>(Nivel 5+)</em></p>
+<p>1/desc. longo; libera emocao acumulada em 6m raio: 3d6 dano
+emocional (tipo varia com estado) + todos na area sentem intensamente a
+emocao. VIG CD (8+Mod.ESP) para metade do dano. 6 PE.</p>
+<p><strong>16. Forma Eterea Emocional</strong> <em>(Nivel 5+)</em></p>
+<p>(Medo/Tristeza) Por 1 min, torna-se parcialmente intangivel; ataques
+fisicos tem 25% de chance de errar. 4 PE.</p>
+<p><strong>17. Maestria de Estado</strong> <em>(Nivel 5+)</em></p>
+<p>Ao trocar Estado Emocional, nao gasta acao  apenas acao bonus e 1 PE
+(em vez de 2).</p>
+<p><strong>18. Eco de Batalha</strong> <em>(Nivel 5+)</em></p>
+<p>Passivo; ao final de cada rodada em que aliado caiu ou inimigo foi
+morto, recupere 2 PE automaticamente. <strong>Requer Nivel
+10+:</strong></p>
+<p><strong>19. Catarse Maior</strong> <em>(Nivel 10+ | Necessita:
+Catarse Menor)</em></p>
+<p>1/desc. longo; 9m raio; 6d6 dano emocional + efeito especial do
+estado. VIG CD (10+Mod.ESP) para metade. 10 PE.</p>
+<p><strong>20. Transcendencia Emocional</strong> <em>(Nivel
+10+)</em></p>
+<p>Passivo; as primeiras 3 habilidades de PE que voce usa em cada
+combate custam 1 PE a menos (minimo 1).</p>
+<p><strong>21. Avatar Emocional</strong> <em>(Nivel 10+)</em></p>
+<p>1/desc. longo; por 1 min, adquire forma fisica do estado emocional:
++3 a atributo relevante, visual dramatico, efeito passivo de area (3m).
+8 PE.</p>
+<p><strong>22. Aura Amplificada</strong> <em>(Nivel 10+ | Necessita:
+Aura de Presenca)</em></p>
+<p>Aura de Presenca se expande para 9m. Aliados na aura tem +1 em todos
+os saves.</p>
+<p><strong>23. Fusao Empatica</strong> <em>(Nivel 10+ | Necessita: Elo
+Empatico Profundo)</em></p>
+<p>Pode se fundir com aliado vinculado temporariamente; por 3 rodadas,
+atuam no mesmo slot de iniciativa e podem usar acao um do outro.</p>
+<p><strong>24. Controle de Multidao</strong> <em>(Nivel 10+)</em></p>
+<p>(qualquer estado) Area 12m raio; todas criaturas fazem ESP CD
+(12+Mod.ESP) ou ficam sob influencia do seu estado por 1 min. 10 PE.</p>
+<p><strong>Requer Nivel 15+:</strong></p>
+<p><strong>25. Presenca Transcendente</strong> <em>(Nivel 15+)</em></p>
+<p>Concentracao sem limite de tempo (1 PE/hora); aura de 6m: inimigos -2
+em saves mentais, aliados +2. Narrativo: todos sentem intensamente seu
+estado.</p>
+<p><strong>26. Catarse Final</strong> <em>(Nivel 15+ | Necessita:
+Catarse Maior)</em></p>
+<p>1/semana; 12m raio; 10d6 dano emocional + Incapacita e impoe estado
+emocional do caster por 1 min a todos os alvos. VIG CD 16 para metade.
+18 PE.</p>
+<p><strong>27. Dom Emocional</strong> <em>(Nivel 15+)</em></p>
+<p>Transfere permanentemente um estado emocional estavel a aliado; ele
+passa a curar 1d6 por turno enquanto naquele estado (requer rituais de 1
+hora). 15 PE. 1/semana.</p>
+<p><strong>28. Dominar Emocoes</strong> <em>(Nivel 15+)</em></p>
+<p>Alvo em 12m faz ESP CD 18; falha = voce controla o estado emocional
+dele por 1 hora, podendo ajusta-lo como acao bonus. 14 PE.</p>
+<p><strong>29. Empatia Universal</strong> <em>(Nivel 15+)</em></p>
+<p>Sente e influencia qualquer criatura inteligente via contato mental
+telepatico; alcance ilimitado mas concentracao; 1 PE/minuto.</p>
+<p><strong>30. Consciencia Emocional Coletiva</strong> <em>(Nivel
+15+)</em></p>
+<p>1/semana; por 1 hora, voce e todos os seus aliados na cena
+compartilham memorias e emocoes  coordenacao perfeita, sem necessidade
+de comunicacao verbal; +2 em todos os testes em equipe.</p>
+<hr />
+<h3 id="devoto">Devoto</h3>
+<p><em>Serve a uma divindade ou forca demoniaca. Combina poder marcial
+com magia de Fe (PD).</em></p>
+<p><strong>Dado de PV:</strong> d8 | <strong>Proficiencias:</strong>
+armas simples e marciais, armaduras leve e media, escudos
+<strong>Saves:</strong> DEV, ESP | <strong>Pericias:</strong> Escolha 2
+de (Medicina, Religiao, Intuicao, Persuasao, Historia, Percepcao)
+<strong>Pool de PD:</strong> 10 no nivel 1, crescendo por nivel (ver
+tabela). Recupera em descanso curto (4 PD) e longo (total).</p>
+<p><strong>Equipamento Inicial:</strong> Escamas; maca ou martelo de
+guerra; escudo de madeira; simbolo sagrado, profano ou de pacto; livro
+de oracoes ou tomo de dogmas; incenso; kit de primeiros socorros; 15
+OO.</p>
+<p>Escolha de Divindade</p>
+<p>Na <strong>criacao do personagem</strong>, o Devoto escolhe sua
+divindade:</p>
+<table>
+<thead>
+<tr>
+<th>Divindade</th>
+<th>Simbolo</th>
+<th>Natureza</th>
+<th>Dominio de Poder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Luz</td>
+<td></td>
+<td>Benigna</td>
+<td>Cura, revelacao, exorcismo, protecao</td>
+</tr>
+<tr>
+<td>Sombra</td>
+<td></td>
+<td>Neutra</td>
+<td>Segredos, ilusoes, passagem, morte suave</td>
+</tr>
+<tr>
+<td>Natureza</td>
+<td></td>
+<td>Neutra</td>
+<td>Plantas, animais, clima, venenos naturais</td>
+</tr>
+<tr>
+<td>Morte</td>
+<td></td>
+<td>Neutra</td>
+<td>Ancestrais, ciclos, ressurreicao, passagem</td>
+</tr>
+<tr>
+<td>Caos</td>
+<td></td>
+<td>Maligna</td>
+<td>Destruicao, mutacao, imprevisibilidade</td>
+</tr>
+<tr>
+<td>Ordem</td>
+<td></td>
+<td>Benigna</td>
+<td>Lei, destino, protecao, profecia</td>
+</tr>
+<tr>
+<td>Demonio</td>
+<td></td>
+<td>Maligna</td>
+<td>Poder, medo, controle, pactos</td>
+</tr>
+</tbody>
+</table>
+<p>Cada habilidade de PD tem uma ou mais divindades associadas. Usar
+habilidade de <strong>divindade diferente da escolhida</strong> custa o
+<strong>dobro de PD</strong>.</p>
+<p><strong>Caracteristicas Fixas de Classe:</strong></p>
+<p> <strong>Nivel 1:</strong> Canalizar Divindade (2 por desc. curto)
+| Simbolo Sagrado</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>PD</th>
+<th>Marcos Fixos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10</td>
+<td>Canalizar Divindade (2/dc), Simbolo Sagrado, Escolha de
+Divindade</td>
+</tr>
+<tr>
+<td>2</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>14</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>14</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>5</td>
+<td>16</td>
+<td>Talento, Canalizar Divindade (3/dc)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>18</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>18</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>20</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>9</td>
+<td>22</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>24</td>
+<td>Intervencao Divina (1/semana)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>28</td>
+<td>Canalizar Divindade (4/dc)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>28</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>13</td>
+<td>32</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>14</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>34</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>34</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>17</td>
+<td>38</td>
+<td>Talento, Canalizar Divindade (5/dc)</td>
+</tr>
+<tr>
+<td>18</td>
+<td>42</td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>42</td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>42</td>
+<td>Melhoria de Atributo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Efeitos das Caracteristicas Fixas:</strong></p>
+<p><strong>Escolha de Divindade.</strong> No nivel 1, escolha uma
+divindade ou forca patrona. Habilidades associadas a essa divindade
+custam o valor normal. Habilidades de outra divindade custam o dobro de
+PD e podem exigir justificativa narrativa do Mestre.</p>
+<p><strong>Simbolo Sagrado.</strong> Voce possui um foco sagrado.
+Enquanto o empunha ou ostenta, recebe +1 em testes de Religiao ligados a
+sua divindade e pode usar habilidades de PD sem componentes
+improvisados. Se perder o simbolo, pode consagrar outro durante descanso
+longo.</p>
+<p><strong>Canalizar Divindade.</strong> Voce pode canalizar poder bruto
+da sua divindade 2 vezes por descanso curto no nivel 1, 3 vezes no nivel
+5, 4 vezes no nivel 11 e 5 vezes no nivel 17. Cada uso pode: recuperar
+PD igual ao Mod. DEV, conceder +1d4 a um teste de aliado em 9m ou impor
+-1d4 a um teste de inimigo que voce possa ver.</p>
+<p><strong>Intervencao Divina.</strong> A partir do nivel 10, uma vez
+por semana, peca intervencao direta. Role Religiao contra CD 16. Em
+sucesso, a divindade produz um milagre narrativo compativel com seu
+dominio; em falha, voce recupera 1 uso de Canalizar Divindade.</p>
+<p><strong>Melhoria de Atributo.</strong> Nos niveis indicados, aumente
+um atributo em 1 passo, respeitando o limite da campanha.</p>
+<p><strong>Talento.</strong> Nos niveis indicados, escolha 1 talento
+para o qual cumpra os pre-requisitos.</p>
+<p>Pool de 30 Caracteristicas - Devoto</p>
+<p><em>(Escolha 1 caracteristica por nivel. Pre-requisitos de nivel ou
+caracteristica devem ser cumpridos.)</em></p>
+<p><strong>Sem pre-requisito de nivel:</strong></p>
+<p><strong>1. Bencao Divina</strong> <em>(Luz/Ordem)</em></p>
+<p>Aliado em 9m ganha +1d4 nos ataques e saves por 1 min. 2 PD.</p>
+<p><strong>2. Toque Curativo</strong> <em>(Luz/Natureza)</em></p>
+<p>Cura toque; 1d8+Mod.DEV PV. 2 PD.</p>
+<p><strong>3. Protecao Divina</strong> <em>(qualquer divindade)</em></p>
+<p>Aliado tocado ganha resistencia a 1 tipo de dano por 1 hora. 3
+PD.</p>
+<p><strong>4. Marca Demoniaca</strong> <em>(Demonio/Sombra)</em></p>
+<p>Marca alvo; pode rastrea-lo sempre e tem +1 nas rolagens de ataque
+contra ele. 2 PD.</p>
+<p><strong>5. Palavras Sagradas</strong> <em>(Luz/Ordem)</em></p>
+<p>Ate 5 criaturas hostis em 9m fazem DEV CD ou ficam Assustadas 1
+turno. 3 PD.</p>
+<p><strong>6. Sussurro dos Mortos</strong> <em>(Morte/Sombra)</em></p>
+<p>Faz 1 pergunta direta ao espirito de um morto recente (ate 24h). 1
+PD.</p>
+<p><strong>7. Comunhao com Natureza</strong> <em>(Natureza)</em></p>
+<p>Fala com animais e plantas em 30m por 1 hora; pode pedir favores
+simples. 2 PD.</p>
+<p><strong>8. Exorcismo</strong> <em>(Luz/Ordem)</em></p>
+<p>Remove possessao, maldicoes e efeitos divinos hostis de aliado
+tocado. 4 PD.</p>
+<p><strong>9. Intuicao Divina</strong></p>
+<p>Passivo; vantagem em Religiao e Intuicao. Sente presenca de magia de
+Fe em 9m.</p>
+<p><strong>10. Arma da Fe</strong> <em>(qualquer)</em></p>
+<p>Acao bonus; arma empunhada causa +1d6 dano sagrado/profano do tipo da
+divindade por 1 min. 2 PD. <strong>Requer Nivel 5+:</strong></p>
+<p><strong>11. Canalizar Divindade Expandido</strong> <em>(Nivel
+5+)</em></p>
+<p>Aprende 1 uso adicional de Canalizar Divindade especifico da sua
+divindade (efeito unico definido com o Mestre).</p>
+<p><strong>12. Barreira Sagrada</strong> <em>(Nivel 5+,
+Luz/Ordem)</em></p>
+<p>9m raio; demonios e mortos-vivos nao podem entrar; aliados dentro tem
++1 Aparar. Dura 10 min. 4 PD.</p>
+<p><strong>13. Invocar Menor</strong> <em>(Nivel 5+,
+Demonio/Morte)</em></p>
+<p>Invoca criatura do plano inferior (PV 15, Aparar 12, dano 1d8) por 1
+hora. 5 PD.</p>
+<p><strong>14. Furia Natural</strong> <em>(Nivel 5+,
+Natureza/Caos)</em></p>
+<p>Em campo aberto, chama raio sobre inimigo em 20m: 3d10 raio. AGI CD
+13 para metade. 5 PD.</p>
+<p><strong>15. Maldicao</strong> <em>(Nivel 5+, Demonio/Sombra)</em></p>
+<p>Alvo faz DEV CD ou fica com desvantagem em uma categoria de testes
+por 1 dia. 3 PD.</p>
+<p><strong>16. Escudo Espiritual</strong> <em>(Nivel 5+ | Necessita:
+Protecao Divina)</em></p>
+<p>Protecao Divina agora protege contra 2 tipos de dano ao mesmo tempo,
+e pode ser concedida a ate 2 aliados.</p>
+<p><strong>17. Animar Mortos</strong> <em>(Nivel 5+,
+Morte/Demonio)</em></p>
+<p>Anima 2 mortos-vivos fracos (PV 15, Aparar 10) por 24h. 5 PD.</p>
+<p><strong>18. Profecia</strong> <em>(Nivel 5+, Ordem/Sombra)</em></p>
+<p>Faz 1 pergunta sobre futuro proximo ao Mestre; recebe resposta
+criptica mas verdadeira. 6 PD. 1/dia. <strong>Requer Nivel
+10+:</strong></p>
+<p><strong>19. Forma de Luz</strong> <em>(Nivel 10+, Luz | Necessita:
+Barreira Sagrada)</em></p>
+<p>Por 1 min: emite luz brilhante 9m, imune a Medo e Morte, ataques
+causam +2d6 radiante. 8 PD. <strong>20. Forma das Sombras</strong>
+<em>(Nivel 10+, Sombra/Morte | Necessita: Invocar Menor)</em></p>
+<p>Por 1 min: torna-se intangivel, move na escuridao sem ser visto;
+imune a dano fisico mas nao pode usar PD. 8 PD.</p>
+<p><strong>21. Avatar da Natureza</strong> <em>(Nivel 10+, Natureza |
+Necessita: Furia Natural)</em></p>
+<p>Transformacao por 1 min: tamanho grande, +6 FOR, pele de casca (+3
+Aparar), regenera 5 PV/turno. 12 PD.</p>
+<p><strong>22. Tempestade do Caos</strong> <em>(Nivel 10+, Caos |
+Necessita: Furia Natural)</em></p>
+<p>12m raio; cada criatura sofre efeito aleatorio (1d6: dano, cura,
+teleporte, status, imunidade, silencio). 8 PD.</p>
+<p><strong>23. Decreto da Ordem</strong> <em>(Nivel 10+, Ordem |
+Necessita: Palavras Sagradas)</em></p>
+<p>Criatura em 12m obedece uma ordem simples nao suicida (ESP CD 15). 6
+PD.</p>
+<p><strong>24. Forma Demoniaca</strong> <em>(Nivel 10+, Demonio |
+Necessita: Invocar Menor)</em></p>
+<p>Transformacao por 1 min: PV dobra, asas, ataques causam +2d8 profano.
+12 PD.</p>
+<p><strong>Requer Nivel 15+:</strong></p>
+<p><strong>25. Milagre da Luz</strong> <em>(Nivel 15+, Luz | Necessita:
+Forma de Luz)</em></p>
+<p>Revive aliado morto com PV maximos e remove todas maldicoes. 20 PD.
+1/semana.</p>
+<p><strong>26. Passagem da Morte</strong> <em>(Nivel 15+, Morte |
+Necessita: Animar Mortos)</em></p>
+<p>Voce e aliados viajam pelo plano dos mortos para reaparecer em local
+em ate 1km. 15 PD.</p>
+<p><strong>27. Decreto Absoluto</strong> <em>(Nivel 15+, Ordem |
+Necessita: Decreto da Ordem)</em></p>
+<p>Todos os inimigos visiveis obedecem 1 ordem simples (ESP CD 18).
+Falha ainda os deixa Assustados 1 rodada. 14 PD.</p>
+<p><strong>28. Pacto Supremo</strong> <em>(Nivel 15+, Demonio |
+Necessita: Forma Demoniaca)</em></p>
+<p>Invoca demonio de alto nivel (PV 80, Aparar 16, dano 2d12) por 1
+hora. 18 PD.</p>
+<p><strong>29. Intervencao Divina Aprimorada</strong> <em>(Nivel
+15+)</em></p>
+<p>A Intervencao Divina agora tem efeito extra dourado definido pela
+divindade (define com o Mestre); nao pode falhar. 1/semana.</p>
+<p><strong>30. Ascensao</strong> <em>(Nivel 15+)</em></p>
+<p>Torna-se semi-divino por 1 hora: +3 em todos os atributos, imune a
+morte, aura sagrada/profana em 6m. 25 PD. 1/semana.</p>
+<hr />
+<h3 id="artifice">Artifice</h3>
+<p><em>Mestre da Tecnologia magica. Cria, encanta e usa itens
+arcano-tecnologicos.</em></p>
+<p><strong>Dado de PV:</strong> d6 | <strong>Proficiencias:</strong>
+armas simples e marciais leves, armaduras leve e media; todas as
+ferramentas artesanais</p>
+<p><strong>Saves:</strong> INT, VIG | <strong>Pericias:</strong> Escolha
+2 de (Arcanismo, Tecnologia, Historia, Investigacao, Percepcao,
+Medicina)</p>
+<p><strong>Pool de PA (tecnico):</strong> 6 no nivel 1, +1 a cada 2
+niveis (max. 16 no nivel 20). Recupera em descanso curto (2 PA) e longo
+(total). Usado para ativar e criar encantamentos.</p>
+<p><strong>Equipamento Inicial:</strong> Brunea; besta leve com 20
+virotes; martelo de mao ou adaga; ferramentas artesanais de 2 tipos; kit
+de alquimia ou kit de reparo; 2 cristais de armazenamento vazios;
+caderno de esquemas; 10 OO.</p>
+<p><strong>Caracteristicas Fixas de Classe:</strong></p>
+<p> <strong>Nivel 1:</strong> Infusao (encanta 1 item por nivel/slots
+conforme tabela) | Especialista em Tecnologia (proficiencia em todas
+ferramentas)</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>PA</th>
+<th>Infusoes</th>
+<th>Marcos Fixos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>6</td>
+<td>1</td>
+<td>Infusao, Especialista em Tecnologia</td>
+</tr>
+<tr>
+<td>2</td>
+<td>6</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>7</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>7</td>
+<td>2</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>5</td>
+<td>8</td>
+<td>3</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>6</td>
+<td>8</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>9</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>3</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>9</td>
+<td>10</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>10</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>11</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>11</td>
+<td>4</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>13</td>
+<td>12</td>
+<td>5</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>14</td>
+<td>12</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>13</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>13</td>
+<td>5</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>17</td>
+<td>14</td>
+<td>6</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>18</td>
+<td>14</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>15</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>16</td>
+<td>6</td>
+<td>Melhoria de Atributo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Efeitos das Caracteristicas Fixas:</strong></p>
+<p><strong>Especialista em Tecnologia.</strong> Voce e proficiente em
+todas as ferramentas artesanais e tecnologicas. Quando ja teria
+proficiencia, recebe +1 adicional no teste.</p>
+<p><strong>Infusao.</strong> Durante descanso longo, escolha itens nao
+magicos em quantidade igual ao seu limite de Infusoes. Cada item recebe
+uma propriedade simples ate o proximo descanso longo: +1 ataque, +1
+Aparar, luz constante, armazenamento de 1 PA tecnico, retorno a mao,
+alarme ou ativacao por comando. Um item so pode manter uma infusao sua
+por vez.</p>
+<p><strong>PA Tecnico.</strong> Seu PA tecnico ativa dispositivos,
+prototipos e infusoes. Ele nao substitui o PA Arcano de Arcanistas para
+rituais complexos, mas pode alimentar itens criados por voce.</p>
+<p><strong>Melhoria de Atributo.</strong> Nos niveis indicados, aumente
+um atributo em 1 passo, respeitando o limite da campanha.</p>
+<p><strong>Talento.</strong> Nos niveis indicados, escolha 1 talento
+para o qual cumpra os pre-requisitos.</p>
+<p>Pool de 30 Caracteristicas - Artifice</p>
+<p><em>(Escolha 1 caracteristica por nivel. Pre-requisitos de nivel ou
+caracteristica devem ser cumpridos.)</em></p>
+<p><strong>Sem pre-requisito de nivel:</strong></p>
+<p><strong>1. Analise de Item</strong></p>
+<p>Identifica completamente item magico ou tecnologico em 10 minutos.
+Sem custo.</p>
+<p><strong>2. Bomba de Fumaca</strong></p>
+<p>Cria 2 bombas de fumaca por descanso (6m raio; Cegueira 3 rodadas).
+Acao bonus para arremessar.</p>
+<p><strong>3. Pocao Artesanal</strong></p>
+<p>Durante descanso, cria 1 pocao (cura 2d4+2 PV). Sem custo de PA.</p>
+<p><strong>4. Veneno Artesanal</strong></p>
+<p>Cria veneno que causa 1d4 por 3 rodadas (VIG CD 12). Aplica em arma
+como acao bonus.</p>
+<p><strong>5. Gatilho Automatico</strong></p>
+<p>Instala mecanismo de ativacao em armadilha ou dispositivo; ativa por
+proximidade, pressao ou tempo.</p>
+<p><strong>6. Infusao Avancada</strong> <em>(Necessita: ter Infusao da
+classe)</em></p>
+<p>Pode infundir 2 itens com efeitos diferentes nos mesmos slots de
+infusao.</p>
+<p><strong>7. Eletrochoque Portatil</strong></p>
+<p>Cria dispositivo de choque (3 cargas; 12m, 1d6+1d6 em metal; acao
+bonus). Recarga em descanso.</p>
+<p><strong>8. Lente Arcana</strong></p>
+<p>Cria oculos que revelam magias, invisibilidade e auras em 9m enquanto
+usados. Custo: 4h trabalho.</p>
+<p><strong>9. Reparo de Campo</strong></p>
+<p>Repara construto ou item tecnologico; recupera PV de construto ou
+funcao de item quebrado. Acao ou descanso.</p>
+<p><strong>10. Armadura Reforcada</strong></p>
+<p>Infusao especial em armadura: +1 Aparar permanente (nao acumula com
+Armadura de Placas). <strong>Requer Nivel 5+:</strong></p>
+<p><strong>11. Golem de Combate</strong> <em>(Nivel 5+)</em></p>
+<p>Cria golem (PV 20+nivel, Aparar 12, dano d8) em 4h de trabalho. Age
+no turno do Artifice.</p>
+<p><strong>12. Canhao Arcano</strong> <em>(Nivel 5+)</em></p>
+<p>Invoca canhao (PV 10); dispara como acao bonus (2d8 dano, 18m).
+2/desc. curto. 2 PA.</p>
+<p><strong>13. Escudo de Forca</strong> <em>(Nivel 5+)</em></p>
+<p>Reacao; projeta escudo que absorve ate 2d6+Mod.INT de dano. 1/desc.
+curto. 2 PA.</p>
+<p><strong>14. Bomba Arcana</strong> <em>(Nivel 5+)</em></p>
+<p>Cria 1 granada (4m raio; 3d6 dano; AGI CD 12 para metade) por
+descanso longo.</p>
+<p><strong>15. Exoesqueleto Parcial</strong> <em>(Nivel 5+)</em></p>
+<p>Pecas mecanicas vestiveis; por 2 horas: +2 FOR, sem penalidade.
+Custo: 2h para vestir/tirar.</p>
+<p><strong>16. Explosivo Runico</strong> <em>(Nivel 5+)</em></p>
+<p>Instala glifo explosivo em superficie (invisivel, Percepcao CD 16;
+4d6 forca em 3m raio na ativacao).</p>
+<p><strong>17. Veneno Avancado</strong> <em>(Nivel 5+ | Necessita:
+Veneno Artesanal)</em></p>
+<p>Venenos causam efeito adicional por 1 rodada (escolhe: paralisia,
+cegueira ou sono, VIG CD 14).</p>
+<p><strong>18. Analise Tatica</strong> <em>(Nivel 5+)</em></p>
+<p>Acao bonus; identifica resistencias, imunidades e pontos fracos do
+alvo. INT CD 12. <strong>Requer Nivel 10+:</strong></p>
+<p><strong>19. Golem Aprimorado</strong> <em>(Nivel 10+ | Necessita:
+Golem de Combate)</em></p>
+<p>Golem evolui: PV dobra, dano 2d8, pode voar ou nadar; obedece
+comandos complexos.</p>
+<p><strong>20. Canhao Pesado</strong> <em>(Nivel 10+ | Necessita: Canhao
+Arcano)</em></p>
+<p>Canhao avanca: PV 20, 3d10 dano; escolhe tipo (fogo/gelo/raio) na
+criacao.</p>
+<p><strong>21. Infusao de Consciencia</strong> <em>(Nivel 10+ |
+Necessita: Infusao Avancada)</em></p>
+<p>Uma infusao pode dar consciencia simples a item; obedece comandos
+autonomamente.</p>
+<p><strong>22. Exoesqueleto Completo</strong> <em>(Nivel 10+ |
+Necessita: Exoesqueleto Parcial)</em></p>
+<p>Exoesqueleto completo: +4 FOR, +3 Aparar, +3m deslocamento. Custo: 2h
+para vestir/tirar.</p>
+<p><strong>23. Bomba Nuclear Arcana</strong> <em>(Nivel 10+ | Necessita:
+Bomba Arcana)</em></p>
+<p>12m raio; 8d6 dano; VIG CD 15 para metade. Cria 1/semana.</p>
+<p><strong>24. Artefato</strong> <em>(Nivel 10+)</em></p>
+<p>Cria item raro unico com propriedade especial (define com Mestre).
+1/mes; leva 1 semana de trabalho. <strong>Requer Nivel
+15+:</strong></p>
+<p><strong>25. Titan Mecanico</strong> <em>(Nivel 15+ | Necessita: Golem
+Aprimorado)</em></p>
+<p>Funde-se com golem por 1 hora: tamanho grande, PV somados, regenera 5
+PV/turno.</p>
+<p><strong>26. Fabrica de Guerra</strong> <em>(Nivel 15+)</em></p>
+<p>Cria 1d4+1 construtos menores por descanso longo (PV 10, Aparar 10,
+dano d6).</p>
+<p><strong>27. Transmutacao Alquimica</strong> <em>(Nivel 15+)</em></p>
+<p>Transforma substancia em outra a nivel basico (agua em acido, ferro
+em ouro bruto, etc.). Ate 10kg; 4h trabalho.</p>
+<p><strong>28. Campo de Forca</strong> <em>(Nivel 15+)</em></p>
+<p>Projeta campo de forca em 18m raio que bloqueia projeteis e magia de
+fora. Dura 1 hora; imovel. 1/semana.</p>
+<p><strong>29. Obra-Prima Viva</strong> <em>(Nivel 15+ | Necessita:
+Artefato, Infusao de Consciencia)</em></p>
+<p>Cria item lendario unico com personalidade e poderes proprios; define
+completamente com o Mestre.</p>
+<p><strong>30. Ascensao Tecnologica</strong> <em>(Nivel 15+)</em></p>
+<p>Substitui um orgao ou membro por versao mecanica (ex.: olho = visao
+arcana, braco = FOR d12, coracao = +20 PV max). Permanente.</p>
+<hr />
+<h3 id="explorador">Explorador</h3>
+<p><em>Mestre das sombras e da sobrevivencia. Combina combate furtivo,
+mobilidade e pericias.</em></p>
+<p><strong>Dado de PV:</strong> d8 | <strong>Proficiencias:</strong>
+armas simples, armas marciais leves e de finesse, armaduras leve e
+media, besta de mao</p>
+<p><strong>Saves:</strong> AGI, INT | <strong>Pericias:</strong> Escolha
+3 de (Furtividade, Percepcao, Sobrevivencia, Atletismo, Enganacao,
+Investigacao, Natureza, Acrobacia)</p>
+<p><strong>Pool de AU:</strong> 2 AU no nivel 1, +1 a cada 3 niveis
+(max. 8 no nivel 20). Recupera em descanso curto.</p>
+<p><strong>Equipamento Inicial:</strong> Couro reforcado; escolha
+<strong>duas espadas curtas</strong> ou <strong>rapieira e
+adaga</strong>; arco curto com 20 flechas ou besta de mao com 20
+virotes; ferramentas de ladrao ou ferramentas de cartografo; corda 15m;
+capa de viagem; 15 OO.</p>
+<p><strong>Caracteristicas Fixas de Classe:</strong></p>
+<p> <strong>Nivel 1:</strong> Ataque Furtivo (+1d6 por 2 niveis de
+Explorador) | Especialista (dobra bonus em 2 pericias)</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Ataque Furtivo</th>
+<th>AU</th>
+<th>Marcos Fixos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1d6</td>
+<td>2</td>
+<td>Ataque Furtivo, Especialista</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1d6</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>2d6</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>2d6</td>
+<td>2</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3d6</td>
+<td>3</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>6</td>
+<td>3d6</td>
+<td>3</td>
+<td>Especialista +2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>4d6</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>4d6</td>
+<td>4</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>9</td>
+<td>5d6</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>5d6</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>6d6</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>6d6</td>
+<td>5</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>13</td>
+<td>7d6</td>
+<td>6</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>14</td>
+<td>7d6</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>8d6</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>8d6</td>
+<td>7</td>
+<td>Melhoria de Atributo</td>
+</tr>
+<tr>
+<td>17</td>
+<td>9d6</td>
+<td>7</td>
+<td>Talento</td>
+</tr>
+<tr>
+<td>18</td>
+<td>9d6</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>10d6</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>10d6</td>
+<td>8</td>
+<td>Melhoria de Atributo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Efeitos das Caracteristicas Fixas:</strong></p>
+<p><strong>Ataque Furtivo.</strong> Uma vez por turno, cause dano extra
+quando acertar uma criatura com arma a distancia, arma leve ou arma de
+finesse e tiver vantagem, estiver escondido, ou tiver um aliado
+adjacente ao alvo. O dano extra segue a coluna Ataque Furtivo da
+tabela.</p>
+<p><strong>Especialista.</strong> No nivel 1, escolha 2 pericias em que
+voce seja proficiente. Ao rolar essas pericias, some o Modificador do
+Atributo duas vezes. No nivel 6, escolha mais 2 pericias para receber
+esse beneficio.</p>
+<p><strong>Pool de Aura do Explorador.</strong> Seu AU representa
+reflexo, respiracao e movimento treinado. Ele recupera em descanso curto
+e pode ser usado em tecnicas de mobilidade, furtividade e
+sobrevivencia.</p>
+<p><strong>Melhoria de Atributo.</strong> Nos niveis indicados, aumente
+um atributo em 1 passo, respeitando o limite da campanha.</p>
+<p><strong>Talento.</strong> Nos niveis indicados, escolha 1 talento
+para o qual cumpra os pre-requisitos.</p>
+<p>Pool de 30 Caracteristicas - Explorador</p>
+<p><em>(Escolha 1 caracteristica por nivel. Pre-requisitos de nivel ou
+caracteristica devem ser cumpridos.)</em></p>
+<p><strong>Sem pre-requisito de nivel:</strong></p>
+<p><strong>1. Passo Silencioso</strong></p>
+<p>Nao produz barulho ao se mover; Furtividade passiva permanente +2.
+Nunca acorda criaturas adormecidas ao passar.</p>
+<p><strong>2. Reflexos de Ladrao</strong></p>
+<p>Nunca fica surpreso quando consciente. Vantagem na rolagem de
+Iniciativa.</p>
+<p><strong>3. Escalada Rapida</strong></p>
+<p>Velocidade de escalada = velocidade de movimento normal.</p>
+<p><strong>4. Maestria em Ferramenta</strong></p>
+<p>Vantagem em todos os testes com ferramentas de ladrao. Pode abrir
+fechaduras em metade do tempo.</p>
+<p><strong>5. Sentido de Perigo</strong></p>
+<p>+3 em Percepcao passiva; vantagem em detectar armadilhas e
+emboscadas.</p>
+<p><strong>6. Veneno Basico</strong></p>
+<p>Cria veneno durante descanso (1d4 por 2 rodadas, VIG CD 10). Aplica
+em arma como acao bonus.</p>
+<p><strong>7. Golpe Preciso</strong></p>
+<p>Rerrola um dado de Ataque Furtivo e usa o melhor resultado.</p>
+<p><strong>8. Ler o Campo</strong></p>
+<p>Acao bonus; analisa campo de batalha. Identifica a posicao mais
+vantajosa para Ataque Furtivo neste turno.</p>
+<p><strong>9. Roubo Perfeito</strong></p>
+<p>Pode retirar objeto de alvo consciente sem que ele perceba
+(Prestidigitacao CD 8+Mod.AGI do alvo). Falha nao alerta  apenas nao
+consegue o item.</p>
+<p><strong>10. Disfarce Rapido</strong></p>
+<p>Pode se disfarcar eficientemente em 1 minuto com objetos disponiveis.
+Enganacao com vantagem para o disfarce.</p>
+<p><strong>Requer Nivel 5+:</strong></p>
+<p><strong>11. Evasao</strong> <em>(Nivel 5+)</em></p>
+<p>Ao passar em save de AGI que causaria dano pela metade, sofre 0 dano.
+Em falha, sofre apenas a metade.</p>
+<p><strong>12. Assassinato</strong> <em>(Nivel 5+)</em></p>
+<p>Critico automatico em criaturas que nao agiram ainda neste combate.
+Dano dobrado em ataques surpresa.</p>
+<p><strong>13. Passo das Sombras</strong> <em>(Nivel 5+)</em></p>
+<p>Gasta 1,5m de movimento para entrar em uma area de escuridao e
+sair em outra em ate 9m. 1 AU.</p>
+<p><strong>14. Emboscada Aprimorada</strong> <em>(Nivel 5+)</em></p>
+<p>Pode aplicar Ataque Furtivo em criaturas que voce esta rastreando
+mesmo que saibam que voce existe, desde que esteja escondido.</p>
+<p><strong>15. Identificar Veneno</strong> <em>(Nivel 5+)</em></p>
+<p>Identifica qualquer veneno/doenca e sabe o antidoto. Vantagem em
+criar e resistir a venenos.</p>
+<p><strong>16. Reflexos Defensivos</strong> <em>(Nivel 5+)</em></p>
+<p>Reacao; ao ser atacado, move-se ate 3m sem provocar ataque de
+oportunidade (antes do ataque ser resolvido).</p>
+<p><strong>17. Rastreamento Avancado</strong> <em>(Nivel 5+)</em></p>
+<p>Segue qualquer criatura em qualquer terreno sem teste. Identifica
+hora, velocidade e estado geral da criatura rastreada.</p>
+<p><strong>18. Maestria de Pericia</strong> <em>(Nivel 5+)</em></p>
+<p>Dobra o Modificador do Atributo em 2 pericias adicionais (alem das do
+Especialista). Uma pericia a escolha tem minimo de 10 em qualquer teste
+(nunca falha criticamente).</p>
+<p><strong>Requer Nivel 10+:</strong></p>
+<p><strong>19. Mente Elusiva</strong> <em>(Nivel 10+)</em></p>
+<p>Imune a leitura de mente, bola de cristal e magias de controle
+mental.</p>
+<p><strong>20. Veneno Paralisante</strong> <em>(Nivel 10+ | Necessita:
+Veneno Basico, Identificar Veneno)</em> Veneno avancado: VIG CD 15 ou
+Paralisado por 1 min. Cria 1/desc. longo.</p>
+<p><strong>21. Golpe Multiplo Furtivo</strong> <em>(Nivel 10+)</em></p>
+<p>Pode dividir os dados de Ataque Furtivo entre 2 alvos adjacentes no
+mesmo turno.</p>
+<p><strong>22. Invisibilidade Prolongada</strong> <em>(Nivel 10+ |
+Necessita: Passo das Sombras)</em></p>
+<p>Pode ficar invisivel indefinidamente (quebra ao atacar ou lancar
+magia). 2 AU para ativar.</p>
+<p><strong>23. Forma de Nevoa</strong> <em>(Nivel 10+ | Necessita: Passo
+das Sombras)</em></p>
+<p>Por 1 min, move-se como nevoa; sem ataques mas imune a dano fisico. 3
+AU.</p>
+<p><strong>24. Maestria de Venenos</strong> <em>(Nivel 10+ | Necessita:
+Veneno Paralisante)</em></p>
+<p>Cria veneno que causa efeitos combinados; cria 2 venenos avancados
+por descanso longo. <strong>Requer Nivel 15+:</strong></p>
+<p><strong>25. Morte Instantanea</strong> <em>(Nivel 15+ | Necessita:
+Assassinato)</em></p>
+<p>Se Ataque Furtivo causa  metade dos PV maximos do alvo, ele faz VIG
+CD 15 ou morre.</p>
+<p><strong>26. Fantasma</strong> <em>(Nivel 15+ | Necessita: Forma de
+Nevoa)</em></p>
+<p>Pode entrar na Forma de Nevoa como reacao a qualquer momento.
+1/desc. curto.</p>
+<p><strong>27. Lamina da Morte</strong> <em>(Nivel 15+ | Necessita:
+Morte Instantanea)</em></p>
+<p>Ao matar em Ataque Furtivo, move-se metade do deslocamento
+gratuitamente e pode atacar outro alvo com Ataque Furtivo.</p>
+<p><strong>28. Reflexos de Lenda</strong> <em>(Nivel 15+ | Necessita:
+Reflexos Defensivos)</em></p>
+<p>Pode usar Esquiva como reacao (em vez de acao). 3/desc. curto.</p>
+<p><strong>29. Sombra Viva</strong> <em>(Nivel 15+)</em></p>
+<p>Cria copia sombria de si mesmo (PV 1, serve como isca perfeita) como
+acao bonus. 1/desc. curto.</p>
+<p><strong>30. Predador Supremo</strong> <em>(Nivel 15+)</em></p>
+<p>Ao matar um inimigo, recupera todos os AU gastos e o proximo Ataque
+Furtivo causa +2d6 extra.</p>
+<hr />

@@ -1,0 +1,478 @@
+<h2 id="parte-ii-atributos">PARTE II - ATRIBUTOS</h2>
+<p>Os seis atributos definem as capacidades fisicas, mentais e magicas
+do personagem. Todos comecam em <strong>d4</strong> na criacao e sobem
+ao longo dos niveis.</p>
+<h3 id="os-seis-atributos">Os Seis Atributos</h3>
+<h4 id="forca-for">Forca (FOR)</h4>
+<p>Poder fisico bruto. Usado em ataques corpo a corpo, testes de
+atletismo, arrombamentos e intimidacao fisica.</p>
+<p> <strong>Dano corpo a corpo:</strong> dano da arma + Mod. FOR</p>
+<p> <strong>Carga maxima:</strong> FOR dado  10 kg</p>
+<h4 id="agilidade-agi">Agilidade (AGI)</h4>
+<p>Velocidade, coordenacao e reflexos. Usada em ataques a distancia,
+acrobacia, furtividade e esquiva.</p>
+<p> <strong>Aparar base:</strong> 4 + Mod. AGI <em>(limitado para
+armaduras medias e ignorado em pesadas)</em></p>
+<p> <strong>Iniciativa:</strong> d20 + Mod. AGI</p>
+<p> <strong>Dano a distancia:</strong> dano da arma + Mod. AGI</p>
+<h4 id="vigor-vig">Vigor (VIG)</h4>
+<p>Resistencia fisica e saude. Determina pontos de vida, resistencia a
+venenos, doencas e exaustao.</p>
+<p> <strong>PV por Vigor</strong> = valor do dado de VIG (Exemplo: VIG
+d8 = 8 PV)</p>
+<p> <strong>PV por classe</strong> = valor do dado de PV da classe</p>
+<h4 id="intelecto-int">Intelecto (INT)</h4>
+<p>Capacidade analitica, memoria e conhecimento arcano. O Modificador de
+INT amplifica o efeito das magias Arcanas lancadas por Arcanistas.</p>
+<p> <strong>Bonus em:</strong> Arcanismo, Historia, Medicina, Natureza,
+Tecnologia</p>
+<p> <strong>PA</strong> nao e derivado do INT  o pool de Arcana vem da
+<strong>classe Arcanista</strong> (ver Parte VI).</p>
+<h4 id="espirito-esp">Espirito (ESP)</h4>
+<p>Forca emocional, percepcao e conexao com o mundo. O Modificador de
+ESP amplifica curas e efeitos de controle da magia Primitiva usada por
+Sensientes.</p>
+<p> <strong>Bonus em:</strong> Intuicao, Percepcao, Persuasao,
+Enganacao</p>
+<p> <strong>PE</strong> nao e derivado do ESP  o pool Emocional vem da
+<strong>classe Sensiente</strong> (ver Parte VI).</p>
+<h4 id="devocao-dev">Devocao (DEV)</h4>
+<p>Ligacao com forcas divinas ou demoniacas. O Modificador de DEV
+amplifica curas, bencaos e maldicoes da magia de Fe usada por
+Devotos.</p>
+<p> <strong>Bonus em:</strong> Religiao; testes de resistencia contra
+magia divina e possessao</p>
+<p> <strong>PD</strong> nao e derivado do DEV  o pool de Fe vem da
+<strong>classe Devoto</strong> (ver Parte VI).</p>
+<hr />
+<h3 id="pontos-de-vida-pv">Pontos de Vida (PV)</h3>
+<p>Os Pontos de Vida representam resistencia fisica, folego, ferimentos
+leves, sorte de combate e a capacidade de continuar lutando sob pressao.
+PV nao mede apenas carne; ele tambem mede aparos, sustos, cansaco,
+postura quebrada e pequenas aberturas que se acumulam ate o personagem
+cair.</p>
+<p>Existem tres valores importantes:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Funcao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PV Maximos</strong></td>
+<td>limite total de vida do personagem quando esta completamente
+recuperado</td>
+</tr>
+<tr>
+<td><strong>PV Atuais</strong></td>
+<td>quanto o personagem tem agora, depois de sofrer dano ou receber
+cura</td>
+</tr>
+<tr>
+<td><strong>PV Temporarios</strong></td>
+<td>protecao extra, barreira, moral ou energia provisoria; e perdido
+antes dos PV atuais</td>
+</tr>
+</tbody>
+</table>
+<p>Ao chegar a 0 PV, o personagem cai inconsciente e passa a usar as
+regras de morte.</p>
+<h3 id="como-calcular-pv-maximos">Como Calcular PV Maximos</h3>
+<p><strong>PV Maximos = Valor do dado de VIG + Valor do dado de PV da
+Classe + bonus permanentes</strong></p>
+<p>Esta regra usa o valor maximo escrito nos dados, sem rolagem. Se o
+personagem tem <strong>VIG d8</strong>, o dado de VIG vale
+<strong>8</strong>. Se a classe usa <strong>d8</strong> como dado de PV,
+o dado da classe vale <strong>8</strong>.</p>
+<blockquote>
+<p><strong>Exemplo rapido:</strong> Guerreiro com VIG d8 tem PV Maximos
+= 8 + 8 = <strong>16 PV</strong>.</p>
+</blockquote>
+<p>Subir de nivel <strong>nao aumenta PV automaticamente</strong>. O
+personagem fica mais forte por habilidades, talentos, magias, tecnicas
+de Aura, tecnologia, equipamento, defesa, cura e aumento de atributos.
+PV so aumenta quando uma regra aumenta VIG, melhora o dado de PV da
+classe, concede bonus permanente ou da PV temporarios.</p>
+<p>Entenda cada parte da formula:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Parte da formula</th>
+<th>O que significa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Valor do dado de VIG</strong></td>
+<td>vida que vem da constituicao fisica do personagem</td>
+</tr>
+<tr>
+<td><strong>Valor do dado de PV da Classe</strong></td>
+<td>resistencia base que vem do treinamento da classe</td>
+</tr>
+<tr>
+<td><strong>Bonus permanentes</strong></td>
+<td>talentos, itens, caracteristicas raciais, proteses, bencaos ou
+efeitos duradouros</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Importante:</strong> dado aqui nao significa rolar.
+Significa usar o valor maximo do dado.</p>
+</blockquote>
+<p><strong>Passo 1 - Valor do Dado de VIG</strong></p>
+<p>O valor do dado de VIG representa corpo, folego, saude, resistencia a
+trauma e capacidade natural de suportar ferimentos.</p>
+<table>
+<thead>
+<tr>
+<th>VIG</th>
+<th style="text-align: right;">Valor para PV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d4</td>
+<td style="text-align: right;">4 PV</td>
+</tr>
+<tr>
+<td>d6</td>
+<td style="text-align: right;">6 PV</td>
+</tr>
+<tr>
+<td>d8</td>
+<td style="text-align: right;">8 PV</td>
+</tr>
+<tr>
+<td>d10</td>
+<td style="text-align: right;">10 PV</td>
+</tr>
+<tr>
+<td>d12</td>
+<td style="text-align: right;">12 PV</td>
+</tr>
+<tr>
+<td>d20</td>
+<td style="text-align: right;">20 PV</td>
+</tr>
+</tbody>
+</table>
+<p>Se o personagem aumentar VIG depois, recalcule esta parte e ajuste os
+PV Maximos pela diferenca.</p>
+<blockquote>
+<p>Exemplo: um personagem sobe VIG de d6 para d8. O valor de VIG muda de
+6 para 8. Ele ganha +2 PV Maximos.</p>
+</blockquote>
+<p><strong>Passo 2 - Valor do Dado de PV da Classe</strong></p>
+<p>O dado de PV da classe representa a robustez do treinamento principal
+do personagem. Classes frageis usam d4, classes intermediarias usam d6 e
+classes resistentes usam d8.</p>
+<table>
+<thead>
+<tr>
+<th>Classe</th>
+<th style="text-align: right;">Dado de PV da Classe</th>
+<th style="text-align: right;">Valor para PV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arcanista</td>
+<td style="text-align: right;">d4</td>
+<td style="text-align: right;">4 PV</td>
+</tr>
+<tr>
+<td>Sensiente</td>
+<td style="text-align: right;">d6</td>
+<td style="text-align: right;">6 PV</td>
+</tr>
+<tr>
+<td>Artifice</td>
+<td style="text-align: right;">d6</td>
+<td style="text-align: right;">6 PV</td>
+</tr>
+<tr>
+<td>Guerreiro</td>
+<td style="text-align: right;">d8</td>
+<td style="text-align: right;">8 PV</td>
+</tr>
+<tr>
+<td>Devoto</td>
+<td style="text-align: right;">d8</td>
+<td style="text-align: right;">8 PV</td>
+</tr>
+<tr>
+<td>Explorador</td>
+<td style="text-align: right;">d8</td>
+<td style="text-align: right;">8 PV</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Passo 3 - Some os Dois Dados</strong></p>
+<p>Depois de encontrar os dois valores, some:</p>
+<table>
+<thead>
+<tr>
+<th>Parte</th>
+<th style="text-align: right;">Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VIG d8</td>
+<td style="text-align: right;">8 PV</td>
+</tr>
+<tr>
+<td>Classe Guerreiro d8</td>
+<td style="text-align: right;">8 PV</td>
+</tr>
+<tr>
+<td>Total</td>
+<td style="text-align: right;">16 PV</td>
+</tr>
+</tbody>
+</table>
+<p>O <strong>Dado de PV</strong> tambem e usado para curas de descanso
+curto, habilidades e referencia de robustez da classe.</p>
+<p><strong>Passo 4 - Some Bonus Permanentes</strong></p>
+<p>Bonus permanentes vem de talentos, itens, tracos raciais, proteses,
+bencaos duradouras ou tecnologia. Eles entram depois da soma dos
+dados.</p>
+<blockquote>
+<p>Exemplo: Artifice com VIG d10, dado de classe d6 e Amuleto de Saude
+(+4 PV): 10 + 6 + 4 = <strong>20 PV</strong>.</p>
+</blockquote>
+<h3 id="exemplos-de-calculo">Exemplos de Calculo</h3>
+<p><strong>Exemplo 1  Arcanista fragil</strong></p>
+<blockquote>
+<p>Arcanista com VIG d6:</p>
+</blockquote>
+<blockquote>
+<p>VIG d6 = 6 | Classe d4 = 4</p>
+</blockquote>
+<blockquote>
+<p><strong>PV Maximos = 6 + 4 = 10</strong></p>
+</blockquote>
+<p><strong>Exemplo 2  Guerreiro resistente</strong></p>
+<blockquote>
+<p>Guerreiro com VIG d8:</p>
+</blockquote>
+<blockquote>
+<p>VIG d8 = 8 | Classe d8 = 8</p>
+</blockquote>
+<blockquote>
+<p><strong>PV Maximos = 8 + 8 = 16</strong></p>
+</blockquote>
+<p><strong>Exemplo 3  Devoto muito vigoroso</strong></p>
+<blockquote>
+<p>Devoto com VIG d12:</p>
+</blockquote>
+<blockquote>
+<p>VIG d12 = 12 | Classe d8 = 8</p>
+</blockquote>
+<blockquote>
+<p><strong>PV Maximos = 12 + 8 = 20</strong></p>
+</blockquote>
+<p><strong>Exemplo 4  Artifice com item</strong></p>
+<blockquote>
+<p>Artifice com VIG d10 e Amuleto de Saude (+4 PV):</p>
+</blockquote>
+<blockquote>
+<p>VIG d10 = 10 | Classe d6 = 6 | Item = +4</p>
+</blockquote>
+<blockquote>
+<p><strong>PV Maximos = 10 + 6 + 4 = 20</strong></p>
+</blockquote>
+<hr />
+<h3 id="ajustes-depois-da-criacao">Ajustes Depois da Criacao</h3>
+<p>Quando algo muda os PV Maximos, aplique apenas a diferenca.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Mudanca</th>
+<th>Como ajustar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subiu de nivel</td>
+<td>nao aumenta PV automaticamente</td>
+</tr>
+<tr>
+<td>Aumentou VIG</td>
+<td>recalcule o valor do dado de VIG e some a diferenca</td>
+</tr>
+<tr>
+<td>Perdeu VIG temporariamente</td>
+<td>o Mestre decide se reduz PV Maximos enquanto durar o efeito</td>
+</tr>
+<tr>
+<td>Ganhou talento/item permanente</td>
+<td>some o bonus listado</td>
+</tr>
+<tr>
+<td>Perdeu item permanente</td>
+<td>remova o bonus listado</td>
+</tr>
+<tr>
+<td>Recebeu PV temporario</td>
+<td>nao altera PV Maximos; cria uma camada separada</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PV atual ao aumentar PV Maximos:</strong> se o personagem
+estiver completamente curado, aumente tambem os PV atuais. Se estiver
+ferido, mantenha os PV atuais e aumente apenas o maximo, a menos que a
+regra diga que tambem cura.</p>
+<blockquote>
+<p>Exemplo: Guerreiro 10/16 PV ganha +4 PV Maximos. Ele fica com 10/20
+PV, nao 14/20. Se estivesse em 16/16, ficaria em 20/20.</p>
+</blockquote>
+<hr />
+<h3 id="multiclasse-e-pv">Multiclasse e PV</h3>
+<p>Em multiclasse, use o dado de PV da <strong>classe principal
+atual</strong> do personagem. A classe principal e normalmente a
+primeira classe escolhida, mas pode mudar com aprovacao do Mestre se a
+historia e os niveis do personagem justificarem.</p>
+<blockquote>
+<p>Exemplo: Guerreiro/Arcanista com Guerreiro como classe principal e
+VIG d8:</p>
+</blockquote>
+<blockquote>
+<p>VIG d8 = 8 | classe principal Guerreiro d8 = 8</p>
+</blockquote>
+<blockquote>
+<p><strong>PV Maximos = 16</strong></p>
+</blockquote>
+<blockquote>
+<p>Exemplo: Arcanista/Guerreiro com Arcanista como classe principal e
+VIG d8:</p>
+</blockquote>
+<blockquote>
+<p>VIG d8 = 8 | classe principal Arcanista d4 = 4</p>
+</blockquote>
+<blockquote>
+<p><strong>PV Maximos = 12</strong></p>
+</blockquote>
+<p>Se o grupo preferir que a multiclasse mude a robustez do personagem,
+permita trocar a classe principal quando uma segunda classe se tornar
+dominante na ficha.</p>
+<hr />
+<h3 id="pv-temporarios">PV Temporarios</h3>
+<p>PV temporarios representam escudos, moral, aura defensiva, placas
+improvisadas, bencaos curtas ou amortecimento tecnologico.</p>
+<p> Dano remove PV temporarios antes dos PV atuais.</p>
+<p> PV temporarios nao curam e nao contam como PV atuais.</p>
+<p> PV temporarios nao acumulam entre si; se receber uma nova fonte,
+escolha o maior valor.</p>
+<p> PV temporarios desaparecem ao fim da cena, descanso ou duracao
+indicada.</p>
+<hr />
+<h3 id="dados-de-vida-e-recuperacao">Dados de Vida e Recuperacao</h3>
+<p><strong>Dados de Vida (Descanso Curto):</strong> No descanso curto
+voce pode gastar um ou mais Dados de Vida para recuperar PV. Role o dado
+indicado pela classe e recupere o resultado + Mod. VIG, com minimo de 1
+PV por dado gasto. So pode usar dados de vida se tiver pelo menos 1 PV.
+Voce possui uma quantidade de Dados de Vida igual ao seu nivel e
+recupera metade deles ao final de um descanso longo.</p>
+<p>Em multiclasse, cada nivel concede um Dado de Vida do tipo da classe
+daquele nivel.</p>
+<blockquote>
+<p>Exemplo: Guerreiro 3 / Arcanista 2 possui 3 Dados de Vida d8 e 2
+Dados de Vida d4.</p>
+</blockquote>
+<p><strong>Descanso Longo:</strong> recupera todos os PV atuais ate o
+maximo, remove PV temporarios expirados e recupera metade dos Dados de
+Vida gastos.</p>
+<hr />
+<h3 id="dano-cura-e-0-pv">Dano, Cura e 0 PV</h3>
+<p>Quando sofre dano, reduza primeiro PV temporarios, depois PV
+atuais.</p>
+<p>Quando recebe cura, aumente PV atuais ate o limite dos PV Maximos.
+Cura excedente e perdida, a menos que o efeito diga que gera PV
+temporarios.</p>
+<p>Ao chegar a 0 PV:</p>
+<p> o personagem cai Inconsciente;</p>
+<p> excesso de dano nao deixa PV negativos no modo padrao;</p>
+<p> comeca a fazer Testes de Morte no inicio dos turnos seguintes;</p>
+<p> cura recebida enquanto esta a 0 PV faz o personagem acordar com o
+valor curado.</p>
+<h3 id="diretrizes-de-balanceamento-pvppve">Diretrizes de Balanceamento
+PvP/PvE</h3>
+<p> <strong>PvP padrao:</strong> como os PV sao baixos e nao escalam
+por nivel, evite dano explosivo sem teste. PV temporario nao acumula; se
+receber outra fonte, escolha o maior valor. Cura em combate nao pode
+ultrapassar os PV maximos e efeitos de cura repetida devem custar acao,
+recurso ou limite de descanso.</p>
+<p> <strong>PvE padrao:</strong> use criaturas com dano compativel com
+o PV baixo dos personagens. Para monstros comuns, prefira ataques de 1d6
+a 2d6. Para chefes, use fases, objetivos e condicoes antes de
+simplesmente aumentar dano.</p>
+<p> <strong>Duracao esperada:</strong> um duelo equilibrado deve durar
+cerca de 2 a 4 rodadas. Um encontro PvE contra grupo equivalente deve
+durar 3 a 5 rodadas. Se personagens caem em 1 ataque comum, reduza dano.
+Se ninguem cai, aumente pressao, numero de ameacas ou objetivos.</p>
+<p> <strong>Modo heroico opcional:</strong> para campanhas menos
+letais, some +2 PV aos personagens no nivel 1. Nao use este bonus em PvP
+competitivo.</p>
+<h3 id="teste-rapido-de-balanceamento">Teste Rapido de
+Balanceamento</h3>
+<table>
+<thead>
+<tr>
+<th>Referencia</th>
+<th>Resultado com PV 16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dano 1d6</td>
+<td>cerca de 5 acertos para derrubar</td>
+</tr>
+<tr>
+<td>Dano 1d8+2</td>
+<td>cerca de 3 acertos para derrubar</td>
+</tr>
+<tr>
+<td>Dano 2d6</td>
+<td>cerca de 3 acertos para derrubar</td>
+</tr>
+<tr>
+<td>Dano 3d6</td>
+<td>cerca de 2 acertos para derrubar</td>
+</tr>
+<tr>
+<td>Dano 5d6</td>
+<td>pode derrubar em 1 acerto medio</td>
+</tr>
+</tbody>
+</table>
+<p>Conclusao: o novo sistema fica balanceado para combates rapidos e
+perigosos se ataques comuns ficarem entre <strong>1d6 e 2d6</strong>,
+ataques pesados ficarem perto de <strong>3d6</strong>, e danos de
+<strong>5d6 ou mais</strong> forem raros, caros, telegrafados ou
+permitirem teste de resistencia.</p>
+<hr />
+<h3 id="aparar">Aparar</h3>
+<p>Representa a defesa passiva  a dificuldade de acertar o
+personagem.</p>
+<p> <strong>Aparar</strong> = 4 + Mod. AGI + Bonus de Armadura + Bonus
+de Escudo</p>
+<p> <em>Armaduras Medias:</em> Mod. AGI maximo de +2</p>
+<p> <em>Armaduras Pesadas:</em> Mod. AGI nao se aplica</p>
+<hr />

@@ -1,0 +1,213 @@
+{
+  "name": "Vila das Sete Portas",
+  "kind": "vila",
+  "continent": "Eldoria",
+  "geo_region": "Marisma Oriental",
+  "empire": "Imperio de Sal",
+  "city": "Porto Junco",
+  "region": "pantano",
+  "race": "lizardman",
+  "deity": "Natureza",
+  "tone": "fronteira perigosa",
+  "party_level": "nivel 3",
+  "leader": {
+    "name": "Sskara da Ponte",
+    "title": "curandeira-chefe",
+    "race": "lizardmans",
+    "profile": "calculista e conhecido por parentesco por ninhada",
+    "pressure": "negocia com uma faccao que a populacao despreza",
+    "public_face": "recebe visitantes com regras claras e observa quem respeita os costumes de Natureza"
+  },
+  "npcs": [
+    {
+      "name": "Issak",
+      "role": "artesã dona de uma chave antiga",
+      "hook": "tem uma prova do segredo local",
+      "deity_link": "interpreta Natureza de um jeito que incomoda parte da comunidade"
+    },
+    {
+      "name": "Sskara Ferrolho",
+      "role": "comerciante que sabe demais",
+      "hook": "sabe qual criatura nao deve ser ferida",
+      "deity_link": "interpreta Natureza de um jeito que incomoda parte da comunidade"
+    },
+    {
+      "name": "Vrass da Ponte",
+      "role": "curandeira que esconde uma falha",
+      "hook": "procura alguem capaz de escoltar uma entrega",
+      "deity_link": "interpreta Natureza de um jeito que incomoda parte da comunidade"
+    },
+    {
+      "name": "Issak da Ponte",
+      "role": "criança ou aprendiz que viu o segredo",
+      "hook": "tem uma prova do segredo local",
+      "deity_link": "interpreta Natureza de um jeito que incomoda parte da comunidade"
+    }
+  ],
+  "culture": {
+    "identity": "Comunidade de lizardmans em ambiente de pantano, marcada por leitura de clima, territorio sagrado.",
+    "architecture": "Casas e espacos usam palafitas, pedra umida, barro endurecido, adaptados a riscos como solo falso.",
+    "customs": [
+      "pinturas de lama",
+      "cacas reguladas"
+    ],
+    "taboo": "matar filhotes ou ovos de especies locais",
+    "law": "forasteiros recebem abrigo por uma noite, mas devem partir ou contribuir depois disso",
+    "faith": "comunidades ribeirinhas, tribos isoladas, druidas devocionais, curandeiros de floresta, lizardmans, caçadores tradicionais e aldeias de fronteira."
+  },
+  "secret": {
+    "surface": "Moradores dizem que os problemas recentes sao apenas azar comum em pantano.",
+    "truth": "Na verdade, um pacto antigo com uma criatura da agua.",
+    "trigger": "o segredo vem à tona se alguem quebrar um tabu local",
+    "cost": "manter silencio preserva a paz por poucos dias"
+  },
+  "market": {
+    "seller": "tenda fiscalizada pelo lider",
+    "note": "Mercado organico, ribeirinho e controlado por anciaos; um item raro so e vendido depois de uma promessa diante da comunidade.",
+    "items": [
+      {
+        "item": "Corda resistente, 15 m",
+        "price": "1 pp",
+        "availability": "comum"
+      },
+      {
+        "item": "Racao de viagem, 1 dia",
+        "price": "5 pc",
+        "availability": "comum"
+      },
+      {
+        "item": "Unguento contra veneno natural",
+        "price": "1 po",
+        "availability": "limitado"
+      },
+      {
+        "item": "Rito de bencao menor",
+        "price": "2 po",
+        "availability": "por reputacao"
+      },
+      {
+        "item": "Incenso ritual",
+        "price": "3 pp",
+        "availability": "comum"
+      },
+      {
+        "item": "Alojamento comum",
+        "price": "5 pc",
+        "availability": "comum"
+      },
+      {
+        "item": "Isca de predador",
+        "price": "4 pp",
+        "availability": "limitado"
+      },
+      {
+        "item": "Tocha resinada",
+        "price": "1 pc",
+        "availability": "comum"
+      }
+    ]
+  },
+  "description": {
+    "read_aloud": "Vila das Sete Portas surge em ambiente de pantano como se tivesse aprendido a sobreviver antes de aprender a receber visitas. O primeiro sinal do lugar e lama quente, seguido por agua parada e por olhares que medem cada arma, simbolo e ferida. A presenca de Natureza aparece em pequenos gestos: marcas nas portas, silencio antes de promessas e cuidado com aquilo que nao deve ser desperdicado.",
+    "landmarks": [
+      "casa de conselho",
+      "celeiro comunal",
+      "praça de barro batido"
+    ],
+    "first_impressions": [
+      "habitantes lizardmans observam visitantes antes de oferecer ajuda",
+      "a aproximacao e marcada por nuvens de mosquitos",
+      "o lugar parece preparado para gas inflamavel"
+    ]
+  },
+  "ecology": {
+    "flora": [
+      "flor de febre",
+      "alga anestesica",
+      "lirio de lodo",
+      "junco negro"
+    ],
+    "fauna": [
+      "Afogado Sem Rosto",
+      "Memória Afogada",
+      "Polvo de Pedra",
+      "rastejantes de pantano",
+      "garcas carniceiras"
+    ],
+    "uses": [
+      "flor de febre pode render remedio simples, mas perde potencia se colhida sem ferramenta limpa.",
+      "alga anestesica serve como pista natural: cresce perto de agua, magia ou ossos antigos, conforme o local.",
+      "Afogado Sem Rosto aparece como pressagio para moradores experientes."
+    ]
+  },
+  "creatures": [
+    {
+      "name": "Afogado Sem Rosto",
+      "type": "Morto-vivo médio",
+      "source": "Primitiva",
+      "culture": "comunidade ribeirinha",
+      "environment": "pântano",
+      "behavior": "corrompido",
+      "grade": "2",
+      "hook": "Ele procura o rosto que perdeu."
+    },
+    {
+      "name": "Memória Afogada",
+      "type": "Espírito médio",
+      "source": "Primitiva",
+      "culture": "comunidade ribeirinha",
+      "environment": "pântano",
+      "behavior": "corrompido",
+      "grade": "1",
+      "hook": "Ela repete o último pedido de alguém que se afogou."
+    },
+    {
+      "name": "Polvo de Pedra",
+      "type": "Aberração grande",
+      "source": "Natural",
+      "culture": "comunidade ribeirinha",
+      "environment": "pântano",
+      "behavior": "predador",
+      "grade": "3",
+      "hook": "Pedras no pântano são ovos endurecidos."
+    },
+    {
+      "name": "Guardião Ribeirinho",
+      "type": "Humanoide médio",
+      "source": "Natural",
+      "culture": "comunidade ribeirinha",
+      "environment": "pântano",
+      "behavior": "guardião",
+      "grade": "1",
+      "hook": "O guardião impede qualquer um de atravessar um rio contaminado."
+    }
+  ],
+  "hooks": [
+    "Sskara da Ponte contrata o grupo para resolver ataques de Afogado Sem Rosto sem revelar que um pacto antigo com uma criatura da agua.",
+    "Um NPC importante oferece pagamento ou abrigo se os aventureiros investigarem o ponto mais antigo de Vila das Sete Portas.",
+    "Uma faccao rival chega ao local procurando o mesmo segredo que a comunidade tenta manter enterrado.",
+    "Se os personagens respeitarem o tabu local, ganham aliados; se ignorarem, o lugar inteiro se fecha contra eles."
+  ],
+  "support_summary": {
+    "paths": {
+      "divindades": "sistema\\mecanicas\\divindades_sistema.md",
+      "sistema": "sistema\\ebook\\Sistema_Mecanico_RPG.monolitico.html",
+      "bestiario": "sistema\\mecanicas\\bestiario_sistema.md"
+    },
+    "divinity_loaded": true,
+    "bestiary_matches": 4,
+    "system_terms": [
+      "Forca",
+      "Agilidade",
+      "Vigor",
+      "Intelecto",
+      "Espirito",
+      "Aparar",
+      "PV",
+      "PA",
+      "PE",
+      "PD",
+      "AU"
+    ]
+  }
+}
