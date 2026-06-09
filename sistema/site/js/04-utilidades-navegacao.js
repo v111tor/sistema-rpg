@@ -13,7 +13,10 @@ function setFilter(group, key, value) {
   if (group === "characters") renderCharacterList();
   if (group === "notes") renderNotes();
   if (group === "creatures") renderCreatures();
-  if (group === "magic") renderMagic();
+  if (group === "magic") {
+    if (typeof scheduleMagicListRender === "function") scheduleMagicListRender();
+    else renderMagic();
+  }
   if (group === "characterSpells") renderSheet();
   if (group === "abilities") renderSheet();
 }

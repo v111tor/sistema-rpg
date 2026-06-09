@@ -36,6 +36,59 @@ th, td {
   vertical-align: top;
 }
 
+#criaturas {
+  margin-top: 2.5em;
+}
+
+#criaturas ~ h3 {
+  break-before: page;
+  break-after: avoid;
+  margin: 2.4em 0 1em;
+  padding: 0.55em 0.75em;
+  color: #fff;
+  background: #3a1015;
+  border-left: 0.45em solid #8d1c27;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+#criaturas ~ h4 {
+  break-after: avoid;
+  margin: 1.35em 0 0.45em;
+  padding: 0.25em 0.55em;
+  color: #3a1015;
+  background: #f3e8e1;
+  border-left: 0.28em solid #8d1c27;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.02em;
+}
+
+#criaturas ~ h5 {
+  break-after: avoid;
+  margin: 1em 0 0.35em;
+  color: #5a1a22;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 0.95em;
+}
+
+#criaturas ~ p {
+  margin: 0.22em 0;
+}
+
+#criaturas ~ p strong:first-child {
+  color: #3a1015;
+}
+
+#criaturas ~ ul {
+  margin-top: 0.35em;
+  margin-bottom: 0.85em;
+}
+
+#criaturas ~ hr {
+  margin: 2em 0;
+  border: 0;
+  border-top: 1px solid #d8c6bd;
+}
+
 @media print {
   body {
     max-width: none;

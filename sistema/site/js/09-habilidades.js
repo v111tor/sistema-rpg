@@ -1,21 +1,37 @@
+let magicListRenderTimer = null;
+let magicSourcesRendered = false;
+
 function renderMagic() {
+  renderMagicSources();
+  renderMagicList();
+}
+function renderMagicSources() {
+  if (magicSourcesRendered) return;
   byId("magic-sources").innerHTML = Object.entries(SOURCES).map(([key, src]) => `
     <div class="item magic-source ${key}">
       <h4>${src.title} <span class="pill ${src.color}">${src.resource}</span></h4>
       <p>${src.text}</p>
     </div>
   `).join("");
+  magicSourcesRendered = true;
+}
+function scheduleMagicListRender() {
+  clearTimeout(magicListRenderTimer);
+  magicListRenderTimer = setTimeout(renderMagicList, 120);
+}
+function renderMagicList() {
   const list = state.magic.filter(m => {
     const sourceOk = !filters.magic.source || m.source === filters.magic.source;
-    const searchOk = textMatches(`${m.name} ${m.cost} ${m.range} ${m.effect}`, filters.magic.search);
+    const searchOk = textMatches(`${m.name} ${m.type} ${m.cost} ${m.range} ${m.duration} ${m.effect}`, filters.magic.search);
     return sourceOk && searchOk;
   });
   byId("magic-list").innerHTML = list.map(m => {
     const src = SOURCES[m.source] || SOURCES.arcana;
+    const details = [src.title, m.type, m.cost, m.range].filter(Boolean).map(esc).join(" | ");
     return `
       <div class="item magic-source ${esc(m.source)}">
         <div class="item-head">
-          <div><h4>${esc(m.name)}</h4><p>${src.title} | ${esc(m.cost)} | ${esc(m.range)}</p></div>
+          <div><h4>${esc(m.name)}</h4><p>${details}</p></div>
           <button class="btn small" onclick="openMagicForm('${m.id}')">Editar</button>
         </div>
         <p>${esc(m.effect)}</p>
