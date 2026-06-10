@@ -1,3 +1,6 @@
+let characterSpellCatalogRenderTimer = null;
+let abilityCatalogRenderTimer = null;
+
 function renderCharacterList() {
   const el = byId("character-list");
   const query = filters.characters.search;
@@ -228,7 +231,7 @@ function renderSheetCategory(c, hpPct) {
               ${Object.entries(SOURCES).map(([key, src]) => `<option value="${key}" ${filters.characterSpells.source === key ? "selected" : ""}>${src.title}</option>`).join("")}
             </select>
           </div>
-          <div class="grid two">
+          <div id="character-spell-catalog" class="grid two">
             ${renderSpellCatalogForCharacter(c)}
           </div>
         </div>
@@ -341,7 +344,7 @@ function renderAbilityCategory(c) {
           <option value="all" ${filters.abilities.level === "all" ? "selected" : ""}>Todos os níveis</option>
         </select>
       </div>
-      <div class="grid two">${renderAbilityCatalog(c)}</div>
+      <div id="ability-catalog-list" class="grid two">${renderAbilityCatalog(c)}</div>
     </div>
   `;
 }
@@ -384,7 +387,7 @@ function renderCharacterSpells(c) {
 function renderSpellCatalogForCharacter(c) {
   const list = state.magic.filter(spell => {
     const sourceOk = !filters.characterSpells.source || spell.source === filters.characterSpells.source;
-    const searchOk = textMatches(`${spell.name} ${spell.cost} ${spell.range} ${spell.effect}`, filters.characterSpells.search);
+    const searchOk = textMatches(`${spell.name} ${spell.type} ${spell.cost} ${spell.range} ${spell.duration} ${spell.effect}`, filters.characterSpells.search);
     return sourceOk && searchOk;
   });
   if (!list.length) return `<div class="empty">Nenhuma habilidade encontrada no catálogo.</div>`;
@@ -392,6 +395,15 @@ function renderSpellCatalogForCharacter(c) {
     ? `<span class="pill green">Adicionada</span>`
     : `<button class="btn small primary" onclick="addKnownSpell('${c.id}','${spell.id}')">Adicionar</button>`
   )).join("");
+}
+function scheduleCharacterSpellCatalogRender() {
+  clearTimeout(characterSpellCatalogRenderTimer);
+  characterSpellCatalogRenderTimer = setTimeout(renderCharacterSpellCatalogOnly, 120);
+}
+function renderCharacterSpellCatalogOnly() {
+  const el = byId("character-spell-catalog");
+  if (!el || sheetCategory !== "magias") return renderSheet();
+  el.innerHTML = renderSpellCatalogForCharacter(currentCharacter());
 }
 function abilityClasses() {
   return [...new Set(LEVEL_ABILITIES.map(a => a.class))].sort();
@@ -447,6 +459,15 @@ function renderAbilityCatalog(c) {
       ? `<button class="btn small primary" onclick="addKnownAbility('${c.id}','${a.id}')">Adicionar</button>`
       : `<span class="pill red">Nível ${esc(a.level)}</span>`
   )).join("");
+}
+function scheduleAbilityCatalogRender() {
+  clearTimeout(abilityCatalogRenderTimer);
+  abilityCatalogRenderTimer = setTimeout(renderAbilityCatalogOnly, 120);
+}
+function renderAbilityCatalogOnly() {
+  const el = byId("ability-catalog-list");
+  if (!el || sheetCategory !== "habilidades" || abilityCategory !== "habilidades") return renderSheet();
+  el.innerHTML = renderAbilityCatalog(currentCharacter());
 }
 function addKnownAbility(charId, abilityId) {
   const c = state.characters.find(x => x.id === charId);

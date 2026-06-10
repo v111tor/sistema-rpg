@@ -17,8 +17,14 @@ function setFilter(group, key, value) {
     if (typeof scheduleMagicListRender === "function") scheduleMagicListRender();
     else renderMagic();
   }
-  if (group === "characterSpells") renderSheet();
-  if (group === "abilities") renderSheet();
+  if (group === "characterSpells") {
+    if (typeof scheduleCharacterSpellCatalogRender === "function") scheduleCharacterSpellCatalogRender();
+    else renderSheet();
+  }
+  if (group === "abilities") {
+    if (typeof scheduleAbilityCatalogRender === "function") scheduleAbilityCatalogRender();
+    else renderSheet();
+  }
 }
 function attrDie(value) {
   if (ATTR_DICE.includes(String(value))) return String(value);
