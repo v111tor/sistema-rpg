@@ -5,7 +5,8 @@ import { uid, parseAndRoll } from '../../services/storage'
 import { LEVEL_ABILITIES } from '../../data/abilities'
 import { normalizeText } from '../../data/catalog'
 import { SOURCES } from '../../data/constants'
-import type { AttrDie, AttrKey, Character, Attack } from '../../types'
+import { Modal } from '../ui/Modal'
+import type { AttrDie, AttrKey, Character, Attack, CustomAbility, CustomSpell } from '../../types'
 
 const CATS = [
   ['resumo',     '📋 Resumo'],
@@ -358,17 +359,26 @@ function TabHabilidades({ c, update, roll }: {
   const { ui, setAbilityCategory } = useStore()
   const subcat = ui.abilityCategory || 'pericias'
   const [abilitySearch, setAbilitySearch] = useState('')
+  const [abilityClassFilter, setAbilityClassFilter] = useState('')
+  const [abilityLevelFilter, setAbilityLevelFilter] = useState('')
+  const [customAbilityOpen, setCustomAbilityOpen] = useState(false)
 
   const roleClass = c.role ? CLASS_HP[c.role]?.label : ''
   const availableAbilities = LEVEL_ABILITIES.filter((ability) => {
-    const belongsToClass = ability.class === roleClass || ability.class === 'Geral'
-    const isUnlocked = ability.level <= c.level
+    const belongsToClass = !abilityClassFilter
+      || (abilityClassFilter === '__current' ? ability.class === roleClass || ability.class === 'Geral' : ability.class === abilityClassFilter)
+    const matchesLevel = !abilityLevelFilter
+      || (abilityLevelFilter === '__unlocked' ? ability.level <= c.level : ability.level === Number(abilityLevelFilter))
     const matchesSearch = !abilitySearch || normalizeText(`${ability.name} ${ability.effect}`).includes(normalizeText(abilitySearch))
-    return belongsToClass && isUnlocked && matchesSearch
+    return belongsToClass && matchesLevel && matchesSearch
   })
+  const abilityClasses = [...new Set(LEVEL_ABILITIES.map(ability => ability.class))]
+  const abilityLevels = [...new Set(LEVEL_ABILITIES.map(ability => ability.level))].sort((a, b) => a - b)
   const knownAbilities = LEVEL_ABILITIES.filter(ability => c.knownAbilityIds.includes(ability.id))
   const addAbility = (id: string) => update({ knownAbilityIds: [...new Set([...c.knownAbilityIds, id])] })
   const removeAbility = (id: string) => update({ knownAbilityIds: c.knownAbilityIds.filter(knownId => knownId !== id) })
+  const addCustomAbility = (ability: CustomAbility) => update({ customAbilities: [...c.customAbilities, ability] })
+  const removeCustomAbility = (id: string) => update({ customAbilities: c.customAbilities.filter(ability => ability.id !== id) })
 
   const rollSkill = (name: string, attr: string) => {
     const attrKey = attr.split('/')[0] as AttrKey
@@ -420,8 +430,14 @@ function TabHabilidades({ c, update, roll }: {
       {subcat === 'habilidades' && (
         <div className="grid" style={{ gap: 12 }}>
           <div className="panel-inner">
-            <div className="section-title"><h3>Características escolhidas</h3><span className="pill blue">{knownAbilities.length}</span></div>
-            {knownAbilities.length === 0 ? <div className="empty">Nenhuma característica adicionada.</div> : <div className="list">
+            <div className="section-title">
+              <h3>Características escolhidas</h3>
+              <div className="row">
+                <span className="pill blue">{knownAbilities.length + c.customAbilities.length}</span>
+                <button className="btn small primary" onClick={() => setCustomAbilityOpen(true)}>+ Personalizada</button>
+              </div>
+            </div>
+            {knownAbilities.length === 0 && c.customAbilities.length === 0 ? <div className="empty">Nenhuma característica adicionada.</div> : <div className="list">
               {knownAbilities.map(a => (
                 <div key={a.id} className="item">
                   <div className="item-head">
@@ -431,15 +447,34 @@ function TabHabilidades({ c, update, roll }: {
                   <p style={{ marginTop: 4 }}>{a.effect}</p>
                 </div>
               ))}
+              {c.customAbilities.map(ability => (
+                <div key={ability.id} className="item">
+                  <div className="item-head">
+                    <div><h4>{ability.name} <span className="pill gold">Personalizada</span></h4><p>{ability.class} · Nível {ability.level}</p></div>
+                    <button className="btn small danger ghost" onClick={() => removeCustomAbility(ability.id)}>Remover</button>
+                  </div>
+                  <p style={{ marginTop: 4 }}>{ability.effect}</p>
+                </div>
+              ))}
             </div>}
           </div>
           <div className="panel-inner">
             <div className="section-title"><h3>Catálogo disponível</h3><span className="pill gold">{availableAbilities.length}</span></div>
-            <div className="filterbar one">
+            <div className="filterbar">
               <input value={abilitySearch} onChange={e => setAbilitySearch(e.target.value)} placeholder="Pesquisar característica ou efeito" />
+              <select value={abilityClassFilter} onChange={event => setAbilityClassFilter(event.target.value)}>
+                <option value="">Todas as classes</option>
+                <option value="__current" disabled={!roleClass}>Minha classe{roleClass ? ` (${roleClass})` : ''}</option>
+                {abilityClasses.map(abilityClass => <option key={abilityClass} value={abilityClass}>{abilityClass}</option>)}
+              </select>
+              <select value={abilityLevelFilter} onChange={event => setAbilityLevelFilter(event.target.value)}>
+                <option value="">Todos os níveis</option>
+                <option value="__unlocked">Até meu nível ({c.level})</option>
+                {abilityLevels.map(level => <option key={level} value={level}>Nível {level}</option>)}
+              </select>
             </div>
             {availableAbilities.length === 0
-              ? <div className="empty">Nenhuma característica encontrada para {roleClass || 'esta classe'} no nível {c.level}.</div>
+              ? <div className="empty">Nenhuma característica encontrada com os filtros selecionados.</div>
               : <div className="list">
                 {availableAbilities.map((a) => (
                   <div key={a.id} className="item">
@@ -455,6 +490,13 @@ function TabHabilidades({ c, update, roll }: {
               </div>
             }
           </div>
+          <CustomAbilityModal
+            open={customAbilityOpen}
+            defaultClass={roleClass || 'Geral'}
+            defaultLevel={c.level}
+            onClose={() => setCustomAbilityOpen(false)}
+            onSave={ability => { addCustomAbility(ability); setCustomAbilityOpen(false) }}
+          />
         </div>
       )}
     </div>
@@ -466,6 +508,7 @@ function TabMagias({ c, update }: { c: Character; update: (p: Partial<Character>
   const { app } = useStore()
   const [search, setSearch] = useState('')
   const [source, setSource] = useState('')
+  const [customSpellOpen, setCustomSpellOpen] = useState(false)
 
   const updateResource = (key: keyof typeof c.resources, field: 'current' | 'max', val: number) => {
     update({ resources: { ...c.resources, [key]: { ...c.resources[key], [field]: val } } })
@@ -489,6 +532,8 @@ function TabMagias({ c, update }: { c: Character; update: (p: Partial<Character>
 
   const addKnown = (id: string) => update({ knownSpellIds: [...c.knownSpellIds, id] })
   const removeKnown = (id: string) => update({ knownSpellIds: c.knownSpellIds.filter(x => x !== id) })
+  const addCustomSpell = (spell: CustomSpell) => update({ customSpells: [...c.customSpells, spell] })
+  const removeCustomSpell = (id: string) => update({ customSpells: c.customSpells.filter(spell => spell.id !== id) })
 
   return (
     <div className="grid" style={{ gap: 12 }}>
@@ -524,9 +569,12 @@ function TabMagias({ c, update }: { c: Character; update: (p: Partial<Character>
       <div className="panel-inner">
         <div className="section-title">
           <h3>Habilidades do personagem</h3>
-          <span className="pill gold">Base {Math.max(1, c.level) + 1} slots</span>
+          <div className="row">
+            <span className="pill gold">Base {Math.max(1, c.level) + 1} slots</span>
+            <button className="btn small primary" onClick={() => setCustomSpellOpen(true)}>+ Personalizada</button>
+          </div>
         </div>
-        {knownSpells.length === 0
+        {knownSpells.length === 0 && c.customSpells.length === 0
           ? <div className="empty">Nenhuma habilidade adicionada. Use o catálogo abaixo.</div>
           : <div className="grid grid-two" style={{ gap: 6 }}>
               {knownSpells.map(spell => (
@@ -538,9 +586,26 @@ function TabMagias({ c, update }: { c: Character; update: (p: Partial<Character>
                   <p style={{ marginTop: 4 }}>{spell.effect}</p>
                 </div>
               ))}
+              {c.customSpells.map(spell => (
+                <div key={spell.id} className={`item magic-card ${spell.source}`}>
+                  <div className="item-head">
+                    <div><h4>{spell.name} <span className="pill gold">Personalizada</span></h4><p>{spell.cost} · {spell.type}</p></div>
+                    <button className="btn small danger ghost" onClick={() => removeCustomSpell(spell.id)}>✕</button>
+                  </div>
+                  <p style={{ marginTop: 4 }}>{spell.effect}</p>
+                  <p className="muted" style={{ marginTop: 3 }}>{spell.range} · {spell.duration}</p>
+                  {spell.notes && <p style={{ marginTop: 3 }}>{spell.notes}</p>}
+                </div>
+              ))}
             </div>
         }
       </div>
+
+      <CustomSpellModal
+        open={customSpellOpen}
+        onClose={() => setCustomSpellOpen(false)}
+        onSave={spell => { addCustomSpell(spell); setCustomSpellOpen(false) }}
+      />
 
       {/* Catálogo */}
       <div className="panel-inner">
@@ -574,6 +639,70 @@ function TabMagias({ c, update }: { c: Character; update: (p: Partial<Character>
           placeholder="Liste magias, técnicas, rituais e tecnologias conhecidas..." />
       </div>
     </div>
+  )
+}
+
+function CustomAbilityModal({ open, defaultClass, defaultLevel, onClose, onSave }: {
+  open: boolean
+  defaultClass: string
+  defaultLevel: number
+  onClose: () => void
+  onSave: (ability: CustomAbility) => void
+}) {
+  const [name, setName] = useState('')
+  const [effect, setEffect] = useState('')
+  const [abilityClass, setAbilityClass] = useState(defaultClass)
+  const [level, setLevel] = useState(defaultLevel)
+  const save = () => {
+    if (!name.trim() || !effect.trim()) return
+    onSave({ id: uid(), name: name.trim(), effect: effect.trim(), class: abilityClass.trim() || 'Geral', level: Math.max(1, level), custom: true })
+    setName(''); setEffect('')
+  }
+  return (
+    <Modal open={open} title="Nova característica personalizada" onClose={onClose} actions={<>
+      <button className="btn small" onClick={onClose}>Cancelar</button>
+      <button className="btn small primary" disabled={!name.trim() || !effect.trim()} onClick={save}>Adicionar</button>
+    </>}>
+      <div className="grid" style={{ gap: 10 }}>
+        <div><label>Nome</label><input value={name} onChange={event => setName(event.target.value)} autoFocus /></div>
+        <div className="field-row">
+          <div><label>Classe / origem</label><input value={abilityClass} onChange={event => setAbilityClass(event.target.value)} /></div>
+          <div><label>Nível</label><input type="number" min={1} max={20} value={level} onChange={event => setLevel(Number(event.target.value))} /></div>
+        </div>
+        <div><label>Efeito</label><textarea rows={5} value={effect} onChange={event => setEffect(event.target.value)} /></div>
+      </div>
+    </Modal>
+  )
+}
+
+function CustomSpellModal({ open, onClose, onSave }: { open: boolean; onClose: () => void; onSave: (spell: CustomSpell) => void }) {
+  const [spell, setSpell] = useState({ name: '', source: 'arcana', cost: '', range: '', type: '', duration: '', effect: '', notes: '' })
+  const patch = (value: Partial<typeof spell>) => setSpell(current => ({ ...current, ...value }))
+  const save = () => {
+    if (!spell.name.trim() || !spell.effect.trim()) return
+    onSave({ id: uid(), ...spell, name: spell.name.trim(), effect: spell.effect.trim(), custom: true })
+    setSpell({ name: '', source: 'arcana', cost: '', range: '', type: '', duration: '', effect: '', notes: '' })
+  }
+  return (
+    <Modal open={open} title="Nova habilidade personalizada" onClose={onClose} actions={<>
+      <button className="btn small" onClick={onClose}>Cancelar</button>
+      <button className="btn small primary" disabled={!spell.name.trim() || !spell.effect.trim()} onClick={save}>Adicionar</button>
+    </>}>
+      <div className="grid" style={{ gap: 10 }}>
+        <div className="field-row">
+          <div><label>Nome</label><input value={spell.name} onChange={event => patch({ name: event.target.value })} autoFocus /></div>
+          <div><label>Fonte</label><select value={spell.source} onChange={event => patch({ source: event.target.value })}>{Object.entries(SOURCES).map(([key, label]) => <option key={key} value={key}>{label}</option>)}</select></div>
+        </div>
+        <div className="field-row-3">
+          <div><label>Custo</label><input value={spell.cost} onChange={event => patch({ cost: event.target.value })} placeholder="2 PA" /></div>
+          <div><label>Tipo</label><input value={spell.type} onChange={event => patch({ type: event.target.value })} placeholder="Ação" /></div>
+          <div><label>Duração</label><input value={spell.duration} onChange={event => patch({ duration: event.target.value })} /></div>
+        </div>
+        <div><label>Alcance</label><input value={spell.range} onChange={event => patch({ range: event.target.value })} /></div>
+        <div><label>Efeito</label><textarea rows={5} value={spell.effect} onChange={event => patch({ effect: event.target.value })} /></div>
+        <div><label>Observações</label><textarea rows={3} value={spell.notes} onChange={event => patch({ notes: event.target.value })} /></div>
+      </div>
+    </Modal>
   )
 }
 

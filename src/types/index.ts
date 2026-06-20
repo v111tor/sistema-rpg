@@ -58,6 +58,7 @@ export interface CustomAbility {
   effect: string
   class: string
   level: number
+  custom: true
 }
 
 export interface Character {
