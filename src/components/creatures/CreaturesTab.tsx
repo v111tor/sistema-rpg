@@ -12,7 +12,7 @@ const BLANK_CREATURE = (): Creature => ({
 })
 
 export function CreaturesTab() {
-  const { app, addCreature, updateCreature, deleteCreature, setInitiative, clearInitiative } = useStore()
+  const { app, addCreature, updateCreature, deleteCreature, setInitiative, clearInitiative, showToast } = useStore()
   const [search, setSearch] = useState('')
   const [form, setForm] = useState<Creature | null>(null)
 
@@ -27,6 +27,25 @@ export function CreaturesTab() {
     const okSearch = !search || norm(`${m.name} ${m.type} ${m.source} ${m.environment}`).includes(norm(search))
     return okSearch
   })
+
+  const addFromCatalog = (entry: (typeof BESTIARY_CATALOG)[number]) => {
+    const creature: Creature = {
+      id: uid(),
+      name: entry.name,
+      type: entry.type,
+      source: entry.source,
+      ac: entry.ac,
+      hp: String(entry.hp),
+      speed: '9m',
+      threat: String(entry.grade),
+      attrs: { FOR: 'd6', AGI: 'd6', VIG: 'd6', INT: 'd4', ESP: 'd4', DEV: 'd4' },
+      attacks: '',
+      notes: `Ambiente: ${entry.environment}. Fonte: ${entry.source}.`,
+      actions: [],
+    }
+    addCreature(creature)
+    showToast(`${entry.name} adicionada à campanha.`)
+  }
 
   const addToInitiative = (name: string, hp: string, creatureId?: string) => {
     const roll = rollDie(20)
@@ -80,12 +99,13 @@ export function CreaturesTab() {
             <span className="pill gold">{catalog.length}</span>
           </div>
           <div className="grid grid-two" style={{ gap: 6 }}>
-            {catalog.slice(0, 40).map((m, i) => (
-              <div key={i} className="item" style={{ fontSize: 12 }}>
+            {catalog.map((m) => (
+              <div key={`${m.source}-${m.name}`} className="item" style={{ fontSize: 12 }}>
                 <div className="item-head">
                   <div><b>{m.name}</b><p>{m.type} · {m.environment} · Grau {m.grade}</p></div>
+                  <button className="btn small primary" onClick={() => addFromCatalog(m)}>+ Adicionar</button>
                 </div>
-                <p>PV {m.hp} | CA {m.ac}</p>
+                <p>PV {m.hp} | CA {m.ac} | {m.source}</p>
               </div>
             ))}
           </div>
