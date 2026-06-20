@@ -9,6 +9,7 @@ import { CharacterSheet } from './components/sheets/CharacterSheet'
 import type { DiceRoll } from './types'
 import { loadCloudConfig, normalizeAppState, saveState } from './services/storage'
 import * as supabase from './services/supabase'
+import { ErrorBoundary } from './components/ui/ErrorBoundary'
 
 const CampaignTab = lazy(() => import('./components/campaign/CampaignTab').then(m => ({ default: m.CampaignTab })))
 const CreaturesTab = lazy(() => import('./components/creatures/CreaturesTab').then(m => ({ default: m.CreaturesTab })))
@@ -55,20 +56,22 @@ export default function App() {
         <main className="main" id="conteudo" tabIndex={-1}>
           <TopBar />
 
-          {ui.activeTab === 'ficha' && (
-            <div className="grid grid-sheet">
-              <CharacterList />
-              <CharacterSheet />
-            </div>
-          )}
+          <ErrorBoundary key={ui.activeTab}>
+            {ui.activeTab === 'ficha' && (
+              <div className="grid grid-sheet">
+                <CharacterList />
+                <CharacterSheet />
+              </div>
+            )}
 
-          <Suspense fallback={<div className="panel">Carregando módulo…</div>}>
-            {ui.activeTab === 'campanha' && <CampaignTab />}
-            {ui.activeTab === 'mestre'   && <CreaturesTab />}
-            {ui.activeTab === 'mapas'    && <MapsTab />}
-            {ui.activeTab === 'magia'    && <AbilitiesTab />}
-            {ui.activeTab === 'dados'    && <DiceTab />}
-          </Suspense>
+            <Suspense fallback={<div className="panel">Carregando módulo…</div>}>
+              {ui.activeTab === 'campanha' && <CampaignTab />}
+              {ui.activeTab === 'mestre'   && <CreaturesTab />}
+              {ui.activeTab === 'mapas'    && <MapsTab />}
+              {ui.activeTab === 'magia'    && <AbilitiesTab />}
+              {ui.activeTab === 'dados'    && <DiceTab />}
+            </Suspense>
+          </ErrorBoundary>
         </main>
       </div>
 

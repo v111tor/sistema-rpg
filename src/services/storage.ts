@@ -1,6 +1,6 @@
 import type {
   AppState, CloudConfig, UiState, Character, GameMap, MapTile,
-  Creature, InitiativeEntry, Note, AttrKey, AttrDie,
+  Creature, InitiativeEntry, Note, AttrKey, AttrDie, DiceRoll,
 } from '../types'
 import { SAVE_KEY, LOCAL_UI_KEY, CLOUD_CONFIG_KEY, DEFAULT_CLOUD_CONFIG } from '../data/constants'
 import { MAGIC_CATALOG, normalizeText } from '../data/catalog'
@@ -106,6 +106,23 @@ function migrateInitiative(value: unknown): InitiativeEntry {
   }
 }
 
+function migrateRoll(value: unknown): DiceRoll {
+  const roll = asRecord(value)
+  const rawBreakdown = roll.breakdown ?? roll.values ?? roll.results
+  const breakdown = Array.isArray(rawBreakdown)
+    ? rawBreakdown.map(Number).filter(Number.isFinite)
+    : []
+  const result = Number(roll.result ?? roll.total ?? roll.value)
+  return {
+    id: String(roll.id || uid()),
+    formula: String(roll.formula ?? roll.dice ?? roll.expression ?? '1d20'),
+    result: Number.isFinite(result) ? result : breakdown.reduce((sum, item) => sum + item, 0),
+    breakdown,
+    label: roll.label ? String(roll.label) : undefined,
+    timestamp: String(roll.timestamp ?? roll.time ?? roll.createdAt ?? new Date().toISOString()),
+  }
+}
+
 function migrateTile(value: unknown): MapTile {
   if (typeof value === 'string') return { type: value as MapTile['type'], visible: true }
   const tile = asRecord(value)
@@ -165,7 +182,7 @@ export function normalizeAppState(value: unknown): AppState {
     map: migrateMap(data.map),
     savedMaps: Array.isArray(data.savedMaps) ? data.savedMaps.map(migrateMap) : [],
     magic,
-    rolls: Array.isArray(data.rolls) ? data.rolls : [],
+    rolls: Array.isArray(data.rolls) ? data.rolls.map(migrateRoll) : [],
   }
 }
 

@@ -59,7 +59,7 @@ export function DiceTab() {
                 <span className="dice-formula">{r.formula}</span>
                 <span className="dice-result">{r.result}</span>
               </div>
-              {r.breakdown.length > 1 && (
+              {(r.breakdown?.length ?? 0) > 1 && (
                 <div style={{ fontSize: 11, color: 'var(--text-dim)', marginTop: 2 }}>
                   [{r.breakdown.join(', ')}]
                 </div>
