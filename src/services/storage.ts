@@ -78,6 +78,22 @@ function migrateNote(value: unknown, fallbackSession: number): Note {
 function migrateCreature(value: unknown): Creature {
   const creature = asRecord(value)
   const blankAttrs = blankCharacter().attrs
+  const actions = Array.isArray(creature.actions) ? creature.actions.map((value: unknown) => {
+    const action = asRecord(value)
+    const sourceRolls = Array.isArray(action.rolls) ? action.rolls : []
+    const legacyRolls = [
+      action.attackFormula ? { label: 'Ataque', formula: action.attackFormula } : null,
+      action.damageFormula ? { label: 'Dano', formula: action.damageFormula } : null,
+    ].filter(Boolean)
+    return {
+      name: String(action.name || ''),
+      description: String(action.description || ''),
+      rolls: [...sourceRolls, ...legacyRolls].map((value: unknown) => {
+        const roll = asRecord(value)
+        return { id: String(roll.id || uid()), label: String(roll.label || 'Rolagem'), formula: String(roll.formula || '1d20') }
+      }),
+    }
+  }) : []
   return {
     id: String(creature.id || uid()),
     name: String(creature.name || 'Criatura sem nome'),
@@ -90,7 +106,7 @@ function migrateCreature(value: unknown): Creature {
     attrs: { ...blankAttrs, ...asRecord(creature.attrs) },
     attacks: String(creature.attacks ?? ''),
     notes: String(creature.notes ?? ''),
-    actions: Array.isArray(creature.actions) ? creature.actions : [],
+    actions,
   }
 }
 

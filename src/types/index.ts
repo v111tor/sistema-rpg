@@ -122,9 +122,16 @@ export interface Campaign {
   notes: Note[]
 }
 
+export interface CreatureActionRoll {
+  id: string
+  label: string
+  formula: string
+}
+
 export interface CreatureAction {
   name: string
   description: string
+  rolls: CreatureActionRoll[]
 }
 
 export interface Creature {

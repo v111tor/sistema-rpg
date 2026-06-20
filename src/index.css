@@ -285,10 +285,20 @@
   .creature-attribute strong { display: block; color: var(--accent); font-size: 16px; }
   .initiative-editor { display: grid; grid-template-columns: minmax(110px, 1fr) 74px minmax(90px, .7fr) auto; gap: 6px; align-items: center; }
   .initiative-editor input { min-width: 0; padding: 6px 8px; }
+  .creature-roll-editor { display: grid; grid-template-columns: minmax(120px, .8fr) minmax(130px, 1fr) auto; gap: 7px; align-items: center; }
+  .combat-roll-popup { position: fixed; right: 20px; bottom: 20px; z-index: 800; width: min(360px, calc(100vw - 32px)); display: grid; grid-template-columns: 1fr auto; gap: 5px 14px; padding: 16px 18px; border: 1px solid color-mix(in srgb, var(--accent) 55%, var(--border)); border-radius: 12px; background: color-mix(in srgb, var(--panel) 95%, transparent); box-shadow: 0 16px 48px rgba(0,0,0,.5); backdrop-filter: blur(10px); animation: combatRollIn .2s ease-out; }
+  .combat-roll-label { align-self: center; color: var(--text); font-size: 13px; font-weight: 700; }
+  .combat-roll-result { grid-row: 1 / 4; grid-column: 2; align-self: center; color: var(--accent); font-size: 40px; line-height: 1; }
+  .combat-roll-formula { color: var(--gold); font-size: 12px; font-weight: 700; }
+  .combat-roll-popup code { color: var(--text-dim); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; }
+  .combat-roll-close { position: absolute; top: 4px; right: 6px; border: 0; background: transparent; color: var(--text-dim); font-size: 20px; cursor: pointer; }
+  @keyframes combatRollIn { from { opacity: 0; transform: translateY(14px) scale(.97); } to { opacity: 1; transform: none; } }
   @media (max-width: 700px) {
     .creature-dashboard-grid { grid-template-columns: 1fr; }
     .initiative-editor { grid-template-columns: 1fr 64px; }
     .initiative-editor .initiative-hp { grid-column: 1 / 2; }
+    .creature-roll-editor { grid-template-columns: 1fr 1fr auto; }
+    .combat-roll-popup { right: 16px; bottom: 16px; }
   }
 
   /* ══════════════════════════════════════════════════════════════════

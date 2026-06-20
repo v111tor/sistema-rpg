@@ -2,9 +2,17 @@ import { useState } from 'react'
 import { useStore } from '../../store'
 import { Modal } from '../ui/Modal'
 import { BESTIARY_CATALOG } from '../../data/bestiary'
-import { rollDie, uid } from '../../services/storage'
+import { parseAndRoll, rollDie, uid } from '../../services/storage'
 import { ATTRS, ATTR_DICE } from '../../data/constants'
 import type { AttrDie, AttrKey, Creature, InitiativeEntry } from '../../types'
+
+interface CombatRollResult {
+  id: string
+  label: string
+  formula: string
+  calculation: string
+  result: number
+}
 
 const BLANK_CREATURE = (): Creature => ({
   id: uid(), name: '', type: '', source: 'campanha', ac: 12, hp: '20', speed: '9m',
@@ -18,6 +26,7 @@ export function CreaturesTab() {
   const [form, setForm] = useState<Creature | null>(null)
   const [dashboardId, setDashboardId] = useState<string | null>(null)
   const [activeTurnId, setActiveTurnId] = useState('')
+  const [combatRoll, setCombatRoll] = useState<CombatRollResult | null>(null)
 
   const norm = (v: string) => v.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
@@ -94,6 +103,19 @@ export function CreaturesTab() {
     if (!app.initiative.length) return
     const index = app.initiative.findIndex(entry => entry.id === activeTurnId)
     setActiveTurnId(app.initiative[(index + 1 + app.initiative.length) % app.initiative.length].id)
+  }
+
+  const rollForCreature = (label: string, formula: string) => {
+    const rolled = parseAndRoll(formula)
+    if (!rolled) {
+      showToast(`Fórmula inválida: ${formula || 'vazia'}`)
+      return
+    }
+    const match = formula.trim().match(/^(\d+)d(\d+)([+-]\d+)?$/i)
+    const modifier = Number(match?.[3] ?? 0)
+    const dice = rolled.breakdown.length > 1 ? `(${rolled.breakdown.join(' + ')})` : String(rolled.breakdown[0] ?? 0)
+    const modifierText = modifier > 0 ? ` + ${modifier}` : modifier < 0 ? ` - ${Math.abs(modifier)}` : ''
+    setCombatRoll({ id: uid(), label, formula, calculation: `${dice}${modifierText} = ${rolled.result}`, result: rolled.result })
   }
 
   const dashboardCreature = app.creatures.find(creature => creature.id === dashboardId) ?? null
@@ -192,18 +214,23 @@ export function CreaturesTab() {
           onClose={() => setDashboardId(null)}
           onEdit={() => { setForm({ ...dashboardCreature }); setDashboardId(null) }}
           onInitiative={() => addToInitiative(dashboardCreature.name, dashboardCreature.hp, dashboardCreature.id)}
+          onRoll={rollForCreature}
         />
       )}
+
+      {combatRoll && <CombatRollPopup roll={combatRoll} onClose={() => setCombatRoll(null)} />}
     </>
   )
 }
 
-function CreatureDashboard({ creature, onClose, onEdit, onInitiative }: {
+function CreatureDashboard({ creature, onClose, onEdit, onInitiative, onRoll }: {
   creature: Creature
   onClose: () => void
   onEdit: () => void
   onInitiative: () => void
+  onRoll: (label: string, formula: string) => void
 }) {
+  const [quickFormula, setQuickFormula] = useState('1d20')
   const metrics = [
     ['PV', creature.hp || '—'], ['CA', String(creature.ac)], ['Deslocamento', creature.speed || '—'], ['Grau', creature.threat || '—'],
   ]
@@ -226,6 +253,15 @@ function CreatureDashboard({ creature, onClose, onEdit, onInitiative }: {
           {metrics.map(([label, value]) => <div className="metric-card" key={label}><span className="metric-value">{value}</span><span className="metric-label">{label}</span></div>)}
         </div>
 
+        <section className="panel-inner">
+          <div className="section-title"><h3>Dados rápidos</h3><span className="pill gold">Sem sair da ficha</span></div>
+          <div className="row">
+            {['1d4', '1d6', '1d8', '1d10', '1d12', '1d20', '1d100'].map(formula => <button className="btn small" key={formula} onClick={() => onRoll(`${creature.name} · ${formula}`, formula)}>{formula}</button>)}
+            <input value={quickFormula} onChange={event => setQuickFormula(event.target.value)} placeholder="2d6+3" style={{ flex: 1, minWidth: 110 }} onKeyDown={event => event.key === 'Enter' && onRoll(`${creature.name} · rolagem`, quickFormula)} />
+            <button className="btn small primary" onClick={() => onRoll(`${creature.name} · rolagem`, quickFormula)}>Rolar</button>
+          </div>
+        </section>
+
         <div className="creature-dashboard-grid">
           <section className="panel-inner">
             <div className="section-title"><h3>Atributos</h3></div>
@@ -242,7 +278,13 @@ function CreatureDashboard({ creature, onClose, onEdit, onInitiative }: {
         <section className="panel-inner">
           <div className="section-title"><h3>Ações detalhadas</h3><span className="pill blue">{creature.actions.length}</span></div>
           {creature.actions.length === 0 ? <div className="empty">Nenhuma ação detalhada.</div> : <div className="grid grid-two">
-            {creature.actions.map((action, index) => <div className="item" key={`${action.name}-${index}`}><h4>{action.name || `Ação ${index + 1}`}</h4><p style={{ whiteSpace: 'pre-wrap', marginTop: 5 }}>{action.description}</p></div>)}
+            {creature.actions.map((action, index) => <div className="item" key={`${action.name}-${index}`}>
+              <h4>{action.name || `Ação ${index + 1}`}</h4>
+              <p style={{ whiteSpace: 'pre-wrap', marginTop: 5 }}>{action.description}</p>
+              {action.rolls.length > 0 && <div className="row" style={{ marginTop: 9 }}>
+                {action.rolls.map(roll => <button className="btn small primary" key={roll.id} onClick={() => onRoll(`${creature.name} · ${action.name} · ${roll.label}`, roll.formula)}>🎲 {roll.label}: {roll.formula}</button>)}
+              </div>}
+            </div>)}
           </div>}
         </section>
 
@@ -255,12 +297,27 @@ function CreatureDashboard({ creature, onClose, onEdit, onInitiative }: {
   )
 }
 
+function CombatRollPopup({ roll, onClose }: { roll: CombatRollResult; onClose: () => void }) {
+  return (
+    <aside className="combat-roll-popup" role="status" aria-live="polite">
+      <button className="combat-roll-close" aria-label="Fechar resultado" onClick={onClose}>×</button>
+      <span className="combat-roll-label">{roll.label}</span>
+      <strong className="combat-roll-result">{roll.result}</strong>
+      <span className="combat-roll-formula">{roll.formula}</span>
+      <code>{roll.calculation}</code>
+    </aside>
+  )
+}
+
 function CreatureFormModal({ creature, onClose, onSave }: { creature: Creature; onClose: () => void; onSave: (c: Creature) => void }) {
   const [c, setC] = useState<Creature>(creature)
   const p = (patch: Partial<Creature>) => setC((prev) => ({ ...prev, ...patch }))
-  const addAction = () => p({ actions: [...c.actions, { name: 'Nova ação', description: '' }] })
+  const addAction = () => p({ actions: [...c.actions, { name: 'Nova ação', description: '', rolls: [{ id: uid(), label: 'Ataque', formula: '1d20' }] }] })
   const patchAction = (index: number, patch: Partial<Creature['actions'][number]>) => p({ actions: c.actions.map((action, actionIndex) => actionIndex === index ? { ...action, ...patch } : action) })
   const removeAction = (index: number) => p({ actions: c.actions.filter((_, actionIndex) => actionIndex !== index) })
+  const addActionRoll = (actionIndex: number) => patchAction(actionIndex, { rolls: [...c.actions[actionIndex].rolls, { id: uid(), label: 'Dano', formula: '1d6' }] })
+  const patchActionRoll = (actionIndex: number, rollId: string, patch: Partial<Creature['actions'][number]['rolls'][number]>) => patchAction(actionIndex, { rolls: c.actions[actionIndex].rolls.map(roll => roll.id === rollId ? { ...roll, ...patch } : roll) })
+  const removeActionRoll = (actionIndex: number, rollId: string) => patchAction(actionIndex, { rolls: c.actions[actionIndex].rolls.filter(roll => roll.id !== rollId) })
 
   return (
     <Modal open wide title={creature.name || 'Nova criatura'} onClose={onClose}
@@ -298,6 +355,14 @@ function CreatureFormModal({ creature, onClose, onSave }: { creature: Creature; 
                 <div className="row" style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }}><button className="btn small danger ghost" onClick={() => removeAction(index)}>Remover</button></div>
               </div>
               <div><label>Descrição</label><textarea rows={3} value={action.description} onChange={event => patchAction(index, { description: event.target.value })} /></div>
+              <div className="section-title" style={{ marginTop: 9 }}><h4>Dados da habilidade</h4><button className="btn small" onClick={() => addActionRoll(index)}>+ Dado</button></div>
+              <div className="list">
+                {action.rolls.map(roll => <div className="creature-roll-editor" key={roll.id}>
+                  <input aria-label="Nome da rolagem" value={roll.label} placeholder="Ataque" onChange={event => patchActionRoll(index, roll.id, { label: event.target.value })} />
+                  <input aria-label="Fórmula da rolagem" value={roll.formula} placeholder="2d6+3" onChange={event => patchActionRoll(index, roll.id, { formula: event.target.value })} />
+                  <button className="btn small danger ghost" onClick={() => removeActionRoll(index, roll.id)}>✕</button>
+                </div>)}
+              </div>
             </div>)}
           </div>
         </div>
