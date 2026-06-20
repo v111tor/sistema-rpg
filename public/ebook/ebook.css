@@ -1,0 +1,100 @@
+:root {
+  color-scheme: light;
+  --ink: #2f1a12;
+  --wine: #6e291f;
+  --line: rgba(99, 48, 27, 0.42);
+}
+
+html {
+  min-height: 100%;
+  background-color: #d4aa68;
+  background-image: url("assets/fundo-pergaminho.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 92ch;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: clamp(5.5rem, 9vw, 8rem) clamp(3rem, 8vw, 7rem);
+  line-height: 1.6;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: transparent;
+  text-shadow: 0 1px rgba(255, 244, 208, 0.28);
+}
+
+a { color: var(--wine); }
+
+nav#TOC {
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+h1, h2, h3, h4 { line-height: 1.2; color: #502118; }
+
+table { border-collapse: collapse; width: 100%; }
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 0.35rem 0.5rem;
+  vertical-align: top;
+  background: rgba(255, 244, 208, 0.13);
+}
+
+#criaturas { margin-top: 2.5em; }
+
+#criaturas ~ h3 {
+  break-before: page;
+  break-after: avoid;
+  margin: 2.4em 0 1em;
+  padding: 0.55em 0.75em;
+  color: #fff5d6;
+  background: rgba(58, 16, 21, 0.92);
+  border-left: 0.45em solid #8d1c27;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+#criaturas ~ h4 {
+  break-after: avoid;
+  margin: 1.35em 0 0.45em;
+  padding: 0.25em 0.55em;
+  color: #3a1015;
+  background: rgba(243, 232, 225, 0.55);
+  border-left: 0.28em solid #8d1c27;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.02em;
+}
+
+#criaturas ~ h5 {
+  break-after: avoid;
+  margin: 1em 0 0.35em;
+  color: #5a1a22;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 0.95em;
+}
+
+#criaturas ~ p { margin: 0.22em 0; }
+#criaturas ~ p strong:first-child { color: #3a1015; }
+#criaturas ~ ul { margin-top: 0.35em; margin-bottom: 0.85em; }
+#criaturas ~ hr { margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+
+@media (max-width: 700px) {
+  html { background-size: auto 100vh; }
+  body { padding: 5.5rem 3.25rem; font-size: 0.94rem; }
+  table { display: block; overflow-x: auto; }
+}
+
+@media print {
+  html {
+    background-size: 100% 100%;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body { max-width: none; padding: 18mm 16mm; text-shadow: none; }
+}
