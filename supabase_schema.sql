@@ -92,5 +92,16 @@ $$;
 
 grant execute on function public.join_campaign(text) to authenticated;
 
--- Optional: let Supabase Realtime broadcast updates for the shared table.
-alter publication supabase_realtime add table public.campaign_states;
+-- Let Supabase Realtime broadcast updates; safe to run more than once.
+do $$
+begin
+  if not exists (
+    select 1 from pg_publication_tables
+    where pubname = 'supabase_realtime'
+      and schemaname = 'public'
+      and tablename = 'campaign_states'
+  ) then
+    alter publication supabase_realtime add table public.campaign_states;
+  end if;
+end;
+$$;
