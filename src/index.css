@@ -149,6 +149,7 @@
   .modal          { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.65); z-index: 100; align-items: center; justify-content: center; }
   .modal.open     { display: flex; }
   .modal-card     { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 20px; width: 480px; max-width: 96vw; max-height: 90vh; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
+  .modal-card.wide { width: 960px; }
   .modal-card h3  { font-size: 16px; }
   .modal-actions  { display: flex; gap: 8px; justify-content: flex-end; margin-top: 4px; }
 
@@ -273,6 +274,22 @@
   .magic-card.primitiva      { border-color: color-mix(in srgb, var(--primitiva) 30%, transparent); }
   .magic-card.fe             { border-color: color-mix(in srgb, var(--fe)        30%, transparent); }
   .magic-card.aura           { border-color: color-mix(in srgb, var(--aura)      30%, transparent); }
+
+  /* Creature combat dashboard */
+  .creature-dashboard { display: grid; gap: 14px; }
+  .creature-dashboard-hero { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 16px; border: 1px solid var(--border); border-radius: 10px; background: linear-gradient(135deg, color-mix(in srgb, var(--danger) 10%, var(--surface)), var(--surface)); }
+  .creature-dashboard-hero h2 { font-size: 24px; margin-bottom: 4px; }
+  .creature-dashboard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .creature-attributes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .creature-attribute { padding: 10px; text-align: center; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
+  .creature-attribute strong { display: block; color: var(--accent); font-size: 16px; }
+  .initiative-editor { display: grid; grid-template-columns: minmax(110px, 1fr) 74px minmax(90px, .7fr) auto; gap: 6px; align-items: center; }
+  .initiative-editor input { min-width: 0; padding: 6px 8px; }
+  @media (max-width: 700px) {
+    .creature-dashboard-grid { grid-template-columns: 1fr; }
+    .initiative-editor { grid-template-columns: 1fr 64px; }
+    .initiative-editor .initiative-hp { grid-column: 1 / 2; }
+  }
 
   /* ══════════════════════════════════════════════════════════════════
      MAP EDITOR

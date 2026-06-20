@@ -3,7 +3,8 @@ import { useStore } from '../../store'
 import { Modal } from '../ui/Modal'
 import { BESTIARY_CATALOG } from '../../data/bestiary'
 import { rollDie, uid } from '../../services/storage'
-import type { Creature, InitiativeEntry } from '../../types'
+import { ATTRS, ATTR_DICE } from '../../data/constants'
+import type { AttrDie, AttrKey, Creature, InitiativeEntry } from '../../types'
 
 const BLANK_CREATURE = (): Creature => ({
   id: uid(), name: '', type: '', source: 'campanha', ac: 12, hp: '20', speed: '9m',
@@ -15,6 +16,8 @@ export function CreaturesTab() {
   const { app, addCreature, updateCreature, deleteCreature, setInitiative, clearInitiative, showToast } = useStore()
   const [search, setSearch] = useState('')
   const [form, setForm] = useState<Creature | null>(null)
+  const [dashboardId, setDashboardId] = useState<string | null>(null)
+  const [activeTurnId, setActiveTurnId] = useState('')
 
   const norm = (v: string) => v.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
@@ -50,7 +53,9 @@ export function CreaturesTab() {
   const addToInitiative = (name: string, hp: string, creatureId?: string) => {
     const roll = rollDie(20)
     const entry: InitiativeEntry = { id: uid(), name, initiative: roll, hp, isPlayer: false, creatureId }
-    setInitiative([...app.initiative, entry].sort((a, b) => b.initiative - a.initiative))
+    const next = [...app.initiative, entry].sort((a, b) => b.initiative - a.initiative)
+    setInitiative(next)
+    if (!activeTurnId) setActiveTurnId(next[0]?.id ?? '')
   }
 
   const rollInitiative = () => {
@@ -61,10 +66,37 @@ export function CreaturesTab() {
     app.characters.forEach((c) => {
       entries.push({ id: uid(), name: c.name, initiative: rollDie(20), hp: `${c.hp.current}/${c.hp.max}`, isPlayer: true, creatureId: c.id })
     })
-    setInitiative(entries.sort((a, b) => b.initiative - a.initiative))
+    const sorted = entries.sort((a, b) => b.initiative - a.initiative)
+    setInitiative(sorted)
+    setActiveTurnId(sorted[0]?.id ?? '')
   }
 
-  const [turn, setTurn] = useState(0)
+  const updateInitiative = (id: string, patch: Partial<InitiativeEntry>) => {
+    const next = app.initiative
+      .map(entry => entry.id === id ? { ...entry, ...patch } : entry)
+      .sort((a, b) => b.initiative - a.initiative)
+    setInitiative(next)
+  }
+
+  const removeInitiative = (id: string) => {
+    const next = app.initiative.filter(entry => entry.id !== id)
+    setInitiative(next)
+    if (activeTurnId === id) setActiveTurnId(next[0]?.id ?? '')
+  }
+
+  const addManualInitiative = () => {
+    const entry: InitiativeEntry = { id: uid(), name: 'Novo participante', initiative: 0, hp: '', isPlayer: false }
+    setInitiative([...app.initiative, entry])
+    if (!activeTurnId) setActiveTurnId(entry.id)
+  }
+
+  const nextTurn = () => {
+    if (!app.initiative.length) return
+    const index = app.initiative.findIndex(entry => entry.id === activeTurnId)
+    setActiveTurnId(app.initiative[(index + 1 + app.initiative.length) % app.initiative.length].id)
+  }
+
+  const dashboardCreature = app.creatures.find(creature => creature.id === dashboardId) ?? null
 
   return (
     <>
@@ -85,6 +117,7 @@ export function CreaturesTab() {
                   <div><h4>{m.name}</h4><p>{m.type} | CA {m.ac} | PV {m.hp} | Grau {m.threat}</p></div>
                   <div className="row">
                     <button className="btn small" onClick={() => addToInitiative(m.name, m.hp, m.id)}>+Init</button>
+                    <button className="btn small primary" onClick={() => setDashboardId(m.id)}>Ficha completa</button>
                     <button className="btn small" onClick={() => setForm({ ...m })}>Editar</button>
                     <button className="btn small danger" onClick={() => deleteCreature(m.id)}>✕</button>
                   </div>
@@ -116,20 +149,24 @@ export function CreaturesTab() {
             <h3>Controle de encontro</h3>
             <div className="row">
               <button className="btn small" onClick={rollInitiative}>Rolar</button>
-              <button className="btn small" onClick={() => setTurn((t) => (t + 1) % Math.max(1, app.initiative.length))}>Próximo</button>
-              <button className="btn small danger" onClick={() => { clearInitiative(); setTurn(0) }}>Limpar</button>
+              <button className="btn small" onClick={addManualInitiative}>+ Manual</button>
+              <button className="btn small" onClick={nextTurn}>Próximo</button>
+              <button className="btn small danger" onClick={() => { clearInitiative(); setActiveTurnId('') }}>Limpar</button>
             </div>
           </div>
           <div className="list">
             {app.initiative.length === 0 && <div className="empty">Sem encontro ativo.</div>}
             {app.initiative.map((e, i) => (
-              <div key={e.id} className={`item ${i === turn % app.initiative.length ? 'selectable active' : ''}`}>
-                <div className="item-head">
-                  <div>
-                    <h4>{e.name} {e.isPlayer && <span className="pill blue">PC</span>}</h4>
-                    <p>Iniciativa: {e.initiative} | PV: {e.hp}</p>
-                  </div>
-                  <span className="pill gold">{i + 1}º</span>
+              <div key={e.id} className={`item selectable ${e.id === activeTurnId ? 'active' : ''}`} onClick={() => setActiveTurnId(e.id)}>
+                <div className="item-head" style={{ marginBottom: 7 }}>
+                  <div><h4>{i + 1}º turno {e.isPlayer && <span className="pill blue">PC</span>}</h4></div>
+                  <span className={`pill ${e.id === activeTurnId ? 'green' : 'gold'}`}>{e.id === activeTurnId ? 'Ativo' : `Init ${e.initiative}`}</span>
+                </div>
+                <div className="initiative-editor" onClick={event => event.stopPropagation()}>
+                  <input aria-label="Nome do participante" value={e.name} onChange={event => updateInitiative(e.id, { name: event.target.value })} />
+                  <input aria-label="Iniciativa" type="number" value={e.initiative} onChange={event => updateInitiative(e.id, { initiative: Number(event.target.value) })} />
+                  <input className="initiative-hp" aria-label="Pontos de vida" value={e.hp} placeholder="PV" onChange={event => updateInitiative(e.id, { hp: event.target.value })} />
+                  <button className="btn small danger ghost" onClick={() => removeInitiative(e.id)}>✕</button>
                 </div>
               </div>
             ))}
@@ -148,16 +185,85 @@ export function CreaturesTab() {
           }}
         />
       )}
+
+      {dashboardCreature && (
+        <CreatureDashboard
+          creature={dashboardCreature}
+          onClose={() => setDashboardId(null)}
+          onEdit={() => { setForm({ ...dashboardCreature }); setDashboardId(null) }}
+          onInitiative={() => addToInitiative(dashboardCreature.name, dashboardCreature.hp, dashboardCreature.id)}
+        />
+      )}
     </>
+  )
+}
+
+function CreatureDashboard({ creature, onClose, onEdit, onInitiative }: {
+  creature: Creature
+  onClose: () => void
+  onEdit: () => void
+  onInitiative: () => void
+}) {
+  const metrics = [
+    ['PV', creature.hp || '—'], ['CA', String(creature.ac)], ['Deslocamento', creature.speed || '—'], ['Grau', creature.threat || '—'],
+  ]
+  return (
+    <Modal open wide title="Ficha completa da criatura" onClose={onClose} actions={<>
+      <button className="btn small" onClick={onClose}>Fechar</button>
+      <button className="btn small" onClick={onEdit}>Editar ficha</button>
+      <button className="btn small primary" onClick={onInitiative}>+ Iniciativa</button>
+    </>}>
+      <div className="creature-dashboard">
+        <div className="creature-dashboard-hero">
+          <div>
+            <h2>{creature.name}</h2>
+            <p className="muted">{creature.type || 'Tipo indefinido'} · {creature.source || 'Fonte indefinida'}</p>
+          </div>
+          <span className="pill red">Grau {creature.threat || '—'}</span>
+        </div>
+
+        <div className="metrics-grid">
+          {metrics.map(([label, value]) => <div className="metric-card" key={label}><span className="metric-value">{value}</span><span className="metric-label">{label}</span></div>)}
+        </div>
+
+        <div className="creature-dashboard-grid">
+          <section className="panel-inner">
+            <div className="section-title"><h3>Atributos</h3></div>
+            <div className="creature-attributes">
+              {ATTRS.map(([key, label]) => <div className="creature-attribute" key={key}><strong>{creature.attrs[key]}</strong><span>{key} · {label}</span></div>)}
+            </div>
+          </section>
+          <section className="panel-inner">
+            <div className="section-title"><h3>Resumo para combate</h3></div>
+            <p style={{ whiteSpace: 'pre-wrap' }}>{creature.attacks || 'Nenhum ataque ou ação rápida registrado.'}</p>
+          </section>
+        </div>
+
+        <section className="panel-inner">
+          <div className="section-title"><h3>Ações detalhadas</h3><span className="pill blue">{creature.actions.length}</span></div>
+          {creature.actions.length === 0 ? <div className="empty">Nenhuma ação detalhada.</div> : <div className="grid grid-two">
+            {creature.actions.map((action, index) => <div className="item" key={`${action.name}-${index}`}><h4>{action.name || `Ação ${index + 1}`}</h4><p style={{ whiteSpace: 'pre-wrap', marginTop: 5 }}>{action.description}</p></div>)}
+          </div>}
+        </section>
+
+        <section className="panel-inner">
+          <div className="section-title"><h3>Notas da sessão</h3></div>
+          <p style={{ whiteSpace: 'pre-wrap' }}>{creature.notes || 'Sem notas adicionais.'}</p>
+        </section>
+      </div>
+    </Modal>
   )
 }
 
 function CreatureFormModal({ creature, onClose, onSave }: { creature: Creature; onClose: () => void; onSave: (c: Creature) => void }) {
   const [c, setC] = useState<Creature>(creature)
   const p = (patch: Partial<Creature>) => setC((prev) => ({ ...prev, ...patch }))
+  const addAction = () => p({ actions: [...c.actions, { name: 'Nova ação', description: '' }] })
+  const patchAction = (index: number, patch: Partial<Creature['actions'][number]>) => p({ actions: c.actions.map((action, actionIndex) => actionIndex === index ? { ...action, ...patch } : action) })
+  const removeAction = (index: number) => p({ actions: c.actions.filter((_, actionIndex) => actionIndex !== index) })
 
   return (
-    <Modal open title={creature.name || 'Nova criatura'} onClose={onClose}
+    <Modal open wide title={creature.name || 'Nova criatura'} onClose={onClose}
       actions={<>
         <button className="btn small" onClick={onClose}>Cancelar</button>
         <button className="btn small primary" onClick={() => onSave(c)}>Salvar</button>
@@ -167,12 +273,34 @@ function CreatureFormModal({ creature, onClose, onSave }: { creature: Creature; 
           <div><label>Nome</label><input value={c.name} onChange={(e) => p({ name: e.target.value })} autoFocus /></div>
           <div><label>Tipo</label><input value={c.type} onChange={(e) => p({ type: e.target.value })} /></div>
         </div>
+        <div className="field-row">
+          <div><label>Fonte</label><input value={c.source} onChange={(e) => p({ source: e.target.value })} /></div>
+          <div><label>Deslocamento</label><input value={c.speed} onChange={(e) => p({ speed: e.target.value })} placeholder="9m" /></div>
+        </div>
         <div className="field-row-3">
           <div><label>CA</label><input type="number" value={c.ac} onChange={(e) => p({ ac: +e.target.value })} /></div>
           <div><label>PV</label><input value={c.hp} onChange={(e) => p({ hp: e.target.value })} /></div>
           <div><label>Grau</label><input value={c.threat} onChange={(e) => p({ threat: e.target.value })} /></div>
         </div>
-        <div><label>Ações</label><textarea value={c.attacks} onChange={(e) => p({ attacks: e.target.value })} /></div>
+        <div>
+          <label>Atributos</label>
+          <div className="creature-attributes">
+            {ATTRS.map(([key, label]) => <div key={key}><label>{key} · {label}</label><select value={c.attrs[key as AttrKey]} onChange={event => p({ attrs: { ...c.attrs, [key]: event.target.value as AttrDie } })}>{ATTR_DICE.map(die => <option key={die} value={die}>{die}</option>)}</select></div>)}
+          </div>
+        </div>
+        <div><label>Resumo de ataques e ações</label><textarea rows={4} value={c.attacks} onChange={(e) => p({ attacks: e.target.value })} /></div>
+        <div>
+          <div className="section-title"><h3>Ações detalhadas</h3><button className="btn small primary" onClick={addAction}>+ Ação</button></div>
+          <div className="list">
+            {c.actions.map((action, index) => <div className="item" key={index}>
+              <div className="field-row">
+                <div><label>Nome</label><input value={action.name} onChange={event => patchAction(index, { name: event.target.value })} /></div>
+                <div className="row" style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }}><button className="btn small danger ghost" onClick={() => removeAction(index)}>Remover</button></div>
+              </div>
+              <div><label>Descrição</label><textarea rows={3} value={action.description} onChange={event => patchAction(index, { description: event.target.value })} /></div>
+            </div>)}
+          </div>
+        </div>
         <div><label>Notas</label><textarea value={c.notes} onChange={(e) => p({ notes: e.target.value })} /></div>
       </div>
     </Modal>

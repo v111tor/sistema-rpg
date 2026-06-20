@@ -6,9 +6,10 @@ interface Props {
   onClose: () => void
   children: ReactNode
   actions?: ReactNode
+  wide?: boolean
 }
 
-export function Modal({ open, title, onClose, children, actions }: Props) {
+export function Modal({ open, title, onClose, children, actions, wide = false }: Props) {
   useEffect(() => {
     const handler = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
     window.addEventListener('keydown', handler)
@@ -19,7 +20,7 @@ export function Modal({ open, title, onClose, children, actions }: Props) {
 
   return (
     <div className="modal open" onClick={(e) => e.target === e.currentTarget && onClose()}>
-      <div className="modal-card" role="dialog" aria-modal aria-labelledby="modal-title">
+      <div className={`modal-card${wide ? ' wide' : ''}`} role="dialog" aria-modal aria-labelledby="modal-title">
         <h3 id="modal-title">{title}</h3>
         <div>{children}</div>
         {actions && <div className="modal-actions">{actions}</div>}
