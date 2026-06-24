@@ -4,16 +4,12 @@ import { exportJson } from '../../services/storage'
 import { CloudModal } from './CloudModal'
 import * as supabase from '../../services/supabase'
 import { loadCloudConfig } from '../../services/storage'
+import { TAB_LABELS } from '../../app/tabs'
 
 export function TopBar() {
   const fileRef = useRef<HTMLInputElement>(null)
   const { app, ui, cloudStatus, saveStatus, save, importState, showToast, setCloudStatus } = useStore()
   const [cloudOpen, setCloudOpen] = useState(false)
-
-  const TAB_LABELS: Record<string, string> = {
-    ficha: 'Personagem', campanha: 'Campanhas', mestre: 'Criaturas',
-    mapas: 'Mapas', magia: 'Habilidades', dados: 'Dados',
-  }
 
   function handleImport(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0]
@@ -44,7 +40,7 @@ export function TopBar() {
   return (
     <>
       <div className="topbar">
-        <h2>{TAB_LABELS[ui.activeTab] ?? ''}</h2>
+        <h2>{TAB_LABELS[ui.activeTab]}</h2>
         <div className="topbar-actions">
           <button className="btn small" onClick={save}>💾 Salvar</button>
           <button className="btn small" onClick={() => exportJson(app)}>📤 Backup</button>

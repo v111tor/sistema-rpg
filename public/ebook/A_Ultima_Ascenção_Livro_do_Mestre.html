@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mesa RPG" />
+  <meta name="description" content="A Ultima Ascenção — Livro do Mestre para download e consulta online." />
+  <title>A Ultima Ascenção — Livro do Mestre</title>
+  <link rel="stylesheet" href="ebook.css" />
+  <style>
+    .gm-book main { max-width: 98ch; margin: 0 auto; }
+    .gm-book .lead { font-size: 1.08rem; }
+    .gm-book figure.world-map { margin: 1.5rem 0; padding: 0.75rem; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,244,208,.22); }
+    .gm-book figure.world-map img { display: block; width: 100%; height: auto; border-radius: 6px; }
+    .gm-book figcaption { margin-top: .55rem; font-style: italic; }
+    .gm-book .two-column { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .gm-book .rule-card table { margin-top: .65rem; }
+    @media (max-width: 780px) { .gm-book .two-column { grid-template-columns: 1fr; } }
+    @media print { .gm-book figure.world-map { break-inside: avoid; } }
+  </style>
+</head>
+<body class="gm-book">
+<header id="title-block-header">
+<h1 class="title">A Ultima Ascenção — Livro do Mestre</h1>
+<p class="author">Livro do Mestre</p>
+</header>
+<main>
+<nav id="TOC" role="doc-toc"><h2>Sumário</h2><ul><li><a href="#como-usar-este-livro">Como Usar Este Livro</a></li><li><a href="#ferramentas-do-mestre">Ferramentas do Mestre</a></li><li><a href="#classe-abismal">A Classe Abismal</a></li><li><a href="#magia-de-dreno">Magia de Dreno</a></li><li><a href="#subclasses-abissais">Subclasses Abissais</a></li><li><a href="#guia-de-criacao-de-aventuras">Guia de Criação de Aventuras</a></li><li><a href="#mapa-mundi">Mapa-Múndi</a></li><li><a href="#regras-opcionais">Regras Opcionais</a></li></ul></nav>
+<h2 id="como-usar-este-livro">Como Usar Este Livro</h2>
+<p class="lead">Este volume é um suplemento de mesa para o Mestre. Ele não substitui o Livro de Regras nem o Bestiário: ele organiza procedimentos, opções e material novo para criar campanhas com mistério, exploração, entidades sombrias e custo moral.</p>
+<p>Use as regras opcionais apenas quando reforçarem o tom da campanha. O Abismo funciona melhor quando é tentador, útil e perigoso: ele resolve problemas imediatos, mas sempre deixa uma sombra para depois.</p>
+
+<h2 id="ferramentas-do-mestre">Ferramentas do Mestre</h2>
+<div class="two-column">
+<section class="rule-card"><h3>Ciclo de Cena</h3><p><strong>Apresente pressão.</strong> Diga o que muda se os personagens demorarem. <strong>Peça escolhas.</strong> Cada cena deve oferecer risco, custo ou oportunidade. <strong>Mostre consequência.</strong> A mesa precisa sentir que o mundo reage.</p></section>
+<section class="rule-card"><h3>CDs Rápidas</h3><table>
+<thead><tr><th>Dificuldade</th><th>CD</th></tr></thead>
+<tbody>
+<tr><td>Rotineira</td><td>8</td></tr>
+<tr><td>Arriscada</td><td>10</td></tr>
+<tr><td>Difícil</td><td>12</td></tr>
+<tr><td>Heroica</td><td>15</td></tr>
+<tr><td>Lendária</td><td>18</td></tr>
+</tbody>
+</table></section>
+<section class="rule-card"><h3>Relógios</h3><p>Use relógios de 4, 6 ou 8 segmentos. Avance 1 segmento em falha, demora, barulho ou custo aceito. Ao completar, a ameaça muda de estado: reforços chegam, ritual avança, fissura abre ou aliado é capturado.</p></section>
+<section class="rule-card"><h3>Reação de Facções</h3><table>
+<thead><tr><th>2d6</th><th>Resposta</th></tr></thead>
+<tbody>
+<tr><td>2-3</td><td>Ataque ou traição imediata</td></tr>
+<tr><td>4-5</td><td>Exigência dura</td></tr>
+<tr><td>6-8</td><td>Negociação tensa</td></tr>
+<tr><td>9-10</td><td>Ajuda com preço</td></tr>
+<tr><td>11-12</td><td>Aliança temporária</td></tr>
+</tbody>
+</table></section>
+</div>
+
+<h2 id="classe-abismal">Nova Classe: Abismal</h2>
+<p><em>O Abismal é alguém que aprendeu a sobreviver ao Vão puxando força de tudo que sangra, teme, reza ou lembra. Sua magia é Dreno: uma técnica de roubo vital, pressão planar e pacto com entidades sombrias.</em></p>
+<p><strong>Dado de PV:</strong> d8 | <strong>Saves:</strong> ESP, VIG | <strong>Perícias:</strong> escolha 2 entre Intuição, Religião, Furtividade, Sobrevivência, Arcanismo, Intimidação e Medicina. <strong>Recurso:</strong> DN, pontos de Dreno.</p>
+<p><strong>Equipamento Inicial:</strong> brunea ou couro batido; adaga ritual ou foice curta; foco rachado; frasco de sangue seco; diário de sonhos; 10 OO.</p>
+<table>
+<thead><tr><th>Nível</th><th>DN Máximo</th><th>Marcos</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>9</td><td>Dreno, Marca do Vazio</td></tr>
+<tr><td>2</td><td>9</td><td>—</td></tr>
+<tr><td>3</td><td>10</td><td>—</td></tr>
+<tr><td>4</td><td>10</td><td>Melhoria de Atributo</td></tr>
+<tr><td>5</td><td>11</td><td>Talento, Subclasse</td></tr>
+<tr><td>6</td><td>11</td><td>—</td></tr>
+<tr><td>7</td><td>12</td><td>—</td></tr>
+<tr><td>8</td><td>12</td><td>Melhoria de Atributo</td></tr>
+<tr><td>9</td><td>13</td><td>Talento, Característica de Subclasse</td></tr>
+<tr><td>10</td><td>13</td><td>—</td></tr>
+<tr><td>11</td><td>14</td><td>—</td></tr>
+<tr><td>12</td><td>14</td><td>Melhoria de Atributo</td></tr>
+<tr><td>13</td><td>15</td><td>Talento, Característica de Subclasse</td></tr>
+<tr><td>14</td><td>15</td><td>—</td></tr>
+<tr><td>15</td><td>16</td><td>—</td></tr>
+<tr><td>16</td><td>16</td><td>Melhoria de Atributo</td></tr>
+<tr><td>17</td><td>17</td><td>Talento, Característica de Subclasse</td></tr>
+<tr><td>18</td><td>17</td><td>—</td></tr>
+<tr><td>19</td><td>18</td><td>Melhoria de Atributo</td></tr>
+<tr><td>20</td><td>18</td><td>—</td></tr>
+</tbody>
+</table>
+<h3>Características Fixas</h3>
+<p><strong>Dreno.</strong> Você conjura habilidades de Dreno usando DN. Recupera 3 DN em descanso curto e todo DN em descanso longo. Se conjurar sem DN suficiente, pode marcar 1 Corrupção para pagar até 3 DN faltantes.</p>
+<p><strong>Corrupção.</strong> Cada Corrupção ativa impõe -1 em um tipo de teste definido pelo Mestre conforme a cena. Em descanso longo, remova 1 Corrupção se houver segurança, cuidado e confissão do custo pago.</p>
+<p><strong>Marca do Vazio.</strong> Como ação bônus, marque criatura visível em 12m por 1 minuto. Suas habilidades de Dreno interagem melhor com criaturas marcadas.</p>
+<h3>Pool de 40 Características — Abismal</h3>
+<table>
+<thead><tr><th>#</th><th>Característica</th><th>Efeito</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Pulso de Dreno</strong></td><td>Ao causar dano a uma criatura viva, gaste 1 DN para recuperar PV iguais ao Mod.ESP, limitado a uma vez por rodada.</td></tr>
+<tr><td>2</td><td><strong>Faro de Fenda</strong></td><td>Detecta fissuras, corrupção abissal e criaturas drenadas em 18m com uma ação de concentração.</td></tr>
+<tr><td>3</td><td><strong>Sangue Escuro</strong></td><td>Recebe +1 em testes contra veneno, doença e medo; quando falha, pode marcar 1 Corrupção para repetir.</td></tr>
+<tr><td>4</td><td><strong>Mão Sifonadora</strong></td><td>Ataque desarmado ou toque causa 1d4 necrótico e pode puxar um objeto pequeno solto até você.</td></tr>
+<tr><td>5</td><td><strong>Reserva Faminta</strong></td><td>Quando reduz inimigo a 0 PV, recupera 1 DN, até o limite de uma vez por cena.</td></tr>
+<tr><td>6</td><td><strong>Marca do Vazio</strong></td><td>Como ação bônus, marca alvo em 12m por 1 minuto; sua primeira magia de Dreno contra ele recebe +1.</td></tr>
+<tr><td>7</td><td><strong>Respirar Ruína</strong></td><td>Pode respirar em ar rarefeito, poeira, fumaça e zonas de fissura sem penalidade por 10 minutos.</td></tr>
+<tr><td>8</td><td><strong>Olhar de Pressão</strong></td><td>Com ação, alvo em 9m faz ESP contra CD de Dreno ou sofre -1 no próximo ataque.</td></tr>
+<tr><td>9</td><td><strong>Pele de Abismo</strong></td><td>Quando sem armadura pesada, ganha +1 Aparar contra o primeiro ataque de cada combate.</td></tr>
+<tr><td>10</td><td><strong>Cicatriz Canal</strong></td><td>Durante descanso curto, converte até 2 PV em 1 DN cada; esses PV não podem ser curados até o fim do descanso.</td></tr>
+<tr><td>11</td><td><strong>Dreno Preciso</strong></td><td>Nível 5+. Quando uma magia de Dreno causa dano, pode trocar 1 dado de dano por -3m deslocamento no alvo.</td></tr>
+<tr><td>12</td><td><strong>Eco Parasita</strong></td><td>Nível 5+. Ao acertar alvo marcado, escolha: ele perde reação ou você ganha 1d6 PV temporários.</td></tr>
+<tr><td>13</td><td><strong>Vínculo Sombrio</strong></td><td>Nível 5+. Vincula-se a um aliado em 9m; quando ele sofre dano, pode gastar 1 DN para reduzir 1d6.</td></tr>
+<tr><td>14</td><td><strong>Passo no Vão</strong></td><td>Nível 5+. Move 3m através de sombra ou rachadura visível sem provocar reação, 1 vez por rodada.</td></tr>
+<tr><td>15</td><td><strong>Fome Controlada</strong></td><td>Nível 5+. A primeira Corrupção marcada em cada sessão não impõe penalidade imediata.</td></tr>
+<tr><td>16</td><td><strong>Lâmina de Ausência</strong></td><td>Nível 5+. Arma empunhada causa +1 dano necrótico contra alvos com menos da metade dos PV.</td></tr>
+<tr><td>17</td><td><strong>Defesa Sifonada</strong></td><td>Nível 5+. Como reação, gaste 2 DN para reduzir dano recebido em 1d8 + Mod.ESP.</td></tr>
+<tr><td>18</td><td><strong>Presságio Oco</strong></td><td>Nível 5+. Uma vez por cena, pergunte ao Mestre qual inimigo está mais vulnerável a controle, fuga ou negociação.</td></tr>
+<tr><td>19</td><td><strong>Sussurro de Entidade</strong></td><td>Nível 5+. Ganha vantagem em um teste social contra criatura corrompida ou pactuada, mas ela reconhece sua marca.</td></tr>
+<tr><td>20</td><td><strong>Apetite Seletivo</strong></td><td>Nível 5+. Suas magias de Dreno não ferem aliados escolhidos quando o efeito for área curta.</td></tr>
+<tr><td>21</td><td><strong>Canal Profundo</strong></td><td>Nível 10+. Seu limite máximo de DN aumenta em 2.</td></tr>
+<tr><td>22</td><td><strong>Roubar Fôlego</strong></td><td>Nível 10+. Ao causar dano de Dreno, alvo faz VIG ou não pode correr até o fim do próximo turno.</td></tr>
+<tr><td>23</td><td><strong>Negar Cura</strong></td><td>Nível 10+. Quando fere alvo marcado, pode gastar 2 DN para reduzir a próxima cura dele pela metade.</td></tr>
+<tr><td>24</td><td><strong>Manto de Fissura</strong></td><td>Nível 10+. Por 1 minuto, luz fraca ao redor de você vira penumbra e ataques à distância sofrem -1 contra você.</td></tr>
+<tr><td>25</td><td><strong>Memória Roubada</strong></td><td>Nível 10+. Ao drenar criatura inteligente, aprende uma impressão útil: medo, rota, senha ou nome relevante.</td></tr>
+<tr><td>26</td><td><strong>Nervo de Ferro Negro</strong></td><td>Nível 10+. Imune a Abalado enquanto tiver ao menos 1 DN disponível.</td></tr>
+<tr><td>27</td><td><strong>Dreno em Cadeia</strong></td><td>Nível 10+. Uma vez por rodada, quando magia de Dreno derruba alvo, outro alvo em 3m sofre 1d6 necrótico.</td></tr>
+<tr><td>28</td><td><strong>Âncora Abissal</strong></td><td>Nível 10+. Cria ponto fixo por 1 minuto; criaturas hostis em 3m gastam +1,5m para sair da área.</td></tr>
+<tr><td>29</td><td><strong>Preço Transferido</strong></td><td>Nível 10+. Quando marcaria Corrupção, pode transferir a manifestação visual para um item carregado.</td></tr>
+<tr><td>30</td><td><strong>Olho Entre Mundos</strong></td><td>Nível 10+. Enxerga invisível, etéreo ou oculto por fissura em 9m por 1 minuto, 1 vez por descanso curto.</td></tr>
+<tr><td>31</td><td><strong>Coração de Abismo</strong></td><td>Nível 15+. Resistência a dano necrótico e psíquico; se já tiver resistência, reduz +2.</td></tr>
+<tr><td>32</td><td><strong>Forma Oca</strong></td><td>Nível 15+. 1 vez por descanso longo, torna-se parcialmente vazio por 1 minuto: atravessa frestas e ignora terreno difícil.</td></tr>
+<tr><td>33</td><td><strong>Dívida da Entidade</strong></td><td>Nível 15+. Chama uma entidade sombria para repetir uma rolagem falha; depois o Mestre cria uma cobrança futura.</td></tr>
+<tr><td>34</td><td><strong>Sifão Maior</strong></td><td>Nível 15+. Ao drenar chefe ou criatura Grau 4+, recupera 2 DN e remove uma condição leve de si.</td></tr>
+<tr><td>35</td><td><strong>Zona Faminta</strong></td><td>Nível 15+. Área de 6m por 1 minuto; inimigos que iniciam turno nela perdem 1 PV temporário ou sofrem -1 em cura.</td></tr>
+<tr><td>36</td><td><strong>Apagar Presença</strong></td><td>Nível 15+. Por 10 minutos, criaturas sem visão especial têm desvantagem para rastrear você por som, cheiro ou magia fraca.</td></tr>
+<tr><td>37</td><td><strong>Tributo de Sangue</strong></td><td>Nível 15+. Pode pagar 5 PV para reduzir custo de uma magia de Dreno em 2 DN, mínimo 1.</td></tr>
+<tr><td>38</td><td><strong>Vazio Obediente</strong></td><td>Nível 15+. Quando alvo falha por 5+ contra sua CD de Dreno, você escolhe também empurrar, derrubar ou silenciar 1 rodada.</td></tr>
+<tr><td>39</td><td><strong>Avatar do Poço</strong></td><td>Nível 17+. 1 vez por descanso longo, por 1 minuto, suas magias de Dreno custam -1 DN e causam +1d6.</td></tr>
+<tr><td>40</td><td><strong>Nome Perdido</strong></td><td>Nível 17+. Uma vez por campanha, apaga seu rastro de uma entidade, juramento ou maldição, mas perde uma lembrança importante.</td></tr>
+</tbody>
+</table>
+<h3>Três Subclasses Abismais</h3>
+<section class="rule-card"><h4>Sifonista de Almas</h4><p><em>Especialista em controle de recursos, cura roubada e punição contra conjuradores.</em></p><table>
+<thead><tr><th>Nível</th><th>Característica</th><th>Efeito</th></tr></thead>
+<tbody>
+<tr><td>5</td><td><strong>Coleta Espiritual</strong></td><td>Quando uma criatura marcada gasta recurso mágico, você ganha 1 PV temporário por ponto gasto.</td></tr>
+<tr><td>9</td><td><strong>Dreno Reverso</strong></td><td>Como reação, reduza cura inimiga em 1d8 e cure aliado em 9m pelo mesmo valor.</td></tr>
+<tr><td>13</td><td><strong>Reservatório de Ecos</strong></td><td>Seu máximo de DN aumenta em 3; ao iniciar combate sem DN, recupera 2.</td></tr>
+<tr><td>17</td><td><strong>Colheita Perfeita</strong></td><td>Uma vez por descanso longo, uma magia de Dreno que derruba alvo recupera metade do custo gasto.</td></tr>
+</tbody>
+</table></section>
+<section class="rule-card"><h4>Flagelante do Vazio</h4><p><em>Linha de frente resistente, feita para pagar PV, segurar corredores e transformar dor em dano.</em></p><table>
+<thead><tr><th>Nível</th><th>Característica</th><th>Efeito</th></tr></thead>
+<tbody>
+<tr><td>5</td><td><strong>Dor Alimenta</strong></td><td>Quando sofre 10+ dano em uma rodada, seu próximo ataque causa +1d6 necrótico.</td></tr>
+<tr><td>9</td><td><strong>Armadura de Fissura</strong></td><td>Gaste 2 DN para ganhar resistência ao próximo dano físico e necrótico até seu turno.</td></tr>
+<tr><td>13</td><td><strong>Corrente no Osso</strong></td><td>Alvos que você marca têm -3m deslocamento enquanto estiverem em 6m de você.</td></tr>
+<tr><td>17</td><td><strong>Mártir Abissal</strong></td><td>Uma vez por descanso longo, ao cair a 0 PV, fica com 1 PV e libera pulso de 6d6 necrótico em inimigos adjacentes.</td></tr>
+</tbody>
+</table></section>
+<section class="rule-card"><h4>Oráculo da Fenda</h4><p><em>Especialista em informação, presságios, rotas impossíveis e manipulação de cena.</em></p><table>
+<thead><tr><th>Nível</th><th>Característica</th><th>Efeito</th></tr></thead>
+<tbody>
+<tr><td>5</td><td><strong>Pergunta ao Fundo</strong></td><td>Uma vez por cena, pergunte ao Mestre por uma ameaça oculta, custo provável ou rota segura.</td></tr>
+<tr><td>9</td><td><strong>Fenda Antecipada</strong></td><td>Quando rola iniciativa, escolha um aliado; ele pode mover 3m antes do primeiro turno.</td></tr>
+<tr><td>13</td><td><strong>Mapa de Rupturas</strong></td><td>Durante exploração, encontra uma passagem, atalho ou fraqueza estrutural se ela existir.</td></tr>
+<tr><td>17</td><td><strong>Profecia do Poço</strong></td><td>Uma vez por sessão, declare uma condição futura plausível; quando acontecer, um aliado trata a rolagem como Aumento.</td></tr>
+</tbody>
+</table></section>
+
+<h2 id="magia-de-dreno">Magia de Dreno — 40 Habilidades</h2>
+<p>A magia de Dreno é mecânica, não apenas narrativa: ela rouba cura, reduz recursos, converte dano em PV temporário, prende movimento, interfere em concentração e abre zonas perigosas.</p>
+<table>
+<thead><tr><th>#</th><th>Habilidade de Dreno</th><th>Custo</th><th>Alcance / Duração</th><th>Tipo</th><th>Efeito</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Mordida do Vão</strong></td><td>1 DN</td><td>9m / Instantâneo</td><td>Ataque</td><td>1 alvo sofre 1d6+Mod.ESP necrótico; se já estiver ferido, você ganha 1 PV temporário.</td></tr>
+<tr><td>2</td><td><strong>Sopro Seco</strong></td><td>1 DN</td><td>Cone 3m / Instantâneo</td><td>Controle</td><td>Criaturas fazem VIG CD 12 ou perdem reação até o início do seu próximo turno.</td></tr>
+<tr><td>3</td><td><strong>Toque de Débito</strong></td><td>2 DN</td><td>Toque / Instantâneo</td><td>Debuff</td><td>Causa 1d8 necrótico e reduz a próxima cura recebida pelo alvo em 1d6.</td></tr>
+<tr><td>4</td><td><strong>Roubar Calor</strong></td><td>2 DN</td><td>12m / Instantâneo</td><td>Controle</td><td>Dano 1d6 frio/necrótico e alvo perde 3m de deslocamento em falha de VIG.</td></tr>
+<tr><td>5</td><td><strong>Fio de Sombra</strong></td><td>2 DN</td><td>12m / 1 rodada</td><td>Dreno</td><td>Liga você ao alvo; o primeiro dano que você causar nele cura você em 1d6.</td></tr>
+<tr><td>6</td><td><strong>Olho Faminto</strong></td><td>1 DN</td><td>18m / 1 minuto</td><td>Utilitário</td><td>Revela qual criatura visível tem menos PV atuais e qual tem recurso mágico ativo.</td></tr>
+<tr><td>7</td><td><strong>Pele Roubada</strong></td><td>3 DN</td><td>Pessoal / 1 minuto</td><td>Proteção</td><td>Ganha 2d6 PV temporários; enquanto durarem, recebe +1 contra medo.</td></tr>
+<tr><td>8</td><td><strong>Lacrar Fôlego</strong></td><td>3 DN</td><td>9m / 1 rodada</td><td>Controle</td><td>Alvo faz VIG CD 13 ou não pode correr, gritar nem conjurar verbalmente por 1 rodada.</td></tr>
+<tr><td>9</td><td><strong>Dreno de Aura</strong></td><td>3 DN</td><td>12m / Instantâneo</td><td>Dreno</td><td>Remove 1 bônus mágico leve do alvo; se remover, você recupera 1 DN.</td></tr>
+<tr><td>10</td><td><strong>Unha do Poço</strong></td><td>3 DN</td><td>15m / Instantâneo</td><td>Ataque</td><td>Ataque mágico causa 2d6+Mod.ESP necrótico; Aumento deixa alvo Marcado.</td></tr>
+<tr><td>11</td><td><strong>Silêncio de Sangue</strong></td><td>4 DN</td><td>Área 4,5m / 1 minuto</td><td>Zona</td><td>Curas feitas na área curam -1d6; criaturas podem sair com AGI CD 13.</td></tr>
+<tr><td>12</td><td><strong>Corrente Abissal</strong></td><td>4 DN</td><td>12m / 1 minuto</td><td>Controle</td><td>Alvo faz FOR ou fica preso; pode repetir no fim do turno. Você sente a direção dele.</td></tr>
+<tr><td>13</td><td><strong>Devolver Ferida</strong></td><td>4 DN</td><td>Pessoal / Reação</td><td>Reação</td><td>Ao sofrer dano, reduza 2d6 e cause metade do valor reduzido ao agressor em 9m.</td></tr>
+<tr><td>14</td><td><strong>Boca na Sombra</strong></td><td>4 DN</td><td>18m / 1 minuto</td><td>Controle</td><td>Cria boca sombria que ameaça área de 3m; inimigos têm -1 em concentração ali.</td></tr>
+<tr><td>15</td><td><strong>Beber Memória</strong></td><td>5 DN</td><td>Toque / Instantâneo</td><td>Utilitário</td><td>Alvo ferido faz ESP CD 14 ou você descobre uma lembrança tática recente.</td></tr>
+<tr><td>16</td><td><strong>Pulso Hemático</strong></td><td>5 DN</td><td>9m raio / Instantâneo</td><td>Dreno</td><td>Inimigos feridos sofrem 2d6 necrótico; você distribui 1d6 PV temporários a aliados.</td></tr>
+<tr><td>17</td><td><strong>Apagar Dor</strong></td><td>5 DN</td><td>Toque / Instantâneo</td><td>Suporte</td><td>Remove Abalado, Assustado ou Sangramento de aliado; você marca 1 Corrupção se remover condição grave.</td></tr>
+<tr><td>18</td><td><strong>Vazar Sorte</strong></td><td>5 DN</td><td>12m / 1 rodada</td><td>Debuff</td><td>Alvo faz ESP; em falha, rola o próximo ataque com desvantagem e você ganha +1d4 no seu.</td></tr>
+<tr><td>19</td><td><strong>Nó de Fissura</strong></td><td>6 DN</td><td>18m / 1 minuto</td><td>Zona</td><td>Área de 6m vira terreno difícil; criaturas feridas que entram sofrem 1d6 necrótico.</td></tr>
+<tr><td>20</td><td><strong>Selo de Inanição</strong></td><td>6 DN</td><td>12m / 1 minuto</td><td>Debuff</td><td>Alvo marcado não recupera recursos mágicos e cura metade até vencer DEV CD 15.</td></tr>
+<tr><td>21</td><td><strong>Manto do Afogado</strong></td><td>6 DN</td><td>Pessoal / 10 minutos</td><td>Utilitário</td><td>Você não precisa respirar e atravessa água, lama e fumaça sem penalidade.</td></tr>
+<tr><td>22</td><td><strong>Dreno Duplo</strong></td><td>7 DN</td><td>15m / Instantâneo</td><td>Dreno</td><td>Dois alvos sofrem 3d6 necrótico; se ambos falharem em VIG, recupere 1 DN.</td></tr>
+<tr><td>23</td><td><strong>Estilhaço de Nome</strong></td><td>7 DN</td><td>18m / Instantâneo</td><td>Ataque</td><td>Dano 3d6 psíquico; se souber o nome do alvo, ele também perde reação.</td></tr>
+<tr><td>24</td><td><strong>Pacto de Sobrevida</strong></td><td>7 DN</td><td>Toque / 1 hora</td><td>Suporte</td><td>Aliado a 0 PV volta com 1 PV; você perde 1 dado de vida até descanso longo.</td></tr>
+<tr><td>25</td><td><strong>Buraco no Mundo</strong></td><td>8 DN</td><td>Área 3m / 1 rodada</td><td>Zona</td><td>Abre fenda curta; criaturas fazem AGI CD 15 ou caem e sofrem 4d6 impacto/necrótico.</td></tr>
+<tr><td>26</td><td><strong>Roubar Milagre</strong></td><td>8 DN</td><td>18m / Reação</td><td>Reação</td><td>Quando inimigo conjura cura ou proteção, reduza o efeito em 2d6 e ganhe PV temporários iguais.</td></tr>
+<tr><td>27</td><td><strong>Coro de Entidades</strong></td><td>8 DN</td><td>9m raio / 1 minuto</td><td>Controle</td><td>Inimigos fazem ESP CD 15 ou não podem receber vantagem; aliados ouvem avisos e ganham +1 Percepção.</td></tr>
+<tr><td>28</td><td><strong>Sangrar o Chão</strong></td><td>9 DN</td><td>Área 6m / 1 minuto</td><td>Zona</td><td>Terreno drena energia; inimigos sofrem 1d6 ao iniciar turno e curas ali custam ação completa.</td></tr>
+<tr><td>29</td><td><strong>Eclipse Interno</strong></td><td>9 DN</td><td>12m / 1 rodada</td><td>Controle</td><td>Alvo faz ESP CD 16 ou fica Cego e Silenciado por 1 rodada; sucesso aplica só uma condição.</td></tr>
+<tr><td>30</td><td><strong>Fome Maior</strong></td><td>9 DN</td><td>18m / Instantâneo</td><td>Dreno</td><td>Causa 5d6 necrótico em alvo ferido; se derrubar, remove uma condição sua.</td></tr>
+<tr><td>31</td><td><strong>Atravessar a Falha</strong></td><td>10 DN</td><td>Pessoal / Instantâneo</td><td>Movimento</td><td>Teleporta até 18m entre sombras, rachaduras ou sangue derramado visível.</td></tr>
+<tr><td>32</td><td><strong>Coração Emprestado</strong></td><td>10 DN</td><td>Toque / 1 minuto</td><td>Proteção</td><td>Aliado ganha 5d6 PV temporários e resistência a necrótico; ao fim, sofre 1 Exaustão leve.</td></tr>
+<tr><td>33</td><td><strong>Maldição de Esvaziar</strong></td><td>10 DN</td><td>18m / 1 minuto</td><td>Debuff</td><td>Alvo faz DEV CD 16; em falha, perde 1 recurso por rodada ou sofre 2d6 psíquico.</td></tr>
+<tr><td>34</td><td><strong>Mandíbula do Abismo</strong></td><td>11 DN</td><td>24m / Instantâneo</td><td>Ataque</td><td>Ataque em linha causa 6d6 necrótico; VIG reduz metade e evita ser puxado 6m.</td></tr>
+<tr><td>35</td><td><strong>Nome ao Poço</strong></td><td>11 DN</td><td>18m / 10 minutos</td><td>Controle</td><td>Enquanto souber o nome do alvo, ele não pode se ocultar de você por meios mundanos.</td></tr>
+<tr><td>36</td><td><strong>Vazio Compartilhado</strong></td><td>12 DN</td><td>9m raio / 1 minuto</td><td>Suporte</td><td>Você e aliados escolhidos dividem PV temporários e podem transferir 1d6 dano entre si por rodada.</td></tr>
+<tr><td>37</td><td><strong>Exílio Breve</strong></td><td>12 DN</td><td>12m / 1 rodada</td><td>Controle</td><td>Alvo faz ESP CD 17 ou desaparece no Vão por 1 rodada, retornando caído no mesmo espaço livre.</td></tr>
+<tr><td>38</td><td><strong>Dreno Absoluto</strong></td><td>13 DN</td><td>18m / Instantâneo</td><td>Dreno</td><td>Causa 8d6 necrótico; metade do dano final vira cura para você ou aliado em 9m.</td></tr>
+<tr><td>39</td><td><strong>Portão Faminto</strong></td><td>14 DN</td><td>Área 9m / 1 minuto</td><td>Zona</td><td>Fenda maior; inimigos que usam magia ali sofrem 2d6 e devem testar concentração.</td></tr>
+<tr><td>40</td><td><strong>Banquete do Poço</strong></td><td>15 DN</td><td>18m / 1 minuto</td><td>Dreno</td><td>Até 3 alvos marcados sofrem 6d6; para cada alvo que falhar, você recupera 1 DN ou remove uma condição.</td></tr>
+</tbody>
+</table>
+
+<h2 id="subclasses-abissais">Subclasses Abissais Para as Outras Classes</h2>
+<p>Cada classe do Livro de Regras recebe uma opção ligada a entidades sombrias. Elas devem ser escolhidas no nível 5 como qualquer subclasse e concedem características nos níveis 5, 9, 13 e 17.</p>
+<h3>Opções por Classe</h3>
+<section class="rule-card"><h4>Guerreiro: Jurado da Fenda</h4><p><em>Duelista ou guardião que fez juramento a uma entidade soterrada.</em></p><table>
+<thead><tr><th>Nível</th><th>Característica</th><th>Efeito</th></tr></thead>
+<tbody>
+<tr><td>5</td><td><strong>Golpe de Fissura</strong></td><td>Ao gastar AU, cause +1d6 necrótico e marque o alvo até o fim do próximo turno.</td></tr>
+<tr><td>9</td><td><strong>Escudo do Juramento Escuro</strong></td><td>Aliados adjacentes recebem +1 Aparar contra criaturas marcadas por você.</td></tr>
+<tr><td>13</td><td><strong>Marcha do Poço</strong></td><td>Ignora terreno difícil criado por sombra, ruína, sangue ou fissura.</td></tr>
+<tr><td>17</td><td><strong>Campeão da Entidade</strong></td><td>Uma vez por descanso longo, por 1 minuto, todo Aumento seu impõe Assustado ou Caído.</td></tr>
+</tbody>
+</table></section>
+<section class="rule-card"><h4>Arcanista: Geômetra Abissal</h4><p><em>Estuda ângulos impossíveis e transforma runas em rachaduras controladas.</em></p><table>
+<thead><tr><th>Nível</th><th>Característica</th><th>Efeito</th></tr></thead>
+<tbody>
+<tr><td>5</td><td><strong>Runa de Falha</strong></td><td>Uma runa sua pode impor -1 no próximo save do alvo contra magia.</td></tr>
+<tr><td>9</td><td><strong>Círculo Invertido</strong></td><td>Ao preparar ritual, escolha: reduzir custo em 1 PA ou esconder o efeito de detecção comum.</td></tr>
+<tr><td>13</td><td><strong>Linha Não Euclidiana</strong></td><td>Uma vez por cena, magia em linha pode dobrar uma esquina visível.</td></tr>
+<tr><td>17</td><td><strong>Teorema do Vão</strong></td><td>Uma vez por descanso longo, converta falha crítica de magia em sucesso com Corrupção narrativa.</td></tr>
+</tbody>
+</table></section>
+<section class="rule-card"><h4>Sensiente: Eco do Vazio</h4><p><em>Transforma emoções em ausência, silêncio e fome emocional.</em></p><table>
+<thead><tr><th>Nível</th><th>Característica</th><th>Efeito</th></tr></thead>
+<tbody>
+<tr><td>5</td><td><strong>Estado Oco</strong></td><td>Ao trocar estado emocional, pode escolher Oco por 1 rodada: +1 contra medo e charme.</td></tr>
+<tr><td>9</td><td><strong>Empatia Negativa</strong></td><td>Quando lê emoção dominante, também descobre o que o alvo não consegue sentir.</td></tr>
+<tr><td>13</td><td><strong>Catarse Silenciosa</strong></td><td>Sua Catarse pode causar psíquico/necrótico e impedir reação dos alvos em falha.</td></tr>
+<tr><td>17</td><td><strong>Ausência Viva</strong></td><td>Uma vez por cena, quando seria controlado emocionalmente, reflete a condição para a origem.</td></tr>
+</tbody>
+</table></section>
+<section class="rule-card"><h4>Devoto: Herege do Abismo</h4><p><em>Canaliza fé por meio de uma entidade que responde com milagres famintos.</em></p><table>
+<thead><tr><th>Nível</th><th>Característica</th><th>Efeito</th></tr></thead>
+<tbody>
+<tr><td>5</td><td><strong>Canalizar Heresia</strong></td><td>Canalizar Divindade pode drenar 1d6 PV de inimigo em 9m e curar aliado no mesmo valor.</td></tr>
+<tr><td>9</td><td><strong>Dogma Partido</strong></td><td>Magias de Fé contra criaturas sagradas, profanas ou pactuadas recebem +1 dano.</td></tr>
+<tr><td>13</td><td><strong>Liturgia Submersa</strong></td><td>Rituais feitos em ruínas, cavernas ou noites sem lua custam -1 PD.</td></tr>
+<tr><td>17</td><td><strong>Santo Invertido</strong></td><td>Uma vez por descanso longo, sua aura torna aliados resistentes a necrótico e inimigos vulneráveis à primeira cura negada.</td></tr>
+</tbody>
+</table></section>
+<section class="rule-card"><h4>Artífice: Engenheiro de Fissura</h4><p><em>Constrói dispositivos que armazenam vácuo, sombra e pressão planar.</em></p><table>
+<thead><tr><th>Nível</th><th>Característica</th><th>Efeito</th></tr></thead>
+<tbody>
+<tr><td>5</td><td><strong>Cristal Oco</strong></td><td>Um dispositivo pode guardar 1 DN temporário que desaparece no descanso longo.</td></tr>
+<tr><td>9</td><td><strong>Motor de Pressão</strong></td><td>Armadilhas suas empurram ou puxam 3m em falha além do efeito normal.</td></tr>
+<tr><td>13</td><td><strong>Golem de Fenda</strong></td><td>Seu construto ganha resistência a necrótico e pode atravessar frestas largas.</td></tr>
+<tr><td>17</td><td><strong>Máquina do Limiar</strong></td><td>Uma vez por sessão, cria aparelho instável que abre passagem curta ou sela fissura menor.</td></tr>
+</tbody>
+</table></section>
+<section class="rule-card"><h4>Explorador: Cartógrafo Profundo</h4><p><em>Rastreador de rotas abaixo do mundo, caçador de fissuras e túneis vivos.</em></p><table>
+<thead><tr><th>Nível</th><th>Característica</th><th>Efeito</th></tr></thead>
+<tbody>
+<tr><td>5</td><td><strong>Trilha Subterrânea</strong></td><td>Em ruínas, cavernas ou cidades antigas, aliados ignoram a primeira penalidade de terreno por cena.</td></tr>
+<tr><td>9</td><td><strong>Marca de Profundidade</strong></td><td>Alvo marcado não se beneficia de escuridão comum contra você.</td></tr>
+<tr><td>13</td><td><strong>Atalho Impossível</strong></td><td>Uma vez por viagem, encontre rota perigosa porém rápida que corta metade do tempo.</td></tr>
+<tr><td>17</td><td><strong>Predador do Limiar</strong></td><td>Contra criaturas abissais ou pactuadas, seu primeiro acerto no combate causa +2d6.</td></tr>
+</tbody>
+</table></section>
+
+<h2 id="guia-de-criacao-de-aventuras">Guia de Criação de Aventuras</h2>
+<p>Monte uma aventura em cinco passos: escolha uma promessa, defina uma ameaça, escolha três cenas obrigatórias, crie um relógio de pressão e prepare uma consequência que mude o mapa ou uma facção.</p>
+<ol>
+<li><strong>Promessa:</strong> o que torna a sessão irresistível?</li>
+<li><strong>Ameaça:</strong> quem ganha se os heróis não agirem?</li>
+<li><strong>Cenas:</strong> investigação, travessia, confronto, escolha moral e resolução.</li>
+<li><strong>Relógio:</strong> o que avança quando há falha ou demora?</li>
+<li><strong>Consequência:</strong> o que permanece no mundo depois da aventura?</li>
+</ol>
+<section class="rule-card"><h3>Chamado da Aventura</h3><table>
+<thead><tr><th>d6</th><th>Ideia</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Uma cidade perde memórias a cada nascer do sol.</td></tr>
+<tr><td>2</td><td>Uma mina encontra uma fissura que respira.</td></tr>
+<tr><td>3</td><td>Uma entidade oferece cura em troca de nomes.</td></tr>
+<tr><td>4</td><td>Um bestiário vivo foge de seu arquivo.</td></tr>
+<tr><td>5</td><td>Um culto quer transformar uma ponte em portal.</td></tr>
+<tr><td>6</td><td>Um aliado retorna diferente depois de morrer.</td></tr>
+</tbody>
+</table></section>
+<section class="rule-card"><h3>Local Central</h3><table>
+<thead><tr><th>d6</th><th>Ideia</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Mosteiro soterrado</td></tr>
+<tr><td>2</td><td>Cidade sobre linha de força</td></tr>
+<tr><td>3</td><td>Floresta que odeia fogo</td></tr>
+<tr><td>4</td><td>Porto afogado</td></tr>
+<tr><td>5</td><td>Deserto de ossos vitrificados</td></tr>
+<tr><td>6</td><td>Distrito industrial arcano</td></tr>
+</tbody>
+</table></section>
+<section class="rule-card"><h3>Complicação</h3><table>
+<thead><tr><th>d6</th><th>Ideia</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>O vilão está certo por motivos terríveis.</td></tr>
+<tr><td>2</td><td>A recompensa é amaldiçoada.</td></tr>
+<tr><td>3</td><td>Uma facção aliada quer segredo absoluto.</td></tr>
+<tr><td>4</td><td>O tempo é contado por um relógio de ameaça.</td></tr>
+<tr><td>5</td><td>Toda magia deixa rastro visível.</td></tr>
+<tr><td>6</td><td>Salvar inocentes fortalece a entidade.</td></tr>
+</tbody>
+</table></section>
+<section class="rule-card"><h3>Recompensa Estranha</h3><table>
+<thead><tr><th>d6</th><th>Ideia</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Mapa para região ainda sem nome.</td></tr>
+<tr><td>2</td><td>Cristal que armazena 1 recurso mágico.</td></tr>
+<tr><td>3</td><td>Favor de uma entidade menor.</td></tr>
+<tr><td>4</td><td>Arma com memória emocional.</td></tr>
+<tr><td>5</td><td>Ritual para selar fissura pequena.</td></tr>
+<tr><td>6</td><td>Uma verdade sobre a origem do mundo.</td></tr>
+</tbody>
+</table></section>
+
+<h2 id="mapa-mundi">Mapa-Múndi do RPG</h2>
+<p>Mapa inicial sem nomes oficiais, feito para receber regiões, nações, rotas e marcas de campanha depois. As cicatrizes vermelhas sugerem zonas de fissura abissal; os vazios e cartuchos foram deixados para anotações futuras.</p>
+<figure class="world-map">
+<img src="assets/mapa-mundi-sistema-mecanico.png" alt="Mapa-múndi em pergaminho do Sistema Mecânico RPG, com continentes, mares, montanhas e fissuras abissais sem rótulos." />
+<figcaption>Mapa de campanha inicial. Adicione nomes, reinos e rotas conforme o cenário evoluir.</figcaption>
+</figure>
+
+<h2 id="regras-opcionais">Regras Opcionais Para Mestres</h2>
+<section class="rule-card"><h3>Perseguições Balanceadas</h3>
+<p>Use quando uma fuga for mais interessante que combate. Cada perseguição tem uma <strong>Distância</strong> de -3 a +3. Em -3, os perseguidores alcançam. Em +3, os fugitivos escapam. Comece em 0, ou +1 se os fugitivos prepararam a fuga.</p>
+<table>
+<thead><tr><th>Passo</th><th>Procedimento</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Cada lado escolhe líder e rola teste apropriado: AGI, FOR, Sobrevivência, Pilotagem, Furtividade ou Tecnologia.</td></tr>
+<tr><td>2</td><td>Maior resultado desloca a Distância 1 passo a seu favor. Aumento desloca 2 passos.</td></tr>
+<tr><td>3</td><td>Quem falha por 5+ sofre complicação: 1d6 dano, queda, item perdido, separação ou +1 segmento no relógio de ameaça.</td></tr>
+<tr><td>4</td><td>A cada rodada depois da terceira, todos fazem VIG CD 10 + rodada ou sofrem -1 no próximo teste da perseguição.</td></tr>
+<tr><td>5</td><td>Ações especiais: Atalho dá vantagem mas complica em falha; Bloqueio muda Distância 1 se vencer CD 12; Distração impõe -1 ao outro lado.</td></tr>
+</tbody>
+</table></section>
+<section class="rule-card"><h3>Ferimentos Persistentes</h3><p>Quando cair a 0 PV ou sofrer crítico narrativo, role VIG CD 12. Em falha, escolha ou role: cicatriz visível, -1 em movimento até tratamento, desvantagem em esforço fino, pesadelos, perda de item ou dívida com curandeiro.</p></section>
+<section class="rule-card"><h3>Pechincha com Entidades</h3><p>Uma entidade pode oferecer sucesso automático, informação verdadeira ou recurso recuperado. O preço deve ser concreto: nome, memória, favor, marca, inimigo alertado ou relógio avançado em 2 segmentos.</p></section>
+<section class="rule-card"><h3>Exploração por Turnos</h3><p>Em masmorras, ruínas e regiões hostis, cada turno de exploração dura 10 minutos. A cada turno, o grupo escolhe duas ações: avançar, procurar, descansar, mapear, forçar passagem, cobrir rastros ou ritualizar. Depois role encontro ou avance relógio.</p></section>
+<section class="rule-card"><h3>Descanso Sob Pressão</h3><p>Descanso curto em território hostil recupera apenas metade dos recursos normais se o grupo não gastar uma ação de exploração preparando abrigo. Descanso longo exige local seguro ou custo narrativo.</p></section>
+<section class="rule-card"><h3>Horror Sem Tirar Agência</h3><p>Medo, corrupção e abismo devem oferecer escolhas ruins, não remover o personagem da mão do jogador. Prefira: custo, tentação, informação incompleta, urgência, marca visível e dívida futura.</p></section>
+</main>
+</body>
+</html>

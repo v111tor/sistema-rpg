@@ -1,132 +1,291 @@
-# C.R.M. — Central de Registro Mecânico
+# A Ultima Ascenção
 
-Sistema de gerenciamento para RPG de mesa — fichas de personagem, campanhas, criaturas, mapas táticos, habilidades e rolagem de dados.
+Aplicação React + TypeScript para gerenciar mesas de RPG e publicar a biblioteca de ebooks do sistema.
 
-Aplicação modular em React e TypeScript para gerenciamento de mesas de RPG.
+O projeto tem duas partes principais:
 
----
-
-## Stack
-
-| Camada       | Tecnologia                     |
-|-------------|--------------------------------|
-| Build        | [Vite](https://vitejs.dev/)    |
-| UI           | React 19 + TypeScript          |
-| Estado       | Zustand (subscribeWithSelector) |
-| Estilo       | Tailwind CSS v4 + CSS custom   |
-| Nuvem        | Supabase (Realtime + Auth)     |
-| Persistência | localStorage + JSON export     |
+- **App de mesa**: fichas, campanhas, criaturas, mapas, habilidades, dados e downloads.
+- **Ebooks publicados**: Livro de Regras, Bestiário e Livro do Mestre em `public/ebook` e `dist/ebook`.
 
 ---
 
-## Estrutura do projeto
+## Como Rodar
 
-```
-src/
-├── components/
-│   ├── abilities/   # Aba de habilidades e catálogo de magias
-│   ├── campaign/    # Aba de campanha, party e notas de sessão
-│   ├── creatures/   # Aba de criaturas, bestiário e controle de iniciativa
-│   ├── dice/        # Aba de rolagem de dados
-│   ├── maps/        # Editor tático de mapas com tiles
-│   ├── sheets/      # Ficha de personagem (lista + formulário)
-│   └── ui/          # Componentes base: Modal, Toast, TopBar, Sidebar
-├── data/
-│   ├── abilities.ts # Habilidades por nível e classe (todas as classes)
-│   ├── bestiary.ts  # Catálogo do bestiário (80 criaturas)
-│   ├── constants.ts # Atributos, classes, perícias, ferramentas de mapa
-│   └── magic.ts     # Catálogo de magias (200 entradas, 4 fontes)
-├── services/
-│   ├── storage.ts   # localStorage, export/import JSON, factories de estado
-│   └── supabase.ts  # Cliente Supabase, auth, sync em tempo real
-├── store/
-│   └── index.ts     # Zustand store central com todas as actions
-├── types/
-│   └── index.ts     # Interfaces TypeScript para todo o domínio
-├── App.tsx          # Roteamento de abas
-└── index.css        # Design system com variáveis CSS + Tailwind
-```
-
----
-
-## Funcionalidades
-
-- **Personagens** — Ficha completa: atributos (dados), perícias, ataques, equipamento, história
-- **Campanhas** — Arquivo de campanha, party, registro de sessões com notas e etiquetas
-- **Criaturas** — Criação de criaturas da campanha, catálogo do bestiário, controle de iniciativa
-- **Mapas** — Editor tático de grid com tiles, pintura livre, mapas aleatórios e banco de mapas salvos
-- **Habilidades** — Catálogo de 200 magias (4 fontes) e habilidades por nível de todas as 6 classes
-- **Dados** — Rolagem livre (d4 a d100), fórmulas customizadas (`3d6+2`), histórico de 100 rolagens
-- **Sincronização** — Backup/restauração local em JSON + sync em tempo real via Supabase
-
----
-
-## Como rodar
-
-### Instalação automática (recomendado)
-
-**Linux / macOS:**
-```bash
-bash setup/install.sh
-```
-
-**Windows (PowerShell):**
-```powershell
-.\setup\install.ps1
-```
-
-Os scripts verificam a versão do Node.js (≥18), instalam as dependências e oferecem subir o servidor automaticamente.
-
-### Instalação manual
+Instale as dependências:
 
 ```bash
 npm install
-npm run dev        # servidor de desenvolvimento em http://localhost:5173
 ```
 
-No PowerShell com política de scripts restrita, use `npm.cmd install` e
-`npm.cmd run dev`.
+Suba o servidor de desenvolvimento:
 
-Build de produção:
 ```bash
-npm run build      # gera dist/
-npm run lint       # valida TypeScript e regras React
-npm run preview    # serve o build localmente
+npm run dev
+```
+
+Abra a URL mostrada pelo Vite, normalmente:
+
+```text
+http://localhost:5173/
+```
+
+No PowerShell, se houver restrição de execução, use:
+
+```powershell
+npm.cmd install
+npm.cmd run dev
 ```
 
 ---
 
-## Diferenças em relação ao original
+## Build E Publicação Local
 
-| Antes (vanilla JS)              | Depois (refatorado)                           |
-|---------------------------------|-----------------------------------------------|
-| 11 arquivos JS com globais      | Módulos ES com import/export explícitos       |
-| ~5.500 linhas sem tipagem       | TypeScript estrito em toda a base de código   |
-| Templates HTML embutidos em JS  | Componentes React com JSX tipado              |
-| Variáveis globais mutáveis      | Zustand store com actions bem definidas       |
-| CSS monolítico (~620 linhas)    | Design system com variáveis CSS + Tailwind v4 |
-| Sem build system                | Vite com HMR, tree-shaking e bundle otimizado |
+Gere o build de produção:
+
+```bash
+npm run build
+```
+
+Depois do build, sincronize os ebooks para dentro de `dist/ebook`:
+
+```bash
+node tools\publish_download_site.cjs
+node tools\sync_rulebook_class_features.cjs
+node tools\enrich_bestiary_special_abilities.cjs
+node tools\sync_rulebook_pdf.cjs
+```
+
+Para testar o build local:
+
+```bash
+node tools\serve_download_site.cjs
+```
+
+URL local:
+
+```text
+http://127.0.0.1:4173/
+```
 
 ---
 
-## Configuração Supabase (opcional)
+## Fluxo Recomendado Após Editar Conteúdo
 
-Para sincronização em nuvem, clique em **Online** no topbar e configure:
+Use esta sequência quando mexer em habilidades, características, bestiário ou ebooks:
 
-1. **URL do projeto** — ex: `https://xxx.supabase.co`
-2. **Anon Key** — chave pública do projeto
-3. **Código de partilha** — identificador único da mesa (ex: `mesa-principal`)
+```bash
+node tools\expand_feature_descriptions.cjs
+node tools\sync_rulebook_class_features.cjs
+node tools\generate_bestiary_png_sprites.cjs
+node tools\enrich_bestiary_special_abilities.cjs
+npm run build
+node tools\publish_download_site.cjs
+node tools\sync_rulebook_class_features.cjs
+node tools\enrich_bestiary_special_abilities.cjs
+node tools\sync_rulebook_pdf.cjs
+```
 
-O schema SQL necessário está em [supabase_schema.sql](./supabase_schema.sql).
-Depois de aplicar o schema, a tela **Online** permite criar uma conta, criar uma
-mesa ao salvar ou entrar em uma mesa existente pelo código de partilha.
+Essa ordem garante que:
 
-## Compatibilidade de dados
+- características de Sensiente e Devoto fiquem junto das classes;
+- habilidades especiais do bestiário tenham descrição;
+- sprites do bestiário continuem em PNG;
+- arquivos finais sejam copiados para `dist`.
+- o PDF do Livro de Regras seja refeito a partir do HTML atualizado.
 
-A aplicação mantém as chaves de `localStorage` do site anterior e normaliza
-automaticamente os formatos históricos. Isso inclui notas no nível raiz, sessão
-em texto, tiles de mapa em string, criaturas sem atributos novos e fichas com
-campos adicionados ao longo do projeto. A mesma normalização é aplicada a
-arquivos JSON importados e estados carregados do Supabase.
+---
 
-O manual publicado pela aplicação está em `public/ebook`.
+## Ebooks
+
+Os ebooks ficam em:
+
+```text
+public/ebook/
+dist/ebook/
+```
+
+Arquivos principais publicados:
+
+```text
+A_Ultima_Ascencao_Livro_de_Regras.html
+A_Ultima_Ascencao_Livro_de_Regras.pdf
+A_Ultima_Ascencao_Livro_de_Regras.epub
+A_Ultima_Ascencao_Bestiario.html
+A_Ultima_Ascencao_Livro_do_Mestre.html
+```
+
+Também existem aliases com acento no nome, como:
+
+```text
+A_Ultima_Ascenção_Livro_de_Regras.html
+A_Ultima_Ascenção_Bestiario.html
+```
+
+Os arquivos sem acento são os mais seguros para URL e hospedagem.
+
+---
+
+## Aba Downloads
+
+Dentro do app há uma aba **Downloads**.
+
+Ela lista:
+
+- Livro de Regras em HTML, PDF e EPUB;
+- Bestiário em HTML;
+- Livro do Mestre em HTML.
+
+Os botões usam os arquivos `A_Ultima_Ascencao_*`, pois eles funcionam melhor em deploys estáticos.
+
+---
+
+## Organização Do Livro De Regras
+
+As características expandidas de **Sensiente** e **Devoto** são geradas a partir de:
+
+```text
+src/data/abilities.ts
+```
+
+Scripts relacionados:
+
+```bash
+node tools\expand_feature_descriptions.cjs
+node tools\sync_rulebook_class_features.cjs
+```
+
+Resultado esperado:
+
+- Sensiente: 120 características expandidas, com custo PE, descrição e efeito.
+- Devoto: 140 características expandidas, com custo PD, descrição e efeito.
+- Essas tabelas aparecem junto das seções de classe, antes da Parte XIII de habilidades.
+
+---
+
+## Bestiário
+
+O bestiário usa PNG nas fichas das criaturas.
+
+Scripts relacionados:
+
+```bash
+node tools\generate_bestiary_png_sprites.cjs
+node tools\enrich_bestiary_special_abilities.cjs
+```
+
+Resultado esperado:
+
+- 80 fichas de criaturas;
+- 80 referências PNG;
+- 0 referências SVG;
+- 80 habilidades especiais com descrição mecânica.
+
+---
+
+## Estrutura Principal
+
+```text
+src/
+  app/
+    AppShell.tsx
+    AppContent.tsx
+    tabs.tsx
+    useActiveDiceRoll.ts
+    useCloudSync.ts
+  components/
+    abilities/
+    campaign/
+    creatures/
+    dice/
+    downloads/
+    maps/
+    sheets/
+    ui/
+  data/
+    abilities.ts
+    bestiary.ts
+    catalog.ts
+    constants.ts
+    magic.ts
+  services/
+  store/
+  types/
+```
+
+Arquivos de publicação:
+
+```text
+public/ebook/
+dist/ebook/
+tools/
+netlify.toml
+```
+
+---
+
+## Scripts Úteis
+
+| Comando | Função |
+|---|---|
+| `npm run dev` | Servidor de desenvolvimento |
+| `npm run build` | Build de produção em `dist` |
+| `npm run preview` | Preview Vite do build |
+| `node tools\serve_download_site.cjs` | Servidor estático simples em `http://127.0.0.1:4173/` |
+| `node tools\publish_download_site.cjs` | Sincroniza ebooks nomeados para `public` e `dist` |
+| `node tools\sync_rulebook_pdf.cjs` | Gera o PDF atualizado do Livro de Regras a partir do HTML |
+| `node tools\sync_rulebook_class_features.cjs` | Move/insere características de Sensiente e Devoto nas seções de classe |
+| `node tools\generate_bestiary_png_sprites.cjs` | Gera sprites PNG do bestiário |
+| `node tools\enrich_bestiary_special_abilities.cjs` | Adiciona descrição mecânica às habilidades especiais das criaturas |
+| `node tools\expand_feature_descriptions.cjs` | Atualiza efeitos/custos das características expandidas |
+
+---
+
+## Deploy
+
+O projeto já tem `netlify.toml`.
+
+Configuração esperada:
+
+```toml
+[build]
+  publish = "dist"
+```
+
+Antes de publicar:
+
+```bash
+npm run build
+node tools\publish_download_site.cjs
+node tools\sync_rulebook_class_features.cjs
+node tools\enrich_bestiary_special_abilities.cjs
+node tools\sync_rulebook_pdf.cjs
+```
+
+Depois disso, publique a pasta `dist`.
+
+---
+
+## Supabase Opcional
+
+O app pode sincronizar dados em nuvem via Supabase.
+
+Use o botão **Online** na barra superior e informe:
+
+- URL do projeto Supabase;
+- Anon Key;
+- código de partilha da mesa.
+
+O schema está em:
+
+```text
+supabase_schema.sql
+```
+
+---
+
+## Observações
+
+- `dist` é gerado pelo build, então pode ser recriado.
+- Depois de qualquer build, rode os scripts de sincronização dos ebooks novamente.
+- Os arquivos SVG antigos do bestiário foram removidos; o bestiário publicado usa PNG.
+- Para links públicos, prefira os nomes `A_Ultima_Ascencao_*`, sem acento.

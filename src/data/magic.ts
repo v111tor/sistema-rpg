@@ -1999,6 +1999,1817 @@ export const SYSTEM_MAGIC_CATALOG = [
     "type": "Especial",
     "duration": "10 minutos",
     "number": 40
+  },
+  // BEGIN EXPANSAO SENSIENTE DEVOTO
+  {
+    "source": "primitive",
+    "name": "Impacto Furioso",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Impacto Furioso canaliza furia em alvo no alcance. Causa 2d6+Mod.ESP fogo ou psiquico; VIG CD 14 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno.",
+    "type": "Raiva/Ataque",
+    "duration": "1 minuto",
+    "number": 41
+  },
+  {
+    "source": "primitive",
+    "name": "Centelha Vingativa",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Centelha Vingativa canaliza furia em alvo no alcance. Causa 2d6+Mod.ESP fogo ou psiquico; VIG CD 14 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno.",
+    "type": "Raiva/Ataque",
+    "duration": "1 minuto",
+    "number": 42
+  },
+  {
+    "source": "primitive",
+    "name": "Ruptura da Furia",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Ruptura da Furia canaliza furia em alvo no alcance. Causa 2d6+Mod.ESP fogo ou psiquico; VIG CD 14 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno.",
+    "type": "Raiva/Ataque",
+    "duration": "1 minuto",
+    "number": 43
+  },
+  {
+    "source": "primitive",
+    "name": "Brasa Persistente",
+    "cost": "5 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Brasa Persistente canaliza furia em alvo no alcance. Causa 2d6+Mod.ESP fogo ou psiquico; VIG CD 14 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno.",
+    "type": "Raiva/Ataque",
+    "duration": "1 rodada",
+    "number": 44
+  },
+  {
+    "source": "primitive",
+    "name": "Martelo Emocional",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Martelo Emocional canaliza furia em alvo no alcance. Causa 3d6+Mod.ESP fogo ou psiquico; VIG CD 15 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno. Em Aumento, o efeito secundario dura +1 rodada.",
+    "type": "Raiva/Ataque",
+    "duration": "1 rodada",
+    "number": 45
+  },
+  {
+    "source": "primitive",
+    "name": "Fagulha de Retorno",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Fagulha de Retorno canaliza furia em alvo no alcance. Causa 3d6+Mod.ESP fogo ou psiquico; VIG CD 15 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno. Em Aumento, o efeito secundario dura +1 rodada.",
+    "type": "Raiva/Ataque",
+    "duration": "1 rodada",
+    "number": 46
+  },
+  {
+    "source": "primitive",
+    "name": "Cicatriz Rubra",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Cicatriz Rubra canaliza furia em alvo no alcance. Causa 3d6+Mod.ESP fogo ou psiquico; VIG CD 15 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno. Em Aumento, o efeito secundario dura +1 rodada.",
+    "type": "Raiva/Ataque",
+    "duration": "1 rodada",
+    "number": 47
+  },
+  {
+    "source": "primitive",
+    "name": "Avanco Irado",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Avanco Irado canaliza furia em alvo no alcance. Causa 3d6+Mod.ESP fogo ou psiquico; VIG CD 15 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno. Em Aumento, o efeito secundario dura +1 rodada.",
+    "type": "Raiva/Ataque",
+    "duration": "1 rodada",
+    "number": 48
+  },
+  {
+    "source": "primitive",
+    "name": "Forno Interior",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Forno Interior canaliza furia em alvo no alcance. Causa 3d6+Mod.ESP fogo ou psiquico; VIG CD 15 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno. Em Aumento, o efeito secundario dura +1 rodada.",
+    "type": "Raiva/Ataque",
+    "duration": "1 rodada",
+    "number": 49
+  },
+  {
+    "source": "primitive",
+    "name": "Quebra de Guarda",
+    "cost": "7 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Quebra de Guarda canaliza furia em alvo no alcance. Causa 3d6+Mod.ESP fogo ou psiquico; VIG CD 15 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno. Em Aumento, o efeito secundario dura +1 rodada.",
+    "type": "Raiva/Ataque",
+    "duration": "10 minutos",
+    "number": 50
+  },
+  {
+    "source": "primitive",
+    "name": "Marca do Agravo",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Marca do Agravo canaliza furia em alvo no alcance. Causa 3d6+Mod.ESP fogo ou psiquico; VIG CD 15 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno. Em Aumento, o efeito secundario dura +1 rodada.",
+    "type": "Raiva/Ataque",
+    "duration": "10 minutos",
+    "number": 51
+  },
+  {
+    "source": "primitive",
+    "name": "Explosao de Temperamento",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Explosao de Temperamento canaliza furia em alvo no alcance. Causa 3d6+Mod.ESP fogo ou psiquico; VIG CD 15 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno. Em Aumento, o efeito secundario dura +1 rodada.",
+    "type": "Raiva/Ataque",
+    "duration": "10 minutos",
+    "number": 52
+  },
+  {
+    "source": "primitive",
+    "name": "Ultimato Flamejante",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Ultimato Flamejante canaliza furia em alvo no alcance. Causa 3d6+Mod.ESP fogo ou psiquico; VIG CD 15 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno. Em Aumento, o efeito secundario dura +1 rodada.",
+    "type": "Raiva/Ataque",
+    "duration": "10 minutos",
+    "number": 53
+  },
+  {
+    "source": "primitive",
+    "name": "Chama Fraterna",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Chama Fraterna restaura ou protege um aliado no alcance. Cura 2d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "type": "Amor/Cura",
+    "duration": "1 minuto",
+    "number": 54
+  },
+  {
+    "source": "primitive",
+    "name": "Promessa Viva",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Promessa Viva restaura ou protege um aliado no alcance. Cura 2d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "type": "Amor/Cura",
+    "duration": "1 minuto",
+    "number": 55
+  },
+  {
+    "source": "primitive",
+    "name": "Cicatriz Fechada",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Cicatriz Fechada restaura ou protege um aliado no alcance. Cura 2d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "type": "Amor/Cura",
+    "duration": "1 minuto",
+    "number": 56
+  },
+  {
+    "source": "primitive",
+    "name": "Escudo do Afeto",
+    "cost": "5 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Escudo do Afeto restaura ou protege um aliado no alcance. Cura 2d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "type": "Amor/Cura",
+    "duration": "1 rodada",
+    "number": 57
+  },
+  {
+    "source": "primitive",
+    "name": "Memoria de Lar",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Memoria de Lar restaura ou protege um aliado no alcance. Cura 3d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "type": "Amor/Cura",
+    "duration": "1 rodada",
+    "number": 58
+  },
+  {
+    "source": "primitive",
+    "name": "Cura Partilhada",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Cura Partilhada restaura ou protege um aliado no alcance. Cura 3d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "type": "Amor/Cura",
+    "duration": "1 rodada",
+    "number": 59
+  },
+  {
+    "source": "primitive",
+    "name": "Luz do Encontro",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Luz do Encontro restaura ou protege um aliado no alcance. Cura 3d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "type": "Amor/Cura",
+    "duration": "1 rodada",
+    "number": 60
+  },
+  {
+    "source": "primitive",
+    "name": "Alianca de Pele",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Alianca de Pele restaura ou protege um aliado no alcance. Cura 3d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "type": "Amor/Cura",
+    "duration": "1 rodada",
+    "number": 61
+  },
+  {
+    "source": "primitive",
+    "name": "Selo de Carinho",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Selo de Carinho restaura ou protege um aliado no alcance. Cura 3d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "type": "Amor/Cura",
+    "duration": "1 rodada",
+    "number": 62
+  },
+  {
+    "source": "primitive",
+    "name": "Manto de Saudade",
+    "cost": "7 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Manto de Saudade restaura ou protege um aliado no alcance. Cura 3d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "type": "Amor/Cura",
+    "duration": "10 minutos",
+    "number": 63
+  },
+  {
+    "source": "primitive",
+    "name": "Coracao Aberto",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Coracao Aberto restaura ou protege um aliado no alcance. Cura 3d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "type": "Amor/Cura",
+    "duration": "10 minutos",
+    "number": 64
+  },
+  {
+    "source": "primitive",
+    "name": "Resgate Afetivo",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Resgate Afetivo restaura ou protege um aliado no alcance. Cura 3d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "type": "Amor/Cura",
+    "duration": "10 minutos",
+    "number": 65
+  },
+  {
+    "source": "primitive",
+    "name": "Milagre do Abrigo",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Milagre do Abrigo restaura ou protege um aliado no alcance. Cura 3d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "type": "Amor/Cura",
+    "duration": "10 minutos",
+    "number": 66
+  },
+  {
+    "source": "primitive",
+    "name": "Fenda do Panico",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Fenda do Panico projeta uma ameaca intima. Um alvo faz ESP CD 14; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "1 minuto",
+    "number": 67
+  },
+  {
+    "source": "primitive",
+    "name": "Olhar de Ruina",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Olhar de Ruina projeta uma ameaca intima. Um alvo faz ESP CD 14; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "1 minuto",
+    "number": 68
+  },
+  {
+    "source": "primitive",
+    "name": "Tremor Interno",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Tremor Interno projeta uma ameaca intima. Um alvo faz ESP CD 14; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "1 minuto",
+    "number": 69
+  },
+  {
+    "source": "primitive",
+    "name": "Noite Subita",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Noite Subita projeta uma ameaca intima. Um alvo faz ESP CD 14; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "1 minuto",
+    "number": 70
+  },
+  {
+    "source": "primitive",
+    "name": "Trava de Instinto",
+    "cost": "5 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Trava de Instinto projeta uma ameaca intima. Um alvo faz ESP CD 14; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "1 rodada",
+    "number": 71
+  },
+  {
+    "source": "primitive",
+    "name": "Pressao do Abismo",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Pressao do Abismo projeta uma ameaca intima. Um alvo faz ESP CD 15; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "1 rodada",
+    "number": 72
+  },
+  {
+    "source": "primitive",
+    "name": "Silhueta Final",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Silhueta Final projeta uma ameaca intima. Um alvo faz ESP CD 15; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "1 rodada",
+    "number": 73
+  },
+  {
+    "source": "primitive",
+    "name": "Respiracao Presa",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Respiracao Presa projeta uma ameaca intima. Um alvo faz ESP CD 15; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "1 rodada",
+    "number": 74
+  },
+  {
+    "source": "primitive",
+    "name": "Gatilho de Fuga",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Gatilho de Fuga projeta uma ameaca intima. Um alvo faz ESP CD 15; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "1 rodada",
+    "number": 75
+  },
+  {
+    "source": "primitive",
+    "name": "Ameaça Sem Rosto",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Ameaça Sem Rosto projeta uma ameaca intima. Um alvo faz ESP CD 15; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "1 rodada",
+    "number": 76
+  },
+  {
+    "source": "primitive",
+    "name": "Medula Fria",
+    "cost": "7 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Medula Fria projeta uma ameaca intima. Um alvo faz ESP CD 15; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "10 minutos",
+    "number": 77
+  },
+  {
+    "source": "primitive",
+    "name": "Som Atrás da Porta",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Som Atrás da Porta projeta uma ameaca intima. Um alvo faz ESP CD 15; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "10 minutos",
+    "number": 78
+  },
+  {
+    "source": "primitive",
+    "name": "Coro dos Receios",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Coro dos Receios projeta uma ameaca intima. Um alvo faz ESP CD 15; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "10 minutos",
+    "number": 79
+  },
+  {
+    "source": "primitive",
+    "name": "Pavor Absoluto",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Pavor Absoluto projeta uma ameaca intima. Um alvo faz ESP CD 15; em falha fica Amedrontado, perde reacao ou nao pode se aproximar de voce ate o fim do proximo turno. Em sucesso, sofre -1 no proximo teste contra voce.",
+    "type": "Medo/Controle",
+    "duration": "10 minutos",
+    "number": 80
+  },
+  {
+    "source": "primitive",
+    "name": "Passo Improvavel",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Passo Improvavel acelera o ritmo dos aliados. Ate 3 aliados em alcance ganham +1d4 no proximo teste, ataque ou salvamento. Quem usar o bonus pode mover 3m sem provocar reacao.",
+    "type": "Alegria/Suporte",
+    "duration": "1 minuto",
+    "number": 81
+  },
+  {
+    "source": "primitive",
+    "name": "Clarim Alegre",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Clarim Alegre acelera o ritmo dos aliados. Ate 3 aliados em alcance ganham +1d4 no proximo teste, ataque ou salvamento. Quem usar o bonus pode mover 3m sem provocar reacao.",
+    "type": "Alegria/Suporte",
+    "duration": "1 minuto",
+    "number": 82
+  },
+  {
+    "source": "primitive",
+    "name": "Euforia Estavel",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Euforia Estavel acelera o ritmo dos aliados. Ate 3 aliados em alcance ganham +1d4 no proximo teste, ataque ou salvamento. Quem usar o bonus pode mover 3m sem provocar reacao.",
+    "type": "Alegria/Suporte",
+    "duration": "1 minuto",
+    "number": 83
+  },
+  {
+    "source": "primitive",
+    "name": "Gesto Vitorioso",
+    "cost": "5 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Gesto Vitorioso acelera o ritmo dos aliados. Ate 3 aliados em alcance ganham +1d4 no proximo teste, ataque ou salvamento. Quem usar o bonus pode mover 3m sem provocar reacao.",
+    "type": "Alegria/Suporte",
+    "duration": "1 rodada",
+    "number": 84
+  },
+  {
+    "source": "primitive",
+    "name": "Luz de Festa",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Luz de Festa acelera o ritmo dos aliados. Ate 4 aliados em alcance ganham +1d4 no proximo teste, ataque ou salvamento. Quem usar o bonus pode mover 3m sem provocar reacao.",
+    "type": "Alegria/Suporte",
+    "duration": "1 rodada",
+    "number": 85
+  },
+  {
+    "source": "primitive",
+    "name": "Aplauso Encantado",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Aplauso Encantado acelera o ritmo dos aliados. Ate 4 aliados em alcance ganham +1d4 no proximo teste, ataque ou salvamento. Quem usar o bonus pode mover 3m sem provocar reacao.",
+    "type": "Alegria/Suporte",
+    "duration": "1 rodada",
+    "number": 86
+  },
+  {
+    "source": "primitive",
+    "name": "Brilho no Peito",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Brilho no Peito acelera o ritmo dos aliados. Ate 4 aliados em alcance ganham +1d4 no proximo teste, ataque ou salvamento. Quem usar o bonus pode mover 3m sem provocar reacao.",
+    "type": "Alegria/Suporte",
+    "duration": "1 rodada",
+    "number": 87
+  },
+  {
+    "source": "primitive",
+    "name": "Roda de Celebracao",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Roda de Celebracao acelera o ritmo dos aliados. Ate 4 aliados em alcance ganham +1d4 no proximo teste, ataque ou salvamento. Quem usar o bonus pode mover 3m sem provocar reacao.",
+    "type": "Alegria/Suporte",
+    "duration": "1 rodada",
+    "number": 88
+  },
+  {
+    "source": "primitive",
+    "name": "Sorte Sorridente",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Sorte Sorridente acelera o ritmo dos aliados. Ate 4 aliados em alcance ganham +1d4 no proximo teste, ataque ou salvamento. Quem usar o bonus pode mover 3m sem provocar reacao.",
+    "type": "Alegria/Suporte",
+    "duration": "1 rodada",
+    "number": 89
+  },
+  {
+    "source": "primitive",
+    "name": "Folego de Carnaval",
+    "cost": "7 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Folego de Carnaval acelera o ritmo dos aliados. Ate 4 aliados em alcance ganham +1d4 no proximo teste, ataque ou salvamento. Quem usar o bonus pode mover 3m sem provocar reacao.",
+    "type": "Alegria/Suporte",
+    "duration": "10 minutos",
+    "number": 90
+  },
+  {
+    "source": "primitive",
+    "name": "Cantiga Valente",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Cantiga Valente acelera o ritmo dos aliados. Ate 4 aliados em alcance ganham +1d4 no proximo teste, ataque ou salvamento. Quem usar o bonus pode mover 3m sem provocar reacao.",
+    "type": "Alegria/Suporte",
+    "duration": "10 minutos",
+    "number": 91
+  },
+  {
+    "source": "primitive",
+    "name": "Estalo de Esperanca",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Estalo de Esperanca acelera o ritmo dos aliados. Ate 4 aliados em alcance ganham +1d4 no proximo teste, ataque ou salvamento. Quem usar o bonus pode mover 3m sem provocar reacao.",
+    "type": "Alegria/Suporte",
+    "duration": "10 minutos",
+    "number": 92
+  },
+  {
+    "source": "primitive",
+    "name": "Triunfo Compartilhado",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Triunfo Compartilhado acelera o ritmo dos aliados. Ate 4 aliados em alcance ganham +1d4 no proximo teste, ataque ou salvamento. Quem usar o bonus pode mover 3m sem provocar reacao.",
+    "type": "Alegria/Suporte",
+    "duration": "10 minutos",
+    "number": 93
+  },
+  {
+    "source": "primitive",
+    "name": "Sino Distante",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Sino Distante pesa a cena com luto. Inimigos em area curta fazem ESP CD 14; em falha sofrem -1 em ataques e curas recebidas caem em 2d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "1 minuto",
+    "number": 94
+  },
+  {
+    "source": "primitive",
+    "name": "Olhos de Ausencia",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Olhos de Ausencia pesa a cena com luto. Inimigos em area curta fazem ESP CD 14; em falha sofrem -1 em ataques e curas recebidas caem em 2d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "1 minuto",
+    "number": 95
+  },
+  {
+    "source": "primitive",
+    "name": "Poço de Silencio",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Poço de Silencio pesa a cena com luto. Inimigos em area curta fazem ESP CD 14; em falha sofrem -1 em ataques e curas recebidas caem em 2d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "1 minuto",
+    "number": 96
+  },
+  {
+    "source": "primitive",
+    "name": "Frio da Saudade",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Frio da Saudade pesa a cena com luto. Inimigos em area curta fazem ESP CD 14; em falha sofrem -1 em ataques e curas recebidas caem em 2d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "1 minuto",
+    "number": 97
+  },
+  {
+    "source": "primitive",
+    "name": "Recordacao Dolorosa",
+    "cost": "5 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Recordacao Dolorosa pesa a cena com luto. Inimigos em area curta fazem ESP CD 14; em falha sofrem -1 em ataques e curas recebidas caem em 2d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "1 rodada",
+    "number": 98
+  },
+  {
+    "source": "primitive",
+    "name": "Queda do Animo",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Queda do Animo pesa a cena com luto. Inimigos em area curta fazem ESP CD 15; em falha sofrem -1 em ataques e curas recebidas caem em 3d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "1 rodada",
+    "number": 99
+  },
+  {
+    "source": "primitive",
+    "name": "Elegia Pesada",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Elegia Pesada pesa a cena com luto. Inimigos em area curta fazem ESP CD 15; em falha sofrem -1 em ataques e curas recebidas caem em 3d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "1 rodada",
+    "number": 100
+  },
+  {
+    "source": "primitive",
+    "name": "Sombra da Perda",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Sombra da Perda pesa a cena com luto. Inimigos em area curta fazem ESP CD 15; em falha sofrem -1 em ataques e curas recebidas caem em 3d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "1 rodada",
+    "number": 101
+  },
+  {
+    "source": "primitive",
+    "name": "Suspiro Final",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Suspiro Final pesa a cena com luto. Inimigos em area curta fazem ESP CD 15; em falha sofrem -1 em ataques e curas recebidas caem em 3d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "1 rodada",
+    "number": 102
+  },
+  {
+    "source": "primitive",
+    "name": "Mar de Ausencia",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Mar de Ausencia pesa a cena com luto. Inimigos em area curta fazem ESP CD 15; em falha sofrem -1 em ataques e curas recebidas caem em 3d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "1 rodada",
+    "number": 103
+  },
+  {
+    "source": "primitive",
+    "name": "Coro Baixo",
+    "cost": "7 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Coro Baixo pesa a cena com luto. Inimigos em area curta fazem ESP CD 15; em falha sofrem -1 em ataques e curas recebidas caem em 3d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "10 minutos",
+    "number": 104
+  },
+  {
+    "source": "primitive",
+    "name": "Gelo no Animo",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Gelo no Animo pesa a cena com luto. Inimigos em area curta fazem ESP CD 15; em falha sofrem -1 em ataques e curas recebidas caem em 3d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "10 minutos",
+    "number": 105
+  },
+  {
+    "source": "primitive",
+    "name": "Memorial de Dor",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Memorial de Dor pesa a cena com luto. Inimigos em area curta fazem ESP CD 15; em falha sofrem -1 em ataques e curas recebidas caem em 3d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "10 minutos",
+    "number": 106
+  },
+  {
+    "source": "primitive",
+    "name": "Luto Profundo",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Luto Profundo pesa a cena com luto. Inimigos em area curta fazem ESP CD 15; em falha sofrem -1 em ataques e curas recebidas caem em 3d6 ate o fim da rodada. Sucesso reduz para uma penalidade narrativa leve.",
+    "type": "Tristeza/Debuff",
+    "duration": "10 minutos",
+    "number": 107
+  },
+  {
+    "source": "primitive",
+    "name": "Recusa da Queda",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Recusa da Queda firma corpo e vontade. Voce ou aliado no alcance ganha 2d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "type": "Determinacao/Protecao",
+    "duration": "1 minuto",
+    "number": 108
+  },
+  {
+    "source": "primitive",
+    "name": "Trilha Obstinada",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Trilha Obstinada firma corpo e vontade. Voce ou aliado no alcance ganha 2d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "type": "Determinacao/Protecao",
+    "duration": "1 minuto",
+    "number": 109
+  },
+  {
+    "source": "primitive",
+    "name": "Pulso Resiliente",
+    "cost": "4 PE",
+    "range": "12m / 1 minuto",
+    "effect": "Pulso Resiliente firma corpo e vontade. Voce ou aliado no alcance ganha 2d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "type": "Determinacao/Protecao",
+    "duration": "1 minuto",
+    "number": 110
+  },
+  {
+    "source": "primitive",
+    "name": "Marca de Persistencia",
+    "cost": "5 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Marca de Persistencia firma corpo e vontade. Voce ou aliado no alcance ganha 2d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "type": "Determinacao/Protecao",
+    "duration": "1 rodada",
+    "number": 111
+  },
+  {
+    "source": "primitive",
+    "name": "Escudo de Vontade",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Escudo de Vontade firma corpo e vontade. Voce ou aliado no alcance ganha 3d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "type": "Determinacao/Protecao",
+    "duration": "1 rodada",
+    "number": 112
+  },
+  {
+    "source": "primitive",
+    "name": "Nao Ceder",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Nao Ceder firma corpo e vontade. Voce ou aliado no alcance ganha 3d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "type": "Determinacao/Protecao",
+    "duration": "1 rodada",
+    "number": 113
+  },
+  {
+    "source": "primitive",
+    "name": "Voto Inquebravel",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Voto Inquebravel firma corpo e vontade. Voce ou aliado no alcance ganha 3d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "type": "Determinacao/Protecao",
+    "duration": "1 rodada",
+    "number": 114
+  },
+  {
+    "source": "primitive",
+    "name": "Coluna de Ferro",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Coluna de Ferro firma corpo e vontade. Voce ou aliado no alcance ganha 3d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "type": "Determinacao/Protecao",
+    "duration": "1 rodada",
+    "number": 115
+  },
+  {
+    "source": "primitive",
+    "name": "Respirar na Dor",
+    "cost": "6 PE",
+    "range": "18m / 1 rodada",
+    "effect": "Respirar na Dor firma corpo e vontade. Voce ou aliado no alcance ganha 3d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "type": "Determinacao/Protecao",
+    "duration": "1 rodada",
+    "number": 116
+  },
+  {
+    "source": "primitive",
+    "name": "Pacto de Caminho",
+    "cost": "7 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Pacto de Caminho firma corpo e vontade. Voce ou aliado no alcance ganha 3d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "type": "Determinacao/Protecao",
+    "duration": "10 minutos",
+    "number": 117
+  },
+  {
+    "source": "primitive",
+    "name": "Alma em Guarda",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Alma em Guarda firma corpo e vontade. Voce ou aliado no alcance ganha 3d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "type": "Determinacao/Protecao",
+    "duration": "10 minutos",
+    "number": 118
+  },
+  {
+    "source": "primitive",
+    "name": "Ultimo Passo",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Ultimo Passo firma corpo e vontade. Voce ou aliado no alcance ganha 3d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "type": "Determinacao/Protecao",
+    "duration": "10 minutos",
+    "number": 119
+  },
+  {
+    "source": "primitive",
+    "name": "Destino Sustentado",
+    "cost": "8 PE",
+    "range": "24m / 10 minutos",
+    "effect": "Destino Sustentado firma corpo e vontade. Voce ou aliado no alcance ganha 3d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "type": "Determinacao/Protecao",
+    "duration": "10 minutos",
+    "number": 120
+  },
+  {
+    "source": "faith",
+    "name": "Benção Clara",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Benção Clara manifesta luz purificadora. Aliado cura 3d6+Mod.DEV PV ou inimigo sofre 3d6+Mod.DEV radiante; DEV CD 15 reduz dano. Morto-vivo, demonio ou criatura corrupta nao reduz esse dano por resistencia comum.",
+    "type": "Luz/Suporte",
+    "duration": "1 rodada",
+    "number": 41
+  },
+  {
+    "source": "faith",
+    "name": "Mandato Radiante",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Mandato Radiante manifesta luz purificadora. Aliado cura 3d6+Mod.DEV PV ou inimigo sofre 3d6+Mod.DEV radiante; DEV CD 15 reduz dano. Morto-vivo, demonio ou criatura corrupta nao reduz esse dano por resistencia comum.",
+    "type": "Luz/Suporte",
+    "duration": "1 rodada",
+    "number": 42
+  },
+  {
+    "source": "faith",
+    "name": "Teto de Aurora",
+    "cost": "8 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Teto de Aurora manifesta luz purificadora. Aliado cura 3d6+Mod.DEV PV ou inimigo sofre 3d6+Mod.DEV radiante; DEV CD 15 reduz dano. Morto-vivo, demonio ou criatura corrupta nao reduz esse dano por resistencia comum.",
+    "type": "Luz/Suporte",
+    "duration": "10 minutos",
+    "number": 43
+  },
+  {
+    "source": "faith",
+    "name": "Verdade Incandescente",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Verdade Incandescente manifesta luz purificadora. Aliado cura 5d6+Mod.DEV PV ou inimigo sofre 5d6+Mod.DEV radiante; DEV CD 16 reduz dano. Morto-vivo, demonio ou criatura corrupta nao reduz esse dano por resistencia comum.",
+    "type": "Luz/Suporte",
+    "duration": "10 minutos",
+    "number": 44
+  },
+  {
+    "source": "faith",
+    "name": "Exilio das Trevas",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Exilio das Trevas manifesta luz purificadora. Aliado cura 5d6+Mod.DEV PV ou inimigo sofre 5d6+Mod.DEV radiante; DEV CD 16 reduz dano. Morto-vivo, demonio ou criatura corrupta nao reduz esse dano por resistencia comum.",
+    "type": "Luz/Suporte",
+    "duration": "10 minutos",
+    "number": 45
+  },
+  {
+    "source": "faith",
+    "name": "Trono Solar",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Trono Solar manifesta luz purificadora. Aliado cura 5d6+Mod.DEV PV ou inimigo sofre 5d6+Mod.DEV radiante; DEV CD 16 reduz dano. Morto-vivo, demonio ou criatura corrupta nao reduz esse dano por resistencia comum.",
+    "type": "Luz/Suporte",
+    "duration": "10 minutos",
+    "number": 46
+  },
+  {
+    "source": "faith",
+    "name": "Corte de Breu",
+    "cost": "4 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Corte de Breu dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 14; falha sofre 2d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "1 minuto",
+    "number": 47
+  },
+  {
+    "source": "faith",
+    "name": "Voto Silencioso",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Voto Silencioso dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 14; falha sofre 2d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "1 minuto",
+    "number": 48
+  },
+  {
+    "source": "faith",
+    "name": "Cortina de Segredos",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Cortina de Segredos dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 14; falha sofre 2d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "1 minuto",
+    "number": 49
+  },
+  {
+    "source": "faith",
+    "name": "Sombra Servil",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Sombra Servil dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 14; falha sofre 2d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "1 minuto",
+    "number": 50
+  },
+  {
+    "source": "faith",
+    "name": "Marca Oculta",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Marca Oculta dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 14; falha sofre 2d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "1 minuto",
+    "number": 51
+  },
+  {
+    "source": "faith",
+    "name": "Noite Portatil",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Noite Portatil dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 14; falha sofre 2d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "1 minuto",
+    "number": 52
+  },
+  {
+    "source": "faith",
+    "name": "Voz Sem Rosto",
+    "cost": "6 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Voz Sem Rosto dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 15; falha sofre 3d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "1 rodada",
+    "number": 53
+  },
+  {
+    "source": "faith",
+    "name": "Vulto Protetor",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Vulto Protetor dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 15; falha sofre 3d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "1 rodada",
+    "number": 54
+  },
+  {
+    "source": "faith",
+    "name": "Selo da Penumbra",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Selo da Penumbra dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 15; falha sofre 3d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "1 rodada",
+    "number": 55
+  },
+  {
+    "source": "faith",
+    "name": "Rito da Cortina",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Rito da Cortina dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 15; falha sofre 3d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "1 rodada",
+    "number": 56
+  },
+  {
+    "source": "faith",
+    "name": "Faca sem Brilho",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Faca sem Brilho dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 15; falha sofre 3d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "1 rodada",
+    "number": 57
+  },
+  {
+    "source": "faith",
+    "name": "Abrigo Noturno",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Abrigo Noturno dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 15; falha sofre 3d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "1 rodada",
+    "number": 58
+  },
+  {
+    "source": "faith",
+    "name": "Segredo Vivo",
+    "cost": "8 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Segredo Vivo dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 15; falha sofre 3d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "10 minutos",
+    "number": 59
+  },
+  {
+    "source": "faith",
+    "name": "Oraculo Escuro",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Oraculo Escuro dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 16; falha sofre 5d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "10 minutos",
+    "number": 60
+  },
+  {
+    "source": "faith",
+    "name": "Porta de Breu",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Porta de Breu dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 16; falha sofre 5d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "10 minutos",
+    "number": 61
+  },
+  {
+    "source": "faith",
+    "name": "Trono da Penumbra",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Trono da Penumbra dobra penumbra e segredo. Escolha: aliado ganha vantagem em Furtividade e cobertura leve por 1 rodada, ou inimigo faz ESP CD 16; falha sofre 5d6 necrotico e nao pode usar reacao.",
+    "type": "Sombra/Utilitario",
+    "duration": "10 minutos",
+    "number": 62
+  },
+  {
+    "source": "faith",
+    "name": "Esporo Curativo",
+    "cost": "4 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Esporo Curativo chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 14 ou sofrem 2d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "1 minuto",
+    "number": 63
+  },
+  {
+    "source": "faith",
+    "name": "Totem de Fera",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Totem de Fera chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 14 ou sofrem 2d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "1 minuto",
+    "number": 64
+  },
+  {
+    "source": "faith",
+    "name": "Chuva Verde",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Chuva Verde chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 14 ou sofrem 2d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "1 minuto",
+    "number": 65
+  },
+  {
+    "source": "faith",
+    "name": "Garra Espiritual",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Garra Espiritual chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 14 ou sofrem 2d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "1 minuto",
+    "number": 66
+  },
+  {
+    "source": "faith",
+    "name": "Barreira de Cipo",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Barreira de Cipo chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 14 ou sofrem 2d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "1 minuto",
+    "number": 67
+  },
+  {
+    "source": "faith",
+    "name": "Fome da Terra",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Fome da Terra chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 14 ou sofrem 2d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "1 minuto",
+    "number": 68
+  },
+  {
+    "source": "faith",
+    "name": "Sopro de Seiva",
+    "cost": "6 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Sopro de Seiva chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 15 ou sofrem 3d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "1 rodada",
+    "number": 69
+  },
+  {
+    "source": "faith",
+    "name": "Canto do Enxame",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Canto do Enxame chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 15 ou sofrem 3d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "1 rodada",
+    "number": 70
+  },
+  {
+    "source": "faith",
+    "name": "Coroa de Espinhos",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Coroa de Espinhos chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 15 ou sofrem 3d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "1 rodada",
+    "number": 71
+  },
+  {
+    "source": "faith",
+    "name": "Muralha de Troncos",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Muralha de Troncos chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 15 ou sofrem 3d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "1 rodada",
+    "number": 72
+  },
+  {
+    "source": "faith",
+    "name": "Mordida da Mata",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Mordida da Mata chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 15 ou sofrem 3d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "1 rodada",
+    "number": 73
+  },
+  {
+    "source": "faith",
+    "name": "Semente Guardiã",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Semente Guardiã chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 15 ou sofrem 3d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "1 rodada",
+    "number": 74
+  },
+  {
+    "source": "faith",
+    "name": "Pele de Liquen",
+    "cost": "8 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Pele de Liquen chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 15 ou sofrem 3d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "10 minutos",
+    "number": 75
+  },
+  {
+    "source": "faith",
+    "name": "Vento de Polen",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Vento de Polen chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 16 ou sofrem 5d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "10 minutos",
+    "number": 76
+  },
+  {
+    "source": "faith",
+    "name": "Ira do Bosque",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Ira do Bosque chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 16 ou sofrem 5d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "10 minutos",
+    "number": 77
+  },
+  {
+    "source": "faith",
+    "name": "Trono Verde",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Trono Verde chama raiz, fera ou veneno natural. Area de 3m vira terreno dificil; inimigos fazem AGI/VIG CD 16 ou sofrem 5d6 perfurante/veneno e ficam presos ate gastar acao para se soltar.",
+    "type": "Natureza/Controle",
+    "duration": "10 minutos",
+    "number": 78
+  },
+  {
+    "source": "faith",
+    "name": "Voz do Tumulo",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Voz do Tumulo invoca a lei do fim. Alvo faz VIG CD 14; falha sofre 2d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "1 minuto",
+    "number": 79
+  },
+  {
+    "source": "faith",
+    "name": "Veu da Passagem",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Veu da Passagem invoca a lei do fim. Alvo faz VIG CD 14; falha sofre 2d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "1 minuto",
+    "number": 80
+  },
+  {
+    "source": "faith",
+    "name": "Marca da Sepultura",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Marca da Sepultura invoca a lei do fim. Alvo faz VIG CD 14; falha sofre 2d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "1 minuto",
+    "number": 81
+  },
+  {
+    "source": "faith",
+    "name": "Frio do Ossario",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Frio do Ossario invoca a lei do fim. Alvo faz VIG CD 14; falha sofre 2d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "1 minuto",
+    "number": 82
+  },
+  {
+    "source": "faith",
+    "name": "Danca dos Ossos",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Danca dos Ossos invoca a lei do fim. Alvo faz VIG CD 14; falha sofre 2d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "1 minuto",
+    "number": 83
+  },
+  {
+    "source": "faith",
+    "name": "Luto Sagrado",
+    "cost": "6 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Luto Sagrado invoca a lei do fim. Alvo faz VIG CD 15; falha sofre 3d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "1 rodada",
+    "number": 84
+  },
+  {
+    "source": "faith",
+    "name": "Ciclo Encerrado",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Ciclo Encerrado invoca a lei do fim. Alvo faz VIG CD 15; falha sofre 3d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "1 rodada",
+    "number": 85
+  },
+  {
+    "source": "faith",
+    "name": "Porta do Alem",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Porta do Alem invoca a lei do fim. Alvo faz VIG CD 15; falha sofre 3d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "1 rodada",
+    "number": 86
+  },
+  {
+    "source": "faith",
+    "name": "Livro dos Nomes",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Livro dos Nomes invoca a lei do fim. Alvo faz VIG CD 15; falha sofre 3d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "1 rodada",
+    "number": 87
+  },
+  {
+    "source": "faith",
+    "name": "Sombra do Mausoleu",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Sombra do Mausoleu invoca a lei do fim. Alvo faz VIG CD 15; falha sofre 3d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "1 rodada",
+    "number": 88
+  },
+  {
+    "source": "faith",
+    "name": "Beijo do Fim",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Beijo do Fim invoca a lei do fim. Alvo faz VIG CD 15; falha sofre 3d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "1 rodada",
+    "number": 89
+  },
+  {
+    "source": "faith",
+    "name": "Procissao Cinzenta",
+    "cost": "8 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Procissao Cinzenta invoca a lei do fim. Alvo faz VIG CD 15; falha sofre 3d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "10 minutos",
+    "number": 90
+  },
+  {
+    "source": "faith",
+    "name": "Juramento Sepulcral",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Juramento Sepulcral invoca a lei do fim. Alvo faz VIG CD 16; falha sofre 5d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "10 minutos",
+    "number": 91
+  },
+  {
+    "source": "faith",
+    "name": "Eco do Ultimo Dia",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Eco do Ultimo Dia invoca a lei do fim. Alvo faz VIG CD 16; falha sofre 5d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "10 minutos",
+    "number": 92
+  },
+  {
+    "source": "faith",
+    "name": "Trono Funerario",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Trono Funerario invoca a lei do fim. Alvo faz VIG CD 16; falha sofre 5d6+Mod.DEV necrotico e nao pode recuperar PV ate o inicio do seu proximo turno. Em alvo a 0 PV, estabiliza ou impede retorno, a sua escolha.",
+    "type": "Morte/Debuff",
+    "duration": "10 minutos",
+    "number": 93
+  },
+  {
+    "source": "faith",
+    "name": "Riso Instavel",
+    "cost": "4 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Riso Instavel quebra a previsibilidade. Role 1d6: 1-2 causa 2d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 14 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "1 minuto",
+    "number": 94
+  },
+  {
+    "source": "faith",
+    "name": "Fenda Mutavel",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Fenda Mutavel quebra a previsibilidade. Role 1d6: 1-2 causa 2d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 14 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "1 minuto",
+    "number": 95
+  },
+  {
+    "source": "faith",
+    "name": "Coro Desafinado",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Coro Desafinado quebra a previsibilidade. Role 1d6: 1-2 causa 2d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 14 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "1 minuto",
+    "number": 96
+  },
+  {
+    "source": "faith",
+    "name": "Rebote Caotico",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Rebote Caotico quebra a previsibilidade. Role 1d6: 1-2 causa 2d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 14 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "1 minuto",
+    "number": 97
+  },
+  {
+    "source": "faith",
+    "name": "Milagre Torto",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Milagre Torto quebra a previsibilidade. Role 1d6: 1-2 causa 2d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 14 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "1 minuto",
+    "number": 98
+  },
+  {
+    "source": "faith",
+    "name": "Faísca Sem Regra",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Faísca Sem Regra quebra a previsibilidade. Role 1d6: 1-2 causa 2d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 14 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "1 minuto",
+    "number": 99
+  },
+  {
+    "source": "faith",
+    "name": "Tempestade Menor",
+    "cost": "6 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Tempestade Menor quebra a previsibilidade. Role 1d6: 1-2 causa 3d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 15 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "1 rodada",
+    "number": 100
+  },
+  {
+    "source": "faith",
+    "name": "Jogo dos Destinos",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Jogo dos Destinos quebra a previsibilidade. Role 1d6: 1-2 causa 3d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 15 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "1 rodada",
+    "number": 101
+  },
+  {
+    "source": "faith",
+    "name": "Ordem Quebrada",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Ordem Quebrada quebra a previsibilidade. Role 1d6: 1-2 causa 3d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 15 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "1 rodada",
+    "number": 102
+  },
+  {
+    "source": "faith",
+    "name": "Moeda em Pe",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Moeda em Pe quebra a previsibilidade. Role 1d6: 1-2 causa 3d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 15 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "1 rodada",
+    "number": 103
+  },
+  {
+    "source": "faith",
+    "name": "Roda Impossivel",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Roda Impossivel quebra a previsibilidade. Role 1d6: 1-2 causa 3d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 15 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "1 rodada",
+    "number": 104
+  },
+  {
+    "source": "faith",
+    "name": "Mandinga Variavel",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Mandinga Variavel quebra a previsibilidade. Role 1d6: 1-2 causa 3d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 15 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "1 rodada",
+    "number": 105
+  },
+  {
+    "source": "faith",
+    "name": "Salto de Probabilidade",
+    "cost": "8 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Salto de Probabilidade quebra a previsibilidade. Role 1d6: 1-2 causa 3d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 15 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "10 minutos",
+    "number": 106
+  },
+  {
+    "source": "faith",
+    "name": "Explosao Irregular",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Explosao Irregular quebra a previsibilidade. Role 1d6: 1-2 causa 5d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 16 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "10 minutos",
+    "number": 107
+  },
+  {
+    "source": "faith",
+    "name": "Resposta Improvavel",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Resposta Improvavel quebra a previsibilidade. Role 1d6: 1-2 causa 5d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 16 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "10 minutos",
+    "number": 108
+  },
+  {
+    "source": "faith",
+    "name": "Trono do Acaso",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Trono do Acaso quebra a previsibilidade. Role 1d6: 1-2 causa 5d6 dano aleatorio, 3-4 teleporta alvo 3m, 5 concede +1d4 a aliado, 6 repete o efeito em alvo adjacente. DEV CD 16 evita efeito hostil.",
+    "type": "Caos/Ataque",
+    "duration": "10 minutos",
+    "number": 109
+  },
+  {
+    "source": "faith",
+    "name": "Peso da Regra",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Peso da Regra cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 14 ou perde reacao e sofre 2d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "1 minuto",
+    "number": 110
+  },
+  {
+    "source": "faith",
+    "name": "Parede de Juramento",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Parede de Juramento cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 14 ou perde reacao e sofre 2d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "1 minuto",
+    "number": 111
+  },
+  {
+    "source": "faith",
+    "name": "Marca de Obediencia",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Marca de Obediencia cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 14 ou perde reacao e sofre 2d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "1 minuto",
+    "number": 112
+  },
+  {
+    "source": "faith",
+    "name": "Compasso Perfeito",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Compasso Perfeito cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 14 ou perde reacao e sofre 2d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "1 minuto",
+    "number": 113
+  },
+  {
+    "source": "faith",
+    "name": "Clausula Punitiva",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Clausula Punitiva cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 14 ou perde reacao e sofre 2d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "1 minuto",
+    "number": 114
+  },
+  {
+    "source": "faith",
+    "name": "Rito de Hierarquia",
+    "cost": "6 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Rito de Hierarquia cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 15 ou perde reacao e sofre 3d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "1 rodada",
+    "number": 115
+  },
+  {
+    "source": "faith",
+    "name": "Veredito Imediato",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Veredito Imediato cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 15 ou perde reacao e sofre 3d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "1 rodada",
+    "number": 116
+  },
+  {
+    "source": "faith",
+    "name": "Lei Inquebravel",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Lei Inquebravel cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 15 ou perde reacao e sofre 3d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "1 rodada",
+    "number": 117
+  },
+  {
+    "source": "faith",
+    "name": "Arquivo Divino",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Arquivo Divino cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 15 ou perde reacao e sofre 3d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "1 rodada",
+    "number": 118
+  },
+  {
+    "source": "faith",
+    "name": "Corrente Legal",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Corrente Legal cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 15 ou perde reacao e sofre 3d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "1 rodada",
+    "number": 119
+  },
+  {
+    "source": "faith",
+    "name": "Ato de Autoridade",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Ato de Autoridade cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 15 ou perde reacao e sofre 3d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "1 rodada",
+    "number": 120
+  },
+  {
+    "source": "faith",
+    "name": "Sentenca Luminosa",
+    "cost": "8 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Sentenca Luminosa cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 15 ou perde reacao e sofre 3d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "10 minutos",
+    "number": 121
+  },
+  {
+    "source": "faith",
+    "name": "Marcha Regular",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Marcha Regular cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 16 ou perde reacao e sofre 5d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "10 minutos",
+    "number": 122
+  },
+  {
+    "source": "faith",
+    "name": "Regra Absoluta",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Regra Absoluta cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 16 ou perde reacao e sofre 5d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "10 minutos",
+    "number": 123
+  },
+  {
+    "source": "faith",
+    "name": "Trono da Lei",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Trono da Lei cria uma regra sagrada curta. Uma criatura ou area no alcance obedece uma condicao simples por 1 rodada; quem quebrar faz DEV CD 16 ou perde reacao e sofre 5d6 radiante/psiquico.",
+    "type": "Ordem/Controle",
+    "duration": "10 minutos",
+    "number": 124
+  },
+  {
+    "source": "faith",
+    "name": "Asa Rasgada",
+    "cost": "3 PD",
+    "range": "9m / Instantaneo",
+    "effect": "Asa Rasgada cobra poder por pacto. Alvo sofre 1d6+Mod.DEV profano ou fogo; DEV CD 13 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "Instantaneo",
+    "number": 125
+  },
+  {
+    "source": "faith",
+    "name": "Fogo do Pacto",
+    "cost": "4 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Fogo do Pacto cobra poder por pacto. Alvo sofre 2d6+Mod.DEV profano ou fogo; DEV CD 14 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "1 minuto",
+    "number": 126
+  },
+  {
+    "source": "faith",
+    "name": "Dente do Abismo",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Dente do Abismo cobra poder por pacto. Alvo sofre 2d6+Mod.DEV profano ou fogo; DEV CD 14 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "1 minuto",
+    "number": 127
+  },
+  {
+    "source": "faith",
+    "name": "Voz Tentadora",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Voz Tentadora cobra poder por pacto. Alvo sofre 2d6+Mod.DEV profano ou fogo; DEV CD 14 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "1 minuto",
+    "number": 128
+  },
+  {
+    "source": "faith",
+    "name": "Cadeia Rubra",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Cadeia Rubra cobra poder por pacto. Alvo sofre 2d6+Mod.DEV profano ou fogo; DEV CD 14 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "1 minuto",
+    "number": 129
+  },
+  {
+    "source": "faith",
+    "name": "Pele Diabolica",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Pele Diabolica cobra poder por pacto. Alvo sofre 2d6+Mod.DEV profano ou fogo; DEV CD 14 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "1 minuto",
+    "number": 130
+  },
+  {
+    "source": "faith",
+    "name": "Dizimo de Dor",
+    "cost": "5 PD",
+    "range": "12m / 1 minuto",
+    "effect": "Dizimo de Dor cobra poder por pacto. Alvo sofre 2d6+Mod.DEV profano ou fogo; DEV CD 14 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "1 minuto",
+    "number": 131
+  },
+  {
+    "source": "faith",
+    "name": "Invocacao Cruel",
+    "cost": "6 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Invocacao Cruel cobra poder por pacto. Alvo sofre 3d6+Mod.DEV profano ou fogo; DEV CD 15 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "1 rodada",
+    "number": 132
+  },
+  {
+    "source": "faith",
+    "name": "Olhar do Pactario",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Olhar do Pactario cobra poder por pacto. Alvo sofre 3d6+Mod.DEV profano ou fogo; DEV CD 15 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "1 rodada",
+    "number": 133
+  },
+  {
+    "source": "faith",
+    "name": "Trono Inferior",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Trono Inferior cobra poder por pacto. Alvo sofre 3d6+Mod.DEV profano ou fogo; DEV CD 15 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "1 rodada",
+    "number": 134
+  },
+  {
+    "source": "faith",
+    "name": "Chicote de Brasa",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Chicote de Brasa cobra poder por pacto. Alvo sofre 3d6+Mod.DEV profano ou fogo; DEV CD 15 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "1 rodada",
+    "number": 135
+  },
+  {
+    "source": "faith",
+    "name": "Pacto de Ferida",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Pacto de Ferida cobra poder por pacto. Alvo sofre 3d6+Mod.DEV profano ou fogo; DEV CD 15 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "1 rodada",
+    "number": 136
+  },
+  {
+    "source": "faith",
+    "name": "Mandibula Rubra",
+    "cost": "7 PD",
+    "range": "18m / 1 rodada",
+    "effect": "Mandibula Rubra cobra poder por pacto. Alvo sofre 3d6+Mod.DEV profano ou fogo; DEV CD 15 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "1 rodada",
+    "number": 137
+  },
+  {
+    "source": "faith",
+    "name": "Selo de Corrupcao",
+    "cost": "8 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Selo de Corrupcao cobra poder por pacto. Alvo sofre 3d6+Mod.DEV profano ou fogo; DEV CD 15 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "10 minutos",
+    "number": 138
+  },
+  {
+    "source": "faith",
+    "name": "Coroa de Chifres",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Coroa de Chifres cobra poder por pacto. Alvo sofre 5d6+Mod.DEV profano ou fogo; DEV CD 16 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "10 minutos",
+    "number": 139
+  },
+  {
+    "source": "faith",
+    "name": "Oferta Maldita",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Oferta Maldita cobra poder por pacto. Alvo sofre 5d6+Mod.DEV profano ou fogo; DEV CD 16 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "10 minutos",
+    "number": 140
+  },
+  {
+    "source": "faith",
+    "name": "Ascensao Infernal",
+    "cost": "9 PD",
+    "range": "24m / 10 minutos",
+    "effect": "Ascensao Infernal cobra poder por pacto. Alvo sofre 5d6+Mod.DEV profano ou fogo; DEV CD 16 reduz metade. Se falhar, fica Marcado: o proximo ataque contra ele causa +1d6, mas o conjurador recebe sinal profano visivel ate o fim da cena.",
+    "type": "Demonio/Debuff",
+    "duration": "10 minutos",
+    "number": 141
   }
+  // END EXPANSAO SENSIENTE DEVOTO
 ];
-

@@ -212,7 +212,7 @@ export interface AppState {
   rolls: DiceRoll[]
 }
 
-export type TabId = 'ficha' | 'campanha' | 'mestre' | 'mapas' | 'magia' | 'dados'
+export type TabId = 'ficha' | 'campanha' | 'mestre' | 'mapas' | 'magia' | 'dados' | 'downloads'
 
 export interface CloudConfig {
   url: string
