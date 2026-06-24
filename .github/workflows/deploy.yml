@@ -29,6 +29,9 @@ jobs:
       - run: npm ci
       - run: npm run lint -- --max-warnings=0
       - run: npm run build
+      - run: node tools/publish_download_site.cjs
+      - run: node tools/apply_bestiary_ai_images.cjs
+      - run: node tools/enrich_bestiary_special_abilities.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

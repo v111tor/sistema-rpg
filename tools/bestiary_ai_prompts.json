@@ -1,0 +1,562 @@
+[
+  {
+    "number": 1,
+    "name": "Lobo de Cinza",
+    "slug": "lobo-de-cinza",
+    "target": "lobo-de-cinza-ai.png",
+    "prompt": "Lobo de Cinza, lobo de porte médio com pelagem cinza-fumaça que parece desfazer-se em partículas finas nas pontas, como fuligem suspensa. Olhos pequenos e claros, atentos, postura baixa de caçador rastejando entre raízes e samambaias de uma floresta densa e sombria. Patas levemente translúcidas na parte inferior, sugerindo ligação com magia primitiva selvagem. Pose: prestes a saltar, três quartos de perfil, orelhas para trás, em alerta de matilha.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 2,
+    "name": "Corvo Rúnico",
+    "slug": "corvo-runico",
+    "target": "corvo-runico-ai.png",
+    "prompt": "Corvo Rúnico, corvo pequeno de penas pretas com runas arcanas pálidas gravadas como veios luminosos sob as penas, visíveis principalmente nas asas abertas. Um olho do corvo é substituído por um glifo circular flutuante e brilhante (Olho Glifado), o outro é um olho normal de corvo. Cenário: pousado sobre uma coluna de ruína em colapso coberta de hera. Pose: asas semiabertas, cabeça inclinada, observando o espectador de forma inteligente e calculista.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 3,
+    "name": "Rastejante de Pântano",
+    "slug": "rastejante-de-pantano",
+    "target": "rastejante-de-pantano-ai.png",
+    "prompt": "Rastejante de Pântano, criatura quadrúpede de porte médio com pele verde-acastanhada coberta por uma camada real de lama, lodo e vegetação aquática aderida (Camuflagem Lodosa), quase indistinguível do terreno ao redor. Olhos amarelados saltados no alto da cabeça, focinho longo e baixo. Cenário: emergindo parcialmente da superfície de um pântano nebuloso, só a cabeça e o dorso visíveis. Pose: imóvel, à espreita, água gotejando do corpo.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 4,
+    "name": "Vaga-lume Sifão",
+    "slug": "vaga-lume-sifao",
+    "target": "vaga-lume-sifao-ai.png",
+    "prompt": "Vaga-lume Sifão, inseto minúsculo (do tamanho de uma mão) com um abdômen translúcido inchado que pulsa com uma luz azul-violeta drenada de outras fontes mágicas (Brilho Faminto). Asas finas como vidro fendido. Cenário: voando em enxame pequeno perto de uma fenda de energia crepitante (linha de força) no ar, sugando filamentos de luz da fenda para dentro do próprio corpo. Pose: close-up de um espécime em voo, abdômen brilhando mais intensamente que o resto do corpo.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 5,
+    "name": "Hiena da Raiva",
+    "slug": "hiena-da-raiva",
+    "target": "hiena-da-raiva-ai.png",
+    "prompt": "Hiena da Raiva, hiena de porte médio com pelagem manchada vermelho-acastanhada, músculos tensos e veias visíveis pulsando sob a pele quando irritada (Fúria Reativa). Boca semiaberta em rosnado permanente, espuma leve nos cantos. Cenário: dunas de um deserto ressecado ao entardecer. Pose: agachada, prestes a atacar, olhar fixo e furioso, terra sendo levantada pelas patas traseiras.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 6,
+    "name": "Serpente de Vidro",
+    "slug": "serpente-de-vidro",
+    "target": "serpente-de-vidro-ai.png",
+    "prompt": "Serpente de Vidro, serpente longa e esguia cujo corpo é parcialmente translúcido como vidro polido, refletindo e distorcendo a luz ao redor (Corpo Refrator) — cores do ambiente aparecem fragmentadas em sua pele. Olhos como pequenas esferas de cristal facetado. Cenário: enrolada sobre os destroços de uma coluna de mármore em ruínas arcanas. Pose: enroscada em espiral, cabeça erguida, luz quebrando-se em pequenos arco-íris ao longo do corpo.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 7,
+    "name": "Urso de Bruma",
+    "slug": "urso-de-bruma",
+    "target": "urso-de-bruma-ai.png",
+    "prompt": "Urso de Bruma, urso grande e corpulento cuja pelagem se dissolve nas bordas em uma névoa fria e espessa que o protege (Bruma Protetora) — o contorno do corpo é nítido no centro e esfumaçado nas extremidades. Olhos pequenos e calmos. Cenário: floresta de pinheiros cobertos de neblina rasteira. Pose: de pé sobre as patas traseiras, bruma saindo de seu corpo como respiração visível no frio, postura imponente e defensiva.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 8,
+    "name": "Aranha de Eco",
+    "slug": "aranha-de-eco",
+    "target": "aranha-de-eco-ai.png",
+    "prompt": "Aranha de Eco, aranha de porte médio com oito patas finas e longas, corpo marcado por padrões espiralados que pulsam suavemente como ondas sonoras visíveis. Teia ao redor dela vibra e brilha em tons diferentes conforme a emoção de quem a toca (Teia Emocional). Cenário: pendurada no centro de uma teia ampla numa caverna subterrânea escura. Pose: suspensa de cabeça para baixo na teia, patas dianteiras tocando os fios, padrões na teia brilhando em ondas concêntricas.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 9,
+    "name": "Crocodilo de Pedra",
+    "slug": "crocodilo-de-pedra",
+    "target": "crocodilo-de-pedra-ai.png",
+    "prompt": "Crocodilo de Pedra, crocodilo robusto cuja pele de escamas se endureceu parcialmente em placas de pedra rachada e musgosa, permitindo-lhe ficar perfeitamente imóvel como uma rocha real (Imóvel como Rocha). Olhos amarelos entreabertos, quase escondidos por crostas minerais. Cenário: submerso até os olhos na água turva de um pântano, parecendo uma pedra emersa coberta de lodo. Pose: só o dorso rugoso e os olhos acima da superfície da água, perfeitamente quieto.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 10,
+    "name": "Mariposa do Luto",
+    "slug": "mariposa-do-luto",
+    "target": "mariposa-do-luto-ai.png",
+    "prompt": "Mariposa do Luto, mariposa grande com asas em tons cinza-azulados que desprendem uma poeira fina e luminosa ao bater (Pó de Saudade) — a poeira parece brilhar e depois apagar lentamente no ar, como memórias se desfazendo. Padrões nas asas lembram rostos desfocados. Cenário: voando entre troncos de árvores mortas numa floresta enevoada ao anoitecer. Pose: asas abertas em pleno voo, poeira luminosa se espalhando atrás dela como um rastro.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 11,
+    "name": "Bandido de Cristal",
+    "slug": "bandido-de-cristal",
+    "target": "bandido-de-cristal-ai.png",
+    "prompt": "Bandido de Cristal, humanoide de aparência ágil vestindo roupas de couro surradas, com fragmentos de cristal tecnológico instável incrustados no antebraço e ombro (Cristal Instável) — os cristais emitem rachaduras de luz que parecem prontas para explodir. Cenário: beco estreito de uma cidade decadente, à noite. Pose: agachado sobre um telhado, arma curta em punho, cristal do braço pulsando em tom de aviso, olhar furtivo para baixo.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 12,
+    "name": "Duelista de Runa",
+    "slug": "duelista-de-runa",
+    "target": "duelista-de-runa-ai.png",
+    "prompt": "Duelista de Runa, humanoide esguio com armadura leve gravada de runas arcanas que brilham ao longo da lâmina e da guarda da espada quando em posição de defesa (Aparar Rúnico). Capa curta esvoaçante. Cenário: pátio de pedra de uma cidade antiga, ao pôr do sol. Pose: em guarda de duelo clássica, espada erguida, runas da lâmina acesas em tom dourado, expressão concentrada e desafiadora.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 13,
+    "name": "Devoto da Luz",
+    "slug": "devoto-da-luz",
+    "target": "devoto-da-luz-ai.png",
+    "prompt": "Devoto da Luz, humanoide vestindo vestes religiosas simples em tons claros, com uma aura suave e constante de luz dourada ao redor das mãos (Fé Menor) — não ofuscante, apenas uma luminescência calma de fé genuína. Cenário: interior simples de um templo de pedra, com luz entrando por uma fresta. Pose: de pé, mãos erguidas em oração, luz dourada emanando suavemente das palmas, rosto sereno.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 14,
+    "name": "Acólito da Sombra",
+    "slug": "acolito-da-sombra",
+    "target": "acolito-da-sombra-ai.png",
+    "prompt": "Acólito da Sombra, humanoide encapuzado com vestes escuras cujas bordas parecem se misturar e desaparecer na escuridão ao redor, deixando os próprios passos quase invisíveis (Passo Apagado). Cenário: corredor subterrâneo mal iluminado por uma única antorcha distante. Pose: encostado contra a parede, meio mesclado com a sombra projetada, apenas os olhos e parte do rosto visíveis sob o capuz.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 15,
+    "name": "Caçadora Emocional",
+    "slug": "cacadora-emocional",
+    "target": "cacadora-emocional-ai.png",
+    "prompt": "Caçadora Emocional, humanoide com vestimenta de couro adornada por pequenos cristais sensíveis que mudam de cor de acordo com a emoção de quem está perto (Leitura de Emoção). Cenário: clareira de uma floresta densa, luz filtrada entre as árvores. Pose: agachada, mão estendida na direção do espectador como se \"lesse\" sua emoção, cristais do colar brilhando em um tom específico, expressão analítica e atenta.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 16,
+    "name": "Engenheiro de Golem",
+    "slug": "engenheiro-de-golem",
+    "target": "engenheiro-de-golem-ai.png",
+    "prompt": "Engenheiro de Golem, humanoide usando um avental de couro cheio de ferramentas e engrenagens, com um dispositivo de comando luminoso preso ao pulso que controla autômatos à distância (Comando Rápido). Cenário: oficina urbana cheia de peças mecânicas e um golem pequeno inacabado ao fundo. Pose: de pé, braço erguido ativando o dispositivo de pulso, olhar fixo e técnico em direção a algo fora de quadro.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 17,
+    "name": "Profeta do Caos",
+    "slug": "profeta-do-caos",
+    "target": "profeta-do-caos-ai.png",
+    "prompt": "Profeta do Caos, humanoide de vestes esfarrapadas e assimétricas, com olhos de cores diferentes entre si e um halo instável e tremulante de energia ao redor da cabeça que muda de forma a cada segundo (Presságio Instável). Cenário: praça de uma cidade em ruínas, céu nublado e estranho. Pose: braços abertos, cabeça inclinada para o céu, halo distorcendo-se em formas caóticas, multidão imaginária implícita fora de quadro.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 18,
+    "name": "Saqueador de Linha",
+    "slug": "saqueador-de-linha",
+    "target": "saqueador-de-linha-ai.png",
+    "prompt": "Saqueador de Linha, humanoide com tatuagens ou marcas de energia absorvida correndo pela pele como rachaduras luminosas que se intensificam perto de fontes de magia ambiente (Dreno de Contato). Cenário: área de fenda energética crepitante (linha de força) em uma paisagem árida. Pose: mão tocando o ar pulsante da fenda, marcas do braço brilhando intensamente, expressão de prazer/dor ao absorver energia.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 19,
+    "name": "Guardião Ribeirinho",
+    "slug": "guardiao-ribeirinho",
+    "target": "guardiao-ribeirinho-ai.png",
+    "prompt": "Guardião Ribeirinho, humanoide robusto vestindo roupas adaptadas para água, com peles de animais aquáticos nos ombros e uma lança longa adornada com conchas (Conhece as Águas). Cenário: margem de um rio largo e calmo, vegetação densa ao redor. Pose: de pé sobre uma rocha na água, lança apoiada no ombro, olhando atentamente o curso do rio como se sentisse cada corrente.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 20,
+    "name": "Monge da Determinação",
+    "slug": "monge-da-determinacao",
+    "target": "monge-da-determinacao-ai.png",
+    "prompt": "Monge da Determinação, humanoide musculoso vestindo trajes simples de treino, em postura marcial firme e equilibrada, com as mãos levemente calejadas erguidas em posição defensiva clássica (Postura de Proteção). Cenário: platô rochoso de montanha, vento forte agitando o tecido das roupas. Pose: postura de artes marciais enraizada, pés bem plantados, expressão de calma absoluta sob pressão.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 21,
+    "name": "Sentinela de Pedra",
+    "slug": "sentinela-de-pedra",
+    "target": "sentinela-de-pedra-ai.png",
+    "prompt": "Sentinela de Pedra, autômato humanoide esculpido em bloco de pedra antiga, com símbolos de proteção gravados no peito que se iluminam ao detectar uma ameaça (Protocolo de Bloqueio). Juntas visíveis como fendas de rocha articulada. Cenário: pátio de uma ruína arcana coberta de vegetação rasteira. Pose: braços cruzados em posição de bloqueio, símbolos do peito acesos em tom azul-pedra, postura imóvel mas alerta.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 22,
+    "name": "Drone de Alarme",
+    "slug": "drone-de-alarme",
+    "target": "drone-de-alarme-ai.png",
+    "prompt": "Drone de Alarme, pequeno autômato esférico flutuante feito de placas metálicas remendadas, com uma luz central giratória vermelha que dispara um som agudo de alerta (Sirene). Cenário: telhado de uma cidade densamente construída, fios e antenas ao fundo. Pose: suspenso no ar, luz central girando e emitindo um brilho intenso, pequenas hastes-antena vibrando como se emitissem som.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 23,
+    "name": "Boneco de Sal",
+    "slug": "boneco-de-sal",
+    "target": "boneco-de-sal-ai.png",
+    "prompt": "Boneco de Sal, figura humanoide esculpida inteiramente em cristais de sal compactado, superfície áspera e esbranquiçada, capaz de explodir parte do corpo em uma nuvem cortante de sal (Estouro Salino). Cenário: deserto salgado rachado sob sol intenso. Pose: braço já em meio a uma explosão controlada de cristais de sal, postura agressiva, rachaduras visíveis no torso prestes a se romper.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 24,
+    "name": "Armadura Vazia",
+    "slug": "armadura-vazia",
+    "target": "armadura-vazia-ai.png",
+    "prompt": "Armadura Vazia, um conjunto completo de armadura de placas antiga, sem ninguém dentro, sustentada por uma runa central flutuante e brilhante visível através da abertura do peitoral (Runa Central). Cenário: salão em ruínas de um castelo abandonado, luz de lua entrando por vitrais quebrados. Pose: empunhando uma espada larga em posição de combate, runa do peito pulsando, elmo vazio encarando o espectador.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 25,
+    "name": "Torreta de Cobre",
+    "slug": "torreta-de-cobre",
+    "target": "torreta-de-cobre-ai.png",
+    "prompt": "Torreta de Cobre, estrutura mecânica cilíndrica de cobre oxidado fixada permanentemente ao solo ou parede, com um único olho-lente giratório de latão no topo (Ancorada). Cenário: corredor estreito de uma fortaleza tecnomágica. Pose: lente focalizada diretamente no espectador, pequenos canos de disparo emergindo das laterais, correntes de fixação visíveis na base.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 26,
+    "name": "Golem de Raiz",
+    "slug": "golem-de-raiz",
+    "target": "golem-de-raiz-ai.png",
+    "prompt": "Golem de Raiz, figura humanoide massiva formada inteiramente por raízes entrelaçadas, troncos finos e musgo, capaz de prender inimigos emaranhando raízes do solo ao redor (Raízes de Prisão). Cenário: clareira profunda de uma floresta antiga. Pose: um braço estendido com raízes brotando do punho em direção ao chão, prendendo algo imaginário fora de quadro, folhas caindo de seu corpo.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 27,
+    "name": "Arquivista Mecânico",
+    "slug": "arquivista-mecanico",
+    "target": "arquivista-mecanico-ai.png",
+    "prompt": "Arquivista Mecânico, autômato esguio com múltiplos braços articulados finos terminando em ponteiras de pena, e um compartimento no peito cheio de pergaminhos e fichas catalogadas (Banco de Pistas). Cenário: biblioteca urbana abandonada e empoeirada. Pose: dois braços escrevendo simultaneamente em pergaminhos diferentes, cabeça mecânica inclinada como se analisando um livro flutuante.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 28,
+    "name": "Colmeia de Ferro",
+    "slug": "colmeia-de-ferro",
+    "target": "colmeia-de-ferro-ai.png",
+    "prompt": "Colmeia de Ferro, estrutura construto em forma de favo de mel metálico enferrujado, de onde pequenos autômatos-inseto idênticos emergem em enxame coordenado (Enxame Interno). Cenário: túnel subterrâneo industrial abandonado. Pose: vista frontal da colmeia com vários pequenos drones-inseto saindo simultaneamente de aberturas no casco, luzes pequenas piscando em sincronia.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 29,
+    "name": "Estátua Consagrada",
+    "slug": "estatua-consagrada",
+    "target": "estatua-consagrada-ai.png",
+    "prompt": "Estátua Consagrada, figura humanoide esculpida em mármore branco representando uma divindade serena, com um juramento sagrado gravado em letras douradas que cruzam o peito e os braços (Juramento Gravado). Cenário: nicho central de uma capela de pedra simples, velas ao redor. Pose: postura solene, palmas das mãos voltadas para frente em gesto de bênção, letras douradas brilhando levemente.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 30,
+    "name": "Casca Andante",
+    "slug": "casca-andante",
+    "target": "casca-andante-ai.png",
+    "prompt": "Casca Andante, construto natural de porte médio formado por uma casca oca de árvore antiga, musgo e raízes finas, movendo-se como armadura vegetal vazia. O tronco rachado no peito drena energia vital de plantas e criaturas próximas (Dreno Vegetal), com seiva escura brilhando nas fissuras. Cenário: floresta úmida com raízes expostas e folhas mortas no chão. Pose: caminhando lentamente com braços longos de galhos retorcidos, cabeça oca inclinada, raízes saindo dos pés e tocando o solo.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 31,
+    "name": "Sussurro da Escada",
+    "slug": "sussurro-da-escada",
+    "target": "sussurro-da-escada-ai.png",
+    "prompt": "Sussurro da Escada, espírito semitransparente em forma humanoide alongada e distorcida, deixando atrás de si o eco visual de pegadas fantasmagóricas que se repetem em loop (Passos Repetidos). Cenário: escadaria estreita e torta de um prédio urbano abandonado. Pose: subindo a escada em movimento borrado, múltiplas \"sombras\" de passos anteriores visíveis atrás da figura principal, semitransparente.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 32,
+    "name": "Memória Afogada",
+    "slug": "memoria-afogada",
+    "target": "memoria-afogada-ai.png",
+    "prompt": "Memória Afogada, espírito com forma humanoide ondulante feita de água turva e memórias visuais fragmentadas flutuando dentro do próprio corpo translúcido (Lembrança de Perda) — rostos e objetos do passado aparecem e desaparecem dentro dele como reflexos. Cenário: superfície calma de um pântano ao anoitecer. Pose: emergindo da água parado até a cintura, rosto erguido, imagens fantasmagóricas visíveis dentro do torso líquido.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 33,
+    "name": "Vigia Ancestral",
+    "slug": "vigia-ancestral",
+    "target": "vigia-ancestral-ai.png",
+    "prompt": "Vigia Ancestral, espírito antigo com corpo inteiramente composto por névoa densa e lenta, mantendo uma forma humanoide vaga e venerável (Corpo de Névoa). Cenário: topo nevado de uma montanha, vista para um vale distante. Pose: postura imóvel e vigilante, névoa do corpo fluindo lentamente como cabelo ao vento, olhar fixo no horizonte.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 34,
+    "name": "Eco da Tristeza",
+    "slug": "eco-da-tristeza",
+    "target": "eco-da-tristeza-ai.png",
+    "prompt": "Eco da Tristeza, espírito curvado e encolhido, envolto numa névoa cinza-azulada espessa que parece pesar sobre seus ombros curvados (Névoa de Luto). Cenário: pátio interno de uma ruína abandonada, chuva fina caindo. Pose: sentado, joelhos abraçados, névoa escorrendo de seu corpo como lágrimas lentas, forma quase dissolvendo-se nas bordas.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 35,
+    "name": "Fagulha de Alegria",
+    "slug": "fagulha-de-alegria",
+    "target": "fagulha-de-alegria-ai.png",
+    "prompt": "Fagulha de Alegria, pequeno espírito luminoso e esférico com um brilho quente e amarelado que se intensifica e contagia outras luzes próximas (Brilho Contagiante). Cenário: rua movimentada de uma cidade à noite, lanternas penduradas. Pose: flutuando entre as pessoas (implícitas fora de quadro), brilho pulsando energicamente, pequenas fagulhas saltando de seu corpo para o ambiente ao redor.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 36,
+    "name": "Aparição da Ordem",
+    "slug": "aparicao-da-ordem",
+    "target": "aparicao-da-ordem-ai.png",
+    "prompt": "Aparição da Ordem, espírito rígido em forma de figura encapuzada sustentando uma balança espectral flutuante, julgando silenciosamente quem se aproxima (Julgamento). Cenário: ruínas de um antigo tribunal ou templo de justiça. Pose: imóvel e ereta, balança suspensa na frente do corpo, luz fria emanando das duas bandejas da balança.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 37,
+    "name": "Máscara Sem Nome",
+    "slug": "mascara-sem-nome",
+    "target": "mascara-sem-nome-ai.png",
+    "prompt": "Máscara Sem Nome, espírito sem rosto definido, cuja face é uma máscara lisa e pálida que parece capaz de assumir traços de outras pessoas (Roubo de Persona). Cenário: câmara subterrânea escura com vários espelhos quebrados ao redor. Pose: cabeça inclinada, mão tocando a própria máscara como se a estivesse trocando, reflexos diferentes visíveis nos espelhos quebrados ao fundo.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 38,
+    "name": "Alma de Cinzas",
+    "slug": "alma-de-cinzas",
+    "target": "alma-de-cinzas-ai.png",
+    "prompt": "Alma de Cinzas, espírito frágil formado por cinzas suspensas que se desfazem e se reformam continuamente, sempre famintas por mais matéria para absorver (Cinza Faminta). Cenário: dunas de um deserto escaldante ao pôr do sol. Pose: corpo em pleno processo de desfazer-se em partículas de cinza pelo vento, braços estendidos como se tentasse se recompor.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 39,
+    "name": "Noiva do Vento",
+    "slug": "noiva-do-vento",
+    "target": "noiva-do-vento-ai.png",
+    "prompt": "Noiva do Vento, espírito feminino esguio vestido com um véu rasgado que se move violentamente mesmo sem vento aparente, cercado por uma torrente giratória constante de ar (Vendaval Nupcial). Cenário: topo de penhasco rochoso de montanha. Pose: véu e cabelos esvoaçando em espiral ao redor do corpo, pés não tocando completamente o solo, pequenos destroços girando ao redor dela.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 40,
+    "name": "Cantor do Subsolo",
+    "slug": "cantor-do-subsolo",
+    "target": "cantor-do-subsolo-ai.png",
+    "prompt": "Cantor do Subsolo, espírito alongado e esguio sem boca visível, mas emitindo ondas sonoras distorcidas que se propagam visivelmente pelo ar como rachaduras translúcidas (Eco Confuso). Cenário: caverna subterrânea com estalactites. Pose: cabeça inclinada para trás, ondulações sonoras visíveis saindo de seu corpo em círculos concêntricos distorcidos.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 41,
+    "name": "Massa de Olhos",
+    "slug": "massa-de-olhos",
+    "target": "massa-de-olhos-ai.png",
+    "prompt": "Massa de Olhos, aberração em forma de massa orgânica irregular e pulsante coberta de dezenas de olhos de tamanhos e cores diferentes que se movem de forma independente (Olhar Múltiplo). Cenário: canto escuro de um túnel subterrâneo abandonado, gotejamento de água. Pose: massa parcialmente esticada para frente, vários olhos focando diferentes direções ao mesmo tempo, textura viscosa e irregular.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 42,
+    "name": "Boca na Parede",
+    "slug": "boca-na-parede",
+    "target": "boca-na-parede-ai.png",
+    "prompt": "Boca na Parede, aberração quase indistinguível de uma parede de pedra comum, exceto por uma boca grande, úmida e dentada que se abre diretamente na superfície (Passagem Viva). Cenário: corredor estreito de ruína antiga, musgo cobrindo as pedras ao redor. Pose: boca totalmente aberta na parede, dentes irregulares visíveis, leve brilho de saliva, restante da parede aparentemente normal.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 43,
+    "name": "Carne de Ritual",
+    "slug": "carne-de-ritual",
+    "target": "carne-de-ritual-ai.png",
+    "prompt": "Carne de Ritual, aberração composta por múltiplas mãos e bocas entrelaçadas formando uma massa carnal disforme que sussurra preces distorcidas continuamente (Oração Carnal). Cenário: altar profanado em ruínas, símbolos religiosos invertidos pintados ao redor. Pose: massa elevada sobre o altar como se estivesse sendo oferecida, mãos levantadas em gesto de oração, bocas sussurrando.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 44,
+    "name": "Gêmeo Deslocado",
+    "slug": "gemeo-deslocado",
+    "target": "gemeo-deslocado-ai.png",
+    "prompt": "Gêmeo Deslocado, aberração humanoide cujo corpo existe simultaneamente em duas posições levemente fora de sincronia, como uma dupla exposição fotográfica viva (Dois Corpos). Cenário: área de fenda energética instável (linha de força) com ar distorcido ao redor. Pose: duas silhuetas quase idênticas sobrepostas com um pequeno deslocamento de posição e tempo, uma levemente translúcida.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 45,
+    "name": "Larva de Medo",
+    "slug": "larva-de-medo",
+    "target": "larva-de-medo-ai.png",
+    "prompt": "Larva de Medo, aberração em forma de larva grande e pálida com uma textura repulsiva de pequenas protuberâncias pulsantes que provocam repulsa instintiva só de olhar (Repulsa Instintiva). Cenário: solo úmido entre raízes podres de uma floresta sombria. Pose: corpo enrolado parcialmente, protuberâncias da pele pulsando em ondas visíveis, baba escorrendo lentamente.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 46,
+    "name": "Polvo de Pedra",
+    "slug": "polvo-de-pedra",
+    "target": "polvo-de-pedra-ai.png",
+    "prompt": "Polvo de Pedra, aberração com corpo central rígido e mineral do qual emergem múltiplos tentáculos de pedra articulada e flexível (Tentáculos Múltiplos). Cenário: pântano com rochas grandes emergindo da água escura. Pose: tentáculos espalhados em diferentes direções sobre rochas próximas, corpo central erguido para fora da lama, textura rugosa de pedra úmida.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 47,
+    "name": "Núcleo Espelhado",
+    "slug": "nucleo-espelhado",
+    "target": "nucleo-espelhado-ai.png",
+    "prompt": "Núcleo Espelhado, aberração esférica composta por fragmentos de espelho flutuando em órbita ao redor de um núcleo escuro pulsante, refletindo e drenando energia de tudo ao redor (Reflexo Drenante). Cenário: fenda energética crepitante (linha de força) em paisagem árida. Pose: fragmentos espelhados girando lentamente em órbita, reflexos distorcidos de luz visíveis em cada fragmento, núcleo central absorvendo um filete de energia.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 48,
+    "name": "Riso Sem Boca",
+    "slug": "riso-sem-boca",
+    "target": "riso-sem-boca-ai.png",
+    "prompt": "Riso Sem Boca, aberração humanoide encurvada cujo rosto é completamente liso, sem boca, mas que emite um riso alto e visível como ondas de ar tremulante saindo da garganta (Gargalhada Compulsiva). Cenário: praça de cidade abandonada à noite, lua cheia ao fundo. Pose: cabeça inclinada para trás em gargalhada silenciosa, ombros tremendo, ondulações de ar visíveis saindo do pescoço.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 49,
+    "name": "Pele de Livro",
+    "slug": "pele-de-livro",
+    "target": "pele-de-livro-ai.png",
+    "prompt": "Pele de Livro, aberração cuja superfície da pele é coberta por páginas finas e símbolos arcanos que se reescrevem constantemente, registrando feitiços que tocou um dia (Memória de Magia). Cenário: biblioteca arcana em ruínas, pergaminhos espalhados pelo chão. Pose: braços abertos mostrando a \"pele-página\" coberta de runas mutáveis, algumas páginas da pele se virando sozinhas.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 50,
+    "name": "Feto de Relâmpago",
+    "slug": "feto-de-relampago",
+    "target": "feto-de-relampago-ai.png",
+    "prompt": "Feto de Relâmpago, aberração pequena e frágil em posição fetal, envolta por uma membrana semitransparente crepitante de eletricidade estática constante (Campo Condutor). Cenário: laboratório tecnomágico abandonado, fios soltos e faíscas no ambiente. Pose: suspensa no ar dentro de uma esfera de energia, pequenos raios percorrendo a membrana externa, corpo encolhido e vulnerável.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 51,
+    "name": "Chama de Linha",
+    "slug": "chama-de-linha",
+    "target": "chama-de-linha-ai.png",
+    "prompt": "Chama de Linha, elemental de fogo arcano puro em forma humanoide esguia, com chamas que mudam de cor (azul, violeta, branco) conforme absorvem energia ambiente de fendas mágicas (Chama Catalisadora). Cenário: área de fenda energética crepitante (linha de força) ao anoitecer. Pose: braços erguidos canalizando energia da fenda diretamente para dentro do próprio corpo flamejante, chamas se intensificando em cor.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 52,
+    "name": "Pedra Chorosa",
+    "slug": "pedra-chorosa",
+    "target": "pedra-chorosa-ai.png",
+    "prompt": "Pedra Chorosa, elemental composto por rocha mineral porosa da qual escorre constantemente uma água mineral espessa, como lágrimas de pedra (Choro Mineral). Cenário: encosta rochosa de montanha coberta de névoa. Pose: forma humanoide ajoelhada, rosto rústico esculpido em expressão de tristeza, água escorrendo visivelmente das fendas do rosto e ombros.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 53,
+    "name": "Lago Vivo",
+    "slug": "lago-vivo",
+    "target": "lago-vivo-ai.png",
+    "prompt": "Lago Vivo, elemental aquático que existe como um corpo de água inteiro com consciência própria, capaz de erguer parte de sua superfície em forma humanoide temporária (Corpo D'Água). Cenário: pântano amplo e calmo sob luz de lua. Pose: uma figura humanoide se erguendo parcialmente da superfície do próprio lago, ainda conectada à água abaixo, translúcida e ondulante.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 54,
+    "name": "Areia Vidente",
+    "slug": "areia-vidente",
+    "target": "areia-vidente-ai.png",
+    "prompt": "Areia Vidente, elemental feito de areia fina dourada que se ergue em padrões espirais previsíveis, formando símbolos que parecem prever o futuro próximo (Presságio Granular). Cenário: deserto vasto sob céu estrelado. Pose: coluna de areia girando em espiral formando símbolos temporários no ar, parte da areia assumindo vagamente uma forma de rosto virado para o alto.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 55,
+    "name": "Gelo da Saudade",
+    "slug": "gelo-da-saudade",
+    "target": "gelo-da-saudade-ai.png",
+    "prompt": "Gelo da Saudade, elemental de gelo translúcido com imagens congeladas de memórias antigas visíveis dentro do próprio corpo cristalino (Memória Congelada). Cenário: encosta nevada de montanha, ventania fraca. Pose: forma humanoide semitransparente de gelo, silhuetas fantasmagóricas de momentos passados visíveis dentro do gelo do peito e braços.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 56,
+    "name": "Raiz Solar",
+    "slug": "raiz-solar",
+    "target": "raiz-solar-ai.png",
+    "prompt": "Raiz Solar, elemental vegetal composto por raízes douradas brilhantes que emitem uma luz quente como seiva radiante circulando visivelmente por dentro (Seiva Radiante). Cenário: clareira ensolarada de floresta densa. Pose: forma humanoide entrelaçada de raízes grossas, luz dourada pulsando visivelmente ao longo das \"veias\" vegetais, pequenas flores brotando nas extremidades.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 57,
+    "name": "Nuvem de Limalha",
+    "slug": "nuvem-de-limalha",
+    "target": "nuvem-de-limalha-ai.png",
+    "prompt": "Nuvem de Limalha, elemental tecnomágico formado por uma nuvem densa de limalha de metal que se organiza e reorganiza magneticamente em formas variáveis (Magnetismo). Cenário: pátio industrial de cidade tecnomágica, faíscas no ar. Pose: nuvem metálica formando temporariamente um braço ou garra apontada para frente, partículas de metal visivelmente atraídas e repelidas em padrões.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 58,
+    "name": "Vento da Ordem",
+    "slug": "vento-da-ordem",
+    "target": "vento-da-ordem-ai.png",
+    "prompt": "Vento da Ordem, elemental de ar visível apenas pelas partículas de poeira e folhas que organiza em formações geométricas perfeitas e simétricas ao seu redor (Geometria Sagrada). Cenário: praça central de uma cidade antiga ao amanhecer. Pose: redemoinho de ar visível através de detritos organizados em círculos e linhas geométricas perfeitas, centro vazio sugerindo uma presença invisível.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 59,
+    "name": "Sombra Líquida",
+    "slug": "sombra-liquida",
+    "target": "sombra-liquida-ai.png",
+    "prompt": "Sombra Líquida, elemental composto por uma substância negra e viscosa que se move como líquido mas se comporta como sombra projetada, deslizando inteiramente dentro de áreas escuras (Passo na Sombra). Cenário: corredor subterrâneo com pouquíssima luz vindo de uma fresta acima. Pose: forma humanoide parcialmente derretida fundindo-se com a sombra projetada na parede, gotejando como tinta escura.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 60,
+    "name": "Pó de Fissura",
+    "slug": "po-de-fissura",
+    "target": "po-de-fissura-ai.png",
+    "prompt": "Pó de Fissura, elemental instável feito de partículas cinzentas flutuantes que parecem corroer e apagar pequenas porções de magia ambiente ao seu redor (Enfraquecer Magia). Cenário: área de fenda energética crepitante (linha de força) com ar visivelmente \"esmaecido\" perto da criatura. Pose: nuvem de partículas cinzentas em forma vagamente humanoide, energia mágica ao redor visivelmente sendo apagada como fumaça se dissipando.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 61,
+    "name": "Cadáver Levantado",
+    "slug": "cadaver-levantado",
+    "target": "cadaver-levantado-ai.png",
+    "prompt": "Cadáver Levantado, morto-vivo humanoide básico com pele cinza-azulada apodrecida e ferimentos abertos, capaz de se reerguer mesmo após abatido (Levantar de Novo) — pequenas marcas de runas sagradas queimadas na testa indicam tentativas anteriores de destruição. Cenário: ruína de cemitério antigo, terra revolvida. Pose: meio erguido do solo, um braço esticado para fora da terra, postura desajeitada de quem acabou de se levantar de novo.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 62,
+    "name": "Afogado Sem Rosto",
+    "slug": "afogado-sem-rosto",
+    "target": "afogado-sem-rosto-ai.png",
+    "prompt": "Afogado Sem Rosto, morto-vivo encharcado permanentemente, pele inchada e pálida, rosto borrado e sem traços definidos pela decomposição na água (Sufocar). Cenário: margem lodosa de um pântano, água escura e estagnada. Pose: emergindo da água até o peito, braços estendidos para frente como se ainda tentasse respirar, água escorrendo constantemente do corpo.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 63,
+    "name": "Cavaleiro Funerário",
+    "slug": "cavaleiro-funerario",
+    "target": "cavaleiro-funerario-ai.png",
+    "prompt": "Cavaleiro Funerário, morto-vivo vestindo uma armadura enferrujada de cavaleiro com a viseira fechada, empunhando uma espada cerimonial marcada com o emblema de um duelo nunca terminado (Duelista Marcado). Cenário: cripta de pedra com estátuas de cavaleiros ao redor. Pose: postura de duelo formal, espada erguida em saudação fúnebre, capa rasgada esvoaçando levemente.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 64,
+    "name": "Criança de Ossos",
+    "slug": "crianca-de-ossos",
+    "target": "crianca-de-ossos-ai.png",
+    "prompt": "Criança de Ossos, morto-vivo pequeno em forma de esqueleto infantil incompleto, emitindo um choro fraco e constante que atrai outras criaturas para perto (Choro Atrativo). Cenário: rua estreita de cidade abandonada à noite, brinquedo quebrado próximo. Pose: sentada no chão, joelhos ósseos abraçados, cabeça baixa, pequenas luzes fantasmagóricas ao redor como lágrimas suspensas.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 65,
+    "name": "Rei da Vala",
+    "slug": "rei-da-vala",
+    "target": "rei-da-vala-ai.png",
+    "prompt": "Rei da Vala, morto-vivo regio vestindo trapos do que antes era um manto real, com uma coroa torta feita de ossos e metal enferrujado que drena vitalidade de quem se aproxima (Coroa de Dreno). Cenário: trono de pedra esculpido em uma caverna subterrânea profunda. Pose: sentado em postura régia decadente, mão erguida em gesto de comando, coroa brilhando com um drenar visível de energia ao redor.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 66,
+    "name": "Monge Sepulto",
+    "slug": "monge-sepulto",
+    "target": "monge-sepulto-ai.png",
+    "prompt": "Monge Sepulto, morto-vivo vestindo trajes monásticos rasgados e cobertos de terra, em posição de meditação perpétua mesmo após a morte, irradiando um silêncio sepulcral perturbador (Silêncio Sepulcral). Cenário: nicho de pedra esculpido na encosta de uma montanha. Pose: sentado em posição de loto, mãos sobre os joelhos, olhos fechados, leve névoa fria ao redor sugerindo ausência total de som.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 67,
+    "name": "Bruxa Mumificada",
+    "slug": "bruxa-mumificada",
+    "target": "bruxa-mumificada-ai.png",
+    "prompt": "Bruxa Mumificada, morto-vivo enrolado em faixas antigas de tecido ritualístico, segurando um item amaldiçoado que pulsa com energia sombria nas mãos ressecadas (Maldição de Item). Cenário: câmara funerária decorada com símbolos arcanos antigos. Pose: de pé, item amaldiçoado erguido entre as mãos enfaixadas, faixas do corpo esvoaçando levemente como se vivas.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 68,
+    "name": "Enxame de Dentes",
+    "slug": "enxame-de-dentes",
+    "target": "enxame-de-dentes-ai.png",
+    "prompt": "Enxame de Dentes, morto-vivo amorfo composto por centenas de dentes e mandíbulas pequenas flutuando juntas em formato vagamente esférico, ocupando todo o espaço de uma passagem estreita (Ocupar Espaço). Cenário: corredor estreito de ruína decadente. Pose: massa de dentes preenchendo toda a largura do corredor, mandíbulas individuais abrindo e fechando em padrões assíncronos.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 69,
+    "name": "Corpo de Sino",
+    "slug": "corpo-de-sino",
+    "target": "corpo-de-sino-ai.png",
+    "prompt": "Corpo de Sino, morto-vivo cujo torso foi substituído por um sino de bronze enferrujado, badalando sozinho um som que provoca medo instantâneo em quem ouve (Badalada de Medo). Cenário: torre de igreja abandonada, cordas de sino apodrecidas balançando. Pose: braços caídos ao lado do corpo, sino do torso balançando visivelmente como se tivesse acabado de badalar, ondas de som visíveis ao redor.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 70,
+    "name": "Sombra do Carrasco",
+    "slug": "sombra-do-carrasco",
+    "target": "sombra-do-carrasco-ai.png",
+    "prompt": "Sombra do Carrasco, morto-vivo incorpóreo em forma de uma sombra projetada com a silhueta nítida de um machado erguido, marcando permanentemente quem sente culpa por perto (Culpa Marcada). Cenário: praça de execução abandonada em ruínas subterrâneas. Pose: sombra alongada projetada contra uma parede de pedra, silhueta do machado erguido pronta para descer, sem corpo físico visível além da projeção.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 71,
+    "name": "Senhora da Linha",
+    "slug": "senhora-da-linha",
+    "target": "senhora-da-linha-ai.png",
+    "prompt": "Senhora da Linha, entidade arcana imponente em forma humanoide feminina alongada, vestida com tecidos que se desfazem em fios de energia pura, capaz de reescrever pequenas regras da realidade ao redor (Reescrever Regra). Cenário: centro de uma grande fenda energética crepitante (linha de força) rasgando o céu. Pose: braços abertos, fios de realidade visivelmente se reorganizando ao redor de suas mãos, expressão serena e poderosa.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 72,
+    "name": "Deus Pequeno do Lodo",
+    "slug": "deus-pequeno-do-lodo",
+    "target": "deus-pequeno-do-lodo-ai.png",
+    "prompt": "Deus Pequeno do Lodo, pequena entidade divina regional em forma disforme de lodo vivo e pulsante, venerada por comunidades locais de pântano, com pequenos olhos formando-se e desaparecendo na superfície lodosa (Lodo Vivo). Cenário: santuário improvisado em pântano profundo, oferendas simples ao redor. Pose: massa de lodo erguida em forma vagamente antropomórfica, vários olhos pequenos abrindo-se temporariamente na superfície.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 73,
+    "name": "Anjo do Juramento",
+    "slug": "anjo-do-juramento",
+    "target": "anjo-do-juramento-ai.png",
+    "prompt": "Anjo do Juramento, entidade celestial severa com múltiplas asas de penas duras e cortantes, portando correntes douradas que simbolizam promessas quebradas a serem punidas (Punição de Promessa). Cenário: topo de uma torre de templo na cidade, nuvens baixas ao redor. Pose: asas abertas em posição de julgamento, correntes douradas flutuando ao redor dos braços, expressão severa e imparcial.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 74,
+    "name": "Demônio do Contrato",
+    "slug": "demonio-do-contrato",
+    "target": "demonio-do-contrato-ai.png",
+    "prompt": "Demônio do Contrato, entidade infernal elegante em forma humanoide, com um contrato espectral flutuante sempre por perto, pronto para selar acordos vinculantes com tinta que parece sangue (Oferta Vinculante). Cenário: salão decadente de uma cidade, luz de velas baixas. Pose: mão estendida oferecendo uma pena espectral e o contrato flutuante, sorriso sutilmente sedutor, chifres pequenos e elegantes.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 75,
+    "name": "Mãe da Raiva",
+    "slug": "mae-da-raiva",
+    "target": "mae-da-raiva-ai.png",
+    "prompt": "Mãe da Raiva, entidade primitiva ancestral em forma de figura maternal monstruosa e imponente, com múltiplos braços que tremem de fúria contida capaz de explodir em fúria universal contagiante (Fúria Universal). Cenário: coração de uma floresta antiga e densa, árvores tortas ao redor. Pose: braços múltiplos erguidos, veias incandescentes de fúria visíveis sob a pele, expressão de raiva monumental mas protetora.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 76,
+    "name": "Vazio que Aprende",
+    "slug": "vazio-que-aprende",
+    "target": "vazio-que-aprende-ai.png",
+    "prompt": "Vazio que Aprende, entidade abstrata em forma de uma mancha de vazio absoluto com bordas instáveis, capaz de copiar e refletir parcialmente formas de outras criaturas que absorveu (Cópia Absorvida). Cenário: centro de uma fenda energética crepitante (linha de força) distorcida. Pose: silhueta vazia com fragmentos parciais de outras criaturas visíveis nas bordas, como um quebra-cabeça incompleto de formas absorvidas.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 77,
+    "name": "Máquina de Oração",
+    "slug": "maquina-de-oracao",
+    "target": "maquina-de-oracao-ai.png",
+    "prompt": "Máquina de Oração, entidade tecnomágica em forma de um grande mecanismo circular com engrenagens douradas que giram lentamente, acumulando energia de preces para liberar uma carga milagrosa (Carga Milagrosa). Cenário: ruína de um templo tecnológico abandonado, luz dourada pulsante do mecanismo. Pose: engrenagens centrais girando e brilhando intensamente, pequenos feixes de luz dourada emergindo das bordas como energia acumulada.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 78,
+    "name": "O Animal Primeiro",
+    "slug": "o-animal-primeiro",
+    "target": "o-animal-primeiro-ai.png",
+    "prompt": "O Animal Primeiro, entidade natural primordial em forma de um grande predador quadrúpede arquetípico, anterior a qualquer espécie conhecida, com presença que sugere ser o modelo original de todos os predadores (Predador Absoluto). Cenário: topo de montanha primitiva acima das nuvens, paisagem intocada. Pose: postura de caça arquetípica, músculos tensos, olhar absoluto e calculista, silhueta imponente contra o céu.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 79,
+    "name": "Arquivo Vivo",
+    "slug": "arquivo-vivo",
+    "target": "arquivo-vivo-ai.png",
+    "prompt": "Arquivo Vivo, entidade arcana em forma de uma biblioteca humanoide ambulante, corpo composto por estantes vivas e livros que se abrem e fecham sozinhos, cobrando um custo conceitual por cada resposta dada (Custo de Resposta). Cenário: salão circular de uma grande biblioteca arcana em ruínas. Pose: \"braços\" feitos de estantes abrindo livros simultaneamente, páginas voando ao redor, postura serena mas imponente.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  },
+  {
+    "number": 80,
+    "name": "Santa Fissura",
+    "slug": "santa-fissura",
+    "target": "santa-fissura-ai.png",
+    "prompt": "Santa Fissura, entidade abstrata em forma de uma grande rachadura flutuante na realidade, com bordas que brilham como vitral sagrado e puxam energia ao redor para dentro de si mesma constantemente (Zona de Absorção). Cenário: ruína de catedral profanada, ar visivelmente sendo sugado para dentro da fenda. Pose: fissura vertical flutuante no centro da composição, bordas luminosas como vitral, pequenos detritos e luz sendo atraídos visivelmente para dentro.\n\nEstilo: ilustração de bestiário clássico de RPG de mesa (tipo Monster Manual), técnica de tinta e aquarela, linhas de contorno definidas, paleta de cores controlada e levemente desbotada, textura de papel visível, sombreado feito com hachuras e lavados de aquarela, sem texto, sem moldura, sem símbolos ou ícones, fundo neutro liso (bege claro ou branco-acinzentado) para destacar a criatura isolada, enquadramento de corpo inteiro mostrando anatomia e pose de ação ou characteristic stance, formato PNG, alta resolução, sem marca de água."
+  }
+]

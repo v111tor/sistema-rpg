@@ -77,9 +77,13 @@ Use esta sequência quando mexer em habilidades, características, bestiário ou
 node tools\expand_feature_descriptions.cjs
 node tools\sync_rulebook_class_features.cjs
 node tools\generate_bestiary_png_sprites.cjs
+node tools\import_bestiary_ai_prompts.cjs
+node tools\generate_bestiary_prompt_pngs.cjs
+node tools\apply_bestiary_ai_images.cjs
 node tools\enrich_bestiary_special_abilities.cjs
 npm run build
 node tools\publish_download_site.cjs
+node tools\apply_bestiary_ai_images.cjs
 node tools\sync_rulebook_class_features.cjs
 node tools\enrich_bestiary_special_abilities.cjs
 node tools\sync_rulebook_pdf.cjs
@@ -89,7 +93,7 @@ Essa ordem garante que:
 
 - características de Sensiente e Devoto fiquem junto das classes;
 - habilidades especiais do bestiário tenham descrição;
-- sprites do bestiário continuem em PNG;
+- sprites do bestiário continuem em PNG e possam ser substituídos por imagens `*-ai.png`;
 - arquivos finais sejam copiados para `dist`.
 - o PDF do Livro de Regras seja refeito a partir do HTML atualizado.
 
@@ -170,13 +174,26 @@ Scripts relacionados:
 
 ```bash
 node tools\generate_bestiary_png_sprites.cjs
+node tools\import_bestiary_ai_prompts.cjs
+node tools\generate_bestiary_prompt_pngs.cjs
+node tools\apply_bestiary_ai_images.cjs
 node tools\enrich_bestiary_special_abilities.cjs
 ```
+
+Para usar os prompts de IA do arquivo `C:\Users\presi\Downloads\Bestiario_Prompts_IA.md`, rode:
+
+```bash
+node tools\import_bestiary_ai_prompts.cjs
+node tools\generate_bestiary_prompt_pngs.cjs
+node tools\apply_bestiary_ai_images.cjs
+```
+
+O importador gera `tools/bestiary_ai_prompts.json`. Se o arquivo de prompts tiver 79 entradas, o script completa a entrada ausente de **Casca Andante** para manter as 80 fichas do bestiário.
 
 Resultado esperado:
 
 - 80 fichas de criaturas;
-- 80 referências PNG;
+- 80 referências PNG, preferencialmente em arquivos `*-ai.png`;
 - 0 referências SVG;
 - 80 habilidades especiais com descrição mecânica.
 
@@ -235,6 +252,9 @@ netlify.toml
 | `node tools\sync_rulebook_pdf.cjs` | Gera o PDF atualizado do Livro de Regras a partir do HTML |
 | `node tools\sync_rulebook_class_features.cjs` | Move/insere características de Sensiente e Devoto nas seções de classe |
 | `node tools\generate_bestiary_png_sprites.cjs` | Gera sprites PNG do bestiário |
+| `node tools\import_bestiary_ai_prompts.cjs` | Importa prompts do bestiário para `tools/bestiary_ai_prompts.json` |
+| `node tools\generate_bestiary_prompt_pngs.cjs` | Gera PNGs `*-ai.png` do bestiário a partir dos prompts importados |
+| `node tools\apply_bestiary_ai_images.cjs` | Troca as fichas do bestiário para usar os PNGs `*-ai.png` disponíveis |
 | `node tools\enrich_bestiary_special_abilities.cjs` | Adiciona descrição mecânica às habilidades especiais das criaturas |
 | `node tools\expand_feature_descriptions.cjs` | Atualiza efeitos/custos das características expandidas |
 

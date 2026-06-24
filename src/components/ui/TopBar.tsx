@@ -4,7 +4,7 @@ import { exportJson } from '../../services/storage'
 import { CloudModal } from './CloudModal'
 import * as supabase from '../../services/supabase'
 import { loadCloudConfig } from '../../services/storage'
-import { TAB_LABELS } from '../../app/tabs'
+import { TAB_LABELS } from '../../app/tabLabels'
 
 export function TopBar() {
   const fileRef = useRef<HTMLInputElement>(null)
