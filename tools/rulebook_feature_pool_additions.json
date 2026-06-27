@@ -1,0 +1,374 @@
+{
+  "guerreiro": [
+    {
+      "number": 31,
+      "name": "Negociador de Trincheira",
+      "tag": "social",
+      "body": "Passivo; em situações de cessar-fogo, rendição ou negociação militar, ganha vantagem em testes de Persuasão e Intimidação."
+    },
+    {
+      "number": 32,
+      "name": "Olho Tático",
+      "tag": "utilitário",
+      "body": "Ação; observe um combate ou formação por 1 rodada sem agir. Descubra o ponto fraco de defesa de 1 criatura visível: seus aliados ganham +1 em ataques contra ela até o fim do encontro."
+    },
+    {
+      "number": 33,
+      "name": "Marcha Forçada",
+      "tag": "utilitário",
+      "body": "Passivo; você e até 6 aliados podem marchar o dia inteiro sem penalidade de exaustão, mesmo em terreno difícil."
+    },
+    {
+      "number": 34,
+      "name": "Cicatriz de Guerra",
+      "tag": "social, Nível 5+",
+      "body": "Escolha uma cicatriz ou marca de batalha; ao mostrá-la, ganha vantagem em testes de Intimidação ou Persuasão envolvendo veteranos ou soldados."
+    },
+    {
+      "number": 35,
+      "name": "Reparo de Campo",
+      "tag": "utilitário",
+      "body": "Ação; com ferramentas básicas, repara 1 item de metal danificado (arma, armadura, escudo) restaurando função total em 10 minutos."
+    },
+    {
+      "number": 36,
+      "name": "Brado de Guerra",
+      "tag": "Nível 5+ | Necessita: Aura de Coragem",
+      "body": "Ação; 1×/descanso curto; todos os inimigos em 9m que ouçam você fazem ESP CD (8+Mod.FOR) ou ficam Assustados por 1 rodada. 2 AU."
+    },
+    {
+      "number": 37,
+      "name": "Veterano de Mil Batalhas",
+      "tag": "social, Nível 10+",
+      "body": "Passivo; quando conta uma história de combate verídica, NPCs militares ou aventureiros experientes a tratam como prova de credibilidade — vantagem em testes de História ou Persuasão relacionados."
+    },
+    {
+      "number": 38,
+      "name": "Disciplina de Ferro",
+      "tag": "Nível 10+",
+      "body": "Passivo; imune a Abalado causado por perda de PV (continua vulnerável a outras fontes da condição)."
+    },
+    {
+      "number": 39,
+      "name": "Resgate Heroico",
+      "tag": "Nível 10+",
+      "body": "Reação; quando aliado adjacente cairia a 0 PV, você pode se interpor: o dano é redirecionado para você (após resistências)."
+    },
+    {
+      "number": 40,
+      "name": "Lenda Viva em Combate",
+      "tag": "social, Nível 15+ | Necessita: Lenda Viva",
+      "body": "Passivo; sua reputação se espalha: ao chegar em um novo lugar, role Persuasão ou Intimidação (sua escolha) com vantagem na primeira interação relacionada a sua fama, a critério do Mestre."
+    }
+  ],
+  "arcanista": [
+    {
+      "number": 31,
+      "name": "Tradutor Arcano",
+      "tag": "social",
+      "body": "Passivo; pode ler, falar e escrever qualquer idioma que tenha visto escrito ou ouvido por ao menos 1 minuto, por até 24 horas."
+    },
+    {
+      "number": 32,
+      "name": "Diplomata Arcano",
+      "tag": "social",
+      "body": "Passivo; vantagem em testes de Persuasão quando demonstra conhecimento arcano relevante para convencer eruditos, nobres ou autoridades."
+    },
+    {
+      "number": 33,
+      "name": "Mapa Mental",
+      "tag": "utilitário",
+      "body": "Ação; memoriza perfeitamente o layout de qualquer área visitada nos últimos 24 horas, incluindo detalhes que não notou conscientemente."
+    },
+    {
+      "number": 34,
+      "name": "Identificação Instantânea",
+      "tag": "utilitário, Nível 5+ | Necessita: Análise Mágica",
+      "body": "Análise Mágica não custa mais ação bônus — passa a ser gratuita, 1× por turno."
+    },
+    {
+      "number": 35,
+      "name": "Sussurro Arcano",
+      "tag": "social",
+      "body": "Ação bônus; envia mensagem curta (até 25 palavras) telepaticamente a criatura conhecida em até 90m. 1 PA."
+    },
+    {
+      "number": 36,
+      "name": "Biblioteca Pessoal",
+      "tag": "utilitário",
+      "body": "Seu grimório funciona como uma biblioteca portátil: pode tentar testes de Arcanismo, História, Natureza ou Religião como se tivesse acesso a uma biblioteca completa, mesmo em campo."
+    },
+    {
+      "number": 37,
+      "name": "Negociador de Pactos",
+      "tag": "social, Nível 5+",
+      "body": "Passivo; vantagem em testes de Persuasão ou Enganação ao negociar acordos, contratos ou tréguas envolvendo magia, espíritos ou entidades."
+    },
+    {
+      "number": 38,
+      "name": "Visão Através do Véu",
+      "tag": "utilitário, Nível 10+",
+      "body": "Ação; por 1 minuto, vê através de ilusões, disfarces mágicos e invisibilidade em 9m. 4 PA."
+    },
+    {
+      "number": 39,
+      "name": "Conselheiro Arcano",
+      "tag": "social, Nível 10+",
+      "body": "Passivo; quando auxilia um aliado com a ação Ajudar em qualquer teste de perícia mental (não combate), o bônus concedido é vantagem dupla."
+    },
+    {
+      "number": 40,
+      "name": "Arquiteto de Realidades",
+      "tag": "utilitário, Nível 15+ | Necessita: Transmutação Menor",
+      "body": "Transmutação Menor pode afetar até 3m³ e durar 8 horas em vez de 1."
+    }
+  ],
+  "sensiente": [
+    {
+      "number": 31,
+      "name": "Diplomata dos Sentimentos",
+      "tag": "social",
+      "body": "Passivo; vantagem em testes de Persuasão quando a outra parte está emocionalmente vulnerável ou abertamente expressando sentimentos."
+    },
+    {
+      "number": 32,
+      "name": "Memória Sensorial",
+      "tag": "utilitário",
+      "body": "Ação; ao tocar um objeto significativo, sente o eco emocional de quem o usou intensamente pela última vez (impressão vaga, sem detalhes factuais). Sem custo."
+    },
+    {
+      "number": 33,
+      "name": "Companhia Reconfortante",
+      "tag": "social",
+      "body": "Passivo; aliados que descansam ao seu lado durante descanso curto ou longo recuperam 1 PV adicional e têm vantagem em testes para evitar ou remover Abalado ao despertar."
+    },
+    {
+      "number": 34,
+      "name": "Sentir o Ambiente",
+      "tag": "utilitário",
+      "body": "Ação; detecta o \"humor\" emocional dominante de uma multidão ou grupo em 18m (hostil, ansioso, festivo, etc.) sem precisar de teste."
+    },
+    {
+      "number": 35,
+      "name": "Voz Que Acalma",
+      "tag": "social, Nível 5+",
+      "body": "Ação; reduz a hostilidade inicial de uma criatura ou grupo neutro/ hostil em uma categoria (hostil→cauteloso, cauteloso→neutro), antes de qualquer teste de Persuasão ser feito."
+    },
+    {
+      "number": 36,
+      "name": "Ressonância em Grupo",
+      "tag": "Nível 5+ | Necessita: Eco de Emoção",
+      "body": "Eco de Emoção também restaura 1 PE para você mesmo quando ativado."
+    },
+    {
+      "number": 37,
+      "name": "Mentor Emocional",
+      "tag": "social, Nível 10+",
+      "body": "Passivo; quando ensina ou aconselha um PC ou NPC por ao menos 10 minutos, ele ganha vantagem no próximo teste de resistência mental que fizer na cena seguinte."
+    },
+    {
+      "number": 38,
+      "name": "Presença Estabilizadora",
+      "tag": "Nível 10+",
+      "body": "Passivo; aliados em 4,5m têm vantagem em testes para resistir a Medo, Charme ou efeitos de controle mental."
+    },
+    {
+      "number": 39,
+      "name": "Tradutor de Sentimentos",
+      "tag": "social, Nível 10+",
+      "body": "Passivo; pode se comunicar de forma rudimentar com qualquer criatura capaz de sentir emoção, mesmo sem idioma compartilhado (intenções simples, não conversas complexas)."
+    },
+    {
+      "number": 40,
+      "name": "Eco Eterno",
+      "tag": "Nível 15+ | Necessita: Vínculo Empático",
+      "body": "Vínculo Empático não exige mais ação bônus para transferir PV — passa a ser uma reação disponível a qualquer momento dentro do alcance."
+    }
+  ],
+  "devoto": [
+    {
+      "number": 31,
+      "name": "Conselheiro Religioso",
+      "tag": "social",
+      "body": "Passivo; vantagem em testes de Religião e Persuasão ao orientar, confortar ou aconselhar alguém em crise de fé ou luto."
+    },
+    {
+      "number": 32,
+      "name": "Rito de Passagem",
+      "tag": "social",
+      "body": "Ação; conduz cerimônia religiosa simples (casamento, funeral, bênção) reconhecida pela sua tradição; comunidades ligadas à sua divindade tratam isso como válido e significativo."
+    },
+    {
+      "number": 33,
+      "name": "Sentir o Sagrado",
+      "tag": "utilitário",
+      "body": "Passivo; detecta locais, objetos ou eventos de significância religiosa ou sobrenatural em 18m, sem teste."
+    },
+    {
+      "number": 34,
+      "name": "Hospitalidade Divina",
+      "tag": "social",
+      "body": "Passivo; quando oferece comida, abrigo ou cuidado em nome da sua divindade, NPCs neutros tendem a aceitar e tratá-lo com mais confiança."
+    },
+    {
+      "number": 35,
+      "name": "Primeiros Socorros Sagrados",
+      "tag": "utilitário",
+      "body": "Ação; estabiliza até 3 criaturas a 0 PV simultaneamente sem teste, gastando 1 PD por criatura."
+    },
+    {
+      "number": 36,
+      "name": "Voz que Acalma Multidões",
+      "tag": "social, Nível 5+",
+      "body": "Ação; 1×/descanso curto; reduz a tensão de uma multidão hostil ou amedrontada em 9m, dando a todos ESP CD (10+Mod.DEV) para evitar pânico ou violência coletiva. 4 PD."
+    },
+    {
+      "number": 37,
+      "name": "Guardião de Relíquias",
+      "tag": "utilitário, Nível 5+",
+      "body": "Passivo; vantagem em testes de Religião ou Investigação para identificar, autenticar ou avaliar artefatos e relíquias religiosas."
+    },
+    {
+      "number": 38,
+      "name": "Confessor",
+      "tag": "social, Nível 10+",
+      "body": "Passivo; criaturas que se confessam ou compartilham segredos com você voluntariamente sentem alívio real (remove 1 nível de Abalado emocional/narrativo); você nunca é forçado a revelar o que ouviu sem consentimento, por código da sua fé."
+    },
+    {
+      "number": 39,
+      "name": "Refúgio Sagrado",
+      "tag": "utilitário, Nível 10+",
+      "body": "Ação; 1×/descanso longo; consagra uma área de 9m por 8 horas — criaturas hostis à sua divindade têm desvantagem para entrar à força. 6 PD."
+    },
+    {
+      "number": 40,
+      "name": "Arauto da Divindade",
+      "tag": "social, Nível 15+ | Necessita: Voz da Fé",
+      "body": "Passivo; quando fala em nome da sua divindade diante de uma multidão, pode gastar 4 PD para que suas palavras sejam ouvidas com clareza sobrenatural por todos em 30m, mesmo sobre barulho ou em idiomas que não conhecem (sentido, não tradução literal)."
+    }
+  ],
+  "artifice": [
+    {
+      "number": 31,
+      "name": "Negociador Técnico",
+      "tag": "social",
+      "body": "Passivo; vantagem em testes de Persuasão ao negociar preços de materiais, ferramentas ou serviços com artesãos e comerciantes."
+    },
+    {
+      "number": 32,
+      "name": "Manual de Instruções",
+      "tag": "utilitário",
+      "body": "Passivo; qualquer pessoa pode operar um item infundido por você seguindo instruções escritas simples, mesmo sem treinamento."
+    },
+    {
+      "number": 33,
+      "name": "Diagnóstico Rápido",
+      "tag": "utilitário",
+      "body": "Ação; identifica a causa de um mau funcionamento mecânico ou arcano em qualquer dispositivo em 1 minuto, sem teste."
+    },
+    {
+      "number": 34,
+      "name": "Workshop Itinerante",
+      "tag": "utilitário",
+      "body": "Passivo; pode realizar trabalhos que normalmente exigem oficina fixa usando apenas suas ferramentas pessoais, levando o dobro do tempo."
+    },
+    {
+      "number": 35,
+      "name": "Mentor de Aprendizes",
+      "tag": "social",
+      "body": "Passivo; ao ensinar uma técnica ou ferramenta a um PNJ ou PC por 1 hora, ele ganha proficiência temporária nela por 24 horas."
+    },
+    {
+      "number": 36,
+      "name": "Rede de Contatos Técnicos",
+      "tag": "social, Nível 5+",
+      "body": "Passivo; conhece pelo menos 1 artesão, engenheiro ou estudioso relevante em qualquer cidade de tamanho médio ou maior, a critério do Mestre."
+    },
+    {
+      "number": 37,
+      "name": "Padronização",
+      "tag": "utilitário, Nível 5+ | Necessita: Infusão Avançada",
+      "body": "Suas infusões duram até o próximo descanso longo do alvo, não apenas o seu, quando aplicadas a itens de terceiros."
+    },
+    {
+      "number": 38,
+      "name": "Reparo em Massa",
+      "tag": "utilitário, Nível 10+",
+      "body": "Ação; 1×/descanso curto; repara todos os itens danificados (não mágicos) de até 6 aliados simultaneamente, em 10 minutos de trabalho."
+    },
+    {
+      "number": 39,
+      "name": "Consultor de Confiança",
+      "tag": "social, Nível 10+",
+      "body": "Passivo; vantagem em testes de Persuasão ou Investigação ao avaliar a qualidade, autenticidade ou segurança de qualquer tecnologia ou invenção de terceiros."
+    },
+    {
+      "number": 40,
+      "name": "Legado do Inventor",
+      "tag": "social, Nível 15+ | Necessita: Artefato",
+      "body": "Passivo; um Artefato que você criou pode ser usado por qualquer pessoa treinada, não apenas por você — desde que siga as instruções que você registrou."
+    }
+  ],
+  "explorador": [
+    {
+      "number": 31,
+      "name": "Negociador de Sombras",
+      "tag": "social",
+      "body": "Passivo; vantagem em testes de Persuasão ou Enganação ao negociar com contatos do submundo, contrabandistas ou informantes."
+    },
+    {
+      "number": 32,
+      "name": "Leitura de Pistas",
+      "tag": "utilitário",
+      "body": "Passivo; vantagem em testes de Investigação para reconstruir os eventos recentes de uma cena com base em pegadas, objetos deixados ou sinais de luta."
+    },
+    {
+      "number": 33,
+      "name": "Camuflagem Urbana",
+      "tag": "utilitário",
+      "body": "Passivo; Passo Silencioso e bônus de Furtividade passiva também se aplicam normalmente em ambientes urbanos densos (multidões, mercados, becos), não apenas natureza."
+    },
+    {
+      "number": 34,
+      "name": "Contato de Confiança",
+      "tag": "social",
+      "body": "Passivo; possui 1 contato recorrente (informante, comerciante, batedor) em uma região de sua escolha que fornece informações ou favores pequenos, a critério do Mestre."
+    },
+    {
+      "number": 35,
+      "name": "Sobrevivência Compartilhada",
+      "tag": "utilitário",
+      "body": "Passivo; quando guia um grupo em viagem, todos os aliados se beneficiam dos seus bônus de Sobrevivência para encontrar comida, água e abrigo, não apenas você."
+    },
+    {
+      "number": 36,
+      "name": "Negociação sob Pressão",
+      "tag": "social, Nível 5+",
+      "body": "Passivo; não sofre desvantagem em testes de Persuasão ou Enganação mesmo quando ameaçado ou em desvantagem numérica."
+    },
+    {
+      "number": 37,
+      "name": "Rastreador de Histórias",
+      "tag": "utilitário, Nível 5+",
+      "body": "Passivo; vantagem em testes de Investigação ou Intuição para descobrir rumores, fofocas ou informações úteis em tavernas, mercados ou portos."
+    },
+    {
+      "number": 38,
+      "name": "Disfarce Perfeito",
+      "tag": "social, Nível 10+ | Necessita: Disfarce Rápido",
+      "body": "Disfarce Rápido agora também muda voz e maneirismos de forma convincente; testes para perceber o disfarce têm desvantagem."
+    },
+    {
+      "number": 39,
+      "name": "Aliado Inesperado",
+      "tag": "social, Nível 10+",
+      "body": "Passivo; 1×/sessão, pode declarar que um NPC menor já encontrado antes é secretamente favorável a você, a critério do Mestre (não cria NPCs do zero, recontextualiza um já existente)."
+    },
+    {
+      "number": 40,
+      "name": "Lenda das Sombras",
+      "tag": "social, Nível 15+ | Necessita: Sombra Viva",
+      "body": "Passivo; rumores sobre suas ações se espalham de forma distorcida; inimigos que já ouviram falar de você têm desvantagem na primeira rolagem de Iniciativa contra você, por acreditarem saber mais do que realmente sabem."
+    }
+  ]
+}

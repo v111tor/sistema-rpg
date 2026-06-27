@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = process.cwd();
+const fallbackAdditions = require("./rulebook_feature_pool_additions.json");
 const files = [
   path.join(root, "public", "ebook", "Sistema_Mecanico_RPG.html"),
   path.join(root, "dist", "ebook", "Sistema_Mecanico_RPG.html"),
@@ -88,6 +89,37 @@ function extractExpansion(html, cls) {
   });
 }
 
+function extractManaged(html, cls) {
+  const start = `<!-- BEGIN CARACTERISTICAS 31-40 ${cls.key} -->`;
+  const end = `<!-- END CARACTERISTICAS 31-40 ${cls.key} -->`;
+  const startIndex = html.indexOf(start);
+  const endIndex = html.indexOf(end);
+  if (startIndex < 0 || endIndex < 0 || endIndex <= startIndex) return [];
+  const block = html.slice(startIndex + start.length, endIndex);
+  const text = stripTags(block);
+  const matches = [...text.matchAll(/(?:^|\n)(3[1-9]|40)\.\s+([\s\S]*?)(?=\n(?:3[1-9]|40)\.\s+|$)/g)];
+  return matches.map((item) => {
+    const number = Number(item[1]);
+    const lines = item[2].split("\n").map((line) => line.trim()).filter(Boolean);
+    const heading = lines.shift() ?? "";
+    const titleMatch = heading.match(/^(.+?)(?:\s+\(([^)]*)\))?$/);
+    return {
+      number,
+      name: titleMatch ? titleMatch[1].trim() : heading,
+      tag: titleMatch?.[2]?.trim() ?? "",
+      body: lines.join(" ")
+    };
+  });
+}
+
+function additionsFor(html, cls) {
+  const expansion = extractExpansion(html, cls);
+  if (expansion.length) return expansion;
+  const managed = extractManaged(html, cls);
+  if (managed.length) return managed;
+  return fallbackAdditions[cls.key] ?? [];
+}
+
 function renderAdditions(cls, items) {
   if (!items.length) return "";
   const rows = items
@@ -105,7 +137,7 @@ function insertBeforeSubclasses(html, cls, content) {
   const marker = `<div class="class-subclasses" id="${cls.key}-subclasses">`;
   const index = html.indexOf(marker);
   if (index < 0) return html;
-  return `${html.slice(0, index)}${content}\n${html.slice(index)}`;
+  return `${html.slice(0, index).replace(/\s+$/, "\n")}${content}\n${html.slice(index)}`;
 }
 
 function removeExpansionSection(html) {
@@ -121,7 +153,7 @@ let updated = 0;
 for (const file of files) {
   if (!fs.existsSync(file)) continue;
   const before = fs.readFileSync(file, "utf8");
-  const expansions = new Map(classes.map((cls) => [cls.key, extractExpansion(before, cls)]));
+  const expansions = new Map(classes.map((cls) => [cls.key, additionsFor(before, cls)]));
   let after = removeManagedBlocks(before);
   for (const cls of classes) {
     after = insertBeforeSubclasses(after, cls, renderAdditions(cls, expansions.get(cls.key) ?? []));
