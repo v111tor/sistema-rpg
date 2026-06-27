@@ -42,6 +42,8 @@ jobs:
       - run: node tools/apply_bestiary_ai_images.cjs
       - run: node tools/enrich_bestiary_special_abilities.cjs
       - run: node tools/rebalance_bestiary_for_5_advances.cjs
+      - run: node tools/audit_feature_pool_counts.cjs
+      - run: node tools/audit_feature_duplicates.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -256,8 +256,10 @@ netlify.toml
 | `node tools\merge_rulebook_feature_pools.cjs` | Une as características 31-40 aos pools principais das classes e remove a expansão duplicada |
 | `node tools\apply_seven_forces_codex.cjs` | Atualiza símbolos do Devoto e publica o Codex das Sete Forças nos ebooks |
 | `node tools\rewrite_unique_feature_effects.cjs` | Reescreve características expandidas de Sensiente e Devoto com efeitos únicos |
+| `node tools\ensure_variation_feature_counts.cjs` | Garante 30 características por emoção do Sensiente e por divindade do Devoto |
 | `node tools\apply_proficiency_dc_formulas.cjs` | Atualiza CDs antigas para incluir Bônus de Proficiência e ajusta fórmulas do Livro do Mestre |
 | `node tools\audit_feature_duplicates.cjs` | Gera relatório de duplicatas em características, habilidades e tabelas principais |
+| `node tools\audit_feature_pool_counts.cjs` | Verifica 40 características gerais por classe e 30 por emoção/domínio |
 | `node tools\apply_attribute_playtest_recommendations.cjs` | Aplica a escala revisada de CDs baseada no stress test dos atributos |
 | `node tools\apply_core_rebalance_5_advances.cjs` | Define 5 avanços iniciais e troca perícias para Bônus de Proficiência por nível |
 | `node tools\apply_quimera_corrections.cjs` | Aplica a Quimera corrigida com partes ativadas por Energia da Floresta |

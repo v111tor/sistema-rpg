@@ -3,6 +3,7 @@ const path = require("path");
 
 const root = process.cwd();
 const fallbackAdditions = require("./rulebook_feature_pool_additions.json");
+const abilitiesPath = path.join(root, "src", "data", "abilities.ts");
 const files = [
   path.join(root, "public", "ebook", "Sistema_Mecanico_RPG.html"),
   path.join(root, "dist", "ebook", "Sistema_Mecanico_RPG.html"),
@@ -58,6 +59,8 @@ function removeManagedBlocks(html) {
     const re = new RegExp(`${escapeRe(start)}[\\s\\S]*?${escapeRe(end)}\\n?`, "g");
     html = html.replace(re, "");
   }
+  html = html.replace(/<!-- BEGIN CARACTERISTICAS POR EMOCAO SENSIENTE -->[\s\S]*?<!-- END CARACTERISTICAS POR EMOCAO SENSIENTE -->\n?/g, "");
+  html = html.replace(/<!-- BEGIN CARACTERISTICAS POR DIVINDADE DEVOTO -->[\s\S]*?<!-- END CARACTERISTICAS POR DIVINDADE DEVOTO -->\n?/g, "");
   return html;
 }
 
@@ -132,6 +135,70 @@ function renderAdditions(cls, items) {
   return `<!-- BEGIN CARACTERISTICAS 31-40 ${cls.key} -->\n${rows}\n<!-- END CARACTERISTICAS 31-40 ${cls.key} -->\n`;
 }
 
+function labelFor(className, slug) {
+  const sens = {
+    raiva: "Raiva",
+    amor: "Amor",
+    medo: "Medo",
+    alegria: "Alegria",
+    tristeza: "Tristeza",
+    determinacao: "Determinação"
+  };
+  const dev = {
+    luz: "Luz",
+    sombra: "Sombra",
+    natureza: "Natureza",
+    morte: "Morte",
+    caos: "Caos",
+    ordem: "Ordem",
+    demonio: "Demônio"
+  };
+  return (className === "Sensiente" ? sens : dev)[slug] ?? slug;
+}
+
+function parseVariationFeatures() {
+  if (!fs.existsSync(abilitiesPath)) return { Sensiente: new Map(), Devoto: new Map() };
+  const text = fs.readFileSync(abilitiesPath, "utf8");
+  const re = /\{ id:"([^"]+)", class:"(Sensiente|Devoto)", level:(\d+), name:"([^"]+)", effect:"([^"]*)" \}/g;
+  const groups = { Sensiente: new Map(), Devoto: new Map() };
+  let m;
+  while ((m = re.exec(text))) {
+    const id = m[1];
+    const className = m[2];
+    const parts = id.split("-");
+    const slug = parts[1];
+    const number = Number(parts[2]);
+    if (!slug || !Number.isFinite(number)) continue;
+    const list = groups[className].get(slug) ?? [];
+    list.push({
+      number,
+      level: Number(m[3]),
+      name: m[4],
+      effect: m[5]
+    });
+    groups[className].set(slug, list);
+  }
+  return groups;
+}
+
+function renderVariationBlock(className, groups) {
+  const map = groups[className];
+  if (!map?.size) return "";
+  const marker = className === "Sensiente" ? "CARACTERISTICAS POR EMOCAO SENSIENTE" : "CARACTERISTICAS POR DIVINDADE DEVOTO";
+  const noun = className === "Sensiente" ? "emoção" : "divindade";
+  const order = className === "Sensiente"
+    ? ["raiva", "amor", "medo", "alegria", "tristeza", "determinacao"]
+    : ["luz", "sombra", "natureza", "morte", "caos", "ordem", "demonio"];
+  const sections = order.map((slug) => {
+    const items = [...(map.get(slug) ?? [])].sort((a, b) => a.number - b.number);
+    if (!items.length) return "";
+    const rows = items.map((item) => `<p><strong>${item.number}. ${escapeHtml(item.name)}</strong> <em>(Nível ${item.level}+)</em></p>\n<p>${escapeHtml(item.effect)}</p>`).join("\n");
+    return `<p><strong>Características por ${noun} — ${labelFor(className, slug)}</strong></p>\n${rows}`;
+  }).filter(Boolean);
+  if (!sections.length) return "";
+  return `<!-- BEGIN ${marker} -->\n${sections.join("\n")}\n<!-- END ${marker} -->\n`;
+}
+
 function insertBeforeSubclasses(html, cls, content) {
   if (!content) return html;
   const marker = `<div class="class-subclasses" id="${cls.key}-subclasses">`;
@@ -150,13 +217,17 @@ function removeExpansionSection(html) {
 }
 
 let updated = 0;
+const variationGroups = parseVariationFeatures();
 for (const file of files) {
   if (!fs.existsSync(file)) continue;
   const before = fs.readFileSync(file, "utf8");
   const expansions = new Map(classes.map((cls) => [cls.key, additionsFor(before, cls)]));
   let after = removeManagedBlocks(before);
   for (const cls of classes) {
-    after = insertBeforeSubclasses(after, cls, renderAdditions(cls, expansions.get(cls.key) ?? []));
+    let content = renderAdditions(cls, expansions.get(cls.key) ?? []);
+    if (cls.key === "sensiente") content += renderVariationBlock("Sensiente", variationGroups);
+    if (cls.key === "devoto") content += renderVariationBlock("Devoto", variationGroups);
+    after = insertBeforeSubclasses(after, cls, content);
   }
   after = removeExpansionSection(after);
   if (after !== before) {
