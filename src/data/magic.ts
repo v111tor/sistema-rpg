@@ -405,7 +405,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Brasa da Raiva",
     "cost": "2 PE",
     "range": "15m / Instantaneo",
-    "effect": "Projeta brasa emocional em 15m. Causa 1d6+Mod.ESP fogo/psiquico; VIG CD 12 evita ser empurrado 1,5m.",
+    "effect": "Projeta brasa emocional em 15m. Causa 1d6 + Bônus de Proficiência + Mod.ESP fogo/psiquico; VIG CD 12 evita ser empurrado 1,5m.",
     "type": "Raiva/Ataque",
     "duration": "Instantaneo",
     "number": 1
@@ -415,7 +415,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Toque Gentil",
     "cost": "3 PE",
     "range": "Toque / Instantaneo",
-    "effect": "Toque cura 1d6+Mod.ESP PV. Se o alvo estiver protegendo alguem, tambem recebe +1 Aparar por 1 rodada.",
+    "effect": "Toque cura 1d6 + Bônus de Proficiência + Mod.ESP PV. Se o alvo estiver protegendo alguem, tambem recebe +1 Aparar por 1 rodada.",
     "type": "Amor/Cura",
     "duration": "Instantaneo",
     "number": 2
@@ -465,7 +465,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Onda de Chamas",
     "cost": "2 PE",
     "range": "15m / Instantaneo",
-    "effect": "Cone curto de chamas emocionais causa 1d6+Mod.ESP em ate 2 alvos adjacentes; AGI CD 12 reduz metade.",
+    "effect": "Cone curto de chamas emocionais causa 1d6 + Bônus de Proficiência + Mod.ESP em ate 2 alvos adjacentes; AGI CD 12 reduz metade.",
     "type": "Raiva/Ataque",
     "duration": "Instantaneo",
     "number": 7
@@ -525,7 +525,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Grito da Fera",
     "cost": "4 PE",
     "range": "15m / 1 minuto",
-    "effect": "Grito causa 2d6+Mod.ESP psiquico em cone de 6m; VIG CD 13 reduz metade e evita ficar Abalado.",
+    "effect": "Grito causa 2d6 + Bônus de Proficiência + Mod.ESP psiquico em cone de 6m; VIG CD 13 reduz metade e evita ficar Abalado.",
     "type": "Raiva/Ataque",
     "duration": "1 minuto",
     "number": 13
@@ -585,7 +585,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Inferno da Raiva",
     "cost": "6 PE",
     "range": "15m / 1 minuto",
-    "effect": "Explosao de furia atinge 1 alvo por 2d6+Mod.ESP; se voce estiver ferido, causa +1d6 adicional.",
+    "effect": "Explosao de furia atinge 1 alvo por 2d6 + Bônus de Proficiência + Mod.ESP; se voce estiver ferido, causa +1d6 adicional.",
     "type": "Raiva/Ataque",
     "duration": "1 minuto",
     "number": 19
@@ -2006,7 +2006,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Impacto Furioso",
     "cost": "4 PE",
     "range": "12m / 1 minuto",
-    "effect": "Impacto Furioso canaliza furia em alvo no alcance. Causa 2d6+Mod.ESP fogo ou psiquico; VIG CD 14 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno.",
+    "effect": "Impacto Furioso canaliza furia em alvo no alcance. Causa 2d6 + Bônus de Proficiência + Mod.ESP fogo ou psiquico; VIG CD 14 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno.",
     "type": "Raiva/Ataque",
     "duration": "1 minuto",
     "number": 41
@@ -2016,7 +2016,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Centelha Vingativa",
     "cost": "4 PE",
     "range": "12m / 1 minuto",
-    "effect": "Centelha Vingativa canaliza furia em alvo no alcance. Causa 2d6+Mod.ESP fogo ou psiquico; VIG CD 14 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno.",
+    "effect": "Centelha Vingativa canaliza furia em alvo no alcance. Causa 2d6 + Bônus de Proficiência + Mod.ESP fogo ou psiquico; VIG CD 14 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno.",
     "type": "Raiva/Ataque",
     "duration": "1 minuto",
     "number": 42
@@ -2026,7 +2026,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Ruptura da Furia",
     "cost": "4 PE",
     "range": "12m / 1 minuto",
-    "effect": "Ruptura da Furia canaliza furia em alvo no alcance. Causa 2d6+Mod.ESP fogo ou psiquico; VIG CD 14 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno.",
+    "effect": "Ruptura da Furia canaliza furia em alvo no alcance. Causa 2d6 + Bônus de Proficiência + Mod.ESP fogo ou psiquico; VIG CD 14 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno.",
     "type": "Raiva/Ataque",
     "duration": "1 minuto",
     "number": 43
@@ -2036,7 +2036,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Brasa Persistente",
     "cost": "5 PE",
     "range": "18m / 1 rodada",
-    "effect": "Brasa Persistente canaliza furia em alvo no alcance. Causa 2d6+Mod.ESP fogo ou psiquico; VIG CD 14 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno.",
+    "effect": "Brasa Persistente canaliza furia em alvo no alcance. Causa 2d6 + Bônus de Proficiência + Mod.ESP fogo ou psiquico; VIG CD 14 reduz metade. Em falha, o alvo tambem e empurrado 3m ou sofre -1 Defesa ate o inicio do seu proximo turno.",
     "type": "Raiva/Ataque",
     "duration": "1 rodada",
     "number": 44
@@ -2136,7 +2136,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Chama Fraterna",
     "cost": "4 PE",
     "range": "12m / 1 minuto",
-    "effect": "Chama Fraterna restaura ou protege um aliado no alcance. Cura 2d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "effect": "Chama Fraterna restaura ou protege um aliado no alcance. Cura 2d6 + Bônus de Proficiência + Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
     "type": "Amor/Cura",
     "duration": "1 minuto",
     "number": 54
@@ -2146,7 +2146,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Promessa Viva",
     "cost": "4 PE",
     "range": "12m / 1 minuto",
-    "effect": "Promessa Viva restaura ou protege um aliado no alcance. Cura 2d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "effect": "Promessa Viva restaura ou protege um aliado no alcance. Cura 2d6 + Bônus de Proficiência + Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
     "type": "Amor/Cura",
     "duration": "1 minuto",
     "number": 55
@@ -2156,7 +2156,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Cicatriz Fechada",
     "cost": "4 PE",
     "range": "12m / 1 minuto",
-    "effect": "Cicatriz Fechada restaura ou protege um aliado no alcance. Cura 2d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "effect": "Cicatriz Fechada restaura ou protege um aliado no alcance. Cura 2d6 + Bônus de Proficiência + Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
     "type": "Amor/Cura",
     "duration": "1 minuto",
     "number": 56
@@ -2166,7 +2166,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Escudo do Afeto",
     "cost": "5 PE",
     "range": "18m / 1 rodada",
-    "effect": "Escudo do Afeto restaura ou protege um aliado no alcance. Cura 2d6+Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
+    "effect": "Escudo do Afeto restaura ou protege um aliado no alcance. Cura 2d6 + Bônus de Proficiência + Mod.ESP PV ou concede o mesmo valor em PV temporarios. Se o alvo estiver abaixo de metade dos PV, remove Abalado, Assustado ou Sangramento leve.",
     "type": "Amor/Cura",
     "duration": "1 rodada",
     "number": 57
@@ -2676,7 +2676,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Recusa da Queda",
     "cost": "4 PE",
     "range": "12m / 1 minuto",
-    "effect": "Recusa da Queda firma corpo e vontade. Voce ou aliado no alcance ganha 2d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "effect": "Recusa da Queda firma corpo e vontade. Voce ou aliado no alcance ganha 2d6 + Bônus de Proficiência + Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
     "type": "Determinacao/Protecao",
     "duration": "1 minuto",
     "number": 108
@@ -2686,7 +2686,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Trilha Obstinada",
     "cost": "4 PE",
     "range": "12m / 1 minuto",
-    "effect": "Trilha Obstinada firma corpo e vontade. Voce ou aliado no alcance ganha 2d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "effect": "Trilha Obstinada firma corpo e vontade. Voce ou aliado no alcance ganha 2d6 + Bônus de Proficiência + Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
     "type": "Determinacao/Protecao",
     "duration": "1 minuto",
     "number": 109
@@ -2696,7 +2696,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Pulso Resiliente",
     "cost": "4 PE",
     "range": "12m / 1 minuto",
-    "effect": "Pulso Resiliente firma corpo e vontade. Voce ou aliado no alcance ganha 2d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "effect": "Pulso Resiliente firma corpo e vontade. Voce ou aliado no alcance ganha 2d6 + Bônus de Proficiência + Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
     "type": "Determinacao/Protecao",
     "duration": "1 minuto",
     "number": 110
@@ -2706,7 +2706,7 @@ export const SYSTEM_MAGIC_CATALOG = [
     "name": "Marca de Persistencia",
     "cost": "5 PE",
     "range": "18m / 1 rodada",
-    "effect": "Marca de Persistencia firma corpo e vontade. Voce ou aliado no alcance ganha 2d6+Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
+    "effect": "Marca de Persistencia firma corpo e vontade. Voce ou aliado no alcance ganha 2d6 + Bônus de Proficiência + Mod.ESP PV temporarios e vantagem no proximo teste de VIG ou ESP. Se ja estiver protegido, recebe resistencia ao proximo dano fisico.",
     "type": "Determinacao/Protecao",
     "duration": "1 rodada",
     "number": 111

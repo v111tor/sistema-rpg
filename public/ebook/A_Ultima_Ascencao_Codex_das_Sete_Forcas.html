@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Codex das Sete Forças</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pergaminho: #e9ddc0;
+    --pergaminho-clara: #f1e8d2;
+    --pergaminho-escura: #d8c89e;
+    --mancha: #c7b283;
+    --tinta: #2c2014;
+    --tinta-suave: #4a3a26;
+    --sangue: #6e2a23;
+    --sangue-clara: #8a3a30;
+    --latao: #8c7339;
+    --latao-claro: #a68f4f;
+    --selo: #20281f;
+    --selo-luz: #3a4a36;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--selo);
+  }
+
+  body {
+    font-family: 'EB Garamond', serif;
+    color: var(--tinta);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- TEXTURE LAYER ---------- */
+  .page-texture {
+    position: relative;
+    background-color: var(--pergaminho);
+    background-image:
+      radial-gradient(ellipse 700px 500px at 8% 12%, rgba(199,178,131,0.55), transparent 60%),
+      radial-gradient(ellipse 600px 450px at 95% 8%, rgba(199,178,131,0.45), transparent 55%),
+      radial-gradient(ellipse 800px 600px at 90% 95%, rgba(199,178,131,0.5), transparent 60%),
+      radial-gradient(ellipse 500px 400px at 5% 92%, rgba(199,178,131,0.4), transparent 55%),
+      repeating-linear-gradient(90deg, rgba(140,115,57,0.03) 0px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(0deg, rgba(140,115,57,0.025) 0px, transparent 2px, transparent 3px);
+  }
+
+  .page-texture::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(110,42,35,0.04) 0, transparent 3%),
+      radial-gradient(circle at 80% 60%, rgba(44,32,20,0.03) 0, transparent 4%),
+      radial-gradient(circle at 60% 85%, rgba(110,42,35,0.03) 0, transparent 3%),
+      radial-gradient(circle at 35% 70%, rgba(44,32,20,0.025) 0, transparent 2.5%);
+    mix-blend-mode: multiply;
+  }
+
+  /* ---------- TOP BAR / TOC TOGGLE ---------- */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: linear-gradient(180deg, var(--selo) 0%, #1a221a 100%);
+    border-bottom: 2px solid var(--latao);
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .topbar .brand {
+    color: var(--pergaminho-clara);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+  .toc-btn {
+    background: transparent;
+    border: 1px solid var(--latao);
+    color: var(--pergaminho-clara);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .toc-btn:hover { background: var(--latao); color: var(--selo); }
+
+  /* ---------- TOC DRAWER ---------- */
+  .toc-drawer {
+    position: fixed;
+    top: 0; right: 0;
+    height: 100%;
+    width: min(300px, 84vw);
+    background: var(--selo);
+    border-left: 2px solid var(--latao);
+    z-index: 60;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    padding: 70px 22px 22px;
+    overflow-y: auto;
+  }
+  .toc-drawer.open { transform: translateX(0); }
+  .toc-drawer h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--latao-claro);
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--selo-luz);
+    padding-bottom: 8px;
+    margin: 0 0 14px;
+  }
+  .toc-drawer a {
+    display: block;
+    color: var(--pergaminho-clara);
+    text-decoration: none;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    padding: 9px 4px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    opacity: 0.85;
+    transition: opacity 0.15s ease, padding-left 0.15s ease;
+  }
+  .toc-drawer a:hover { opacity: 1; padding-left: 10px; color: var(--latao-claro); }
+  .toc-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.4);
+    z-index: 55; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+  }
+  .toc-overlay.open { opacity: 1; pointer-events: all; }
+
+  /* ---------- LAYOUT ---------- */
+  .book {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 28px 80px;
+  }
+
+  /* ---------- COVER (full bleed frontispiece) ---------- */
+  .cover-wrap {
+    background: radial-gradient(ellipse 120% 100% at 50% 0%, #2c2014 0%, #1a140d 60%, #120e08 100%);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(166,143,79,0.025) 0px, transparent 2px, transparent 5px),
+      repeating-linear-gradient(0deg, rgba(166,143,79,0.02) 0px, transparent 2px, transparent 4px);
+    pointer-events: none;
+  }
+  .cover {
+    padding: 64px 24px 56px;
+    text-align: center;
+    position: relative;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .cover-frame {
+    border: 1px solid rgba(166,143,79,0.5);
+    padding: 46px 20px 40px;
+    position: relative;
+  }
+  .cover-frame::before, .cover-frame::after {
+    content: "";
+    position: absolute;
+    width: 26px; height: 26px;
+    border: 1px solid var(--latao-claro);
+  }
+  .cover-frame::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .cover-frame::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+  .cover-ring {
+    width: 230px;
+    height: 230px;
+    margin: 0 auto 26px;
+  }
+  .cover .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--latao-claro);
+    opacity: 0.85;
+    margin-bottom: 22px;
+  }
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(40px, 8vw, 58px);
+    color: var(--pergaminho-clara);
+    margin: 0 0 14px;
+    letter-spacing: 0.01em;
+    line-height: 1.05;
+    text-shadow: 0 2px 18px rgba(110,42,35,0.4);
+  }
+  .cover .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17.5px;
+    color: var(--pergaminho-escura);
+    max-width: 440px;
+    margin: 18px auto 0;
+    line-height: 1.55;
+  }
+  .cover .imprint {
+    margin-top: 34px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--latao-claro);
+    opacity: 0.6;
+  }
+
+  /* ---------- SCENE ILLUSTRATION (per chapter) ---------- */
+  .scene {
+    margin: 8px auto 36px;
+    max-width: 480px;
+  }
+  .scene svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .scene-caption {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--tinta-suave);
+    opacity: 0.75;
+    margin-top: 8px;
+    letter-spacing: 0.01em;
+  }
+
+  /* ---------- REFCARD SEAL ICON ---------- */
+  .refcard-seal {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 12px;
+    opacity: 0.95;
+  }
+  .divider {
+    width: 100%;
+    max-width: 420px;
+    margin: 36px auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--latao), transparent);
+  }
+  .divider .mark { color: var(--latao); font-size: 13px; }
+
+  /* ---------- OPENING SECTION ---------- */
+  .opening {
+    padding: 30px 0 50px;
+  }
+  .opening h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--sangue);
+    margin-bottom: 22px;
+    text-align: center;
+  }
+  .opening p {
+    font-size: 18.5px;
+    line-height: 1.78;
+    margin: 0 0 20px;
+    text-align: justify;
+    hyphens: auto;
+  }
+  .opening p:first-of-type::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--sangue);
+    float: left;
+    line-height: 0.8;
+    padding: 6px 8px 0 0;
+  }
+
+  /* ---------- CHAPTER ---------- */
+  .chapter {
+    padding: 70px 0 10px;
+    border-top: 3px double var(--latao);
+    position: relative;
+  }
+  .chapter:first-of-type { border-top: none; }
+
+  .chapter-head {
+    text-align: center;
+    margin-bottom: 46px;
+  }
+  .chapter-head .sigil-wrap {
+    width: 86px;
+    height: 86px;
+    margin: 0 auto 18px;
+  }
+  .chapter-head .numeral {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--tinta-suave);
+    opacity: 0.6;
+    margin-bottom: 8px;
+  }
+  .chapter-head h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 7vw, 50px);
+    font-weight: 600;
+    margin: 0 0 10px;
+    line-height: 1;
+  }
+  .chapter-head .nature-line {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--tinta-suave);
+    letter-spacing: 0.02em;
+  }
+
+  .chapter-body h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 38px 0 14px;
+    padding-left: 14px;
+    border-left: 3px solid var(--latao);
+  }
+  .chapter-body p {
+    font-size: 17.5px;
+    line-height: 1.75;
+    margin: 0 0 18px;
+    text-align: justify;
+    hyphens: auto;
+  }
+  .chapter-body strong { color: var(--sangue-clara); font-weight: 600; }
+  .chapter-body em { color: var(--tinta-suave); }
+
+  /* ---------- REFERENCE CARD ---------- */
+  .refcard {
+    margin: 46px 0 10px;
+    background: linear-gradient(160deg, var(--selo) 0%, #283328 100%);
+    border: 1px solid var(--latao);
+    border-radius: 3px;
+    padding: 26px 26px 22px;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(166,143,79,0.15);
+  }
+  .refcard-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--latao-claro);
+    border-bottom: 1px solid rgba(166,143,79,0.3);
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+  }
+  .refcard dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+  .refcard .row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 14px;
+    align-items: baseline;
+  }
+  .refcard dt {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.04em;
+    color: var(--latao-claro);
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+  .refcard dd {
+    margin: 0;
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    color: var(--pergaminho-clara);
+    line-height: 1.5;
+  }
+  .refcard dd em { color: var(--pergaminho-escura); font-style: italic; }
+  @media (max-width: 560px) {
+    .refcard .row { grid-template-columns: 1fr; gap: 3px; }
+  }
+
+  /* ---------- CLOSING / CROSSOVER ---------- */
+  .closing {
+    padding: 70px 0 40px;
+    border-top: 3px double var(--latao);
+  }
+  .closing h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--sangue);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .closing p {
+    font-size: 17.5px;
+    line-height: 1.75;
+    margin: 0 0 20px;
+    text-align: justify;
+    hyphens: auto;
+  }
+  .closing p strong { color: var(--sangue-clara); }
+
+  .colophon {
+    text-align: center;
+    padding: 40px 0 90px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--tinta-suave);
+    opacity: 0.55;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 600px) {
+    .book { padding: 0 18px 60px; }
+    .cover { padding: 60px 10px 50px; }
+    .opening p, .chapter-body p, .closing p { font-size: 16.5px; text-align: left; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toc-overlay" id="tocOverlay"></div>
+<nav class="toc-drawer" id="tocDrawer">
+  <h3>Sumário</h3>
+  <a href="#abertura">Abertura</a>
+  <a href="#cap-ordem">I. Ordem</a>
+  <a href="#cap-caos">II. Caos</a>
+  <a href="#cap-luz">III. Luz</a>
+  <a href="#cap-sombra">IV. Sombra</a>
+  <a href="#cap-natureza">V. Natureza</a>
+  <a href="#cap-morte">VI. Morte</a>
+  <a href="#cap-demonio">VII. Demônio</a>
+  <a href="#fios">Onde os Fios se Cruzam</a>
+</nav>
+
+<div class="topbar">
+  <span class="brand">Codex das Sete Forças</span>
+  <button class="toc-btn" id="tocToggle">Sumário</button>
+</div>
+
+<div class="cover-wrap">
+  <header class="cover">
+    <div class="cover-frame">
+      <div class="eyebrow">Lore complementar — não substitui o livro de regras</div>
+      <div class="cover-ring">
+        <svg viewBox="0 0 240 240" fill="none">
+          <!-- outer ring -->
+          <circle cx="120" cy="120" r="112" stroke="#a68f4f" stroke-width="0.8" opacity="0.6"/>
+          <circle cx="120" cy="120" r="96" stroke="#a68f4f" stroke-width="0.6" stroke-dasharray="1 5" opacity="0.5"/>
+          <!-- seven small sigils around the ring, evenly spaced -->
+          <!-- Ordem: compass, top -->
+          <g transform="translate(120,28)">
+            <circle r="13" stroke="#d8c89e" stroke-width="1"/>
+            <line x1="0" y1="-9" x2="0" y2="9" stroke="#d8c89e" stroke-width="0.9"/>
+            <line x1="0" y1="0" x2="8" y2="-5" stroke="#d8c89e" stroke-width="1.1"/>
+          </g>
+          <!-- Caos: crooked spiral -->
+          <g transform="translate(189,57)">
+            <path d="M5 5 C 10 2, 11 -4, 5 -7 C -1 -10, -8 -5, -6 2 C -4 9, 4 11, 9 6" stroke="#d8c89e" stroke-width="1" fill="none"/>
+          </g>
+          <!-- Luz: open circle with dashed halo -->
+          <g transform="translate(212,120)">
+            <circle r="7" stroke="#d8c89e" stroke-width="1"/>
+            <circle r="12.5" stroke="#d8c89e" stroke-width="0.5" stroke-dasharray="1.5 2.5"/>
+          </g>
+          <!-- Sombra: blurred silhouette curve -->
+          <g transform="translate(189,183)">
+            <path d="M-6 9 C -8 1, -6 -7, 2 -10 C 7 -6, 7 1, 4 6 C 9 4, 11 -2, 9 -9" stroke="#d8c89e" stroke-width="0.9" fill="none" opacity="0.8"/>
+          </g>
+          <!-- Natureza: sprout -->
+          <g transform="translate(120,212)">
+            <circle cy="6" r="8" stroke="#d8c89e" stroke-width="1"/>
+            <path d="M0 -3 C 0 -8, -4 -12, 0 -17 C 4 -12, 0 -8, 0 -3" stroke="#d8c89e" stroke-width="1" fill="none"/>
+          </g>
+          <!-- Morte: door in profile -->
+          <g transform="translate(51,183)">
+            <path d="M-5 -11 L-5 11 C 4 11, 9 5, 8 -2 C 7 -9, 1 -11, -5 -11" stroke="#d8c89e" stroke-width="1" fill="none"/>
+          </g>
+          <!-- Demônio: broken seal -->
+          <g transform="translate(28,120)">
+            <circle r="10" stroke="#d8c89e" stroke-width="1" stroke-dasharray="3 2.5"/>
+            <line x1="-7" y1="0" x2="7" y2="0" stroke="#d8c89e" stroke-width="1.2"/>
+          </g>
+          <!-- center seal -->
+          <circle cx="120" cy="120" r="44" stroke="#8a3a30" stroke-width="1.3"/>
+          <circle cx="120" cy="120" r="32" stroke="#a68f4f" stroke-width="0.7"/>
+          <path d="M120 88 L120 152 M88 120 L152 120" stroke="#a68f4f" stroke-width="0.5" opacity="0.7"/>
+          <path d="M98 98 L142 142 M142 98 L98 142" stroke="#8a3a30" stroke-width="0.4" opacity="0.5"/>
+          <circle cx="120" cy="120" r="5" fill="#8a3a30"/>
+          <!-- connecting threads from center to each sigil -->
+          <line x1="120" y1="120" x2="120" y2="28" stroke="#8a3a30" stroke-width="0.3" opacity="0.35"/>
+          <line x1="120" y1="120" x2="189" y2="57" stroke="#8a3a30" stroke-width="0.3" opacity="0.35"/>
+          <line x1="120" y1="120" x2="212" y2="120" stroke="#8a3a30" stroke-width="0.3" opacity="0.35"/>
+          <line x1="120" y1="120" x2="189" y2="183" stroke="#8a3a30" stroke-width="0.3" opacity="0.35"/>
+          <line x1="120" y1="120" x2="120" y2="212" stroke="#8a3a30" stroke-width="0.3" opacity="0.35"/>
+          <line x1="120" y1="120" x2="51" y2="183" stroke="#8a3a30" stroke-width="0.3" opacity="0.35"/>
+          <line x1="120" y1="120" x2="28" y2="120" stroke="#8a3a30" stroke-width="0.3" opacity="0.35"/>
+        </svg>
+      </div>
+      <h1>Codex das<br>Sete Forças</h1>
+      <p class="subtitle">Sendo um relato das divindades do mundo conhecido, suas histórias contraditórias, seus cultos, seus segredos e suas sombras — compilado para uso de Mestres e jogadores de qualquer mesa.</p>
+      <div class="imprint">Volume Único · Sete Capítulos · Edição do Mestre</div>
+    </div>
+  </header>
+</div>
+<div class="page-texture">
+<div class="book">
+
+  <div class="divider" style="margin-top: 50px;"><span class="mark">✦</span></div>
+
+  <!-- OPENING -->
+  <section class="opening" id="abertura">
+    <h2>Como os Mortais Tocam o Divino</h2>
+    <p>Ninguém no mundo de campanha duvida que as Sete existem. O que se discute, nas tabernas e nos templos, não é <em>se</em> a fé funciona, mas <em>o que ela custa</em> e <em>o que ela exige de volta</em>.</p>
+    <p>Há duas formas reconhecidas de tocar o divino. A primeira é institucional: <strong>Acólitos</strong> entram em formação dentro de um templo ou santuário de uma das Sete, aprendem rituais, hierarquia e doutrina, e — se perseverarem — tornam-se <strong>Devotos</strong>, capazes de canalizar o poder da divindade que servem em troca de devoção contínua. A segunda forma é pessoal e não exige clero nenhum: qualquer pessoa, de qualquer ofício ou classe, pode fazer um <strong>voto ou pacto individual</strong> com uma das Sete — uma promessa sussurrada, um gesto repetido todo amanhecer, uma recusa jurada. Essa devoção leiga não confere o mesmo alcance de poder que a de um Devoto formado, mas é igualmente real aos olhos das divindades, e muitas vezes mais sincera, livre da política interna de um templo.</p>
+    <p>As Sete não pedem o mesmo tipo de fé. Algumas preferem multidões e cerimônia; outras preferem silêncio e um único fiel teimoso. Por isso este livro evita tratar "templo" como sinônimo de "fé verdadeira" — em cada capítulo, a prática leiga recebe tanto espaço quanto a prática clerical.</p>
+    <p><strong>Templos e santuários</strong> físicos existem para cada uma das Sete, em escala que varia de catedrais urbanas a pedras isoladas em florestas. Eles abrigam fiéis, oferecem cura básica a quem precisa, e funcionam como ponto de ancoragem social da fé numa região — mas não são obrigatórios para a prática religiosa, e algumas das Sete (notoriamente Sombra e Demônio) têm fiéis que preferem nunca se aproximar de um templo formal.</p>
+    <p>Uma última nota sobre convivência: usar o favor de uma divindade diferente daquela que se serve é universalmente reconhecido como <strong>transgressão</strong> — um rompimento de lealdade que todo fiel, leigo ou clérigo, entende como falta grave, ainda que as consequências espirituais variem de fé para fé. Este livro não detalha a mecânica disso; o livro de regras já cobre o custo. O que importa aqui é que a transgressão é sentida <em>antes</em> de ser uma regra — é um tabu social tanto quanto uma penalidade de jogo.</p>
+    <p>Por fim: o mundo de campanha não é um lugar de harmonia entre povos. Discriminação entre raças é realidade cotidiana em quase toda região, e os cultos das Sete não estão isolados disso — cada fé, à sua maneira, já absorveu um pouco dessa tensão em sua própria história e em suas próprias fações internas. Este livro não trata esse tema como capítulo à parte; ele aparece, quando aparece, como mais uma camada da ambiguidade moral que já pertence a cada uma das Sete.</p>
+    <p>Que cada Mestre escolha o que destas páginas é verdade absoluta em sua mesa, e o que é apenas a versão que um certo povo, num certo século, escolheu acreditar.</p>
+  </section>
+
+  <!-- CHAPTER: ORDEM -->
+  <section class="chapter" id="cap-ordem">
+    <div class="chapter-head">
+      <div class="sigil-wrap">
+        <svg viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="40" stroke="#6e2a23" stroke-width="1.6"/>
+          <circle cx="50" cy="50" r="28" stroke="#6e2a23" stroke-width="1"/>
+          <path d="M50 14 L50 86" stroke="#6e2a23" stroke-width="1"/>
+          <path d="M50 50 L72 30" stroke="#6e2a23" stroke-width="1.4"/>
+        </svg>
+      </div>
+      <div class="numeral">CAPÍTULO I</div>
+      <h2 style="color: var(--sangue);">Ordem</h2>
+      <div class="nature-line">Benígna — Lei, destino, proteção, profecia</div>
+    </div>
+
+    <div class="scene">
+      <svg viewBox="0 0 480 220" fill="none">
+        <circle cx="120" cy="80" r="8" fill="#2c2014" opacity="0.85"/>
+        <circle cx="360" cy="150" r="10" fill="#2c2014" opacity="0.85"/>
+        <path d="M120 80 C 180 110, 230 120, 270 122" stroke="#6e2a23" stroke-width="1" fill="none" stroke-dasharray="3 4" opacity="0.7"/>
+        <path d="M360 150 C 320 130, 290 122, 270 122" stroke="#6e2a23" stroke-width="1" fill="none" stroke-dasharray="3 4" opacity="0.7"/>
+        <circle cx="270" cy="122" r="3" fill="#8c7339"/>
+        <path d="M270 100 L270 144 M248 122 L292 122" stroke="#8c7339" stroke-width="0.6" opacity="0.5"/>
+        <path d="M40 190 Q 240 200 440 190" stroke="#2c2014" stroke-width="0.7" opacity="0.3" fill="none"/>
+      </svg>
+      <div class="scene-caption">As duas estrelas, no instante em que não colidem — o primeiro padrão do cosmos.</div>
+    </div>
+
+    <div class="chapter-body">
+      <h3>A Lei Que Veio Antes do Mundo</h3>
+      <p>Diz-se que Ordem não foi criada — que Ordem <em>é</em> o motivo pelo qual qualquer outra coisa pôde ser criada sem se desfazer no instante seguinte. Antes de haver tempo, não havia sequência; antes de haver sequência, não havia "antes". A lenda mais aceita pelos tribunais sacerdotais conta que Ordem não tem rosto porque rosto é uma forma, e forma é uma escolha posterior à sua própria existência — Ordem é o que torna possível haver escolhas que se sustentam.</p>
+      <p>Uma segunda versão, popular entre astrônomos-sacerdotes e cartógrafos do destino, é mais modesta: Ordem nasceu no instante em que duas estrelas, caindo uma contra a outra, <em>não</em> colidiram. Esse desvio — o primeiro padrão, a primeira regra que o cosmos obedeceu sem ser forçado — seria a centelha original da divindade. Os clérigos mais antigos preferem a primeira história; os devotos leigos, sobretudo marinheiros e agricultores que vivem por calendários e marés, preferem a segunda, porque nela Ordem nasce de um <em>evento</em>, algo que se pode imaginar.</p>
+      <p>As duas versões não se excluem nos textos canônicos — apenas raramente são contadas pela mesma boca.</p>
+
+      <h3>A Fé Vivida</h3>
+      <p>Para o clero, a prática diária de Ordem é menos sobre oração e mais sobre <strong>manutenção</strong>: calendários sagrados conferidos pedra por pedra, registros de nascimento e morte copiados à mão mesmo onde já existem escribas seculares, rituais de "alinhamento" do templo realizados ao amanhecer (reposicionar objetos, reacender lamparinas na sequência exata). Um sacerdote de Ordem que falha em manter sua própria rotina é visto com mais suspeita do que um que comete um pecado dramático — a falha pequena e repetida é o verdadeiro tabu.</p>
+      <p>Para o devoto leigo, a fé é mais simples e mais íntima: contratos verbais selados com a mão sobre o coração, a recusa em quebrar uma promessa mesmo trivial, o hábito de "fechar o dia" — revisar mentalmente o que foi prometido e cumprido antes de dormir. Soldados e juízes leigos frequentemente fazem voto pessoal a Ordem sem nunca pisar num templo; para eles, a divindade não pede adoração, pede <em>consistência</em>.</p>
+
+      <h3>Relação com Caos</h3>
+      <p>Ordem e Caos são, nos textos populares, descritos como opostos absolutos — mas os teólogos mais cuidadosos discordam. Ordem não combate a mudança; combate a mudança <em>sem padrão</em>. Há um ditado sacerdotal pouco citado fora dos templos: "Caos é a pergunta que Ordem ainda não respondeu." Isso não torna as duas forças aliadas — cultos de Ordem historicamente lideraram expurgos contra adoradores de Caos — mas explica por que alguns dos maiores estudiosos de Ordem foram, em sua juventude, fascinados por Caos: ambos lidam com o que ainda não tem nome.</p>
+
+      <h3>A Sombra Dentro da Lei</h3>
+      <p>A ambiguidade interna de Ordem é simples de enunciar e impossível de resolver: <em>toda lei eventualmente protege algo que não devia</em>. Os arquivos de qualquer templo de Ordem antigo o suficiente guardam ao menos um caso em que a "profecia" ou o "destino" sacerdotal foi usado para justificar uma injustiça que, mais tarde, o próprio clero reconheceu como erro — mas que não podia ser desfeita, porque desfazer um decreto de Ordem é, para muitos devotos, mais grave que o erro original. Há clérigos que dedicam a vida inteira a corrigir, em silêncio, decisões antigas da própria fé — sem nunca admitir publicamente que a fé pode errar.</p>
+      <p>Entre essas decisões antigas estão decretos de séculos passados que distribuíram terra, cargo e direito de fala por linhagem e povo de origem — "destino", segundo a doutrina da época, sempre favorecendo quem já estava no poder. Hoje, fações dissidentes dentro do próprio clero de Ordem trabalham para reverter esses decretos um a um, enquanto outras fações insistem que reverter um decreto antigo é abrir a porta para reverter todos.</p>
+    </div>
+
+    <div class="refcard">
+      <svg class="refcard-seal" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="28" r="22" stroke="#a68f4f" stroke-width="1"/>
+        <line x1="28" y1="11" x2="28" y2="45" stroke="#a68f4f" stroke-width="0.9"/>
+        <line x1="28" y1="28" x2="42" y2="18" stroke="#a68f4f" stroke-width="1.2"/>
+      </svg>
+      <div class="refcard-title">Ficha de Referência — Ordem</div>
+      <dl>
+        <div class="row"><dt>Símbolo</dt><dd>Um compasso fechado sobre um círculo duplo</dd></div>
+        <div class="row"><dt>Cores litúrgicas</dt><dd>Branco-marfim e cinza-aço</dd></div>
+        <div class="row"><dt>Saudação</dt><dd><em>"Que seu passo siga a linha."</em></dd></div>
+        <div class="row"><dt>Tabu</dt><dd>Quebrar promessa feita sob testemunha; decretar sem registrar</dd></div>
+        <div class="row"><dt>Oferenda típica</dt><dd>Um objeto reparado pelas próprias mãos do ofertante</dd></div>
+        <div class="row"><dt>Reconhecer um templo</dt><dd>Arquitetura simétrica e numerada; relógios ou calendários visíveis em toda sala; silêncio absoluto durante o "alinhamento" do amanhecer</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- CHAPTER: CAOS -->
+  <section class="chapter" id="cap-caos">
+    <div class="chapter-head">
+      <div class="sigil-wrap">
+        <svg viewBox="0 0 100 100" fill="none">
+          <path d="M50 50 C 65 45, 70 30, 55 22 C 40 14, 22 24, 26 42 C 30 60, 50 68, 64 58" stroke="#6e2a23" stroke-width="1.6" fill="none"/>
+          <circle cx="50" cy="50" r="2.5" fill="#6e2a23"/>
+        </svg>
+      </div>
+      <div class="numeral">CAPÍTULO II</div>
+      <h2 style="color: var(--sangue);">Caos</h2>
+      <div class="nature-line">Maligna — Destruição, mutação, imprevisibilidade</div>
+    </div>
+
+    <div class="scene">
+      <svg viewBox="0 0 480 220" fill="none">
+        <path d="M40 110 L 180 110" stroke="#2c2014" stroke-width="0.8" opacity="0.4"/>
+        <path d="M180 110 C 210 95, 220 130, 250 100 C 270 80, 260 140, 300 105 C 330 80, 310 150, 360 95" stroke="#6e2a23" stroke-width="1.3" fill="none"/>
+        <path d="M360 95 C 380 75, 400 60, 420 50" stroke="#6e2a23" stroke-width="1.3" fill="none"/>
+        <circle cx="250" cy="100" r="2" fill="#8c7339"/>
+        <circle cx="300" cy="105" r="2" fill="#8c7339"/>
+        <path d="M340 130 L 350 145 M345 125 L 360 135" stroke="#2c2014" stroke-width="0.6" opacity="0.4"/>
+      </svg>
+      <div class="scene-caption">O silêncio que durou demais, partindo-se em fragmentos que não combinam.</div>
+    </div>
+
+    <div class="chapter-body">
+      <h3>Não Há Início. Só Houve Antes-de-Agora.</h3>
+      <p>Não pergunte de onde Caos veio. A pergunta já é uma forma de prender Caos numa linha — começo, meio, fim — e Caos não cabe em linha nenhuma.</p>
+      <p>As histórias que existem não são uma história. São fragmentos. Um pastor jura que Caos nasceu de um silêncio que durou demais — tanto tempo sem nada acontecer que algo <em>teve</em> que quebrar. Uma anciã de outra vila conta o oposto: Caos sempre existiu, e Ordem é que nasceu depois, como uma casca tentando conter o que nunca pediu para ser contido.</p>
+      <p>Os dois fragmentos não combinam. Ninguém tenta combiná-los. Quem serve Caos aprende rápido que perguntar "qual é a verdade" é a pergunta errada.</p>
+
+      <h3>Como Se Serve o Que Não Tem Forma Fixa</h3>
+      <p>Clero de Caos quase não existe — e quando existe, não dura. Templos se desfazem, se mudam, se reconstroem em outro formato a cada geração, porque um templo fixo é uma contradição que a própria fé não perdoa. O que existe, em vez disso, são <strong>círculos</strong>: grupos pequenos, instáveis, que se reúnem sem hierarquia clara, lideram por quem está mais inspirado naquele dia, e se dissolvem quando perdem a razão de existir.</p>
+      <p>Devoção leiga é mais comum, e mais honesta. Um artesão que quebra de propósito sua própria peça perfeita antes de vendê-la. Um marinheiro que nunca repete a mesma rota duas vezes, mesmo quando a rota antiga era mais rápida. Pequenos gestos de recusa ao previsível — isso é oração, para quem serve Caos.</p>
+
+      <h3>Caos e Ordem — O Espelho Que Nenhum dos Dois Admite</h3>
+      <p>Eles se odeiam. Isso é fácil de dizer. O difícil é dizer por quê.</p>
+      <p>Caos não odeia Ordem por existir regra. Odeia porque Ordem finge que a regra resolve tudo. Há fiéis de Caos — poucos, escondidos, quase heréticos aos olhos dos próprios — que admitem: talvez sirvam Caos porque, em algum momento, uma "lei justa" os destruiu, e só restou acreditar que nada deveria ser fixo o bastante para fazer isso de novo.</p>
+
+      <h3>Por Que Alguém Serve Isto, Sabendo o Que É</h3>
+      <p>Caos é Maligna. Isso não é debate, é a tabela, é fixo. Mas nem todo fiel quer destruição pela destruição.</p>
+      <p>Há quem sirva porque viveu sob um sistema — de lei, de casta, de sangue — que nunca ia mudar por dentro. Caos prometeu (prometer não é bem a palavra certa, Caos não promete nada) — Caos <em>permitiu</em> que mudasse, mesmo que o preço fosse perder o controle sobre o que vem depois. Para um povo inteiro barrado de templo, de cargo, de nome de família reconhecido, um deus que não exige hierarquia de sangue para servir é, ainda que maligno, o único que aceita.</p>
+      <p>Isso não limpa Caos. Não tenta. Mas explica por que, em certas vilas, o culto de Caos tem mais fiéis entre os marginalizados do que entre os privilegiados — não porque Caos os ama mais, mas porque Caos não pergunta de onde vieram antes de dar poder.</p>
+      <p>E há quem sirva por motivo nenhum bom. Isso também é verdade. Caos não filtra.</p>
+    </div>
+
+    <div class="refcard">
+      <svg class="refcard-seal" viewBox="0 0 56 56" fill="none">
+        <path d="M30 30 C 38 26, 40 14, 30 9 C 18 4, 6 16, 10 30 C 14 44, 30 50, 40 42" stroke="#a68f4f" stroke-width="1.1" fill="none"/>
+      </svg>
+      <div class="refcard-title">Ficha de Referência — Caos</div>
+      <dl>
+        <div class="row"><dt>Símbolo</dt><dd>Uma espiral que não se fecha, desenhada sempre um pouco torta</dd></div>
+        <div class="row"><dt>Cores litúrgicas</dt><dd>Nenhuma fixa — fiéis evitam repetir a mesma combinação duas vezes</dd></div>
+        <div class="row"><dt>Saudação</dt><dd><em>"Que quebre."</em> (dito sem especificar o quê)</dd></div>
+        <div class="row"><dt>Tabu</dt><dd>Repetir um ritual exatamente como da última vez</dd></div>
+        <div class="row"><dt>Oferenda típica</dt><dd>Algo que já era seu, destruído por suas próprias mãos</dd></div>
+        <div class="row"><dt>Reconhecer um templo</dt><dd>Quase nunca dura — procure construções inacabadas, reformadas a meio, ou ruínas habitadas de propósito</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- CHAPTER: LUZ -->
+  <section class="chapter" id="cap-luz">
+    <div class="chapter-head">
+      <div class="sigil-wrap">
+        <svg viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="22" stroke="#6e2a23" stroke-width="1.6"/>
+          <circle cx="50" cy="50" r="38" stroke="#6e2a23" stroke-width="0.7" stroke-dasharray="2 4"/>
+        </svg>
+      </div>
+      <div class="numeral">CAPÍTULO III</div>
+      <h2 style="color: var(--sangue);">Luz</h2>
+      <div class="nature-line">Benígna — Cura, revelação, exorcismo, proteção</div>
+    </div>
+
+    <div class="scene">
+      <svg viewBox="0 0 480 220" fill="none">
+        <path d="M150 170 C 140 140, 145 110, 165 95" stroke="#2c2014" stroke-width="0.8" opacity="0.45" fill="none"/>
+        <circle cx="240" cy="90" r="14" stroke="#6e2a23" stroke-width="1.3"/>
+        <circle cx="240" cy="90" r="24" stroke="#8c7339" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.7"/>
+        <circle cx="240" cy="90" r="34" stroke="#8c7339" stroke-width="0.4" stroke-dasharray="1 5" opacity="0.45"/>
+        <path d="M310 175 C 305 145, 300 120, 270 105" stroke="#2c2014" stroke-width="0.8" opacity="0.45" fill="none"/>
+        <path d="M210 190 Q 240 200 270 190" stroke="#2c2014" stroke-width="0.6" opacity="0.3" fill="none"/>
+      </svg>
+      <div class="scene-caption">O eco do primeiro grito de dor, transformado em chama que responde a quem chama.</div>
+    </div>
+
+    <div class="chapter-body">
+      <h3>A Chama Que Não Foi Acesa Por Ninguém</h3>
+      <p>A versão mais contada nos templos urbanos diz que Luz nasceu do primeiro grito de dor do mundo — não como resposta divina a esse grito, mas como o próprio eco dele, transformado. Onde havia sofrimento sem testemunha, Luz apareceu para que nenhum sofrimento fosse, dali em diante, completamente solitário.</p>
+      <p>Comunidades rurais, mais desconfiadas de origens tão poéticas, contam outra coisa: Luz não nasceu de nada, sempre esteve lá, do mesmo jeito que o sol sempre nasce mesmo em noites em que parece impossível. Para essas comunidades, perguntar "de onde vem Luz" é tão estranho quanto perguntar de onde vem a manhã.</p>
+      <p>Os dois mitos coexistem sem tensão real — a maioria dos fiéis nem percebe que está contando versões diferentes, porque ambas chegam ao mesmo lugar: Luz responde a quem chama.</p>
+
+      <h3>A Fé Que Cura e a Fé Que Cobra</h3>
+      <p>O clero de Luz administra a maior rede de templos e santuários entre as Sete — quase toda vila tem ao menos um santuário menor, ainda que humilde, oferecendo cura básica a quem precisa. Isso dá a Luz uma reputação de generosidade quase automática, mas o clero interno sabe que generosidade tem custo de manutenção: hospitais sagrados, escolas de cura, viagens de exorcismo a regiões remotas — tudo isso exige doação contínua, e templos maiores cobram (em favor, em lealdade política, raramente em moeda direta) mais do que aparentam à primeira vista.</p>
+      <p>Devoção leiga a Luz tende a ser mais simples e menos institucional: o hábito de deixar uma vela aceso para quem está doente mesmo distante, o costume de nunca recusar abrigo a um estranho ferido, pequenos votos pessoais de "não vou deixar essa dor passar sem nome" — testemunhar o sofrimento de alguém em vez de desviar o olhar.</p>
+
+      <h3>Relação com Sombra</h3>
+      <p>Luz e Sombra compartilham, por acidente teológico que incomoda ambos os clérigos, o domínio de "passagem" — Sombra na forma de morte suave e trânsito discreto, Luz na forma de exorcismo e revelação do que estava oculto. Templos das duas fés às vezes disputam o direito de conduzir um rito funerário específico, sobretudo quando a morte envolveu algo "indecente" o bastante para exigir exorcismo, mas gentil o bastante para merecer a suavidade de Sombra.</p>
+      <p>Na prática cotidiana, fiéis das duas fés se toleram mais do que clérigos admitiriam: curandeiros de Luz que trabalham em vilas pobres sabem que, à noite, é um fiel de Sombra quem ajuda famílias a esconder dívidas ou segredos vergonhosos da vizinhança — e os dois sabem que precisam um do outro para a vila inteira sobreviver com alguma dignidade.</p>
+
+      <h3>A Sombra Dentro da Luz</h3>
+      <p>O conflito moral de Luz raramente é discutido abertamente, mas todo clérigo sênior o conhece: Luz revela. Sempre. E nem toda verdade revelada cura — algumas apenas destroem, sem aviso, sem escolha de quem foi exposto.</p>
+      <p>Há casos documentados (e silenciados, quando possível) de exorcismos que expuseram não um espírito maligno, mas um segredo familiar que destruiu uma casa inteira de dentro para fora — uma adoção escondida, uma linhagem misturada que a comunidade local não aceitaria, revelada por um rito que só queria "purificar". O clero de Luz nunca formalizou uma doutrina sobre quando revelar é cura e quando é crueldade disfarçada de virtude; cada templo decide isso sozinho, e nem sempre decide bem — sobretudo quando o segredo revelado envolve a origem ou o sangue de alguém de um povo já visto com desconfiança pela vizinhança.</p>
+    </div>
+
+    <div class="refcard">
+      <svg class="refcard-seal" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="28" r="12" stroke="#a68f4f" stroke-width="1.1"/>
+        <circle cx="28" cy="28" r="21" stroke="#a68f4f" stroke-width="0.6" stroke-dasharray="2 4"/>
+      </svg>
+      <div class="refcard-title">Ficha de Referência — Luz</div>
+      <dl>
+        <div class="row"><dt>Símbolo</dt><dd>Um círculo aberto, como um sol sem raios desenhados</dd></div>
+        <div class="row"><dt>Cores litúrgicas</dt><dd>Branco e dourado pálido</dd></div>
+        <div class="row"><dt>Saudação</dt><dd><em>"Que nada arda em silêncio."</em></dd></div>
+        <div class="row"><dt>Tabu</dt><dd>Negar cura a quem pede, mesmo a um desconhecido hostil</dd></div>
+        <div class="row"><dt>Oferenda típica</dt><dd>Uma vela, acesa em nome de alguém ausente</dd></div>
+        <div class="row"><dt>Reconhecer um templo</dt><dd>Sempre com uma porta aberta ao público a qualquer hora; luz artificial ou natural nunca completamente apagada</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- CHAPTER: SOMBRA -->
+  <section class="chapter" id="cap-sombra">
+    <div class="chapter-head">
+      <div class="sigil-wrap">
+        <svg viewBox="0 0 100 100" fill="none">
+          <path d="M35 75 C 30 55, 35 35, 50 25 C 60 32, 62 48, 58 60 C 70 55, 75 40, 70 25" stroke="#6e2a23" stroke-width="1.4" fill="none" opacity="0.8"/>
+        </svg>
+      </div>
+      <div class="numeral">CAPÍTULO IV</div>
+      <h2 style="color: var(--sangue);">Sombra</h2>
+      <div class="nature-line">Neutra — Segredos, ilusões, passagem, morte suave</div>
+    </div>
+
+    <div class="scene">
+      <svg viewBox="0 0 480 220" fill="none">
+        <circle cx="120" cy="90" r="13" stroke="#6e2a23" stroke-width="1" opacity="0.7"/>
+        <path d="M150 70 C 220 60, 280 90, 330 140 C 350 160, 360 175, 365 190" stroke="#2c2014" stroke-width="0.7" opacity="0.3" fill="none"/>
+        <path d="M310 150 C 300 130, 305 110, 320 100 C 330 112, 332 128, 325 142 C 340 138, 348 122, 345 105" stroke="#6e2a23" stroke-width="1" fill="none" opacity="0.85"/>
+        <ellipse cx="330" cy="160" rx="22" ry="6" fill="#2c2014" opacity="0.12"/>
+      </svg>
+      <div class="scene-caption">O que sobra quando a luz já passou — o vestígio, não o oposto.</div>
+    </div>
+
+    <div class="chapter-body">
+      <h3>Ninguém Sabe... e Ninguém Devia</h3>
+      <p>Não existe uma história de origem aceita para Sombra. Existem três, talvez quatro, e os próprios fiéis preferem assim — uma fé sobre segredos que tivesse uma origem clara e documentada seria, de algum jeito, uma contradição mal resolvida.</p>
+      <p>Uma versão sussurrada (nunca dita em voz alta dentro de templo) diz que Sombra é o que sobra quando Luz ilumina alguma coisa — não o oposto de Luz, mas o resto, o vestígio, a parte que a luz não alcançou por escolha, não por acidente. Outra versão, mais antiga e quase esquecida, fala de Sombra como a primeira a perceber que nem tudo precisa ser visto para ser real.</p>
+      <p>Há uma terceira versão. Ela não vai aqui. Quem precisa saber, já sabe.</p>
+
+      <h3>Praticar Uma Fé Que Não Quer Ser Vista Praticando</h3>
+      <p>Não há grande cerimônia em Sombra — isso seria o oposto do que a fé pede. Clérigos (raros, e raramente reconhecidos como tal por estranhos) vivem entre a população comum, sem hábito distintivo, oferecendo passagem discreta a quem precisa desaparecer de uma situação perigosa, ou uma morte suave a quem já não tem cura possível e pede para não sofrer mais.</p>
+      <p>A prática leiga é, paradoxalmente, mais visível, ainda que ninguém a chame de religiosa: guardar o segredo de um vizinho sem julgar, ajudar alguém a sair de uma cidade sem perguntas, sentar ao lado de um moribundo até o fim sem precisar de palavras. Quem faz isso por instinto, sem nunca ter ouvido falar de "fé em Sombra", está — segundo os poucos clérigos que se importam em explicar — praticando exatamente a mesma coisa.</p>
+
+      <h3>Relação com Morte</h3>
+      <p>Sombra e Morte compartilham "passagem" no domínio de poder de ambas, e a relação entre as duas é mais próxima de parceria silenciosa do que rivalidade — ainda que nenhuma das duas chamaria isso de aliança em voz alta. Onde Morte preside o ciclo grande, o que acontece a uma alma depois, Sombra cuida do momento imediatamente anterior: a transição, o último segredo guardado, a dor abreviada.</p>
+      <p>Tensão existe quando um morre de forma "errada" — violenta, pública, sem dignidade — e os dois cultos discordam sobre quem deveria ter chegado primeiro.</p>
+
+      <h3>O Que Sombra Esconde de Si Mesma</h3>
+      <p>A ambiguidade central de Sombra é desconfortável até para seus próprios fiéis: uma fé construída sobre guardar segredos é, estruturalmente, incapaz de se autocorrigir. Erros dentro do próprio clero raramente saem à luz — não por proteção corporativa, mas porque expor o erro seria quebrar a própria natureza da fé.</p>
+      <p>Isso tem um custo concreto: vilas inteiras já usaram a discrição de Sombra para abrigar costumes de exclusão entre povos — esconder de fora quem "não devia" se misturar, sob o pretexto de "proteção". Alguns fiéis de Sombra, justamente por servirem uma fé sem hierarquia central que fiscalize isso, hoje trabalham individualmente para desfazer esse uso torto — guardando, em vez disso, o segredo de quem está sendo perseguido por essa mesma exclusão.</p>
+    </div>
+
+    <div class="refcard">
+      <svg class="refcard-seal" viewBox="0 0 56 56" fill="none">
+        <path d="M19 42 C 16 31, 19 19, 28 14 C 34 18, 35 27, 32 34 C 39 31, 42 22, 39 14" stroke="#a68f4f" stroke-width="1" fill="none" opacity="0.85"/>
+      </svg>
+      <div class="refcard-title">Ficha de Referência — Sombra</div>
+      <dl>
+        <div class="row"><dt>Símbolo</dt><dd>Uma silhueta sem contorno definido, quase borrada de propósito</dd></div>
+        <div class="row"><dt>Cores litúrgicas</dt><dd>Cinza-escuro e violeta profundo</dd></div>
+        <div class="row"><dt>Saudação</dt><dd><em>(geralmente apenas um gesto — dois dedos tocando a própria têmpora)</em></dd></div>
+        <div class="row"><dt>Tabu</dt><dd>Revelar segredo confiado, mesmo sob tortura ou suborno</dd></div>
+        <div class="row"><dt>Oferenda típica</dt><dd>Algo nunca antes dito a ninguém, escrito e depois queimado</dd></div>
+        <div class="row"><dt>Reconhecer um templo</dt><dd>Raramente parece templo — costuma se camuflar como casa comum, taverna ou depósito abandonado</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- CHAPTER: NATUREZA -->
+  <section class="chapter" id="cap-natureza">
+    <div class="chapter-head">
+      <div class="sigil-wrap">
+        <svg viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="62" r="16" stroke="#6e2a23" stroke-width="1.2"/>
+          <path d="M50 46 C 50 36, 42 28, 50 16 C 58 28, 50 36, 50 46" stroke="#6e2a23" stroke-width="1.4" fill="none"/>
+        </svg>
+      </div>
+      <div class="numeral">CAPÍTULO V</div>
+      <h2 style="color: var(--sangue);">Natureza</h2>
+      <div class="nature-line">Neutra — Plantas, animais, clima, venenos naturais</div>
+    </div>
+
+    <div class="scene">
+      <svg viewBox="0 0 480 220" fill="none">
+        <path d="M50 195 Q 240 205 430 195" stroke="#2c2014" stroke-width="0.8" opacity="0.35" fill="none"/>
+        <path d="M150 195 C 150 160, 140 135, 155 110 C 165 130, 160 155, 160 175" stroke="#6e2a23" stroke-width="1.2" fill="none"/>
+        <path d="M155 130 C 140 122, 130 110, 128 98" stroke="#6e2a23" stroke-width="0.8" fill="none" opacity="0.7"/>
+        <path d="M158 145 C 175 138, 188 125, 192 112" stroke="#6e2a23" stroke-width="0.8" fill="none" opacity="0.7"/>
+        <path d="M300 195 C 296 175, 290 168, 278 168 C 268 168, 262 178, 268 188" stroke="#2c2014" stroke-width="0.8" opacity="0.4" fill="none"/>
+        <path d="M320 195 C 322 180, 330 172, 342 173" stroke="#2c2014" stroke-width="0.7" opacity="0.3" fill="none"/>
+      </svg>
+      <div class="scene-caption">O broto que sabe quando crescer — e quando devolver tudo à terra.</div>
+    </div>
+
+    <div class="chapter-body">
+      <h3>Crescer, Apodrecer, Crescer de Novo</h3>
+      <p>A história mais difundida sobre a origem de Natureza não é bem uma história de criação — é mais uma observação que se tornou mito: Natureza não fez o primeiro broto nascer. Natureza <em>é</em> o motivo pelo qual o broto, uma vez nascido, sabe quando crescer, quando florescer, quando murchar e devolver tudo à terra para o próximo broto.</p>
+      <p>Povos de regiões mais áridas contam uma versão mais dura: Natureza não escolhe favoritos, e a prova disso é a seca que mata a colheita do justo e do injusto igualmente. Eles não rezam a Natureza por bondade — rezam por <em>atenção</em>, porque o pior destino, dizem, não é a fúria de Natureza, é a indiferença dela.</p>
+      <p>Ambas as versões concordam num ponto: Natureza não promete justiça. Promete ciclo.</p>
+
+      <h3>Quem Cuida da Terra e Quem Vive Dela</h3>
+      <p>O clero de Natureza tende a viver fora dos centros urbanos — bosques sagrados, vales protegidos, ilhas de mata preservada mesmo quando a região ao redor já foi inteiramente desmatada por necessidade humana. Rituais clericais giram em torno de marcar as estações: plantio, colheita, a primeira geada, o primeiro degelo — cada um com pequena cerimônia, raramente grandiosa.</p>
+      <p>A devoção leiga é talvez a mais universal entre as Sete, porque quase todo agricultor, caçador ou herbalista pratica alguma versão dela sem nunca se chamar de "fiel": deixar parte da colheita no campo para os animais, nunca caçar fêmea prenhe, agradecer em voz baixa antes de cortar uma árvore adulta. São hábitos tão comuns que muita gente os pratica sem saber que está, tecnicamente, rezando.</p>
+
+      <h3>Relação com Morte</h3>
+      <p>Natureza e Morte se entendem bem — talvez a relação mais tranquila entre quaisquer duas das Sete — porque ambas operam sob a mesma lógica de ciclo: nada cresce sem que algo antes tenha morrido e apodrecido para alimentar o solo. Templos das duas fés frequentemente compartilham terreno em regiões rurais, e clérigos de uma costumam saber o nome dos clérigos da outra na mesma vila.</p>
+      <p>A única fricção histórica surge quando uma comunidade humana interfere demais no ciclo — represas que impedem a decomposição natural de um rio, ou rituais funerários que insistem em preservar o corpo "intacto" em vez de devolvê-lo à terra. Nesses casos, os dois clergies costumam discordar sobre qual deles tem prioridade de doutrina.</p>
+
+      <h3>O Veneno Que Também É Remédio</h3>
+      <p>A ambiguidade de Natureza está embutida no próprio domínio: venenos naturais são, ao mesmo tempo, arma e remédio, dependendo só da dose e da intenção de quem colhe. Isso torna o clero de Natureza permanentemente desconfiado de poder político — porque o mesmo conhecimento que cura uma vila pode envenenar um poço inteiro, e a fé nunca resolveu, em doutrina formal, quem tem o direito de decidir quando usar qual.</p>
+      <p>Historicamente, isso teve um efeito colateral incômodo: comunidades isoladas ou nômades — frequentemente de povos já discriminados pelas cidades maiores — desenvolveram conhecimento profundo de Natureza por necessidade de sobrevivência, e foram, mais de uma vez, acusadas de "bruxaria" ou "envenenamento" por esse mesmo conhecimento, enquanto herbalistas urbanos com o mesmo saber recebiam o título de "curandeiro respeitado". O clero de Natureza nunca tomou partido institucional nessa injustiça específica — alguns templos rurais abrigam essas comunidades sem perguntas; outros, mais próximos das cidades, preferem não se envolver.</p>
+    </div>
+
+    <div class="refcard">
+      <svg class="refcard-seal" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="34" r="11" stroke="#a68f4f" stroke-width="1.1"/>
+        <path d="M28 23 C 28 14, 22 8, 28 0 C 34 8, 28 14, 28 23" stroke="#a68f4f" stroke-width="1.1" fill="none" transform="translate(0,6)"/>
+      </svg>
+      <div class="refcard-title">Ficha de Referência — Natureza</div>
+      <dl>
+        <div class="row"><dt>Símbolo</dt><dd>Um ramo brotando de um círculo de raízes entrelaçadas</dd></div>
+        <div class="row"><dt>Cores litúrgicas</dt><dd>Verde-musgo e marrom-terra</dd></div>
+        <div class="row"><dt>Saudação</dt><dd><em>"Que a estação te encontre pronto."</em></dd></div>
+        <div class="row"><dt>Tabu</dt><dd>Desperdiçar o que foi colhido sem necessidade</dd></div>
+        <div class="row"><dt>Oferenda típica</dt><dd>Sementes ou grãos, plantados e não comidos</dd></div>
+        <div class="row"><dt>Reconhecer um templo</dt><dd>Quase indistinguível da paisagem natural ao redor — bosque cercado, gruta, ou simples clareira marcada por pedras</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- CHAPTER: MORTE -->
+  <section class="chapter" id="cap-morte">
+    <div class="chapter-head">
+      <div class="sigil-wrap">
+        <svg viewBox="0 0 100 100" fill="none">
+          <path d="M38 18 L38 82 M38 18 C 55 18, 62 28, 60 50 C 58 70, 48 78, 38 78" stroke="#6e2a23" stroke-width="1.4" fill="none"/>
+          <line x1="62" y1="48" x2="62" y2="52" stroke="#6e2a23" stroke-width="1.6"/>
+        </svg>
+      </div>
+      <div class="numeral">CAPÍTULO VI</div>
+      <h2 style="color: var(--sangue);">Morte</h2>
+      <div class="nature-line">Neutra — Ancestrais, ciclos, ressurreição, passagem</div>
+    </div>
+
+    <div class="scene">
+      <svg viewBox="0 0 480 220" fill="none">
+        <path d="M210 50 L210 175 C 250 175, 275 150, 272 110 C 270 72, 245 50, 210 50" stroke="#6e2a23" stroke-width="1.3" fill="none"/>
+        <line x1="262" y1="108" x2="262" y2="116" stroke="#6e2a23" stroke-width="1.6"/>
+        <path d="M120 175 C 140 150, 155 130, 175 115" stroke="#2c2014" stroke-width="0.7" opacity="0.4" fill="none" stroke-dasharray="3 4"/>
+        <circle cx="115" cy="180" r="4" fill="#2c2014" opacity="0.35"/>
+        <path d="M60 200 Q 240 210 420 200" stroke="#2c2014" stroke-width="0.6" opacity="0.3" fill="none"/>
+      </svg>
+      <div class="scene-caption">A porta entreaberta — a garantia de que nada fica preso para sempre.</div>
+    </div>
+
+    <div class="chapter-body">
+      <h3>A Porta Que Sempre Esteve Lá</h3>
+      <p>A versão mais antiga sobre Morte não fala de nascimento, fala de função: antes de qualquer outra divindade, antes mesmo de haver vida para terminar, já existia a porta pela qual tudo que um dia começa eventualmente passa. Morte, nessa leitura, não é uma força que mata — é a garantia de que nada fica preso para sempre num único estado.</p>
+      <p>Outra tradição, mais comum entre povos com culto ancestral forte, conta que Morte nasceu do primeiro luto — a primeira vez que alguém chorou por outro alguém que não voltaria, e esse choro, repetido por gerações, deu forma a uma presença que recebe os que partem e os mantém, de algum modo, acessíveis a quem ficou.</p>
+      <p>As duas versões raramente competem: a primeira explica o <em>porquê</em> de Morte existir; a segunda explica <em>como</em> os mortais se relacionam com ela.</p>
+
+      <h3>Velar os Mortos, Falar com os Ancestrais</h3>
+      <p>O clero de Morte se concentra menos em cerimônia de massa e mais em <strong>acompanhamento individual</strong>: velórios conduzidos pessoalmente, registros genealógicos mantidos com cuidado quase obsessivo, rituais de "abertura de passagem" para almas que, por morte violenta ou repentina, precisam de ajuda extra para seguir adiante. Onde Ordem mantém registro por princípio, Morte mantém registro por amor — cada nome lembrado é, para essa fé, uma pequena vitória contra o esquecimento total.</p>
+      <p>A devoção leiga mais comum é o <strong>culto ancestral doméstico</strong>: um pequeno altar em casa, nomes de antepassados ditos em voz alta em datas específicas, a crença de que falar o nome de alguém morto o mantém, de algum jeito, presente. Isso independe totalmente de templo — é praticado por famílias inteiras que jamais se identificariam como "fiéis de Morte" formalmente.</p>
+
+      <h3>Relação com Sombra</h3>
+      <p>Como já visto no capítulo de Sombra, as duas fés dividem o domínio de "passagem" e mantêm uma parceria tácita: Sombra cuida do momento da partida, Morte cuida do que vem depois — o acolhimento da alma, a manutenção da memória ancestral.</p>
+
+      <h3>Ressuscitar: Dádiva ou Roubo?</h3>
+      <p>A maior controvérsia interna ao culto de Morte é também a mais óbvia: ressurreição. A própria divindade governa esse domínio, e ainda assim o clero nunca chegou a consenso sobre quando trazer alguém de volta é um ato de compaixão e quando é uma violação do ciclo que a própria fé existe para proteger.</p>
+      <p>Casos históricos de ressurreição forçada — nobres que pagaram fortunas para trazer de volta herdeiros, ignorando se a alma "queria" voltar — dividiram o clero em fações que ainda não se reconciliaram. Pior ainda, há registros de comunidades inteiras de um povo marginalizado terem seus rituais funerários tradicionais proibidos por autoridades locais sob a alegação (questionável, segundo estudiosos do próprio clero) de que "atrapalhavam a passagem correta" — uma acusação que, não por coincidência, nunca foi feita contra os rituais funerários dos povos no poder.</p>
+    </div>
+
+    <div class="refcard">
+      <svg class="refcard-seal" viewBox="0 0 56 56" fill="none">
+        <path d="M21 10 L21 46 C 32 46, 39 38, 38 28 C 37 18, 30 10, 21 10" stroke="#a68f4f" stroke-width="1.1" fill="none"/>
+        <line x1="35" y1="27" x2="35" y2="30" stroke="#a68f4f" stroke-width="1.4"/>
+      </svg>
+      <div class="refcard-title">Ficha de Referência — Morte</div>
+      <dl>
+        <div class="row"><dt>Símbolo</dt><dd>Uma porta entreaberta, desenhada de perfil</dd></div>
+        <div class="row"><dt>Cores litúrgicas</dt><dd>Preto e cinza-pérola</dd></div>
+        <div class="row"><dt>Saudação</dt><dd><em>"Que seu nome seja dito depois de você."</em></dd></div>
+        <div class="row"><dt>Tabu</dt><dd>Deixar um morto sem nome registrado, quando o nome é conhecido</dd></div>
+        <div class="row"><dt>Oferenda típica</dt><dd>Um objeto pessoal do falecido, deixado no altar doméstico</dd></div>
+        <div class="row"><dt>Reconhecer um templo</dt><dd>Geralmente anexo a um cemitério ou ossário; portas largas o suficiente para um caixão passar com folga</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- CHAPTER: DEMÔNIO -->
+  <section class="chapter" id="cap-demonio">
+    <div class="chapter-head">
+      <div class="sigil-wrap">
+        <svg viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="30" stroke="#6e2a23" stroke-width="1.4" stroke-dasharray="6 5"/>
+          <path d="M35 50 L65 50" stroke="#6e2a23" stroke-width="1.8"/>
+        </svg>
+      </div>
+      <div class="numeral">CAPÍTULO VII</div>
+      <h2 style="color: var(--sangue);">Demônio</h2>
+      <div class="nature-line">Maligna — Poder, medo, controle, pactos</div>
+    </div>
+
+    <div class="scene">
+      <svg viewBox="0 0 480 220" fill="none">
+        <path d="M150 130 C 165 115, 185 110, 200 118" stroke="#2c2014" stroke-width="0.8" opacity="0.4" fill="none"/>
+        <path d="M330 130 C 315 115, 295 110, 280 118" stroke="#2c2014" stroke-width="0.8" opacity="0.4" fill="none"/>
+        <circle cx="240" cy="118" r="22" stroke="#6e2a23" stroke-width="1.2" stroke-dasharray="4 3"/>
+        <line x1="225" y1="118" x2="255" y2="118" stroke="#6e2a23" stroke-width="1.4"/>
+        <path d="M240 96 L240 140" stroke="#6e2a23" stroke-width="0.5" opacity="0.4"/>
+        <path d="M160 170 Q 240 178 320 170" stroke="#2c2014" stroke-width="0.6" opacity="0.3" fill="none"/>
+      </svg>
+      <div class="scene-caption">O primeiro pacto — poder demais pedido, preço exato cobrado depois.</div>
+    </div>
+
+    <div class="chapter-body">
+      <h3>Não Há Mito de Origem. Há Apenas o Primeiro Pacto.</h3>
+      <p>As outras Seis têm histórias de como vieram a existir. Demônio não. O que existe, em vez disso, é o registro — sempre em segunda mão, sempre contado por quem não estava lá — do <strong>primeiro pacto</strong>: alguém, em algum momento que ninguém consegue datar com certeza, pediu poder demais para resolver um problema pequeno demais, e recebeu exatamente o que pediu, ao preço exato que não tinha percebido que estava pagando.</p>
+      <p>Não há "nascimento" de Demônio porque, segundo a doutrina mais difundida (se "doutrina" é a palavra certa para uma fé sem clero centralizado), Demônio não precisa ter nascido — ele é convocado de volta, a cada novo pacto, pela mesma fome que criou o primeiro. Alguns estudiosos discordam até disso, e sugerem que pode haver mais de um "Demônio" — uma força que se manifesta sempre que a ambição humana cruza certa linha, em vez de uma entidade única e contínua. A tabela do culto oficial nega isso, mas a tabela do culto oficial é, convenientemente, escrita por quem já fez pacto.</p>
+
+      <h3>Servir Sem Templo, Pagar Sem Recibo</h3>
+      <p>Não existem santuários de Demônio reconhecidos publicamente — quem ousa construir um é, historicamente, destruído pelas outras Seis em conjunto, um dos raros pontos de cooperação entre fés que normalmente nem se falam. O que existe são <strong>pactos individuais</strong>, negociados em privado, com termos que raramente ficam completamente claros até o momento de pagar.</p>
+      <p>Isso não significa ausência de "clero": existem <strong>Intermediários</strong> — fiéis experientes que já fizeram seu próprio pacto e agora ajudam outros a negociar os deles, cobrando uma fração do preço para si mesmos. Não há hierarquia entre Intermediários, só reputação, e reputação nesse meio se constrói sobre quantos pactos alguém já viu dar errado e sobreviveu para contar.</p>
+      <p>A prática leiga mais comum não é pacto formal, mas o <strong>pequeno trato cotidiano</strong>: prometer algo de valor real (não simbólico) em troca de uma vantagem específica, sem nunca convocar a divindade diretamente — uma forma de tatear a fé sem assumir o compromisso total de um pacto.</p>
+
+      <h3>Relação com as Outras Seis</h3>
+      <p>Demônio não tem aliado entre as Sete. Mesmo Caos, que compartilha a tag de "Maligna", mantém distância: Caos quer imprevisibilidade pela própria imprevisibilidade, sem intenção de controlar o resultado; Demônio quer controle absoluto sobre um resultado específico, e isso, paradoxalmente, é visto por fiéis de Caos como "ordem disfarçada de caos" — quase um insulto.</p>
+      <p>A única relação consistente entre Demônio e qualquer outra divindade é de oposição ativa: templos de Luz e de Ordem, historicamente os dois clergies mais organizados, mantêm registros de pactos conhecidos na região e oferecem (a um preço alto, irônico considerando o tema) ajuda para "quebrar" um pacto antes que o preço total seja cobrado.</p>
+
+      <h3>Por Que Alguém Faz Pacto, Sabendo o Preço</h3>
+      <p>Ninguém faz pacto com Demônio por acaso, e quase ninguém faz por maldade pura — essa é a parte que a doutrina das outras Seis convenientemente simplifica quando conta a história para assustar crianças.</p>
+      <p>A maioria dos pactos documentados nasce de um momento em que todas as outras portas já estavam fechadas: uma dívida que vai tirar a casa da família, uma doença que nenhum templo de Luz aceita curar de graça, uma comunidade inteira ameaçada de expulsão e sem recurso legal porque Ordem, naquele território, naquele século, decidiu que aquele povo específico "não tinha direito de petição". Para quem já foi recusado por todo o resto, Demônio é, ao menos, honesto sobre o que cobra — o que, perversamente, alguns fiéis descrevem como um tipo torto de respeito que as fés "boas" não ofereceram.</p>
+      <p>Isso não absolve o preço. Pactos arruínam vidas, isoladamente e em cadeia — um Intermediário antigo costuma dizer que "todo pacto que parece justo na assinatura parece roubo na cobrança". Mas entender por que alguém assina é diferente de aprovar a assinatura, e este livro não pretende fazer as duas coisas ao mesmo tempo.</p>
+    </div>
+
+    <div class="refcard">
+      <svg class="refcard-seal" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="28" r="17" stroke="#a68f4f" stroke-width="1.1" stroke-dasharray="5 4"/>
+        <line x1="16" y1="28" x2="40" y2="28" stroke="#a68f4f" stroke-width="1.4"/>
+      </svg>
+      <div class="refcard-title">Ficha de Referência — Demônio</div>
+      <dl>
+        <div class="row"><dt>Símbolo</dt><dd>Um selo de cera quebrado pela metade</dd></div>
+        <div class="row"><dt>Cores litúrgicas</dt><dd>Vermelho-sangue escuro e preto opaco (sem brilho)</dd></div>
+        <div class="row"><dt>Saudação</dt><dd><em>(não há saudação pública — usar uma marcaria a pessoa como suspeita)</em></dd></div>
+        <div class="row"><dt>Tabu</dt><dd>Falar os termos completos de um pacto em voz alta fora da negociação</dd></div>
+        <div class="row"><dt>Oferenda típica</dt><dd>Não há oferenda simbólica — o "pagamento" de um pacto é sempre real e específico</dd></div>
+        <div class="row"><dt>Reconhecer um templo</dt><dd>Não existem templos reconhecidos; locais de pacto costumam ser discretos, privados, e desaparecem ou mudam de endereço com frequência</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing" id="fios">
+    <h2>Onde os Fios se Cruzam</h2>
+    <p>As Sete não vivem em compartimentos separados, e qualquer Mestre que queira tensão religiosa numa campanha encontra material de sobra nos pontos onde as fés se tocam — por afinidade, por disputa, ou por pura contradição teológica que ninguém nunca resolveu.</p>
+    <p><strong>Domínios compartilhados.</strong> Sombra e Morte dividem "passagem", e essa sobreposição já gera disputa de jurisdição em qualquer morte fora do comum — quem conduz o rito quando a morte foi violenta, escondida, ou moralmente ambígua? Luz e Sombra, por acidente teológico que incomoda os dois clergies, também tocam "passagem" por ângulos opostos (revelação versus discrição), e historicamente disputaram o direito de oficiar exorcismos que terminam em morte.</p>
+    <p><strong>Pares de oposição declarada.</strong> Ordem e Caos se descrevem como inimigos absolutos, mas — como visto nos respectivos capítulos — a relação é mais espelhada do que qualquer um dos dois lados admite: ambos lidam com o que ainda não tem padrão definido, só que com reações opostas a essa mesma ausência.</p>
+    <p><strong>A exceção isolada.</strong> Demônio não tem aliado entre as Sete, e é o único ponto de cooperação confiável entre fés que normalmente não se falam — Luz, Ordem, e até Natureza já cooperaram historicamente para conter pactos descontrolados numa região, ainda que por motivos doutrinários diferentes cada uma.</p>
+    <p><strong>Uma sombra comum.</strong> Há um padrão incômodo que atravessa praticamente todas as Sete, sem que nenhuma o tenha resolvido: cada fé, em algum momento de sua história, foi usada — por clero corrupto, por decreto antigo, por silêncio conveniente — para justificar ou ignorar discriminação entre povos. Nenhuma das Sete é "a culpada" disso de forma isolada, e nenhuma está livre dele. Isso não é um capítulo à parte porque não é exclusivo de nenhuma fé — é uma rachadura que corre por baixo de todas, visível para quem procura, ignorável para quem prefere não olhar. Mestres que queiram puxar esse fio numa campanha encontram gancho em qualquer um dos sete capítulos, sem precisar inventar nada que já não esteja germinando ali.</p>
+    <p><strong>Conflitos históricos úteis para campanha.</strong> Um decreto antigo de Ordem que distribuiu terra por linhagem; uma seca que um culto de Natureza interpretou como "vontade divina" contra um povo nômade específico; um pacto com Demônio nascido porque Ordem recusou petição a um povo marginalizado; um ritual funerário ancestral proibido por autoridades que alegavam (sem base doutrinária real) que ele "atrapalhava a passagem". Nenhum desses ganchos exige que o Mestre escolha um lado da história — a ambiguidade é o ponto.</p>
+  </section>
+
+  <div class="colophon">✦ Codex das Sete Forças · Fim do Volume ✦</div>
+
+</div>
+</div>
+
+<script>
+  const tocToggle = document.getElementById('tocToggle');
+  const tocDrawer = document.getElementById('tocDrawer');
+  const tocOverlay = document.getElementById('tocOverlay');
+
+  function closeToc() {
+    tocDrawer.classList.remove('open');
+    tocOverlay.classList.remove('open');
+  }
+
+  tocToggle.addEventListener('click', () => {
+    tocDrawer.classList.toggle('open');
+    tocOverlay.classList.toggle('open');
+  });
+  tocOverlay.addEventListener('click', closeToc);
+  tocDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeToc));
+</script>
+
+</body>
+</html>

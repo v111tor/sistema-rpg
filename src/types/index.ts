@@ -79,6 +79,7 @@ export interface Character {
   resources: Resources
   attrs: Attributes
   skills: Record<string, boolean>   // true = has proficiency
+  saves: Record<string, boolean>    // true = proficient saving throw
   attacks: Attack[]
   // Magic
   emotion: string

@@ -45,6 +45,14 @@ const files = [
     title: "A Ultima Ascenção — Livro do Mestre",
     description: "Ferramentas de mestre, classe Abismal, magia de Dreno, subclasses abissais, mapa-múndi e regras opcionais.",
     type: "HTML"
+  },
+  {
+    source: "Codex_das_Sete_Forcas.html",
+    target: "A_Ultima_Ascencao_Codex_das_Sete_Forcas.html",
+    alias: "A_Ultima_Ascenção_Codex_das_Sete_Forças.html",
+    title: "A Ultima Ascenção — Codex das Sete Forças",
+    description: "Site complementar com lore, símbolos, cultos e referências das sete divindades.",
+    type: "HTML"
   }
 ];
 

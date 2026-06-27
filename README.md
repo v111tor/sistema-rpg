@@ -50,6 +50,7 @@ Depois do build, sincronize os ebooks para dentro de `dist/ebook`:
 
 ```bash
 node tools\publish_download_site.cjs
+node tools\organize_rulebook_subclasses.cjs
 node tools\sync_rulebook_class_features.cjs
 node tools\enrich_bestiary_special_abilities.cjs
 node tools\sync_rulebook_pdf.cjs
@@ -83,6 +84,7 @@ node tools\apply_bestiary_ai_images.cjs
 node tools\enrich_bestiary_special_abilities.cjs
 npm run build
 node tools\publish_download_site.cjs
+node tools\organize_rulebook_subclasses.cjs
 node tools\apply_bestiary_ai_images.cjs
 node tools\sync_rulebook_class_features.cjs
 node tools\enrich_bestiary_special_abilities.cjs
@@ -92,6 +94,7 @@ node tools\sync_rulebook_pdf.cjs
 Essa ordem garante que:
 
 - características de Sensiente e Devoto fiquem junto das classes;
+- subclasses fiquem no final da própria classe, com início e fim marcados;
 - habilidades especiais do bestiário tenham descrição;
 - sprites do bestiário continuem em PNG e possam ser substituídos por imagens `*-ai.png`;
 - arquivos finais sejam copiados para `dist`.
@@ -249,13 +252,25 @@ netlify.toml
 | `npm run preview` | Preview Vite do build |
 | `node tools\serve_download_site.cjs` | Servidor estático simples em `http://127.0.0.1:4173/` |
 | `node tools\publish_download_site.cjs` | Sincroniza ebooks nomeados para `public` e `dist` |
+| `node tools\organize_rulebook_subclasses.cjs` | Move subclasses para o final de cada classe e marca início/fim de cada uma |
+| `node tools\merge_rulebook_feature_pools.cjs` | Une as características 31-40 aos pools principais das classes e remove a expansão duplicada |
+| `node tools\apply_seven_forces_codex.cjs` | Atualiza símbolos do Devoto e publica o Codex das Sete Forças nos ebooks |
+| `node tools\rewrite_unique_feature_effects.cjs` | Reescreve características expandidas de Sensiente e Devoto com efeitos únicos |
+| `node tools\apply_proficiency_dc_formulas.cjs` | Atualiza CDs antigas para incluir Bônus de Proficiência e ajusta fórmulas do Livro do Mestre |
+| `node tools\audit_feature_duplicates.cjs` | Gera relatório de duplicatas em características, habilidades e tabelas principais |
+| `node tools\apply_attribute_playtest_recommendations.cjs` | Aplica a escala revisada de CDs baseada no stress test dos atributos |
+| `node tools\apply_core_rebalance_5_advances.cjs` | Define 5 avanços iniciais e troca perícias para Bônus de Proficiência por nível |
+| `node tools\apply_quimera_corrections.cjs` | Aplica a Quimera corrigida com partes ativadas por Energia da Floresta |
 | `node tools\sync_rulebook_pdf.cjs` | Gera o PDF atualizado do Livro de Regras a partir do HTML |
 | `node tools\sync_rulebook_class_features.cjs` | Move/insere características de Sensiente e Devoto nas seções de classe |
+| `node tools\stress_test_attributes.cjs` | Gera relatório matemático de stress test dos atributos d4 a d20 |
+| `node tools\stress_test_creation_advances.cjs` | Gera relatório sobre a quantidade ideal de avanços de atributo na criação |
 | `node tools\generate_bestiary_png_sprites.cjs` | Gera sprites PNG do bestiário |
 | `node tools\import_bestiary_ai_prompts.cjs` | Importa prompts do bestiário para `tools/bestiary_ai_prompts.json` |
 | `node tools\generate_bestiary_prompt_pngs.cjs` | Gera PNGs `*-ai.png` do bestiário a partir dos prompts importados |
 | `node tools\apply_bestiary_ai_images.cjs` | Troca as fichas do bestiário para usar os PNGs `*-ai.png` disponíveis |
 | `node tools\enrich_bestiary_special_abilities.cjs` | Adiciona descrição mecânica às habilidades especiais das criaturas |
+| `node tools\rebalance_bestiary_for_5_advances.cjs` | Rebalanceia o bestiário para personagens com 5 avanços iniciais |
 | `node tools\expand_feature_descriptions.cjs` | Atualiza efeitos/custos das características expandidas |
 
 ---
@@ -276,6 +291,7 @@ Antes de publicar:
 ```bash
 npm run build
 node tools\publish_download_site.cjs
+node tools\organize_rulebook_subclasses.cjs
 node tools\sync_rulebook_class_features.cjs
 node tools\enrich_bestiary_special_abilities.cjs
 node tools\sync_rulebook_pdf.cjs

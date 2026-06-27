@@ -32,6 +32,13 @@ const EBOOKS = [
     href: 'ebook/A_Ultima_Ascencao_Livro_do_Mestre.html',
     online: true,
   },
+  {
+    title: 'A Ultima Ascenção - Codex das Sete Forças',
+    description: 'Site complementar com lore, símbolos, cultos e referências das sete divindades.',
+    type: 'HTML',
+    href: 'ebook/A_Ultima_Ascencao_Codex_das_Sete_Forcas.html',
+    online: true,
+  },
 ]
 
 export function DownloadsTab() {

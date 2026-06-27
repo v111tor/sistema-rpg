@@ -103,14 +103,19 @@ function escapeHtml(value) {
 }
 
 function dcFor(grade) {
-  return 10 + Number(grade) * 2;
+  return [11, 13, 15, 16, 18, 20][Number(grade)] || 13;
 }
 
 function enrich(html) {
   return html.replace(/<article class="monster-card grade-(\d)" id="([^"]+)">([\s\S]*?)<\/article>/g, (full, grade, id, body) => {
     const abilityMatch = body.match(/<p><strong>Habilidade(?: especial)?:<\/strong>\s*([\s\S]*?)<\/p>/);
     if (!abilityMatch) return full;
-    const rawName = abilityMatch[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").replace(/\.$/, "").trim();
+    const abilityText = abilityMatch[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+    const rawName = abilityText
+      .split(".")[0]
+      .replace(/\s+1\/rodada[\s\S]*$/i, "")
+      .replace(/\.$/, "")
+      .trim();
     const effect = (effects[rawName] || "1/rodada, usa sua natureza para impor pressão tática: o alvo faz teste apropriado CD {dc}; falha: sofre 1d6 de dano ou perde reação até o fim do turno.").replaceAll("{dc}", String(dcFor(grade)));
     const replacement = `<p><strong>Habilidade especial:</strong> <em>${escapeHtml(rawName)}.</em> ${escapeHtml(effect)}</p>`;
     return `<article class="monster-card grade-${grade}" id="${id}">` + body.replace(abilityMatch[0], replacement) + "</article>";

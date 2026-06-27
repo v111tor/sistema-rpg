@@ -193,6 +193,9 @@ function TabDados({ c, update }: { c: Character; update: (p: Partial<Character>)
 
 // ─── Atributos ────────────────────────────────────────────────────────────────
 function TabAtributos({ c, update, roll }: { c: Character; update: (p: Partial<Character>) => void; roll: (f: string, l: string) => void }) {
+  const saves = c.saves ?? {}
+  const toggleSave = (key: AttrKey) => update({ saves: { ...saves, [key]: !saves[key] } })
+
   return (
     <div className="grid" style={{ gap: 10 }}>
       {ATTRS.map(([key, label, desc]) => {
@@ -217,6 +220,39 @@ function TabAtributos({ c, update, roll }: { c: Character; update: (p: Partial<C
           </div>
         )
       })}
+      <div className="panel-inner">
+        <div className="section-title">
+          <h3>Testes de resistência</h3>
+          <span className="pill blue">Proficiência +{c.prof}</span>
+        </div>
+        <p className="muted" style={{ marginBottom: 8 }}>
+          Sem proficiência: role só o dado do atributo. Com proficiência: some +{c.prof}.
+        </p>
+        <div className="skills-grid">
+          {ATTRS.map(([key, label]) => {
+            const attrKey = key as AttrKey
+            const die = c.attrs[attrKey]
+            const hasProf = !!saves[attrKey]
+            const mod = hasProf ? c.prof : 0
+            return (
+              <div key={key} className="skill-row">
+                <button
+                  className={`skill-prof-btn ${hasProf ? 'active' : ''}`}
+                  title={hasProf ? 'Com proficiência' : 'Sem proficiência'}
+                  onClick={() => toggleSave(attrKey)}
+                >
+                  {hasProf ? '◆' : '◇'}
+                </button>
+                <span className="skill-name">{key}</span>
+                <span className="skill-attr muted">({label})</span>
+                <button className="btn small" onClick={() => roll(`1${die}${mod ? '+' + mod : ''}`, `Save ${key}`)}>
+                  {die} {signed(mod)}
+                </button>
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </div>
   )
 }

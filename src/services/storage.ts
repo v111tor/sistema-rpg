@@ -52,6 +52,7 @@ function migrateCharacter(value: unknown): Character {
     },
     currency: { pp: 0, gp: 0, sp: 0, cp: 0, ...(c.currency ?? {}) },
     skills: asRecord(c.skills),
+    saves: asRecord(c.saves),
     attacks: Array.isArray(c.attacks) ? c.attacks.map((attack: unknown) => ({
       id: uid(), name: '', attr: 'FOR', bonus: 0, damage: '', range: '', type: '', notes: '',
       ...asRecord(attack),
@@ -282,6 +283,7 @@ export function blankCharacter(id = uid()): Character {
     },
     attrs: { FOR: 'd4', AGI: 'd4', VIG: 'd4', INT: 'd4', ESP: 'd4', DEV: 'd4' },
     skills: {},
+    saves: {},
     attacks: [],
     // magic
     emotion: '',

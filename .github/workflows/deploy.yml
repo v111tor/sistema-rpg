@@ -27,11 +27,21 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: node tools/rewrite_unique_feature_effects.cjs
+      - run: node tools/apply_proficiency_dc_formulas.cjs
       - run: npm run lint -- --max-warnings=0
       - run: npm run build
       - run: node tools/publish_download_site.cjs
+      - run: node tools/organize_rulebook_subclasses.cjs
+      - run: node tools/merge_rulebook_feature_pools.cjs
+      - run: node tools/apply_seven_forces_codex.cjs
+      - run: node tools/apply_attribute_playtest_recommendations.cjs
+      - run: node tools/apply_core_rebalance_5_advances.cjs
+      - run: node tools/apply_quimera_corrections.cjs
+      - run: node tools/apply_proficiency_dc_formulas.cjs
       - run: node tools/apply_bestiary_ai_images.cjs
       - run: node tools/enrich_bestiary_special_abilities.cjs
+      - run: node tools/rebalance_bestiary_for_5_advances.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

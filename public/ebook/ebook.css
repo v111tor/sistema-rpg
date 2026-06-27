@@ -152,6 +152,51 @@ h3 {
   padding-left: 1.2rem;
 }
 
+.class-subclasses {
+  margin: 2.25rem 0;
+  padding: 1rem 1.1rem;
+  border: 2px solid rgba(110, 41, 31, 0.42);
+  border-radius: 8px;
+  background: rgba(255, 244, 208, 0.18);
+}
+
+.class-subclasses > h4 {
+  margin-top: 0;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(99, 48, 27, 0.28);
+}
+
+.subclass-block {
+  margin: 1.25rem 0;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(99, 48, 27, 0.34);
+  border-left: 0.38rem solid var(--wine);
+  border-radius: 6px;
+  background: rgba(255, 244, 208, 0.24);
+  break-inside: avoid;
+}
+
+.subclass-boundary {
+  margin: 0.25rem 0 0.65rem;
+  color: var(--wine);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.subclass-note {
+  margin-top: -0.25rem;
+  color: rgba(47, 26, 18, 0.82);
+  font-style: italic;
+}
+
+.subclass-break {
+  margin: 1.35rem 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
 @media print {
   nav#TOC,
   .rule-card {
